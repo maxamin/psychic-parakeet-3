@@ -1,0 +1,50 @@
+.loadingIndicator {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  height: 80%;
+  align-items: center;
+  margin: 3.5em 0;
+}
+
+.overlayLoading {
+  background: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.emptyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+}
+
+.empty {
+  text-align: center;
+  color: var(--c-warm-grey-1);
+
+  & svg {
+    font-size: var(--fs-96);
+  }
+}
+
+.errorButton {
+  color: var(--c-warm-grey-1) !important;
+}
+
+.emptyMessage {
+  font-size: var(--fs-18);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0.2em 0 1em;
+}
+
+@media (max-width:959.95px) {
+  .empty,
+  .loadingIndicator {
+    margin-top: 6em;
+  }
+}

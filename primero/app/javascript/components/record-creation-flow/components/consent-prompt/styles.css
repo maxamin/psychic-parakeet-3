@@ -1,0 +1,56 @@
+.container {
+  & form {
+    display: flex;
+    flex-direction: column;
+
+    & fieldset {
+      margin-bottom: 0;
+
+      & legend {
+        color: var(--c-black);
+        font-weight: bolder;
+      }
+
+      & label {
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.introductoryText {
+  font-size: var(--fs-16);
+}
+
+.createCaseText {
+  font-weight: bold;
+  padding: 16px;
+  border: 1px solid var(--c-yellow);
+  border-radius: .5em;
+}
+
+
+.introductoryText {
+  font-size: var(--fs-16);
+}
+
+.consentLabel {
+  font-weight: bold;
+  font-size: var(--fs-16);
+}
+
+.fieldsContent {
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.createButtonContainer {
+  bottom: 0;
+  position: sticky;
+  width: 100%;
+  padding: 1em;
+  border-top: 1px solid var(--c-light-grey-2);
+  background-color: var(--c-white);
+  z-index: 1300;
+}

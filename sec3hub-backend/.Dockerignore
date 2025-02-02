@@ -1,0 +1,5 @@
+#.dockerignore 
+.env
+#assets
+assets/*
+insomnia_docs.json

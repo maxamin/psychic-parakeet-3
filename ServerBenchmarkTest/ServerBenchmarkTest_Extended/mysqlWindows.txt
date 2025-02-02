@@ -1,0 +1,8 @@
+user: root, passwort: AdminP4ssWort50%Sicher
+user: httpUser, passwort: simpleP4ssPhrase4Testing
+Servername: MySQL Server 8.0.24, Port: 3306
+
+Stop mit Befehl in cmd: 
+"C:\Programme\MySQL\MySQL Server 8.0\bin\mysqladmin" -u root -p shutdown
+
+Start mysql mit Installer oder per restart

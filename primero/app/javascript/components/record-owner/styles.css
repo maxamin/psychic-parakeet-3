@@ -1,0 +1,15 @@
+.formTitle {
+  display: flex;
+  background: var(--c-sticky-grey);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  align-items: center;
+}
+
+.formHeading {
+  color: var(--c-solid-black);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--fs-20);
+}

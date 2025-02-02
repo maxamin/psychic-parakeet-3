@@ -1,0 +1,41 @@
+{% load widget_tweaks %}
+{{ form.media }}
+
+<div class="card">
+    <div class="card-body">
+        {% if method %}
+            {% if not without_form_tag %}
+<form method="{{ method }}" {% if enctype %}enctype="multipart/form-data"{% endif %} action="{{ form.action }}">
+    {% csrf_token %}
+                {% endif %}
+{% else %}
+            {% if not without_form_tag %}
+<form method="get" action="{{ form.action}}">
+                {% endif %}
+{% endif %}
+    {% for hidden in form.hidden_fields %}
+      {{ hidden }}
+    {% endfor %}
+
+    {% for field in form.visible_fields %}
+      {% include 'forms/field.html' %}
+    {% endfor %}
+
+    {% if not no_submit %}
+    <div class="form-group mt-3">
+        <div class="clearfix">
+            <button type="submit" class="btn btn-success form-control">
+                {% if submit_text %}
+                    {{ submit_text }}
+                {% else %}
+                    Submit
+                {% endif %}
+            </button>
+        </div>
+    </div>
+    {% endif %}
+    {% if not without_form_tag %}
+  </form>
+    {% endif %}
+    </div>
+</div>

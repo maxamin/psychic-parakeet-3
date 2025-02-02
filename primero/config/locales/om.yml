@@ -1,0 +1,3146 @@
+# encoding: utf-8
+#
+# This is the English localization file for Primero.  It is based on the sample
+# English localization file found in the repository linked below[1].
+#
+# Anyone editing this file is strongly encouraged to use yamllint[2] to ensure
+# that this document remains valid YAML.
+#
+# [1] https://github.com/svenfuchs/rails-i18n/
+# [2] https://yamllint.readthedocs.io/en/stable/
+
+
+---
+om:
+  'true': 'Eeyyen.'
+  'false': 'Miti/lakki'
+  accepted: Fudhatama argateera.
+  cancel: Haquu.
+  connection_lost: Yeroo ammaantanaa haala sararaan ala keessa jiran.
+  connected: Walqunnamaniiru.
+  clear: Ifa.
+  sandbox_ui: " Agarsiisa."
+  description: Ibsa.
+  form: Guca/unka.
+  minimum_reportable_fields: "Dirreewwan xiqqicha  gabaasamuu%{record_type} danda'an."
+  name: Maqaa.
+  offline: Sararaan ala.
+  unavailable_offline: Sararaan alatti hinargamu.
+  online: Sarara irra.
+  yes_label: 'Eeyyen.'
+  or_label: Ykn.
+  select_provider: Dhiyeessaa filadhaa.
+  select_language: Qooqa/afaan filadhaa.
+  log_in_primero_idp: "Maqaa  fayyadamaan  %{idp_name}keessa seeni"
+  offline_submitted_changes: Yeroo ammaa kana sararaan ala jirtan. Jijjiramni taasistan  kan galu yoo sarara irratti  deebitanidha.
+  updated: Ammayyoomeera.
+  sync:
+    success: "Galmeewwan%{records} haala milkaa'aan walsimaniiru."
+    error:
+      create: "Uumuu hindandeenye %{record_type}.Maloo deeggarsa argadhaa."
+      update: "Ammayyoomsuun  %{record_type}%{short_id}hin milkoofne.Maloo deeggarsa argadhaa."
+
+  actions:
+    approvals: Mirkaneessummoota.
+    button: Gochoota.
+    close: Cufi /cufuu.
+    description:
+      invalid: Galmee sirrii hintaane.
+      valid: Galmee sirrii.
+    disable: Dadhabsiisuu.
+    enable: Dandeessisuu.
+    incident_details_from_case: Taatee  dabali/ida'i.
+    incident_from_case: Taatee uumi.
+    next: " Itti aanee."
+    notes: Yaadannoo dabali.
+    previous: Dursaa/duraa.
+    reopen: Irra deebiin bani.
+    request_approval: " Mirkaneessa gaafadhaa."
+    revoke: Kuffisuu/fudhatama dhabsiisuu.
+    save: Ol'kaa'i .
+    services_from_case_creation_success: Galmeen kennisa tajaajilaa milkiin banamee jira.
+    services_section_from_case: Kenninsa/kenna tajaajilaa dabali.
+    mark_for_offline: Sararaan ala mallattoo  kaa'i.
+  agencies:
+    label: Ejensii
+    translations:
+      manage: Hiikkaawwan to'adhu.
+  agency:
+    agency_logos: Asxaawwan Ejensii.
+    code: Koodii Ejensii.
+    description: Ibsa.
+    disabled: Qaama miidhamaa.
+    exclude_agency_from_lookups: Ejensicha kana dhimma barbaachaawwanii fi calaliiwwanii  irraa baasaa/ hambisaa.
+    exclude_agency_from_lookups_help: Ejensichi fayyadamtoota kan hin qabaannee yoo ta'e isa kana mirkanneeffadhaa/ mirkaneessaa.(fknf. ejensichi  ida'ameera.Kanaafuu  asxichi hojii gara alaatti erguuf    nihojjeta.
+    label: Ejensii.
+    logo_enabled: "Asxaa ejensii kana Piriimiiroo keessatti agarsiisaa?"
+    logo_enabled_help: "Asxaa ejensii kanaa Piriimiiroo keessatti agarsiisaa?"
+    logo_icon: Asxaa jaalatamaa.
+    logo_icon_help: "Inni kun qixxaayinoota argii xiqqaatiin ,taabileetootaa fi bilbilootaa irratti mul'ata.Inni kunis rog-afree ta'utu irra jiraata."
+    logo_large: Asxaa guddaa.
+    logo_large_help: Inni kun qixxaayinoota argii gurguddaa fi  gara alaatti nerguu PiiDiiEffii(PDF) keessatti mul'ata..Inni kunis reektaangilii dheerinni isaa dheerinna hojaa isaa irra dheeratu ta'uu qaba.
+    messages:
+      created: Ejensichi haala milkaa'aan uumameera.
+      updated: Ejensichi haala milkaa'aan ammayyoomeera.
+    name: Maqaa Ejensichaa.
+    pdf_logo_option: "Gara alaatti erguu  Pii Dii Fiif asxaan akka argamu taasisuu?"
+    pdf_logo_option_help: 'Hubachiisa:Asxaawwan fayyadamaa ejensichaa  isaaniif durtiin ni argamu.Kanaafuu isin asxaan kun fayyadamtoota hundaafuu  akka argamu yoo barbaaddan qofa kan mirkaneessitan.'
+    services: Tajaajiloota Ejensichaa.
+    terms_of_use: Qajelfama itti fayyadamaa.
+    terms_of_use_help: Faayiloota PiiDii Effii hayyamaman qofa.
+    terms_of_use_download_button: PDFii   buusi/fe'i.
+    terms_of_use_enabled: "Waliigaltee itti fayyadamaa agarsiisi?"
+  approvals:
+    approved_by: Qaama/nama mirkaneesse.
+    case_plan_type_label: Akaakuu/gosa  karoora dhimmaa.
+    manager_comments_label: Yaada hoji gaggeessaa/bulchaa.
+    rejected_by: Qaama fudhatama dhabsiise.
+    requested_by: Qaama gaafate.
+    requested_for_label: Dhimma  mirkaneessi gaafatameef.
+    requested_for_title: Gaaffii mirkaneessaa.
+    response_for_label: Dhimma mirkanaa'eef.
+    response_for_title: Mirkaneessa.
+    action_plan: Karoora raawwii hojii.
+    gbv_closure: Cufinsa miidhaa koornaayaa bu'ureeffatee.
+    status:
+      approved: Mirkanaa'eera.
+      pending: Eeggachaa kan jiru ykn akka turu taasifame.
+      rejected: Fudhatama hinarganne.
+      requested: Gaafatameera.
+  audit_log:
+    action: Gocha/raawwii.
+    description: Ibsa.
+    record_owner: Abbaa  galmee.
+    timestamp: Yeroo.
+    user_name: Qaama raawwatu/raawwate.
+  bulk_export:
+    file_name: Doosee/faayila.
+    record_type: Akaakuu/gosa.
+    retry: Inni gara alaatti erguu kun kan sirrii ta'ee miti.Maaloo gara alaatti erguu keessan  irra deebiin uumuudhaaf yaalaa.
+    started_on: Eegaleera.
+    status: Haala.
+  form_export:
+    label: Qindaayina guca/unka gara alaatti erguu.
+    include_hidden: "Gucaawwan dhokatanii fi dirrewwan dabalataa?"
+    file_name: Maqaa faayila dhuunfaa keessanii uumaa.(filannoo)
+    success_message: Faayilli gara alaatti ergamu milkaa'inaan uumameera.
+  buttons:
+    accept: Fudhadhu.
+    add: Dabali/ida'i.
+    add_another_option: Filannoo biraa dabali.
+    add_note: Yaadannoowwan dabali
+    apply: Iyyachuu.
+    approvals: Mirkaneessummoota.
+    approve_action_plan: Karoora raawwii hojii mirkaneessuu.
+    approve_bia: Sakatta'insa fedhii ol'aanaa daa'imaa mirkaneessuu.
+    approve_case_plan: Karoora dhimmaa mirkaneessuu.
+    approve_closure: Cufiinsa mirkaneessuu.
+    approve_gbv_closure: Cufiinsa miidhaa koornaayaa bu'ureeffatee mirkaneessuu.
+    back: Deebi'i/duuba.
+    bundle_export: Qindaayina dilbii /walitti hidhamiinsaa.
+    bundle_import: Qindaayina dilbii/walitti hidhamiinsaa /dilbii
+    cancel: Haqi.
+    change_password: Furtuu icciitii iggitaa jijjiiraa.
+    check_status: Haala jiru mirkaneeffadhaa.
+    clear_default: Durti jiru  qulqulleessi
+    clear_selection: Filannoo ifa ta'e.
+    clear: Ifa/adii.
+    close: Cufi/ittisiqaa.
+    continue: Ittifufi.
+    create_case: Dhimma uumi.
+    create_incident: Taatee uumi.
+    create_new_record: "Haaraa uumi %{model}"
+    delete: Haqi/haquu.
+    disable: Dadhabsiisi/Irraa kaasi.
+    disable_photo_wall: Dhaabaa suuraa irraa kaasi.
+    done: Raawwatameera.
+    download: Buusuu.
+    edit: Gulaali.
+    edit_subform: Unka xiqqaa gulaali.
+    enable: Kakkaasi/dandeessisi.
+    enable_photo_wall: Daabaa suuraa olkaasi/jabeessi.
+    export: Alergii/alatti erguu.
+    filter: Calallii fayyadami/hojirra oolchi.
+    filter_clear: Calalliwwan ifa ta'an.
+    filter_label: 'Calallii.'
+    filter_restore: "Gara bakka qindaayinootni sirnaa turetti deebsii. "
+    find_tracing_match: Walsimsiisa barbaachaa argadhaa.
+    flag_model: "Alaabaa%{model}."
+    flag_records: Alaabaa/mallattoo.
+    flags: Alaabaawwan/mallattoowwan.
+    guidance: Qajelfama.
+    guiding_questions: Gaaffiwwan qajelfamaa.
+    import: Fichisiisi/Alaa galchi.
+    login: Seeni.
+    logout: Bahi/Keessaa bahi.
+    mark_for_mobile: Mobaayilaaf mallattoo kaayaa.
+    new: Haaraa.
+    ok: Tole/haata'u.
+    print: Maxxansuu.
+    reassign: Ramaduu.
+    referral: Akeeka/dabarsuu/walitti kennuu.
+    referral_again: Irra deebi'ii ilaali.
+    reject: Fudhachuu diduu.
+    remove_referrals: Dabarsaawwan dhabamsiisaa.
+    reorder: Irra deebi'aa ajajaa.
+    request_approval: Mirkaneessa gaafadhaa.
+    request_transfer: Dabarsa gaafadhaa.
+    reunite: Irra deebiin walitti dhufaa/walqunnamaa.
+    save: Kaayuu/Olkaa'i.
+    save_and_add_service_provision: Kaayiitii kenna tajaajilaa itti dabali.
+    save_and_return: Kaa'uu fi deebisuu.
+    save_continue: Kaa'uu fi itti fufi.
+    save_changes: Jijjiiramota ol kaa'i.
+    select: Filadhaa.
+    send: Erguu.
+    sort_by_case: Dhimmoota.
+    sort_by_tr: Gaaffiwwan Barbaachaa.
+    sync: Wal simsiisi/walfakkeessi.
+    submit: Galchi.
+    transfer: Dabarsuu.
+    unflag_model: "Alaabaa/mallattoo kaassi %{model}"
+    unflag_model_history: "Seenaa Alabaa %{model}"
+    unmark_for_mobile: Mobaayilaaf mallattoo kaa'uu dhabuu.
+    update: Haaroomsi.
+    view: Ilaalcha/Agarsiisi.
+    view_flags_history: Seenaa ilaalaa.
+    return_to_case: Gara dhimmatti deebi'i.
+  case:
+    label: Dhimma.
+    create_new_case: Dhimma haaraa uumi.
+    add_new: Haaraa galchi/dabali.
+    back_to_case: Dhimmatti deebi'i.
+    back_to_results: Gara bu'aatti deebi'uu.
+    back_to_search: Gara qorannootti deebi'uu.
+    search_by: Qaama barbaade.
+    search_for: "Barbaadi %{record_type}"
+    results: Bu'aalee.
+    details: Bal'ina.
+    select: Filadhaa.
+    deselect: Filachuu dhiisuu.
+    enter_id_number: Galmee jiru barbaaduuf lakkofsa eenyummeessaa galchaa.
+    id_search_no_results: "Sirnicha keessatti  walsimuudhaaf kan ta'u wayiituuhin jiru%{search_query} maaloo galmee haaraa uumaa."
+    messages:
+      disabled: Dhimmi gufateera.
+      update_success: 'Dhimmi %{record_id}haala milkaa''aan ammayyoomeera.'
+      update_success_queue: 'Dhimmi %{record_id}seen-duuba keessatti milkaa''inaan ammayoomeera.'
+      creation_success: 'Galmeen dhimmaa haala milkaa''aan uumameera.'
+      creation_success_queue: 'Galmeen dhimmaa haala milkaa''aan seen-duubaa keessatti uumameera.'
+      already_matched: Gaafataan kun dursee dhimma keessan wajjiin walfakkaateera.
+      already_matched_not_current_case: Sirnicha keessatti dhimmi gaafataa kana wajjiin walsimu duraanuu jira.
+      not_found_case: "Dhimmi wal-fakkaatan wayiituu hin argamne %{search_value}dhimma haaraa uumaa."
+      introductory_sentence: Maaloo tajajilloottan bulchinsa dhimmaa dhuunfaa fudhachuu fi galmeen isaanii pirimeeroo keessa akka taa'u eeyyama dhuunfaa ifteessaa.
+      consent_agreements_required: Maaloo walii galteewwan eeyyamaa keessaa yoo xiqqatee filannoo tokko filadhaa.
+      legitimate_basis_required: Maaloo ramaddiiwwan bu'ura seeraa qaban keessaa yoo xiqqaate filannoo tokko filadhaa.
+    save: Dhimma kaa'ame.
+    save_text: "Itti fufuu keessaniin dura,maaloo jijjiramoota taasiftan  dhimmicha irra ol kaayaa."
+    skip_and_create: Irra utaaluu fi dhimma haaraa uumuu.
+    search_existing: Dhimmoota jiran barbaadaa.
+    search_helper_text: "Maaliif?Dhimmotni baay'isaman akka hin uumamne ittisuudhaaf."
+    consent_agreements: Waliigalteewwan eeyyama ilaallatu hunda filadhaa.
+    legitimate_basis: Ramaddiiwwan bu'ura seerummaa qaban ilaallatan hunda filaadhaa.
+    workflow:
+      assessment: Sakatta'insa
+      case_plan: Karoora Dhimmaa.
+      closed: " Cufaa."
+      created_on: Irratti kan uumame.
+      in_progress: Adeemsa irra jira
+      new: Haaraa.
+      on_label: 'Irra/gubbaa.'
+      reopened: Irra deebiin banameera.
+      service_implemented: Tajaajilli raawwatameera
+      services_implemented: Tajaajilli hojirra ooleera.
+  linkedincidents:
+    label: Taateewwan walargatan/walittidhufan.
+  activity_log:
+    label: Galmee yaadannoo  hojii/sosochii.
+    accepted_transfer: '%{to} Dabarsa fudhatama argate %{record_type}%{record_id}irraa%{from}'
+    rejected_transfer: '%{to}Dabarsa fudhatama hinarganne%{record_type}%{record_id}.irraa %{from}'
+  cases:
+    action_plan: Karoora raawwii hojii.
+    age: Umurii.
+    age_estimated: "Umurii tilmaamamu?"
+    agency: Ejensii.
+    apply_filter: hojitti hiiki/raawwachuu/iyyachuu.
+    approval_comments: Yaada.
+    approval_radio: Fedhii qaba.
+    approval_radio_accept: Mikaneessuu.
+    approval_radio_reject: Hin mirkaneessin/hin hayyamamu.
+    approval_select: Unka .......dhaaf.
+    approved_success_action_plan: '%{approval_label}Mirkanaa''eera'
+    approved_success_assessment: '%{approval_label}Mirkanaa''eera.'
+    approved_success_bia: '%{approval_label}Mirkanaa''eera.'
+    approved_success_case_plan: '%{approval_label}Mirkanaa''eera.'
+    approved_success_closure: '%{approval_label}Mirkannaa''eera.'
+    approved_success_gbv_closure: '%{approval_label}Mirkannaa''eera.'
+    assessment: Sakatta'insa.
+    case_opening_date: Guyyaa banaa dhimmaa.
+    case_plan: Karoora dhimmaa.
+    case_worker_code: Dambii/koodii hojjetaa dhimmaa.
+    clear_filter: Ifa.
+    close_dialog: Ishii tole jettu tuquun haala dhimma kanaa gara cufamuutti jijjiira.
+    close_dialog_title: Dhimma cufi.
+    close_success: Dhimma milkaa'inaan cufame.
+    closure: Cufaa./cufamuu.
+    date_of_birth: Guyyaa dhalootaa.
+    disable_dialog: Ishii tole jettu tuquun haala dhimma kanaa gara gufachiisuutti jijjiira.
+    disable_dialog_title: Dhimma gufachiisuu/dadhabsiisuu.
+    disable_success: Dhimma  haala milkaa'aan gufate.
+    enable_dialog: Ishii tole jettu tuquun haala dhimmaa gara kakka'umsaatti jijjiira.
+    enable_dialog_title: Dhimma kakkaasuu/dandeessisuu.
+    enable_success: Dhimma haala milkaa'aan dandeessifame.
+    export: Gara alaatti erguu/ergaa.
+    mark_for_offline:
+      title: Sararaan alatti mallattoo kaa'aa.
+      text: "Dhugumatti yeroo sararaan ala taatanitti   dhimmoottan  kanneen fayyadamuuf mallattoo kaa'uu barbaadduu? "
+      success: Dhimmotni  sararaan alatti fayyadamuuf  haala milkaa'aan mallattoon irra kaayame.
+    filter_by:
+      3month_inactivity: Ji'oota 3f+
+      action_plan: Karoora raawwii hojii.
+      age_0_5: 0-5
+      age_12_17: 12-17
+      age_18_more: 18+
+      age_6_11: 6-11.
+      age_range: Bal'ina garaagarummaa umurii/naannoo umurii.
+      agency: Ejensii.
+      approval_status: Haala  mirkaneessummaa.
+      approvals:
+        approved: " Mirkanaa'eera."
+        pending: Kan murtii eeggachaa jiru/Akka turu taasisame.
+        rejected: Fudhatama hinarganne.
+      bia: Sakatta'insa fedhii daa'imaa ol'aanaa.
+      by_date: Guyyaan/guyyaadhaan.
+      case_open_date: Guyyaa banaa dhimmaa.
+      case_plan: Karoora dhimmaa.
+      closed: " Cufaa."
+      closure: Cufamuu.
+      current_location: Iddoo ammee.
+      date: Guyyaa.
+      displacement_status: Haala sadarkaa  buqqaatii.
+      district: Ona/ aanaa.
+      duplicate: Kan baay'isame.
+      enabled_disabled: Dandeessisameera//dadhabsiisameera.
+      female: Dubartii.
+      flag: Eerameera.
+      flag_label: "Eerameeraa?"
+      gbv_closure: Cufiinsa miidhaa koornaayaa bu'ureeffatee.
+      high: Ol'aanaa.
+      low: Gadi aanaa.
+      male: Dhiira.
+      medium: Giddugaleessa.
+      mobile: Mobaayila.
+      mobile_label: "Mobaayila irratti mallattoo kaayameeraa?"
+      my_cases: Dhimmoota kiyya.
+      no_action: Tarkaanfiin/Gochi wayiituu hin jiru.
+      no_activity: Sochiin/hojiin wayiituu hin jiru.
+      open: Bani.
+      other: Kan biraa.
+      photo: Suuraa.
+      photo_label: "Suuraa qabaa?"
+      protection_concerns: Sodaawwan eegumsaa.
+      protection_status: Haala sadarkaa eegumsaa.
+      record_state: Haala galmee.
+      referred_cases: Dhimma gara kiyyatti dabarsaman/eeraman.
+      registration_date: Guyyaa galmee.
+      risk_level: Sadarkaa balaa.
+      sex: Saala/koornaayaa.
+      social_worker: Dirree/Dhimma/Hojjetaa hawaasaa.
+      status: Haala.
+      transferred: Dabarsamaniiru.
+      type_of_risk: Akaakuu balaa.
+      urgent_protection_concern: Sodaawwan  ariifachiisaa eegumsaa.
+      user_group: Garee fayyadamaa.
+      workflow: Dhimmoottan  akkaataa yaa'insa hojiitiin.
+    flag_summary: Cuunfaa Alaabaa.
+    full_name: Maqaa guutuu.
+    gbv_closure: Cufama  dhimma Miidhaa Koornaayaa Bu'ureeffatee.
+    hide_name: Maqaa dhoksuu.
+    hide_name_error: "Yeroo jijjiirraawwan keessan sanitti dogongorri uumameera. Maaloo irra deebi'aa yaalaa. "
+    id: "# eenyumeessaa."
+    label: Dhimmoota.
+    my_filters: Calaltoota kiyya.
+    name: Maqaa.
+    notes_dialog_title: Yaadannoo  ida'aa.
+    notes_form_notes: Yaadannoo.
+    notes_form_subject: Mata duree/dhimma.
+    ok: Tole.
+    order_by:
+      label: Qaama/abbaa ajaja kenne.
+      most_recently: Irra caalaa yeroo dhiheenya kanatti.
+      name: Maqaa.
+    owned_by: Abbaa galmee.
+    owned_by_agency: Ejensii abbaa galmee.
+    photo: Suuraa.
+    photos: Suuraa.
+    quick_view:
+      tracing_message: 'Yaadachiisa:Nama mucaa kana barbaadu wajjiin sirnicha keessatti walsiminni jira.Yoo daa''imichi fedhii kan qabu ta''e tarkaanfii dabalataatiif  hojjetaa hawaasaa galmee kanaa qunnamaa/dubbisaa.'
+    referral_done: "\"Hojjetameera'' kan jedhu tuquun hojiin dabarsuu dhimma kanaan walqabatan xumuramuu isaa  agarsiisa. Al tokko ''Hojjetame'' kan jedhu yoo tuqte kana booda galmee kana argachuu hin dandeessu."
+    referral_done_success: Walitti kenninsi/dabarsi raawwatameera.
+    referral_accepted_header: Walitti kenna fudhadhu.
+    referral_accepted: "Dhuguma keessanii?Ammaa hojii walitti kennaa kanaa wajjiin walitti dhufeenya qabu xumuruuf gaafatamummaa qabdu."
+    referral_accepted_success: Walitti kenna fudhatama argate.
+    referral_rejected: "\"Dhiisi\"kan jedhu tuquun ammaan tana walitti kennaa  kanaaf gaafatamummaa fudhachuuf  qophii akka hintaane mul'isa. Maaloo sababaa walitti kennaa kana gataa jirtaniif seenaa ; takkashee  yoo \"dhiisi/gati\" tuqtan achii booda galmee dhimma kanaa bira gahuu hin dandeessan."
+    referral_rejected_success: "Walitti kenna fudhatama dhabe.,"
+    register_new_case: Dhimma haaraa.
+    registration_date: Guyyaa galmee.
+    rejected_success_action_plan: '%{approval_label}Hin mirkannoofne.'
+    rejected_success_assessment: '%{approval_label}Hin mirkannoofne'
+    rejected_success_bia: '%{approval_label}Hin mirkannoofne'
+    rejected_success_case_plan: '%{approval_label}Hin mirkannoofne'
+    rejected_success_closure: '%{approval_label}Hin mirkannoofne'
+    rejected_success_gbv_closure: '%{approval_label}Hin mirkannoofne'
+    reopen_dialog: Ishii tole jettu tuquun haala dhimma kanaa akka banamuu taasisa.
+    reopen_dialog_title: Dhimma irra deebiin bani.
+    reopen_success: Dhimma haala milkaa'aan  irra deebi'ee baname.
+    request_approval_failure: "Dogongorri uumameera. Maaloo gargaarsa argadhaa?"
+    request_approval_select: Hayyama gaafadhaa.
+    request_approval_success_action_plan: "Mirkanneessi  gaafatameera %{approval_label}guca."
+    request_approval_success_assessment: "Mirkanneessi kan gaafatameef %{approval_label}guca."
+    request_approval_success_case_plan: "Mirkanneessi kan gaafatameef %{approval_label} guca."
+    request_approval_success_closure: "Mirkanneessi kan gaafatameef %{approval_label}guca."
+    request_approval_success_gbv_closure: "Mirkanneessi kan gaafatameef %{approval_label}guca."
+    request_approval_type_of_case_plan: " Gosa karoora dhimmaa mirkaneessuu."
+    request_approve_action_plan: "Karoora raawwii mirkaneessuu?"
+    request_approve_bia: Sakatta'insa mirkaneessuu.
+    request_approve_case_plan: "Karoora dhimmaa mirkaneessuu?"
+    request_approve_closure: "Cufiinsa mirkaneessuu?"
+    request_approve_gbv_closure: "Cufiinsa miidhaa koornaayaa bu'ureeffatee mirkaneessuu?"
+    revoke_failure: " Haqiinsa  irratti dogongorri uumameera %{transition_type}Maloo deeggarsa argadhaa."
+    revoke_message: "\"'Haqi\" kan jedhu tuquun  bira gahiinsa dhimmaa  fudhataan qabu%{transition_type} dhabamsiistu. "
+    revoke_success_message: "Dhimma %{case_id}%{transition_type} gara  %{recipient_username}haqameera."
+    save_filter: Kaayuu.
+    selected_all_records: "Dhimmoota gaafii kana waliin walsimatan%{total_records} hundaa filadhu.."
+    selected_records: 'Dhimma(dhimmoota) %{select_records} filatamaniiru.'
+    sex: Saala/koornaayaa.
+    show_case: 'Eenyummeessaa dhimma:%{short_id}'
+    social_worker: Hojjettaa hawaasaa
+    status: Haala.
+    summary:
+      label: Cuunfaa
+      find_match: Kan waliin fakkaatan/walsiman  barbaadi.
+      matched_trace: '#Firoomsi %{trace_id}'
+      cannot_find_matches: Waan walsiman/walfakkaatan arguun hin danda'amne.  Waayee kaayoo barbaachaa kanaaf odeeffannoo  ifa gochuuf waliigalteen dhimma kanarraa argamuu hindandeenye.
+      matched: Walsimaniiru./walitti firoomaniiru.
+      fields:
+        consent_for_tracing:
+          label: " Kaayoowwan barbaachaaf/hordoffiif odeeffannoo ifa gochuuf waligalteen /hayyamni argameera."
+          help_text: "Yoo dirreen kun \" lakkii\" ta'e,galmeen dhimma daa'imaa kanaa gaaffii barbaaduu gaafataa waliin bifa walfakkaatuun hin ilaalamu."
+        wishes_child_family_tracing:
+          label: "Daa'imni miseensoota maatii isaa faana bu'ee argachuu barbaadaa?"
+        wishes_reunification:
+          label: "Daa'imni maatiin  walitti deebi'ee makamuu barbaadaa?"
+          options:
+            yes_as_soon_as_possible: "Eeyyen,ariitiidhaan,haga danda'ameen."
+            yes_but_later: "Eeyyen,garuu boodarra.."
+            not_sure: Hin dhugoomne/hin mirkanoofne.
+            'no': 'Miti.'
+        data_confidentiality_link:
+          label: Iccitummaa galmee ilaalaa.
+        child_wishes_link:
+          label: Fedhiiwwan daa'imaa ilaalaa.
+    survivor_code: Koodii warra miidhaa irraa hafanii.
+    transfer_accepted: "\"Fudhadhu\"kan jedhu tuquun dhimma kanaaf gaafatamummaa fudhatteerta jechuudha;yoo isa fudhadhu jedhu al tokko tuqxan abbaa galmee sirnichaa taatu."
+    transfer_managed_user_accepted: "Yoo ' Fudhi' kan jedhu tuqxe %{transitioned_to}dhimma kanaaf gaafatamaa ta'a,erga al tokko ''Fudhi' tuqxee  %{transitioned_to}sirncha keessatti abbaa galmeee ta'a."
+    transfer_managed_user_rejected: "'Hinfudhatin/gati' kan jedhu tuquun %{transitioned_to}taasistan yeroo kanatti dhimmicha kanaaf gaafatamummaa fudhachuuf qophii  akka hintaane mul'isa. Maaloo sababa dhimma kana itti kuffistaniif galchaa.Al tokko 'hinfudhatin/didi'kan jedhu yoo tuqtan  %{transitioned_to}taasiftan ammaan booda gara galmee dhimmaa kana gahuu hun danddeessan."
+    transfer_accepted_rejected: "Dhimma %{record_id}dabarsuu fudhatama hinarganne."
+    transfer_accepted_success: Dabarsi dhimmaa milkaa'inaan fudhatama argateera.
+    transfer_reject_reason_label: Sababa fudhatama dhabeef.
+    transfer_rejected: "\"Dhiisi\"kan jedhu tuquun  ammatti dhimma kanaaf gaafatamummaa fudhachuudhaaf qophii akka hintaane mul'isa. Maaloo sababaa dhimma kan itti kuffistaniif  galchaa.Al-tokko \"dhiisi\"kan jedhu erga tuqtaniin booda gara galmee dhimma kana bira gahuu hindandeessan. "
+    view_name: Maqaa agarsiisi.
+  change_logs:
+    filters:
+      form: Guca.
+      field: Aloola/dirree.
+    add_subform: 'Dabalameera %{subform_name}itti galcha gucaa xiqqaa#%{short_id}'
+    changes_subform: 'Jijjiiramoota gara %{subform_name}guca xiqqaa.'
+    create: Galmee uume.
+    deleted_subform: 'Haqameera %{subform_name}itti galumsa guca xiqqaa #%{short_id}'
+    label: Galmee  jijjiiraa.
+    see_details: Tarreeffamoota  ilaalaa.
+    change: 'Irraa %{from_value}gara%{to_value}'
+    updated_subform: 'Ammayyoomeera%{subform_name}"iiti galumsa guca xiqqaa #%{short_id}'
+    update_subform: 'Ammayyoomeera%{subform_name}guca xiqqaa.'
+    from: "Irraa,"
+    to: Gara.
+  children:
+    selectable_date_options:
+      assessment_requested_on: Guyyaa sakatta'insaa.
+      closure_approved_date: 'Guyyaa  dhimmichi itti cufamu.'
+      created_at: Guyyaa banaa dhimmaa.
+      date_case_plan_initiated: Guyyaa karoora dhimmaa
+      date_of_creation: Guyyaa itti uumame.
+      registration_date: Guyyaa galmee.
+  configurations:
+    apply_label: "Dhuguma keetii?Yoo beeksiftan/iyyattan qindaa'inoonni naannawa kana keessa jiran sirnicha irratti hojirra oolu.Qindaayinoota amma jiran hundaa nidhabdu,akkasumas dursitanii qindaayinoota biraa keessa yoo kaayachuu baattan malee deebitanii argachuu hin dandeessan."
+    apply_label_bold: Jijjiiramoonni atoo fe'amaa jiranitti primeroon daqiiqaawwan xiqqoof fayyadamaaf hin argaman.
+    version_mismatch_tooltip: Primeeroo varshinii isa ola'aanan waan hojjetameef  Konfigreeshinii gochuu hin danda'amu. Kanaafuu amma saayitiin kun primeeroon haaraan fooyya'uutti maloo konfigreeshinii taasisuuf turi.
+    send_header: Gara oomishaatti erguu.
+    send_text: "Ani sirriidha jettaa?Ergi isa jedhu yoo tuqtan qindaayina kana gara buufata oomishaatti ergitu.Bulchaan buufata kana irra jiru haga harkaan hojirra oolchutti qindaayinni kun oomisha irratti hojirra hin oolu."
+    attributes:
+      created_by: Qaama uume.
+      date_created: Guyyaa itti uumame.
+      description: Ibsa.
+      last_applied_by: Qaama dhumarratti hojirra oolche.
+      last_applied_on: Xumurarratti hojirra ooleera.
+      name: Maqaa.
+      version: Hiika qindaayinaa.
+      primero_version: Hiika Primeeroo.
+    delete_label: "Dhugumatti waan kana gochuu barbaadduu?Inni kun yeroo qindaayinootni  kun uumamerraa jalqabee  qindaayinoota jiran cufa bakka bu'a."
+    explanation: '"Kaayi"kan jedhu tuquun qindaayina galmee amma jiru (Fknf.shooraawwan,ejensiiwwan,gucoota) yeroo kanatti galmee uumaa.Eega keessan booda jijjiiramoota kanneen gara pireemiiroo biraatti dhiibuu dandeessu.Gara fulduraatiif yoo ta''e jijjirammoota duubatti deebi''uu yoo taasiftan ammoo yeroo kanatti jijjiiramoota qindaayinaa taasiftan hundaa gara dura turanitti deebisuuf galmee qindaayinaa kana hojirra oolchuu nidandeessuu.'
+    label: Qindaayinoota.
+    label_new: Qindaayina haaraa.
+    messages:
+      applied: Qindaayinni haala milkaa'aan hojirra ooleera.
+      created: Qindeessuun haala milkaa'aan uumameera.
+      deleted: Qindeessuun haala milkaa'aan haqameera.
+      updated: Qindaayinni haala milkaayaan ammayyomsameera.
+      sent: Qindaayina gara oomishaa erguu irratti .Maaloo qindaayinni achi gahuu isaa beekuuf iddoo oomishaa san mirkaneeffadhaa.
+    not_allowed: Hayyama hin arganne.
+    unavailable_server: Tajaajilaan yeroodhaaf hin argamne.
+  contact:
+    field:
+      email: Imeelii.
+      location: Bakka.
+      name: Maqaa.
+      organization: Dhaabbata.
+      other_information: Odeeeffannoo biraa.
+      phone: Bilbila.
+      position: Sadarkaa.
+      primero_version: Tolfama pirimeeroo/kan pirimeeroon  hojjetame.
+      support_forum: Ardaa marii deggarsaa/waltajjii deggarsaa.
+      system_version: " sirna hiikaa."
+    info_label: Odeeffannoo qunnamtii.
+    updated: Qunnamtiin odeeffannoo haala milkaa'aan ammayyoomeera.
+  code_of_conduct:
+    field:
+      title: Mata duree.
+      content: Qabiyyee.
+      created_on: Waan irratti uumame.
+      created_by: Qaama uume.
+    info_label: Koodii amalaa/naamusaa.
+    updated: Koodiin amala milkaa'inaan haaromsameera.
+  dashboard:
+    activity: Hojii./sochii.
+    admin_only: "Fayyadama  irratti jijjiiramoota gochuudhaaf %{links} irratti tuqaa."
+    all_cases: Dhimmoota hunda.
+    all_services_implemented: Tajaajiloota hunda hojirra oolan.
+    and: 'Fi.'
+    approval_action_plan_approved: Kan mirkanaa'an.
+    approval_action_plan_pending: Akka turu kan taasisaman..
+    approval_action_plan_pending_group: Karoora raawwii.
+    approval_action_plan_rejected: Kan gataman.
+    approval_assessment_approved: Kan mirkanaa'an.
+    approval_assessment_pending: Akka turu taasisaman.
+    approval_assessment_pending_group: Sakatta'insa.
+    approval_assessment_rejected: Kan gataman.
+    approval_case_plan_approved: Kan mirkanaa'an.
+    approval_case_plan_pending: Akka turu taasisaman.
+    approval_case_plan_pending_group: Karoora dhimmaa.
+    approval_case_plan_rejected: Kan gataman.
+    approval_closure_approved: Kan mirkanaa'an.
+    approval_closure_pending: Murtii eeggachaa jira.
+    approval_closure_pending_group: Cufiinsa.
+    approval_closure_rejected: Fudhatama hin arganne.
+    approval_gbv_closure_approved: Mirkanaa'eera.
+    approval_gbv_closure_pending: Murtii eeggachaa jira.Akka turu taasisaman.
+    approval_gbv_closure_pending_group: Cufiinsa Miidhaa koornaayaa bu'ureeffatee.
+    approval_gbv_closure_rejected: Fudhatama hin arganne.
+    approvals: Mirkaneessummoota.
+    approvals_action_plan: Karoora raawwii hojii.
+    approvals_assessment: Sakatta'insa.
+    approvals_case_plan: Karoora dhimmaa.
+    approvals_closure: Cufuu.
+    approvals_gbv_closure: Cufama Miidhaa Koornaayaa Bu'ureeffatee.
+    approved: Mirkanaa'eera.
+    assessment: Sakatta'insa.
+    awaiting_acceptance: Fudhatama eeggachaa jira.
+    cases_by_social_worker_total: Waliigala.
+    cases_by_social_worker_new_or_updated: Haaraa fi kan ammayyoome.
+    case_id: '#Eenyumeessaa dhimmaa.'
+    case_management_service: Tajaajila bulchinsa dhimmaa.
+    case_overview: Dhimmoota kiyya.
+    case_plan: Karoora dhimmaa.
+    case_risk: Dhimmoota sadarkaa sakatta'insa isaaniitiin.
+    case_stat_by_approval_type: Mirkaneessummoota.
+    case_stat_by_assessment_level: Dhimmoottan sadarkaa sakatta'insaan.
+    case_stat_referrals: Walharkaafuudhiinsa.
+    case_stats: Dhimmoota.
+    case_worker: Hojjetaa dhiimmaa.
+    cases_by_social_worker: Dhimmootan hojjetaa hawaasatiin
+    cases_by_task_overdue: Hojiiwwan yeroon isaanii irra darbe.
+    cases_by_workflow: Dhimmoottan akkaataa yaa'insa hojiin.
+    cases_this_week: Dhimmoota torbee kanaa.
+    cases_to_assign: Dhimmoota  ramadamuu  qaban.
+    closed: Cufaa.
+    closed_last_week: Cufameera (torbee darbe)
+    closed_this_week: Cufameera (torbee kana)
+    comprehensive_need_intervention: Deebii hundagaleessa.
+    count_new_bia_approvals:
+      one: ''
+      other: ''
+    count_new_case_plan_approvals:
+      one: ''
+      other: ''
+    count_new_closure_approvals:
+      one: ''
+      other: ''
+    count_pending_approval_total:
+      one: ''
+      other: ''
+    count_pending_transfers:
+      one: ''
+      other: ''
+    count_records_new:
+      one: ''
+      other: ''
+    count_records_total:
+      one: 'You have %{stat} total case '
+      other: 'Dhimmoota waliigalaa %{stat}qabda. '
+    count_referrals_new:
+      one: ''
+      other: ''
+    count_referrals_total:
+      one: 'You have %{stat} total referral '
+      other: 'Dabarsa waliigalaa%{stat} qabda.'
+    count_rejected_approval_total:
+      one: ''
+      other: ''
+    count_rejected_transfers:
+      one: ''
+      other: ''
+    count_risk_level_new:
+      one: ''
+      other: ''
+    count_risk_level_total:
+      one: ''
+      other: ''
+    count_waiting_for_acceptance_transfers: "Dabarsi eeyyama kee  eegu %{stat}qabda."
+    current_owner: Abbaa ammee.
+    dash_case_incident_overview: Dhimmoota kiyya.
+    dash_group_overview: Dhimmoota garee kiyyaa.
+    dash_shared_from_my_team: Garee kiyyarraa qoodameera.
+    dash_shared_with_me: Anaan waliin kan qooddatame.
+    dash_shared_with_my_team: Garee kiyya waliin qooddateera..
+    dash_shared_with_my_team_overview: Garee kiyya waliin qooddateera (Ilaalcha waliigalaa)
+    dash_shared_with_others: Warra biraa waliin  qooddatameera.
+    dash_national_admin_summary: Goolaba bulchaa/gaggeessaa.
+    date: Guyyaa.
+    date_of_incident: Guyyaa taateen itti uumame.
+    date_of_interview: Guyyaa gaaffii fi deebii/Af-gaaffii.
+    due: Duubatti harkifateera.
+    flagged: Eerameera.
+    flagged_by: 'Qaama/Eeruu kenne/eerameen.'
+    flagged_by_me: Anaan eerameera.
+    flagged_by_other: Nama/qaama biraatiin eerameera.
+    flagged_cases: Dhimmoottan eeraman.
+    follow_up: Hordooffii.
+    forms: Gabatee gucootaa.
+    geographic_area: Naannoo teessuma lafaa.
+    group_overview_closed: Cufaa.
+    group_overview_open: Bani.
+    high_level: Ol'aanaa.
+    high_risk: Dursi ol'aanaan kan kennamuuf.
+    immediate_response: Deebii ariifachiisaa.
+    in_progress: Adeemsarra kan jiru.
+    incident_id: '# Eenyumeesssa Taatee.'
+    incident_location: Naannoo  taatee.
+    incident_status_open: Bani.
+    last_updated: Dhumarratti kan fooyyaa'e/ammayyoome.
+    link_see_all: Hunda isaaniituu ilaalaa.
+    low_level: Gadi aanaa.
+    low_risk: Dursa gadi aanaa kan itti kennamu.
+    manager_count_closed_total:
+      one: ''
+      other: ''
+    manager_count_open_total:
+      one: ''
+      other: ''
+    manager_transfers_totals:
+      one: ''
+      other: ''
+    match_result: Bu'aawwan walsiman.
+    medium_level: Giddugaleessa.
+    medium_risk: Dursi giddugaleessaa kan itti kennaman.
+    missed_cases: Dhimmoota  dhabaman.
+    name: Maqaa.
+    name_or_survivor_code: Maqaa ykn koodii  warra dararama irraa hafanii.
+    near_deadline: Gara guyyaa beellamaatti  dhiyaatanii kan jiran.
+    new: Haaraa fi kan ammayyooman.
+    new_child_assigned_to_you: Dhimmoottan haaraa isiniif ramadamaniiru.
+    new_incident: Taateewwan haaraa.
+    new_incident_assigned_to_you: Taateewwan haaraa ramadaman.
+    new_last_week: Haaraa (torbee dabre)
+    new_or_updated: Haaraa ykn kan ammayyoome.
+    new_referred: Dabarsaawwan  haaraa.
+    new_service_provision: Dhiheessii/kenna tajaajilaa haaraa.
+    new_this_week: Haaraa (torbee kana keessa)
+    no_action_risk: Tarkaanfiin wayiituu hinjiru.
+    no_case_stats: Istaatistikiin/xiinannoon dhimmaa wayiituu hinjiru.
+    no_caseworker_data: Ragaan hojjetaa dhimmaa hinjiru.
+    no_flagged_child: Dhimmootni maallattoon itti taasisaman hinjiran.
+    no_flagged_incident: Taateewwan mallattoon irra kaayaman  hinjiran.
+    no_open_incidents: Taateewwan banaa ta'an hinjiran.
+    no_overdue_activities: Hojiiwwan hin raawwatin hafan hinjiran.
+    no_recent_activities: Hojiiwwan/sochiiwwan  dhiheenya kanaa hinjiran.
+    no_scheduled_activities: Hojiiwwan/sochiiwwan  saganteeffaman hinjiran.
+    none_risk: Dursa kan argate hinjiru.
+    number_of_victims: Lakkofsa miidhamtootaa.
+    number_of_violations: Lakkofsa miidhaalee/jeequmsaa.
+    number_of_violations_verified: Miidhaaleen mirkanaa'aniiru.
+    open: Bani.
+    open_cases: Dhimmoota banaa ta'an/banaman.
+    open_incidents: Taateewwan banaa ta'an/banaman.
+    outstanding_transfers: Dabarsaawwan ciccimoo.
+    overdue_activities: Hojiiwwan yeroon irra darbe.
+    overdue_cases_to_assign: Dhimmoota ramaddiif yeroon isaanii  irra darbe.
+    overdue_cases_to_assign_high: Dhimmotni kunniin sa'aatii 1 ol isin qunnamaniiru.
+    overdue_cases_to_assign_low: Dhimmootni  kunniin  sa'aatii sadii ol isin qunnamaniiru.
+    overview: Ilaalcha waliigalaa.
+    pending: Eeggachaa jira.
+    pending_approvals: Mirkaneessoota eeggacharra jiran/akka turu taasisaman.
+    pending_transfers: Dabarsaawwan yeroo eeggachaa jiran.
+    protection_concern: Sodaa eegumsaa.
+    protection_concerns: Sodaawwan eegumsaa.
+    range12+: 12+
+    range4: 0-4
+    range4_8: 4-8
+    range8_12: 8-12
+    recent_activities: Hojiiwwan/sochiiwwan  dhiheenya kanaa.
+    recently_flagged_child: Dhimmoota dhiyeenya kanatti mallattoon itti taasifaman.
+    recently_flagged_incident: Taateewwan dhiyeenyatti eeraman.
+    referrals_by_social_worker: Dabarsa hojjetaa hawaasaan taasifame.
+    registration: Galmeessuu.
+    rejected: Fudhatama dhabe.
+    rejected_transfers: Dabarsaawwan fudhatama dhaban.
+    response: Deebii(adeemsarra jiru.)
+    scheduled_activities: Hojiiwwan saganteeffaman.
+    score_range: Naannoo bu'aa qabxii.
+    screening_service: Tajaajila calaluu.
+    services: Tajaajiloota.
+    services_implemented: Tajaajiloota hojirra oolan/ raawwataman.
+    shared_from_my_team_pending_transfers: Dabarsaawwan tursiisaman/murtii eeggachaa jiran.
+    shared_from_my_team_referrals: Walittikenninsa.
+    shared_from_my_team_rejected_transfers: Dabarsawan fudhatama dhaban.
+    shared_with_me_new_referrals: Dabarsaawwan haaraa.
+    shared_with_me_total_referrals: Dabarsaawwan waliigalaa.
+    shared_with_me_transfers_awaiting_acceptance: Dabarsaawwan fudhatama eeggatan.
+    shared_with_my_team_pending_transfers_overview: Dabarsaawwan fudhatama eeggatan.
+    shared_with_my_team_pending_transfers: Dabarsaawwan tursiisaman.
+    shared_with_my_team_referrals: Dabarsaawwan.
+    shared_with_others_pending_transfers: Dabarsaawwan tursiisaman.
+    shared_with_others_referrals: Dabarsaawwan.
+    shared_with_others_rejected_transfers: Dabarsaawwan fudhatama dhaban.
+    status_of_cases: Haala sadarkaa dhimmootaa.
+    system_user: Sirna.
+    total: Waliigala.
+    total_cases: Dhimmoota waliigalaa.
+    total_referred: Dabrsaawwan waliigalaan.
+    tr_stats: Gaaffiiwwan barbaachaa.
+    transers_awaiting_acceptance: Dabarsaawwan fudhatama eegachaa jiran.
+    transfers_by_social_worker: Dabarsaawwan hojjetaa hawaasaan taasifaman.
+    users: Qindaa'ina jaalatamaa.
+    violence_type: Gosa miidhaaa.
+    with_incidents: Taateewwan wajjiin/duukaa.
+    with_new_incidents: Taateewwan haaraa wajjiin.
+    without_incidents: Taateewwaniin ala.
+    worker_count_referrals_total:
+      one: ''
+      other: ''
+    worker_count_total:
+      one: ''
+      other: ''
+    workflow: "Yaa'insa hojii,"
+    workflow_team: Yaa'insa hojii-Dhimmoota gareewwanii.
+    you_have: 'Qabda.'
+  disabled:
+    status:
+      disabled: Qaama miidhamaa.
+      enabled: Danda'eera/cimeera.
+  email_notification:
+    assign: '%{user}kanneen itti aanaan%{record_type} siif ramadamaniiru.%{record_id}'
+    assign_subject: '%{record_type}%{id}kan siif ramadame'
+    approval_request: 'Fayyadamaan%{user} dhimma%{case_id} mirkanneessa gaafachaa jira%{approval_type}'
+    approval_request_subject: 'Dhimma:1%(LG)-GGaafii Mirkanneessaa'
+    approval_response: '%{user}gaafii mirkaneessa%{status}dhimma%{case_id} gaafatame qabaa%{approval_type}'
+    approval_response_subject: 'Dhimma: Deebii mirkaneessa %{id}'
+    referral: '%{user}%{agency} irraa dhimmoota kana %{record_type} karaa kee%{record_id}gosa tajaajila%{service_type}dabarsee jira.'
+    transfer: '1%(fayyadamaa)kannee itti aananii jiran dabarsan2%(gosa-galmee) karaa kee: 3%(LG-galmee)'
+    transfer_request_subject: Gaaffii dabarsaa dhimma keessanii tokkoof.
+    transfer_subject: 'Dabarsa%{record_type}:%{id}'
+    referral_subject: '%{record_type}%{id}walitti dabarsuu.'
+    transfer_request: 'Fayyadamaa primeeroo%{user} irraa%{agency}abbummaa dabarsuu kana gaafatamaa jiragalmee%{record_id}sana irraa kan ka''e %{record_type} naannoo isaanitti tajaajila bulchiinsa  namoota dhunfaaf%{record_type}. Yoo dabarsi kun isin fudhatama argate maaloo %{record_type}irratti cuqaassi banuuf Email kana irratti ID link%{record_type}primeeroo fi dabarsa si''eessi'
+    approval_request_html: 'Fayyadamaan <strong>%{user}</strong>dhimma<strong>%{case_id}</strong>kana mirkanneessuuf gaafachaa jira<strong>%{approval_type}'
+    approval_response_html: '<strong>%{user}gaafii <strong>%{status}mirkanneessa <strong>%{approval_type}dhimma<strong>%{case_id}qaba</strong>'
+    referral_html: '<strong>%{user}%{agency}irraa kanneen ittai aanan  karaa keetitti <strong>%{record_id} gosa tajaajilatiif%{service_type}dabarsee jira%{record_type}'
+    transfer_html: '1 1%(fayyadamaa) 1 kanneen armaan gadii dabarsee jira 2%(gosa-galmee) karaa kee:2 3%(galmee-LG)2.'
+    assign_html: '<strong>%{user}gosa galmee %{record_type}kana siif kennee jira<strong>%{record_id}</strong>'
+    transfer_request_html: 'Fayyadamaa primeeroo1 1%(Fayyadamaa)karaa 2%(ajensii) abbummaa kana dabarsuuf  gaafatamaa jira 3%(gosa-galmee) galmee2 4%(Gamlee-LK) 2 kanaaf tajaajila bulchiinsaa naannoo isaanitti 3%(gosa-galmee) ni kennu. Yoo dabarsi siin fudhatama argate maloo 3%(gosa-galmee) irratti cuqaassi 3%(gosa-galmee) banuuf LG emailii kana waliin wal-qabate'
+    transfer_request_notes_html: ' Tokkon tokkoon  nama gaafii  gaafatan irraa yaadannoo fudhuu:1(gaafii-dabarsuu-yaadannoo)'
+  encrypt:
+    export_type: Gosa/akaakuu gara alaatti erguu.
+    file_name: Faayila mataa keessanii uumaa(filannoo)
+    password_extra_info: Iggitaan yoo xiqqaate arfii 8 ta'utu irra jiraata.Iggitaan kun faayila gara alaatti ergamu wajjiin walqabata akkasumas fulduraaf namni faayila kana banu eenyuyyuu iggita kana galchutu irra jiraata.
+    password_label: Maaloo jecha iggitaa faayila keessanii  icciteessu galchaa.
+  error_message:
+    address_fields: "Dirree %{fields}gucoota%{forms}irratti agarsiissu qabda"
+    address_form_fields: "Guca kana irratti dirree%{fields}agarsiisuu qabda,"
+    address_subform_fields: '%{subform}dirree bu''aa hin qabne qaba%{fields}'
+  error_page:
+    not_authorized:
+      code: 403
+      server_error: Fuula kana argachuuf mirga /aangoo hinqabdan.
+      title: Hin hayyamamne/Seera qabeessaa miti.
+    not_found:
+      code: 404
+      contact_admin: "Ani kan asan  jiru dogongoraan jettanii kan amantan yoo ta'e,maaloo bulchaa keessan dubbisaa."
+      something_went_wrong: "Dhiifama,dogoggorri wayii uumameera!"
+  errors:
+    error_loading: Galmee/galmeewwan dogongoraa fe'uu.
+    models:
+      agency:
+        code_present: Duwwaa ta'uun irra hin jiraatu.
+        logo_format: Faaylichi eeggacharra kan jiru ta'uu qaba.
+        terms_of_use_format: Faayili kun eeggacharra kan jiru ta'uu qaba.
+        name_present: Duwwaa ta'uun irra hinjiraatu.
+      child:
+        age: Umuriin  0 fi 130 gidduu ta'uutu irra jiraata.
+        date_of_birth: Maaloo galmee dhimmaa kanaatiif guyyaa dhalootaa sirrii ta'e seensisaa.
+      export_configuration:
+        opt_out_field_does_not_exist: Dirreen murtaa'aan filatanii ittiin bahanii galmee irra hin jiru.
+        record_type: "Gosa galmee sirrii hin taane. Daa'ima, gaaffii barbaachaa ykn taatee ta'utu irra jiraata."
+      field:
+        translated_options_do_not_match: Filannoowwan  dirree irratti hiikaman  enyummeessaawwan walfakkaatan qabachutu irraa eegama.
+      location:
+        admin_level_present: Duwwaa ta'uun  irra hin jiraatu.
+        code_present: Duwwaa  ta'uun irra hinjiraatu.
+        name_present: Duwwaa ta'uun irra hinjiraatu.
+        unique_location_code: "Iddoon koodii naannoo san wajjiin jiru durattis jira,maaloo koodii iddoo addaddaa galchaa."
+      lookup:
+        being_used: Barbaachi kun faayidaa irra oolaa jira kanaafuu haqamuu hin  danda'u.
+        name_present: Maqaan duwwaa ta'uu hin qabu.
+        values_ids_blank: Barbaacha-eenyummeessaan sonaa duwwaadha.
+      primero_module:
+        associated_record_types: Yoo xiqqaate akaakuun galmee tokko muraa kana wajjiin walsimuu qaba.
+        form_section_ids: Yoo xiqqaate unki tokko mura kana wajjiin walsimuu qaba.
+        name_present: Maqaan  duwwaa ta'uun irra hin jiraatu.
+        unique_name: "Murri maqaa saniin walqabate durumaanuu  jira,maaloo maqaa addaa galchaa."
+      report:
+        module_presence: Muraan duwwaa ta'uu hinqabu.
+        module_syntax: Muraawwan gabaasaa hundumtuu dursanii jiraachuu qabu.
+        name_presence: Maqaan  duwwaa ta'uun irra hinjiraatu.
+      role:
+        permission_presence: Maaloo yoo xiqqaate hayyama tokko filaadhaa.
+      user:
+        email: "Maaloo iimeelii gataa'aa galchi.(Fknf:'maqaa@fknf.org)"
+        password_mismatch: Dirreewwan jecha iggitaa jecha iggitaa walfakkaatan hinqaban.
+        password_length: " Iggitaan yoo xiqqaate arfiiwwan %{min}}ta'uu qaba."
+        email_uniqueness: "Fayyadamaan teessoo iimeelii kanaa qabu durumaanuu  jira,maaloo kan adda ta'e galchaa."
+      code_of_conduct:
+        title_present: Mata dureen duwwaa taa'uu hinqabu.
+        content_present: Qabiyyeen duwwaa ta'uu hinqabu.
+        created_by_present: Inni uumame duwwaa ta'uu hinqabu.
+    not_found: Galmeen/galmeewwan wayiituu hinargamne.
+    try_again: Irra deebi'ii yaali.
+  exports:
+    case_pdf:
+      all: Piidiieffi.
+      one: Piidiieffi.
+      selected: Gara Piidiieffitti  filatameera.
+    csv:
+      all: Gatii/sona  Qoodduu Addaan kan bayee.
+      one: Gatii/sona/qoodduu addaan kan bayee.
+      selected: Gatii /sona/qoodduu addaan bayeef kan filatame.
+    custom:
+      all: Maamilaa.
+    custom_exports:
+      all: Maamilaa.
+      choose_fields: "Gucaaf dirreewwan nama dhuunfaa filachuu barbaadduu?"
+      empty_fields_forms: Gara alatti erguuf maaloo gucaawwan ykn dirreewwan muraasa filadhaa.
+      empty_format: " Maaloo dhangii  gara alaa ittiin ergan filadhaa."
+      empty_module: Maaloo muraa gara alaa ergaman filadhaa.
+      empty_password: Maaloo jecha iggitaa faayila keessan icciteessuu danda'u galchaa.
+      field_label: Dirree.
+      fields: Dirreewwan gara alaatti ergaman filadhaa.
+      form_label: Guca/unka.
+      format_label: Caasaa/dhangii  filadhaa.
+      forms: Gucoota gara alaatti  ergaman filadhaa.
+      label: Maamilaa gara alaatti erguu.
+      module_placeholder: Maaloo mura filadhaa.
+      select_module: Mura filadhaa..
+      submit: Tole/haatahu.
+      header: Irraantoo/mataa gubbaa.
+      custom_header: Irraantoo maamilaa.
+      signatures: Mallattoodhaaf sarara dabalaa..
+      include_implementation_logos: "Asxaawwan hojirra oolmaa raawwii dabalaa?"
+      include_implementation_logos_help_text: Inni kun asxaawwan  baafata naanna'iinsaa fi fuula seensaa irratti mul'atan ofkeessatti qabata.
+      include_agency_logo: "Asxaa ejensichaa dabalaa?"
+      include_other_logos: "Asxaawwan biraa dabalaa?"
+    duplicate_id_csv:
+      all: Eenyumeessaa baay'isaman.
+      female_abbreviation: Faa.
+      headers:
+        age: Umurii.
+        case_id: Eeyumeessaa dhimmaa.
+        child_name_last_first: Maqaa daa'imaa.
+        family_size: Baay'ina maatii.
+        moha_id: Eenyummeessaan MOHA addaan citeera.
+        national_id_no: Lakkofsa eenyumeessaa biyyooleessaa.
+        progress_id: Eenyumeessaa adeemsaa.
+        sex_mapping_m_f_u: Saala/koornaayaa.
+        other_agency_id: Koodii hospitaalaa fi lakkofsa  dhukkubsataa.
+      male_abbreviation: Maa.
+      unknown_abbreviation: Uu.
+    exported: Faayilli gara alaatti ergamu haala miilkaa'aan uumeera.
+    exported_error: Faayila gara alaatti ergaman  burqisiisuu irratti dogongora.
+    forms:
+      button: Gucoota gara alaa erguu.
+      label: Gara alaatti  erguu.
+      header:
+        form_group: Guca garee.
+        form_name: Guca maqaa.
+        field_id: Eenyumeessaa dirree.
+        field_type: Gosa dirree.
+        field_name: Maqaa dirree.
+        required: Ni barbaachisa.
+        on_mobile: Mobaayilarratti.
+        on_short_form: Unka/guca gabaabarratti.
+        option_ids: Eenyumeessaawwan filannoo.
+        options: Filannoowwan.
+        options_lookup: Ilaali.
+        help_text: Barreeffama  deggarsaa.
+        guiding_questions: Gaaffiwwan qajeelchuu.
+        visible: Mul'ataa./kan mul'atu.
+        lookup_id: Eenyummeessaa barbaachaa.
+        lookup_name: Maqaa barbaachaa.
+        option_id: Eenyumeessaa filannoo.
+        option_name: Maqaa filannoo.
+      options:
+        location: Iddoowwan.
+        agency: Ejensiiwwan.
+        user: Fayyadamtoota.
+        reportinglocation: Iddoowwan  gabaasa itti taasisan.
+        subforms: 'qaamagucaa%{subform_name}'
+        collapsed_fields: 'Dirreewwan gufatan%{fields}'
+        country: Biyyoota.
+      summary_header:
+        form_group: Garee unka piriimeeroo.
+        form: Unkaawwan Piriimeeroo.
+        status: Haala/sadarkaa.
+        notes: Yaadannoo.
+
+    go_to_exports: Buusuudhaaf gara fuula gara alaatti erguutti deemaa.
+    incident_recorder_xls:
+      all: Maashinii sagalee waraabduu taatee.
+      one: Maashinii sagalee waraabduu taatee.
+      selected: Waraabbii  sagalee taateef filatameera.
+    json:
+      all: JSON/
+      one: JSON
+      selected: Karaa JSON filatame
+    list_view_csv:
+      all: Ilaalcha tarreeffamaa gara alaatti erguu.
+      selected: CSVf filatame
+    messages:
+      no_exporter: Namni alatti ergu wamaatuu hin ibsamne.
+    mrm_violation_xls:
+      all: Jeequmsaawwan Mala/tooftaa/hordoffii fi gabaasaa
+      one: Miidhaa MRM
+      selected: " Mala/tooftaa/hordoffii fi gabaasaaJeequmsaawwan filataman."
+    no_records: Galmeewwan wayiituu hinjiran.
+    pdf:
+      all: "pII Dii Effii  {Dhokataa miti}"
+      one: Pii Dii Effi
+      selected: PiiDiiEffiif filatameera.
+    pdf_exports:
+      label: Pii dii effii.
+      recipient: Fudhataa.
+      case_worker: Hojjetaa dhimmaa.
+      client: Maamila.
+      date: Guyyaa.
+      recipient_name: Maqaa fudhataa.
+      recipient_agency: Ejensii fudhataa.
+      caseworker_name: Maqaa hojjetaa dhimmaa.
+      caseworker_agency: Ejensii hojjetaa dhimmaa.
+    photowall:
+      all: Dhaabaa suuraa.
+      flag_suspect_record: Akka galmee shakkamaatti eerameera.
+      no_photos_available: Suuraawwan wayiituu hinjiran.
+      one: Dhaabaa suuraa.
+      reunited: Irra deebiin walitti deebi'an/walargan.
+      selected: Dhaabaa suuraatiif  filatameera.
+      success_message: "iddoo suuraa uumuu%{file_name}dhimmootni suura hin qabne keessatti hin qabataman"
+    printed: 'Maxxane:%{date}'
+    queueing: "Faayila ala baasu uumuu%{file_name}"
+    selected_xls:
+      all: Caalmaa.
+      one: Caalmaa.
+      selected: Caalmaaf  filatameera.
+      selected_fields: Dirreewwan filataman.
+    unhcr_csv:
+      all: Komishiinii Ol'aanaa Koolugaltootaa Dhaabbata Mootummoota Gamtoomanii.
+      female_abbreviation: Faa.
+      headers:
+        age: Umurii.
+        case_status: Haala/sadarkaa dhimmaa.
+        causes_of_separation: Sababoota addaan bahiinsaa.
+        country_of_origin: Biyya dhalootaa.
+        cpims_code: Koodii sirna bulchiinsa odeeffannoo eegumsa daa'imaa
+        current_care_arrangement: Qindeeffama kunuunsaa ammee.
+        date_of_birth: Guyyaa dhalootaa.
+        date_of_identification: Guyyaa  itti beekaman.
+        family_count_no: Baay'ina maatii.
+        governorate_country: Kutaa bulchiinsaa-Biyya.
+        id: Eenyumeessaa.
+        individual_progress_id: Eenyummeessaa guddinna nama dhuunfaa.
+        locations_by_level: "Teessoo(Buufataa,Gamoo,fi sadarkaalee teessoo \n ilaallatan  biraa kan akka walgitaawwan GPSii godoo."
+        long_id: Eenyumeessaa dheeraa.
+        moha_id: Eenyummeessaa MOHA.
+        name_of_caregiver: Maqaa guutuu kunuunsaa.
+        name_of_child_last_first: Maqaa guutuu daa'imaa.
+        primary_protection_concerns: Sodaawwan eegumsaa jalqabaa.
+        progres_id: Eenyummeessaa adeemsaa.
+        reunification_status: Haala/sadarkaa deebisanii walitti makuu.
+        secondary_protection_concerns: Sodaawwan eegumsaa sadarkaa lammaffaa.
+        sex: Saala/koornaayaa.
+        sex_mapping_m_f_u: Saala/koornaayaa.
+        short_id: Eenyumeessaa gabaabaa.
+        vulnerability_code: Koodiiwwan saaxilamummaa.
+        vulnerability_details_code: Koodiiwwan  tarreeffamoota saaxilamummaa.
+      male_abbreviation: Maa.
+      one: Komiishiinii Olaanaa Kooluugaltootaa Mootummoota Gamtoomanii.
+      selected: Komishiinii Olaanaa Kooluugaltootaa Mootummoota Gamtoomaniif filatameera.
+      unknown_abbreviation: Uu.
+    xlsx:
+      all: Caalmaa.
+      one: Caalmaa.
+      selected: Caalmaadhaaaf filatameera.
+  imports:
+    csv_hxl_location:
+      messages:
+        success: Iddoowwan haala milkaa'aan alaa fichisiisamaniiru.
+        no_data: 'Fichisiisuun hin hojjetamne:Deetaan/ragaan wayiituu keessa hingalle.'
+        csv_parse_error: 'Keessatti galchuun hin adeemsifamne: ragaa CVS baassuuf doggongora'
+        error: 'Bo''iin%{row_number}hin hojjatamne/deemaa hin jiru/%{message}'
+        db_error: 'Rakkoo uumuu%{location_code}%{message}'
+        locale_invalid: 'Darbuu%{column_name}locale invalid'
+        insert_all_error: 'Keessa galchuun hojjetaa hin jiru. rakkoo daatabeezii%{message}'
+    csv_record:
+      messages:
+        success: Galmeewwan haala milkaa'aan gara biyyaa galaniiru.
+        no_data: 'Fichisiisuun hin hojjetamne:Deetaan wayiituu hin seenne.'
+        no_file: 'Fichisiisuun hin hojjetamne:Faayilli hinjiru/hinargamne.'
+        csv_parse_error: 'Keessa galchuun hojjetaa hin jiru: rakkoo daataa CSV'
+        error: 'Bo''iin%{row_number}hojjetaa hin jiru%{message}'
+        db_error: 'Rakkoo uumame%{location_code}%{message}'
+        locale_invalid: 'Darbuu%{column_name}:Locale invalid'
+        insert_all_error: 'Fichisiisuun/galchuun hin hojjetamne.Dogongora kuusa odeeffannoo/galmee.%1 {ergaa}'
+  sync_record:
+    failed: 'Walsimsiisuun inni dhumaa:hin milkoofne.'
+    last: 'Last Sync:%{date_time}'
+    not_found: 'Walsimsiisuu dhumaa ragaan hin argamne.'
+    retrieving: Ragaa/deetaa foyyeeffamaa jiru.
+    see_details: Bal'ina tarreeffamootaa ilaalaa.
+  fields:
+    action: Hojimaata.
+    actions: Hojimaatoota/dalagaawwan.
+    add: Dabali.
+    add_new_field: Dirree haaraa uumuu.
+    add_existing_field: Dirree jiru  itti dabalaa.
+    add_field: Dirree itti dabalaa.
+    add_field_type: "Ida'uu%{file_type}"
+    audio:
+      current: Sagalee dhageettii ammee.
+    audio_upload_box: Fe'umsa sagalee dhageettii.
+    bia_document: Galmee sakatta'insa fedhii daa'imaa ol'aanaa.
+    bid_document: Galmee fedhii ol'aanaa daa'imaa murteessummaa.
+    check_box: Sanduuqoota filannoo.
+    clear_group_by: Qaama garee qulqulleesse.
+    clear_sort_by: Qaama garee fooye/tarreesse.
+    copy_from_another_form: Dirreen kun guca biraa irraa garagalfame.
+    create_field: Dirree/aloola uumuu..
+    create_unique_values: Sonaawwan addaa uumuu.
+    date_field: Guyyaa bobbaa dirree.
+    date_help: Guyyaa-Ji'a-Bara.
+    date_help_with_time: Guyyaa-Ji'a-Bara-Sa'aa-Daqiiqaa
+    date_not_valid: Guyyaan kun sirrii miti
+    time: Yeroo.
+    date_range:
+      date: Guyyaa.
+      date_range: Bal'ina naannoo guyyaa.
+      from: Irraa
+      to: Gara
+      view_by: Ilaalchaan.
+    date_range_field: Bal'ina naannoo guyyaa.
+    date_time: Guyyaa-yeroo.
+    db_name: Maqaa kuusa galmee/odeeffannoo.
+    default: "Durtii?"
+    default_date_validation: Mirkaneessa guyyaa durtii.
+    default_to_current_date: "Durtiiwwan guyyaa ammaatiif ?"
+    default_to_current_datetime: "Guyyaa fi  sa'aatii ammatiif durtiidhaa?"
+    default_value: Sona durtii.
+    deleted: "Dirreen%{display_name}haqamee jira."
+    detail: Tarreeffama.
+    disabled: Qaama miidhamaa.
+    display_name: Maqaa ittiin yaamamu.
+    document:
+      comments: Yaada.
+      current: "Inni kun galmee ammeetii?"
+      date: Guyyaa galmee.
+      name: Maqaa galmee.
+      is_current: "Inni kun ragaa/galmqee ammeetii?"
+    document_upload_box: Galmee fe'aman.
+    edit_label: Dirree  gulaali.
+    enabled: "Dammaqeeraa/danda'eeraa?"
+    enabled_label: Danda'eera/dammaqeera.
+    english_text: Barruu Ingliffaa.
+    field_name: Maqaa dirree.
+    field_type: Akaakuu dirree.
+    attachment_too_large: Faayilli mb10 caalaa guddachuun irra hinjiraatu.
+    file_upload_box:
+      add_document_label: Galmee dabali.
+      add_new_document_button_text: Galmee biraa dabali.
+      add_new_photo_button_text: Suraa biraa dabali.
+      add_photo_label: Suuraa dabali
+      document_description: Ibsa galmee.
+      document_file_restrictions_message: Faayilotni meegaa baaytii (MB)2caaluu hinqaban.(hojirra ooluu kan danda'u(faayilotni hojirra ooluu danda'an fannifamuu hindanda'an.
+      no_file_selected: Faayilli tokkollee hin filatamne.
+      photo_file_restrictions_message: Suuraan mb10 irra caaluu hinqabu.Faayiloonni dhageettii sagalees mb10 irra caaluu hinqabu. Inni xiqqaan irra gaarooma qaba.
+      recorded_audio_label: Sagalee dhageettii waraabame.
+      select_file_button_text: Faayila filadhaa.
+    find_lookup: Barbaacha barbaadaa.
+    form_name: Maqaa unkaa.
+    future_date_not_valid: Eegereedhaaf ta'uu hindand'u.
+    guidance: Qajeelfama.
+    guiding_questions: Gaffiiwwan qajeelfamaa.
+    help_text: Barruu gargaarsaa.
+    hide_on_view_page: Fuula agarsisaa.
+    label: Dirreewwan/aloola.
+    mobile_visible: Hojitti hiiktuu mobaayilaa.
+    move_to: Garatti siqsuu/sochoosuu.
+    multi_select: Filannowwan hedduu filachuu danda'a.
+    multi_select_box: Abbaa hedduu filadhu.
+    must_be_english: Ingliffaan seenuutu irra jiraata..
+    name: Maqaa.
+    not_future_date: Guyya egereetii miti.
+    number_not_valid: Maaloo ragaa/deetaa lakkofsaa galchi.
+    numeric_field: Dirree lakkofsaa.
+    on_collapsed_subform: "Guca xiqqaa fashalaa'e irrattii?"
+    option_strings_add_option: Filannoo dabalaa.
+    option_strings_source: Barbaachaawwan.
+    option_strings_text: Filannowwan.
+    option_strings_text_display: Barruu filannoo.
+    option_strings_text_key: Furtuu/bantuu filannoo.
+    options_indications_lookup_values: Barbaachawwan dursanii ibsaman ykn sonaawwan addaa uumuu dandeessu.
+    options_indications_restrictions: Lamaan isaaniituu gochuu hin dandeessan.
+    options_or_lookup_warning: Maaloo filannoowwan dabalaa ykn barbaacha filadhaa.Lamaanuu keessa hin hin galinaa.
+    other_documents: Galmee/ragaa biroo.
+    photo_upload_box: Suuraa fe'aman.
+    predifined_lookups: Barbaacha dursa mutaa'etti fayyadamaa.
+    radio_button: Qabduu/qulfii  raadiyoonii.
+    remove: Dhabamsiisi.
+    remove_attachment_confirmation: "Dhugumatti miltoo kana dhabamsiisuu  barbaaddaa?"
+    required: Barbaachisaadha..
+    required_field: '%{field}ni barbaachisa'
+    search_existing: Dirreewwan jiran barbaadaa.
+    select_box: Kaa'umsa bu'aa filadhaa.
+    select_date_validation: Mala mirkaneessa guyyaa filadhaa.
+    select_multiple: Wanta ilaallatu hunda filadhaa.
+    select_single: (filadhaa...)
+    separator: Foo'aa/adda baasaa.
+    show: "Mul'isi/Agarsiisi?"
+    show_on: Irratti agarsiisi.
+    show_on_minify_form: Guca gabaabaa.
+    subform: Guca xiqqaa.
+    subform_group_by: Qaama garee uume.
+    subform_remove_message: "Dhugumatti Guca xiqqaa kana dhabamsiisuu barbaaddaa?"
+    subform_section:
+      description: Ibsa unka/guca xiqqaa.
+      name: Mataduree Guca xiqqaa.
+      starts_with_one_entry: "Seensa guca xiqqaa tokkootiin  eegalaa?"
+      subform_append_only: Walfakkeessa mobaayila irratti filatame.
+      subform_prevent_item_removal: "Seensi karaa guca xiqqaa dhabamsiisuu ni ittisaa?"
+    subform_sort_by: Qaama  tartiiba isaa tarreesse.
+    successfully_added: Dirreen haala milkaa'aan dabalameera.
+    tally_field: Dirree safartuu.
+    tally_items: Meeshaalee lakkofsaa/safartuu.
+    tally_items_maximum: (Olaanaan 5)
+    text_area: Naannoo barruu.
+    text_field: Dirree barruu.
+    textarea: Naannoo barruu.
+    tick_box: Sanduuqa mallattoon itti taasifamu.
+    tick_box_label: Asxaa sanduuqa mallattoo.
+    translation_text: Barruu hiikkaa.
+    total: Wallgala/dimshaasha.
+    type: Gos/akaakuu.
+    updated: Dirreen/Aloolli ammayyoomsameera.
+    visibility: Mul'ataa/mul'atina.
+    web_app: Hojitti hiiktuu saphaphuu.
+  filters:
+    apply_filters: Iyyadhu/fayyadami.
+    clear_filters: Ifa.
+    less: Xiqqaa.
+    more: Caalaattti/dabalata.
+    save_filters: Ol'kaayi/kuusi.
+  flags:
+    add_flag_tab: Alaabaa/mallattoo haaraa dabalaa.
+    date: 'Guyyaa.'
+    flag_added: Alaabaan/mallattoon haala  milkaa'aan dabalameera.
+    flag_date: Guyyaa  alaabaa.
+    flag_reason: Sabaabaa alaabaa/mallattoo.
+    flag_reason_maximun_label: Irra guddaan  amaloota 255.
+    flag_resolved: Alaabaan hiikameera/bu'eera.
+    flags_tab: Alaabaawwan.
+    no_flags: Alaabaawwan  wayiituu hin argamne.
+    resolve_button: Hiikuu/murteessuu.
+    resolve_flag: Alaabaawwan hiikuu.
+    resolve_reason: Sababicha hiikuu.
+    resolved: Alaabaawwan hiikaman.
+    resolved_date: 'Furmaata/fala argateera./hiikameera.'
+    resolved_reason: 'Sababicha hiikuu.'
+    title: Alaabaawwan.
+  followup_reminders:
+    system_generated_followup_flag: Doowwannaa hordoffii dirqama ta'e.
+  form_section:
+    form_name: Maqaa unkaa/gucaa.
+    module: Muraa/moojula.
+    name: Maqaa.
+    record_type: Gosa/ akaakuu galmee.
+    required_field: '{dirree ni barbaachisa}'
+  forms:
+    add: Unka dabalaa.
+    description: Ibsa gucaa.
+    fields: Aloola/dirreewwan.
+    form_description: Ibsa.
+    form_group: Guca garee.
+    form_title: Guca Mata duree.
+    help_text:
+      must_be_english: Qooqa/Afaan Ingliffaan seenutu irra jiraata.
+      related_groups: Fayyadamtoota garee walitti dhufeenya qabaniif guca kaayaa.
+      summariaze_purpose: Kaayyoo gucichaa cuunfuu.Afaan Ingliffaan seenutu irra jiraata.
+    invalid_characters_field: '%{field}amaloota hin barbaachisne qabatee jira'
+    label: Gucaalee
+    manage: Bulchi/hoggani.
+    messages:
+      created: Kutaan gucaa/unkaa milkaa'inaan uumameera.
+      fields_with_same_name: Gucootni dirreewwan maqaa walfakkaataa qaban qabaachuu hin danda'an.
+      save_success: Kutaaleen gucaa milkaa'inaan ammayyomeera.
+      save_with_errors: Rakkoon ture. Akkasumas kutaaleen gucaa muraasni hin ammayyoomsamne.
+      updated: Kutaan gucaa/unkaa haalaa milkaa'aan ammayyoomeera.
+      use_existing: Walii qoodiinsi deetaa kun jaarmiyaalee jiddutti walitti makiinsa deetaa salphaa waan taasisuuf  uunkaawwan jiranitti akka fayyadamtan isin jajjabeessina.
+    mobile_app: Hojitti hiiktuu mobaayilaa.
+    module: Mura.
+    no_subform_filters_added: Gucni xiqqaan kun yeroo ammaa direewwan wayiituu hinqabu.
+    record_type: Akaakuu galmee.
+    record_types:
+      approvals: Mirkaneessoota.
+      case: Dhimma.
+      child: Dhimma.
+      incident: Taatee.
+      individual_victim: Miidhamaa nama dhuunfaa
+      potential_match: Dandeettii cimaa walsimsiisuu.
+      record_information: Odeeffannoo galmeessuu.
+      referrals: Walharkaafuudhiinsa.
+      reportable_follow_up: Hordoffii
+      reportable_protection_concern: Sodaa eegumsaa.
+      reportable_service: Tajajila.
+      tracing_request: Gaaffii barbaaduu/barbaachaa.
+      transfers_assignments: Dabarsaawwanii/  ramaddiiwwan.
+      violation: Miidhaawwan/seera cabsuu.
+      registry_details: Tarreeffamoota galmeessaa.
+      registry_record: Galmee itti galmaa'an.
+    required_field: '%{field}dirree barbaachissuudha'
+    select_label: Filadhaa.
+    settings: Qindaayinoota.
+    show_on: Irratti mul'isi.
+    subform_need_to_be_added: Itti dabaluu barbaachisa.
+    subform_need_to_be_added_single: Inni kun itti dabalamuu  barbaachisa.
+    subform_not_found: "%{subform_name}hin argamne"
+    title: Mata duree gucaa.
+    translations:
+      edit: Hiikkaawwan  gulaali.
+      edit_form_group: " Barbaacha garee guca gulaali."
+      manage: Hiikaawwan bulchuu.
+      no_changes_message: jijjiirama  hiikaa wamaatuu hintaasisne..
+      note: 'Yaadannoo.'
+      note_form_group: Garee gucaatiif hiikkaawwan dabaluuf hiikkaawwan garee gucichaa gulaaluu/sirreessuu isin barbaachisa.
+      select_language: Qooqa/afaan  filadhaa.
+      title: Hiikaawwan.
+    type_label: Akaakuu/gosa.
+    visibility: Mul'atina.
+    web_app: Iyyata saphaphuu.
+  home:
+    ar: Qooqa/Afaan Arabaa.
+    ar-IQ: Qooqa/Afaan Arabaa(biyya Iraaq)
+    ar-JO: Qooqa/afaan Arabaa(Jordaan)
+    ar-LB: Qooqa/Afaan Arabaa (biyya Lubunaan/Libanon)
+    ar-SD: Afaan Arabaa(Suudaanii)
+    bn: -বাংলা
+    current_time_zone: Argamiinsa/godina yeroo ammee.
+    dashboard: Daashboordii.
+    en: Ingliffa.
+    es: " Isphaanyool."
+    es-GT: Ispaanool(Guwaatmaalaa)
+    fr: Afaan/qooqa Firaansi
+    id: Bahaasaa.
+    km: "-"
+    ku: Qooqa/Afaan Kurdii.
+    ku-IQ: Kurdi.
+    fa-AF: Qooqa/afaan Faaris(Iran)
+    ps-AF: Afghanistan.
+    sw-KE: Qooqa/Afaan Kiisiwaahiilii (biyya Keenyaa)
+    sw-TZ: Qooqa/Afaan Kiisiwaahiilii(biyya Tanzaaniyaa)
+    ne: Hindii.
+    label: "Mana,"
+    language: Qooqa/Afaan.
+    manage_system_users: Fayyadamtoota walsimsiisaa tajaajilaa  bulchaa.
+    my: "-"
+    pt: Qooqa/Afaan Poortugiizi.
+    pt-BR: Qooqa/Afaan Poortugiizi ( Biraaziil)
+    records_need_attention: Galmeewwan xiyyeeffannoo barbaadan.
+    ru: Greece.
+    so: Qooqa/Afaan Soomaalii.
+    th: "-"
+    users: Fayyadamtoota bulchuu.
+    view_records: Galmeewwan ilaalaa.
+    welcome: Baga gara Pirimeerootti nagaan dhuftan.
+    zh: Kan Chaayinaa.
+  incident:
+    associated_case: "Dhimma walqbsiifama qaban."
+    messages:
+      creation_success: Galmeen taatee haala milkaa'aan uumameera.
+      creation_success_queue: Galmeen taatee haala milkaa'aan duub duubee keessatti uumameera.
+      disabled: Taateen gufateera.
+      update_success: 'Balaan 1%(LG-Galmee) Milkaa''inaan foyya''ee jira.'
+      update_success_queue: 'Balaan %{record_id}seen-duubee keessatti milka''iinaan foyya''ee jira.'
+    violation:
+      update_and_return: 'Fooyyeessuun karaa %{association}deebi''i'
+      save_and_return: 'Ida''uun karaa%{association}deebi''i'
+      pending: Mirkaneessa  eeggachaa jira.
+      title: Jeequmsaawwan/miidhaawwan.
+      types:
+        killing: Ajjeechaa daa'immanii.
+        maiming: Dararama daa'immanii.
+        recruitment: Daa'imman qacaruu fi/ykn itti fayyadamuu.
+        sexual_violence: Dirqisiisanii gudeeduu fi /ykn miidhaawwan saal-qunnamtii  bifa biraatiin raawwataman.
+        abduction: Butii.
+        attack_on: Miidhaalee mana barnootaa(manneen barnootaa) fi ykn hospitaala(hospitaaloota)irratti raawwataman.
+        military_use: Itti fayyadama loltummaa mana barumsaa(manneen barnootaa) fi ykn hospitaalaa(hospitaalootaa) keessattii.
+        denial_humanitarian_access: Daa'imman dhiyeessii deggarsa namummaa dhorkachuu.
+  incidents:
+    disable_dialog: Tolee tuquun haala taatee kanaa gara gufachiisutti jijjiira.
+    disable_dialog_title: Taatee gufachiisi.
+    disable_success: Taatee haala milkaa'aan bade.
+    enable_dialog: Ok tuquun haala taatee kanaa gara dandeessisuutti jijjiira.
+    enable_dialog_title: Taatee danda'aman.
+    enable_success: Taateewwan haala milkaa'aan dandeessisaman.
+    id: "# eenyumeessaa."
+    date_of_interview: Guyyaa Af-gaaffii/Gaaffii fi deebii.
+    date_of_incident: Guyyaa taateen itti uumame.
+    incident_location: Bakka/iddoo taatee.
+    violations: Jeequmsaawwan.
+    export: Gaara alaatti erguu.
+    label: Taateewwan.
+    filter_by:
+      boys: Ijjoollee/ilma dhiiraa.
+      by_date: Guyyyaan.
+      children: Daa'imman.
+      girls: Shamarran/intala dubraa.
+      incident_location: Bakka/iddoo  taatee.
+      unaccompanied_separated_status: Haala/sadarkaa Eegumsaa.
+      unknown: Kan hin beekamin.
+      verification_status: Haala mirkaneessaa.
+      violence_type: Gosa/akaakuu jequmsaa.
+      armed_force_group_name: Maqaa garee humna hidhataa.
+      armed_force_group_type: Akaakuu garee humna  hidhataa.
+    register_new_incident: Taatee haaraa.
+    selectable_date_options:
+      date_of_first_report: GuyyaaAf-gaaffii/ gaaffii fi deebii.
+      incident_date_derived: Guyyaa taatee.
+    selected_records: '%{select_records}balaa filataman'
+    selected_all_records: 'Balaa/taatee gaafilee kanaan firooman %{total_records} hundaa filli'
+    survivor_code: Koodii baraaramtootaa./warra miidharraa hafanii
+    show_incident: 'ID taatee/balaa%{short_id}'
+    social_worker: Hojjetaa hawaasaa.
+    violence_type: Gosa/akaakuu jeequmsaa.
+    type_violence: Akaakuu/gosa miidhaa/jeequmsaa.
+  key_performance_indicators:
+    label: "Pulse/KPIs"
+    case_assessment: "Sakatta'insa dhimmaa."
+    case_action_planning: "Karoora raawwii dhimmaa baasuu."
+    case_action_plan_implementation: "Hojiirra oolchuu raawwii karoora dhimmaa,"
+    case_follow_up: "Hordoffii dhimmaa."
+    case_closure: "Cufamiinsa dhimmaa."
+    feedback: "Dubdeebii."
+    other: "Kan biraa."
+    date_format: "%b %y."
+    date_range_select:
+      custom_range: 'Maamila/aadaa.'
+    long_date_format: "Guyyaa/Ji'a/Bara."
+    time_periods:
+      all_time: 'Yeroo hunda.'
+      current_month: "Ji'a ammee."
+      last_3_months: "Ji'oottan 3n dhumaa."
+      last_6_months: "Ji'oottan 6n dhumaa/dabran."
+      last_1_year: "Bara dabre."
+      0-3days: "Guyyoota 0-3"
+      4-5days: "Guyyoota 4-5"
+      6-14days: "Guyyoota 6-14"
+      15-30days: "Guyyoota 15-30"
+      1-3months: "Ji'oota 1-3"
+      4months: "Ji'oota 3 ol"
+      1-month: "Ji'a 1 gadi."
+      3-6months: "Ji'oota 3-6"
+      7-months: "Ji'oota 6 ol."
+    helptext:
+      helptext: "Waa'ee KPL baradhu"
+    number_of_cases:
+      title: "1.Lakkofsa dhimmottan galmaa'anii."
+      reporting_site: "Buufata gabaasni itti taasisamu."
+      helptext: |
+    number_of_incidents:
+      title: "2.Baay'ina taateewwan galmaa'anii."
+      reporting_site: "Buufata gabaasni itti dhiyaatuu. "
+      helptext: |
+    reporting_delay:
+      title: "3.Turiinsa gabaasuu."
+      delay: "Turiinsa."
+      total_incidents: "Waliigala taateewwanii."
+      helptext: |
+    service_access_delay:
+      title: "Bira gahinsa tajaajilaa harkifatan."
+      delay: "Turiinsa."
+      total_incidents: "Taateewwan waliigalaa."
+    assessment_status:
+      title: "4.Haala sakatta'iinsaa."
+      completed: "Xumurameera."
+      completed_supervisor_approved: "Xumurameera  akkasumas  to'ataan mirkanaa'eera."
+      helptext: |
+    completed_case_safety_plans:
+      title: "5.Karoorawwan nageenyummaa dhimmaa xumuraman."
+      completed: "Karoora nageenyummaa dhimmaa xumurame."
+      helptext: |
+    completed_case_action_plans:
+      title: "6.Karoorawwan raawwii dhimmaa  xumuraman."
+      completed: "Karoora raawwii dhimmaa xumurame."
+      label: "Karoora raawwii dhimmaa xumurame."
+      helptext: |
+    completed_supervisor_approved_case_action_plans:
+      title: "7.Karoorawwan raawwii dhimmaa to'ataan mirkana'an."
+      completed_and_approved: "Karoorawwan raawwii dhimmaa xumuramanii to'ataan mirkanaa'an."
+      helptext: |
+    services_provided:
+      title: "8.Tajaajiloota kennaman."
+      service: "Tajaajila."
+      count: "Yeroon kennameera."
+      male: "Dhiira."
+      female: "Dubartii."
+      0-11: "0-11"
+      12-17: "12-17"
+      ">18": "18 tii ol'"
+      disability: "Qaama miidhamaa."
+      no_disability: "Miidhamni qaamaa hinjiru."
+      helptext: |
+    average_referrals:
+      title: "9.Walitti kenninsoota giddu galaan."
+      label: "Walitti kenniinsaa tokkoo tokkoo dhimmaa giddu galeessaan."
+      helptext: |
+    referrals_per_service:
+      title: "Walitti kenniinsa tokkoo tokkoo tajaajilaatiin."
+    average_followup_meetings_per_case:
+      title: "10.Tokkoo tokkoon dhimaa  irratti walga'iiwwan hordoffii adeemsifaman giddu galeessaan.."
+      label: "walga'iiwwan hordoffii tokkoon tokkoo dhimmaa irratti giddu galaan."
+      helptext: |
+    time_from_case_open_to_close:
+      title: "11.Yeroo baniinsa dhimmaa irraa haga cufiinsa dhimmaatti jiru."
+      time: "Yeroo."
+      percent: "Dhimmootaan dhibbeentaan."
+      helptext: |
+    case_closure_rate:
+      title: "12.Baay'ina lakkofsa cufiinsa dhimmaa."
+      reporting_site: "Buufata gabaasni itti dhiyaatuu.."
+      helptext: |
+    client_satisfaction_rate:
+      title: "13.Saffisa itti quufiinsa maamilaa."
+      label: "Ittiquufiinsa maamilaa."
+      invalid: "Amma kana shallaguu hindandeenyuu."
+      helptext: |
+    supervisor_to_caseworker_ratio:
+      title: "14.Walgitiinsa lakkofsa to'ataa fi hojjetaa dhimmaa walbira qabanii yoo ilaalan."
+      label: "Hojjetoota  dhimmaa fi to'ataa walbira  qabanii yoo  ilaalan."
+      helptext: |
+    case_load:
+      title: "15.Fe'iinsa Dhimma "
+      case_load: "Fe'insa dhimmaa."
+      percent: "Dhibbeentaa hojjettoota dhimmaa dhimma fe'ame wajjiin  walbira qabanii  yoo ilaalan."
+      10cases: "Dhimmoota  10 gadi."
+      20cases: "Dhimmoota 11-20"
+      21-30cases: "Dhimmoota 21-30"
+      30cases: "Dhimmoota 30 ol"
+      helptext: |
+    date_range_dialog:
+      title: "Bal'ina guyyaa maamilaa."
+      description: "Jijjiiramni kun al tokko hojirra oollaan,guyyoota lamaan armaan gadi jiran jiddutti deetaan filatama."
+      apply: 'iyyachuu/gaafachuu.'
+      from: 'Irraa.'
+      to: 'Gara.'
+      aria-labels:
+        from: "Ragaan/deetaan guyyaa kanaan booda filatama."
+        to: "Deetaan guyyaa kanaan duratti filatama."
+
+  location:
+    base_types:
+      camp: Buufata.
+      chiefdom: Bulchiinsa ol'aanaa.
+      city: Magaalaa.
+      community: Hawaasa.
+      country: Biyya.
+      county: Kutaa biyyaa.
+      district: Aanaa/ona.
+      governorate: Bulchiinsa.
+      locality: Naannoo.
+      other: Kan biraa.
+      province: Kutaa biyyaa/godina.
+      region: Naannoo.
+      site: Iddoo.
+      state: Mootummaa.
+      sub-district: Kutaa aanaa/kutaa onaa.
+      village: Ganda.
+      zone: Godina.
+      association: Waldaa.
+      division: Kutaa/
+      central_warehouse: Mankuusaa waaltaa/giddugalaa.
+      warehouse: Mankuusaa.
+      buyingstation: Buufata bittaa.
+    label: Bakka/iddoo.
+    name: Maqaa.
+    code: Koodii.
+    admin_level: Sadarkaa bulchaa.
+    type: Akaakuu/gosa.
+    hierarchy: Gulantaa/ aangawaa.
+    import_title: Iddoo/bakka fichisiisaa.
+    message: ""
+    no_location: Maaloo  eenyummeessaa fayyadamaa kamiinuu oso  uumiin dura iddoowwan/bakkeewwan fichisiisaa.
+    enable_title: Naannoo dammaqsi.
+    enable_text: "Dhugaa keetii?/sirriidha jettaa?/Iddoowwan filataman yoo dandeessiste, iddoo iddoowwan irratti akka  filannoo ta'anii  ni mul'atu."
+    disable_title: Naannoo gufachiisi.
+    disable_text: "Dhugaa keetii ?yoo iddowwan filataman dhaamsite/dadhaabsiiste/armaan booda iddoowwan argaman irratti akka filannootti hin mul'atan."
+  logger:
+    actions:
+      _approved: Mirkanaa'eera.
+      _rejected: Fudhatama dhabeera.
+      _requested: Gaafatameera.
+      add_note: Yaadannoo dabali.
+      assign: Ramadi.
+      assign_to: Ramaduu.
+      attach: Miilteessi.
+      bulk_assign: Ramaddii jumilaanii.
+      bulk_create: Uumuu jumilaanii.
+      bulk_index: Eertuu/tarreessituu ragaa jumiaanii.
+      case_plan_approved: Karoora dhimmaa mirkaneessame.
+      case_plan_rejected: Karoora dhimmaa fudhatama dhabe.
+      case_plan_requested: Karoora dhimmaa gaafatame.
+      close: Walqabsiise.
+      create: Uumuu.
+      create_bulk: Baay'inaan uumaa.
+      delete: Haqi.
+      destroy: Balleessuu.
+      detach: Walgadhiisisuu.
+      enable_disable_record: Gufachiisaa galmee dammaqsi/kaasi.
+      export: Gara alaatti erguu.
+      flag: Alaabaa.
+      import: Fichisiisi.
+      incident_details_from_case: Tarreeffamoota  taatee dhimma irraa.
+      index: Tarreessa/kasaa.
+      list: Tarreeffama.
+      login: Gali/seeni.
+      password_reset: Jecha Iggita haaroomsuu/deebi'anii jalqabsiisuu.
+      password_reset_request: Gaaffii haaroomsa jecha iggitaa.
+      refer: Walitti kennuu.
+      refer_accepted: Walitti kenna fudhatama argate.
+      refer_done: Walitti kenninsi raawwatameera.
+      refer_rejected: Walitti kenna fudhatama hin arganne.
+      refer_revoke: Kuffisuu eeraa.
+      refer_to: Ilaali.
+      reopen: Deebi'ii bani.
+      services_section_from_case: Kutaa tajaajilootaa dhimma irraa.
+      show: Agarsiisi/mul'isi.
+      show_alerts: Eeggannoowwan/dammaqiinsoota mul'isi.
+      traces: Duukaawwan.
+      transfer: Dabarsa.
+      transfer_accepted: Dabarsa fudhatama argate.
+      transfer_rejected: Dabarsa fudhatama hin arganne.
+      transfer_request: Gaaffii dabarsaa.
+      transfer_to: Qaama dabarsmeef.
+      unflag: Alaabaa irraa kaasuu.
+      update: Ammayyoomsi.
+      user_password_reset_request: Gaaffii jecha iggitaa fayyadamaa haaroomsuu.
+      webhook: Hookkoo/huutuu saphaphuu.
+    approve_form:
+      action_plan: Unkaa karoora raawwii.
+      bia: Unka sakatta'insa fedhii ol'aanaa daa'imaa.
+      case_plan: Unka karoora dhimmaa.
+      closure: Unka cufiinsaa.
+      'false': Fudhachuu dhabuu.
+      gbv_closure: Unka cufiinsaa midhaa koornaayaa bu'ureeffatanii.
+      'true': Mirkaneessuu.
+    assessment_approved: "%{approval_label}kan mirkanaa'e"
+    assessment_requested: "%{approval_label}kan gaafatame"
+    bulk_index: Hunda isaaniituu tarreessaa.
+    by_user: Fayyadamaadhaan.
+    case_plan_approved: "%{approval_label}kan mirkanaa'eef"
+    case_plan_requested: "%{approval_label}kan gaafatameef"
+    close: Walitti hidhe.
+    closure_approved: "%{approval_label}kan mirkanaa'eef"
+    closure_requested: "%{approval_label}kan gaafatameef"
+    consent_count: Baay'ina hayyamaa/waliigaltee.
+    copy: Garagalchuu.
+    create: Uumuu.
+    create_subform: Unka xiqqaa uumuu.
+    destroy: Haquu.
+    edit: Gulaaluu.
+    enable_disable_record: Dandeessisuu/gufachiisuu.
+    export: Deetaa gara alaatti erguu.....dhaaf.
+    flag: Eeruu.
+    flag_records: Eeruu.
+    graph_data: Deetaa caatoo ilaaluu.
+    hide_name:
+      protect: Maqaa dhoksuu.
+      view: Maqaa ilaalchaa..
+    index: Galmeewwan tarreessuu.
+    list: Tarreeffama.
+    login: Gali/seeni.
+    logout: Bahi.
+    lookups_for_field: Barbaachaawwan dirree.
+    mark_for_mobile:
+      'false': Mobaayilaaf mallattoo gochuu dhabuu.
+      'true': Mobaayilaaf mallattoo kaayaa.
+    match_record: Galmee walsimaa.
+    permitted_field_list: Tarreeffama dirree hayyamame.
+    quick_view: Ilaalcha ariifataa ilaaluu irra jiru.
+    reassign: Ramaduu.
+    resources:
+      audit_log: Galmee To'annoo/odiitii.
+      user: Fayyadamaa.
+      agency: Ejensii.
+      user_group: Garee fayyyadamaa.
+      child: Daa'ima.
+      alert: Dammaqsaa/eeggannoo
+      form_section: Unka.
+      lookup: Ilaali
+      system_settings: Sirna qindaa'inootaa.
+      permission: Eeyyama.
+      dashboard: Daash boordii.
+      report: Gabaasa.
+      bulk_export: Gara alaatti erguu jumilaanii.
+      saved_search: Barbaacha kaayame.
+      role: Shoora.
+      incident: Taatee.
+      location: Bakka/iddoo.
+      primero_configuration: Qindaayina piriimeeroo.
+      code_of_conduct: Dambii naamusaa.
+      task: Hojii.
+    record_state:
+      'false': Gufachiisuu.
+      'true': Dandeessisuu/dadammaqsuu.
+    refer: Ilaali.
+    refer_to: Fudhataa walharkaa fudhiinsaa barbaadi.
+    referral: Eeruun.
+    relinquish_referral: Riferaaliin itti dhiisuu raawwateera.
+    reopen: Irra deebi'ii bani.
+    reopen_case: Irra deebi'anii  banuu irratti.
+    request_approval:
+      action_plan: Gaaffii mirkaneessaa unka karooraa raawwiif.
+      bia: Mirkaneessa sakatta'insa fedhii ol'aanaa daa'imaaf hayyama gaafadhaa.
+      case_plan: Mirkaneessa guca karoora dhimmaatiif hayyama gaafadhaa.
+      closure: Mirkaneessaa guca/unka cufiinsaatiif hayyama gaafadhaa.
+      gbv_closure: Guca cufiinsaa midhaalee kornaayaa bu'ureeffataniif hayyama gaafadhaa.
+    request_transfer: Gaaffii dabarsa erguu.
+    request_transfer_view: Gaaffii  dabarsuu ilaaluu.
+    save_subform: Guca xixiqqaa Qusannoo.
+    search: Barbaadu API
+    show: Ilaaluu/mul'isuu.
+    show_alerts: Dammaqiinsoota ..dhaaf  ilaalaa.
+    to: Gara.
+    to_user: Fayyadamtootaaf.
+    transfer: Dabarsuu.
+    transfer_status:
+      Accepted: Dabarsa fudhatama qabu.
+      Rejected: Dabarsa fudhatama dhabe.
+    unflag: Alaabaa/mallattoo  kaasuu.
+    update: Ammayyoomuu irra /ammayyoomsuu.
+  login:
+    label: Seeni/gali.
+    password:
+      label: Iggitaa.
+    password_confirmation:
+      label: Dhugoomsa/mirkaneessa iggitaa.
+    password_match:
+      label: Iggitaan walfakkaachuu qaba.
+    provider_title: "duukaa isaa/wajjiin%{provider}"
+    title: Seeni.
+    username: Maqaa fayyadamaa.
+    password_reset_modal: Iggitaa deebi'ii jalqabsiisi.
+    password_reset_modal_text: Primeeroon geessituu haaroomsuu iggitaa gara teessoo iimeelii keessanitti erga.
+    password_reset_email: Iimeelii.
+    forgot_password: "Lakkofsa Iggitaa keetii  ni irraanfattee?"
+    email:
+      label: Ii meelii
+  lookup:
+    create: Barbaacha haaraa.
+    enabled_label: "Dammaqeeraa/danda'eeraa?"
+    english_label: Barruu afaan Ingliffaa.
+    label: Ilaal.
+    language_label: Qooqa/Afaan.
+    messages:
+      cannot_create: Barbaachi uumamuu hin dandeenye.
+      correct_errors: 'Maaloo dogongoraawwan itti aanan kanneen sirreessaatii irra deebi''aa galchaa.'
+      created: Barbaachi haala milkaa'aan uumameera.
+      updated: Barbaachi haala milkaa'aan ammayyoomeera.
+    name: Maqaa.
+    no_options: Barbaachi kun yeroo ammaa kana filannoo wayiituu hin qabu..
+    translation_label: Barruu  hiikkaa.
+    values: Filannoowan.
+  managed_reports:
+    label: Qalbifannaawwan/hubannoowwan.
+    total: Waliigala.
+    filter_by: 
+      date: Guyyaa.
+      verification_status: Haala mirkaneessaa.
+    date_range:
+      month: Ji'a.
+      quarter: Kurmaana.
+      year: Bara/woggaa.
+    date_range_options:
+      this_quarter: Kurmaana kana.
+      last_quarter: Kurmaana darbe.
+      this_month: Ji'a kana.
+      last_month: Ji'a darbe.
+      this_year: Barana/bara kana.
+      last_year: Bara darbe/bara dheengaddaa.
+      custom: Aadaa/maamiloo.
+    no_data: Hubannoo kanaaf deetaan /ragaan wayiituu hin jiru.
+    no_data_table: Hubannoo kanaaf deetaan ...wayiituu hinjiru.
+    violations:
+      name: Miidhaawwan.
+      description: ''
+      filter_options:
+        incident_date: Guyyaa taateen itti mul'ate.
+        date_of_report: Guyyaa gabaasaa.
+        ctfmr_verified_date: Guyyaa mirkaneessaa.
+      reports:
+        killing: Ajjeechaa daa'immanii/daa'imman ajjeesuu.
+        maiming: Hiyyummaa daa'immanii.
+        recruitment: Daa'imman qacaruu fi ykn itti fayyadamuu.
+        sexual_violence: Dirqisiisanii gudeeduu fi/ykn miidhaawwan/jequmsaawwan saal-quunnamtii biraa.
+        abduction: Butii.
+        attack_on: Midhaawwan mana barumsaa/manneen barnootaa fi ykn hospitaala/hospitaaloota irra gahan.
+        military_use: Itti fayyadama loltummaa mana barumsaa(manneen barnootaa)fi ykn hospitaalaa(hospitaalootaa)
+        denial_humanitarian_access: Daa'imman dhiyeessii gargaarsa namoomaa dhorkachuu.
+      sub_reports:
+        combined: Miidhaawwan.
+        detention_detained: Akkuma hidhamanitti turu.
+        detention_released: Gadi lakkifameera.
+        perpetrators: Baay'ina laakkofsa daa'immanii warra yakka irratti raawwateetiin.
+        reporting_location: Lakkofsa daa'immanii naannoodhaan.
+        attack_type: Baay'ina ijoollee akaakuu midhamaatiin.
+        boys: Ijoollee dhiiraa.
+        girls: Shamarran.
+        unknown: Kan hinbeekamne.
+        total: Waliigala.
+    gbv_statistics:
+      name: Xiinannoo midhaa kornaayaa bu'ureeffatee.
+      description: ''
+      filter_options:
+        date_of_first_report: Guyyaa Af-gaaffii/gaaffii fi deebii.
+        incident_date: Guyyaa taatee.
+      reports: 
+        incidents: Taateewwan.
+        perpetrators: Yakkamtoota.
+      sub_reports:
+        combined: Taateewwan.
+        total: Baay'ina lakkofsa taateewwan miidhaalee kornaayaa bu'ureeffatanii gabaasaman.
+        gbv_sexual_violence: Baay'ina lakkofsa taateewwan miidhaa saalaa gabaasaman.
+        gbv_previous_incidents: Taateewwan miidhaa koornaayaa bu'ureeffatan dura lakkofsa baay'ina taateewwanii namoota  lubbuudhaan hafaniin gabaasaman.. 
+        gbv_sexual_violence_type: Gosa/akaakuu taatee.
+        incident_timeofday: Yeroo taatee guyyaa.
+        elapsed_reporting_time: Garaagarummaa yeroo  gidduu taatee fi gabaasaa gidduu jiru.
+        elapsed_reporting_time_rape: "Taatee dirqisiisanii gudeeduu,yeroo taatee fi guyyaa gabaasaa gidduu jiru."
+        incident_location_type: Bakka/iddoo  Taatee.
+        number_of_perpetrators: Lakkofsa yakka raawwattootaa sadarkaa jalqabaa.
+        perpetrator_relationship: "Walittidhufeenya yakka raawwataan shakkamaan duraa  nama miidhaa irraa hafe wajjiin qaban. "
+        perpetrator_age_group: Garee umurii yakka raawwattootaa sadarkaa jalqabaa.
+        perpetrator_occupation: Hojii yakka raawwataa sadarkaa jalqabaa.
+  messages:
+    alert_items: "Gosa yaadannoo %{items}qabda."
+    alerts_for:
+      approval: "mirkaneessi akka turu kan taasifameef.%{form_section_name}"
+      field_change: 'Guyyaa%{alert_time} foyya''eera%{form_section_name}'
+      transfer_request: "gaaffiin haaraa dabarsaa guyyaan taasifamee%{date}qaama%{user} mana hojiitiin %{agency} taasifameera."
+      duplicate_field: "dhimmi biroo sirnicha keessatti kana %{field_name}waliin kan walfakkaatudha."
+    cannot_edit: Isa kana gulaaluu hindandeessu.
+    confirmation_message: Tolee cuqqaassuun jijjiirama hin olkaa'iin  kan balleessuu danda'uu fi karaa tarree mul'atanitti deebisa.  Karaa galmeetti deebi'uuf haqqii cuqqaassi.
+    confirmation_message_subform: "'Tolee' tuquun jijjiiramoota maalimaa/mi'a kana irratti hin kaa'amin maqsa.Jijjiramoota taasisuu ittifufsiisuudhaaf  haqi kan jedhu tuqaa."
+    dashboard_offline: Sararaan ala jirtu.Gara sararaatti yegguu deebitan daashboordichi guutummaa guututti hojjeta.
+    field_name_on_form_name: '%{field_name}guca dirree/bobbii/irraa%{form_name}'
+    logout_confirmation: "Walga'ii kee itti fufuu barbaaddaa?"
+    logout_offline_warning: "Dhugumatti cuftee keessaa bahuu barbaaddaa?Yoo kana taasifte deebitee sarara irra haga galtaniitti deebitanii  galuu hindandeessan.Sararaan ala taatanii jijjiramootn taasiftan kamiiyyuu hindhabaman."
+    logout_warning: Daqiiqaa 5 keessatti  akka baasamtan taasifamtu.
+    logout_dialog_header: Sararaan ala bayeera.
+    logout_confirmation_title: Mirkaneessa cufanii keessaa bahuu.
+    logout_confirmation_text: "Dhugaa keessaa bayuu ni barbaaddaa?"
+    no_changes: Jijjiiramoota dirree wayiituu hin taasisne.
+    not_available: Hin argamu.
+    record_list:
+      column_header_tooltip: "kan akka foyya'u ta'e.%{column}"
+      of: Ka.
+      no_match: "Dhiifama,galmeewwan walsiman/walfakkaatan  kamiyyuu hin argamne."
+      rows_per_page: Sararaawwan tokkoo tokkoon fuula isaaniitiin.
+      sort: Fooyii kaayi/tarreessi.
+  navigation:
+    bulk_exports: Gara alaatti erguu.
+    cases: Dhimmoota.
+    home: Mana.
+    key_performance_indicators: Pulse/KPIs
+    incidents: Taateewwan.
+    logout: Cufii keessaa bahi.
+    reports: Gabaasaawwan.
+    insights: Hubannoowwan.
+    search: Barbaacha.
+    settings: Qindaa'inoota.
+    support: Deggarsa.
+    support_menu:
+      contact_information: Odeeffannoo teessoo iddoo argamaa/quunnamtii.
+      code_of_conduct: Dambii naamusaa.
+      terms_of_use: Qajeelfama itti fayyadamaa.
+      system_information: Ragaa sirna odeeffannoo.
+    tasks: Hojiiwwan.
+    tracing_request: Gaaffii Maatii barbaachaa.
+    activity_log: Yaadannoo galmee hojii/sosochii.
+    registry_records: Mana Galmee.
+  notes:
+    note_success: Yaadannoo haala milkaa'aan dabalaniiru.
+  permissions:
+    label: Hayyamoota.
+    permission:
+      All: Hunda/mara.
+      add_note: Yaadannoowwan dabali.
+      admin_only: Galmeewwan wayiituu hinjiran-dalagiinsa bulchaa qofa.
+      administrator_read: Bulchaan dubbise.
+      agency: Ejensii.
+      agency_read: Ejensii dubbisuu.
+      all: Galmeewwan ykn fayyadamtoota hundaa bira gahaa/argachuu yaalaa.
+      approvals_assessment: '%{approval_label}mallattoo-mirkaneessaa.'
+      approvals_assessment_pending: '%{approval_label}kan akka turu taasifame.'
+      approvals_case_plan: '%{approval_label}mallattoo-mirkaneessaa.'
+      approvals_case_plan_pending: '%{approval_label}akka turu kan taasifame.'
+      approvals_closure: '%{approval_label}mallattoo-mirkaneessa.'
+      approvals_closure_pending: '%{approval_label}akka turu kan taasifame.'
+      approve_action_plan: "mirkaneessi%{approval_label} "
+      approve_assessment: " guca/unka/%{approval_label}mirkaneessi"
+      approve_case_plan: Mirkanneessa1%(approval-label)
+      approve_closure: " guca/unka/%{approval_label}{approval_label}mirkaneessi"
+      approve_gbv_closure: "guca %{approval_label}mirkaneessi."
+      assign: Ramaduu.
+      assign_within_agency: Ejensicha keessatti ramaduu.
+      assign_within_user_group: Garee fayyadamaa keessatti ramaduu.
+      audit_log: Galmee to'annoo/odiitii.
+      case: Dhimma.
+      case_approvals: Mirkaneessaawwan  dhimmaa.
+      case_assignments_referrals_transfers: "Ramaddiiwwan dhimmaa,walharkaa fudhiinsaawwanii fi dabarsaawwanii."
+      case_exports: Dhimma gara alaatti erguu.
+      case_overview: Dhimmoota kiyya.
+      case_risk: Dhimmoota sadarkaa sakatta'insaan.
+      cases_by_task_overdue_assessment: Dhimmoota sakatta'insa hojii yeroon isaa irra darbeetiin/dubatti harkifateetiin  ilaalaa.
+      cases_by_task_overdue_case_plan: Dhimmoota  karoora dhimmaa hojiin isaa irra darbeetiin/duubattii harkifateetiin ilaalaa.
+      cases_by_task_overdue_followups: Dhimmoottan hojii tajaajilootaa yeroon irra darbeen ilaalaa.
+      cases_by_task_overdue_services: Dhimmoottan hojii tajaajilootaa yeroon irra darbani/duubatti harkifataniin ilaalaa.
+      cases_managed_other_users: Dhimmootan  fayyadamtoota biraatiin bulan.
+      close: Walitti qabe/Cufuu.
+      consent_override: Waliigaltee jigsuu.
+      copy: Waraabi/Garagalcha.
+      copy_of: Waraabbii.
+      create: Uumuu.
+      dash_case_incident_overview: Dhimmoota kiyya/taateewwan.
+      dash_cases_by_social_worker: Dhimmoota hojjetaa hawaasaatiin ilaalaa.
+      dash_cases_by_task_overdue: Dhimmoota  yeroo raawwii isaaniitiin ilaalaa.
+      dash_cases_by_workflow: Dhimmoota yaa'iinsa hojiitiin ilaalaa.
+      dash_cases_to_assign: Dhimmota ramaduuf ilaalaa.
+      dash_group_overview: Dhimmoota garee kiyyaa.
+      dash_manager_transfers: Dabarsaawwan hoji gaggeessaan taasifaman ilaalaa.
+      dash_matching_results: Bu'aawwan walsimatan ilaalaa.
+      dash_protection_concerns: Sodaawwan eegumsaa ilaalaa.
+      dash_protection_concerns_by_location: Sodaawwan eegumsaa iddoowwan isaaniitiin ilaalaa.
+      dash_referrals_by_socal_worker: Wal harkaa fuudhiinsa hojjetaa hawaasaatiin taasifaman ilaalaa.
+      dash_reporting_location: Iddoowwan gabaasa itti taasisan ilaalaa.
+      dash_service_provisions: Dhiyeessiiwwan kenniinsa tajaajilaa ilaalaa.
+      dash_shared_from_my_team: Garee kiyya irraa  qooddateera.
+      dash_shared_with_me: Ana wajjiin kan qooddaman.
+      dash_shared_with_my_team: Garee kiyya wajjiin qooddateera.
+      dash_shared_with_others: Warra biraa wajjiin qooddateera.
+      dash_show_none_values: Waan gatii hinqabne ilaalaa.
+      dash_tasks: Hojiiwwan/dalagaawwan ilaalaa.
+      dash_transfers_by_socal_worker: Walharkaafuudhiinsaawwan  hojjetaa hawaasaatiin raawwataman ilaalaa.
+      dash_national_admin_summary: Cuunfaa bulchaa/hogganaa.
+      dashboard: Daash boordii.
+      delete: Haqi.
+      display_view_page: Fuula  agarsiisaa ilaalchaa.
+      duplicate: Barbaacha baay'isaman.
+      enable_disable_record: Dadhabsiisi/gufachiisi.
+      export_case_pdf: Pii dii effii Dhimmaa gara alatti erguu.
+      export_csv: Gatii/sona/qoodduu fi addaan bayanii alatti ergi.
+      export_custom: Maamila gara alatti erguu.
+      export_duplicate_id_csv: Baay'isamoota gara alaatti erguu.
+      export_json: Export json
+      export_list_view_csv: Tarreeffama mul'annoo gatii/sona/qoodduu fi addaan bayanii alatti ergi.
+      export_mrm_violation_xls: toftaa hordoffii gabaasaa xls cabse alatti ergi
+      export_pdf: PDFii ala ergi.
+      export_photowall: Dhaabaa suuraa ala ergi.
+      export_unhcr_csv: Export unhcr csv
+      export_xls: Export xls
+      find_tracing_match: Barbaacha walsimaa dhimma  irraa barbaadaa.
+      view_registry_record: Galmee irratti galmaa'an ilaalaa.
+      add_registry_record: Galmee irratti  galmaa'an dabalaa.
+      flag: Alaabaa.
+      form: Gucaawwan/unka.
+      group: Galmeewwan ykn fayyadamtoota garee kiyya keessaa jiran hunda bira gahi.
+      group_read: Garee dubbisuu/dubbisa gareenii.
+      import: Fichisiisi.
+      incident: Taatee.
+      incident_details_from_case: Dhimma fayyadamaa biraa irratti tarreeffamoota taatee dabalaa.
+      incident_from_case: Dhimma irraa taatee uumaa.
+      kpi: pulse/KPIs
+      lookup: Barbaachaawwan.
+      manage: Bulchi.
+      mark_for_offline: Sararaan alatti mallattoo kaayaa.
+      matching_configuration: Qindaayina walsimaa.
+      metadata: "Gucaawwan/unkaawwan,barbaachaawwan."
+      potential_match: Dandeettii guddaa walsiman.
+      primero_configuration: Qindaayina.
+      read: Dubbisi.
+      reassign: Irra deebiin ramaduu..
+      receive_referral: Wal harkaa fuudhiinsa fudhachuu.
+      receive_transfer: Dabarsa fudhachuu.
+      referral: Walharkaa fuudhiinsaaf itti fayyadamuun ni danda'ama.
+      referral_from_service: Dhimicha  guca tajaajilaa irraa ilaalaa.
+      registry_record: Mana Galmee.
+      remove_assigned_users: Fayyadamtoota biraa ramadaman keessaa baasaa(walharkaa fuudhiinsaawwan)
+      reopen: Irra deebi'ii bani.
+      report: Gabaasa.
+      managed_report: Hubannoowwan.
+      request_approval: Gaaffii mirkaneessuudhaafii.
+      request_approval_action_plan: "Mirkanneeffannaa%{approval_label}gaafatame"
+      request_approval_assessment: "Mirkanneeffannaa%{approval_label}gaafatame"
+      request_approval_case_plan: "Mirkanneeffannaa%{approval_label}gaafatame"
+      request_approval_closure: Gaafii 1%(sadarkaa -mirkanneessuu) mirkanaa'e.
+      request_approval_gbv_closure: "Mirkanneeffannaa%{approval_label}gaafatame"
+      request_transfer: " Dabarsa gaafadhaa."
+      role: Shoorawwan.
+      save_search: Barbaachaawwan taasisaman ol'kaayaa.
+      saved_search: Barbaacha ol'kaayame.
+      search_owned_by_others: Galmeewwan dhimmaa fayyadamtoota biraatiin dhuunfataman/qabaman  barbaadaa.
+      self: "Galmeewwan kiyya ykn  fayyadamaa kiyyaa qofa bira gahaa. "
+      service_provision_incident_details: Ijaarsa tarreeffamoota  taatee irratti furtuu dhiyeessii tajaajilaa dabal jedhu ilaalaa.
+      services_section_from_case: Dhimma fayyadamaa biraatiif dhiyeessii tajaajilaa dabalaa.
+      specific_roles: Tarreessa shooraawwan sirritti adda bahanii ibsamanii  bira gahaa.
+      sync_external: Sirna qabiinsa/bulchiinsa  odeeffannoo alee wajjiin walfakkeessuu.
+      sync_mobile: Sararaan alatti mallattoo kaa'aa.
+      system: Sirna.
+      tracing_request: Gaaffii barbaachaa.
+      transfer: Hojii dabarsaatiiff  fayyidaa irra ooluu danda'a.
+      user: Fayyadamtoota.
+      user_group: Gareewwan fayyadamaa.
+      view_approvals: Mirkaneessawwan ilaalaa.
+      view_assessment: Sakatta'insa ilaalaa.
+      view_photo: Suuraa ilaalaa.
+      view_protection_concerns_filter: Calaltuu sodaawwan eegumsaa ilaalaa.
+      view_response: Deebiwwan kennaman ilaalaa.
+      webhook: Hookkoo/huutuu sapaphuu.
+      workflow: Yaa'insa hojii-dhimmoota nama dhuunfaa.
+      workflow_team: Yaa'insa hojii-dhimmoota gareewwanii.
+      write: Barreessi.
+      activity_log: Yaadannoo galmee hojii/sosochii.
+    resource:
+      kpi:
+        actions:
+          read:
+            explanation: Dandeettii fuula Pulse/KPIs argachuu
+            label: Fuula pulse/KPIs argadhu
+          kpi_assessment_status:
+            explanation: Dandeettii waa ilaaluu dhimmoottan si'aawaa fayyadamaan bira gahuu danda'uu ilaaluu.isaan keessaallee kutaaleen meeqaa uunka gamaaggamaa xumurame akka qaban beekuu.
+            label: Haala sakatta'insaa.
+          kpi_average_followup_meetings_per_case:
+            explanation: "Dandeettii bulchaan dhimmoota aktiifii ta'anii fayyadaman dhaqabamaa ta'an  itti arguu danda'u, yeroo murtaa'e keessatti giddu-galleessan baayyina walga'ii hordoffii taasifame. "
+            label: Walga'iiwwan hordoffii  tokkoo tokkoo dhimmaa irratti giddu galeessaan  taasisame.
+          kpi_average_referrals:
+            explanation: Dandeettii dhimmoota si'awaa hundaa fayyadamaan bira gahuu danda'u irratti baayi'ina eeruuwwani tokkoon tokkoo akaakuu tajaajilootaaf jiddu galaan taasifame ilaaluu danda'uu.
+            label: Walharkaa fudhiinsaawwan taasifaman giddu galeessaan.
+          kpi_case_closure_rate:
+            explanation: Dandeetti  dhimmoottan meeqaa tokkoon tokkoo  buufataa irratti ji'a tokko tokkotti   akka cufaman ilaaluu.
+            label: Baay'ina cufiinsa dhimmaa.
+          kpi_case_load:
+            explanation: Dandeettii  tokkoon tokkoo hojjetaan dhimmaadhimmoota banaa giddu galeessaan  harkaa qabu ilaaluu.
+            label: Fe'insa dhimmaa.
+          kpi_client_satisfaction_rate:
+            explanation: Dandeettii tokkoon tokkoo dhimmaaa fayyadamaan bira gahuu danda'uuf hunda tuqaa warra du'arraa baraaramanii qorannaa duub-deebii xumuranii itti quufan ilaaluu danda'uu.
+            label: Saffisa ittiquufiinsa maamilaa.
+          kpi_completed_case_action_plans:
+            explanation: Dandeettii fayyadamaan dhimmoottan si'aawaa bira gahuu danda'uuf karoorri raawwii dhimmaa meeqaa akka xumurame ilaaluu danda'uu.
+            label: Karoorawwan raawwii dhimmaa xumuraman.
+          kpi_completed_case_safety_plans:
+            explanation: Dandeettii fayyadamaan dhimmoottan si'aawaa bira gahuu danda'uuf karoorri nageenyummaa hangamii akka barbaachisuu fi xumuramee ilaaluu danda'uu.
+            label: Karoorawwan nageenyummaa dhimmaa xumuraman.
+          kpi_completed_supervisor_approved_case_action_plans:
+            explanation: Dandeettii fayyadamaan dhimmoottan si'aawaa biragahuu danda'uuf karoora raawwii dhimmaa too'ataa tokkoon mirkanaa'e hangam  akka ta'e ilaaluu danda'uu.
+            label: "Karoora raawwii too'taan xumuramee mirkanaa'e.  "
+          kpi_goal_progress_per_need:
+            explanation: "Dandeettii fayyadamaan bira gahiinsa dhimmootaaf qabuu,tokkoon tokkoo qodamsa fedhii keessatti dhibbeentaan kaayyoolee meeqa galma akka gahan  ilaaluu danda'uu."
+            label: " Fooyya'iinsa/guddinna  galma gahiinsa galmaawwanii irratti  taasifaman."
+          kpi_number_of_cases:
+            explanation: Dandeettii  dhimmottan haaraa meeqaa jia ji'aan gabasaaman tokkoon tokkoo buufataa keessatti  akka banaman ilaaluu.
+            label: Baay'ina lakkofsa dhimmoottanii.
+          kpi_number_of_incidents:
+            explanation: Dandeettii taateewwan haaraa gabaasaman meeqaa ji'a ji'aan tokkoon tokkoo buufataa keessatti akka banaman ilaaluu danda'uu.
+            label: Baay'ina taateewwanii.
+          kpi_reporting_delay:
+            explanation: Dandeettii fayyadamaan taateewwan hundaa bira gahuu danda'uu guyyoota yeroo midhaan koornaayaa bu'uureeffate irra gahee fi warreen miidhaa kanarraa hafan dhiyeessaa tajaajila kennuuf gabaasan jidduu jiru ilaaluu danda'uu.
+            label: Gabaasa osoo hindhiyaatin ture.
+          kpi_services_provided:
+            explanation: Dandeettii fayyadamaandhimmoota waliigalaa bira gahuu danda'uu dhaabbaticha keessatti tajaajilootni akkamii akka kennaman ilaaluu danda'uu.
+            label: Tajaajiloota kennaman.
+          kpi_supervisor_to_caseworker_ratio:
+            explanation: Dandeettii hunda-tuqaa//walgitiinsa  hojjettoota dhimmaa fi to'attootaa gidduu jiru ilaaluu.
+            label: Hunda-tuqaa/walgitiinsa too'ataa fi  hojjeta dhimmaa gidduu jiru.
+          kpi_time_from_case_open_to_close:
+            explanation: Dandeettii fayyadamaan tokko dhimmoota bira gahuu danda'u hundaaf dhimmootni meeqa yeroo meeqaaf banaa ta'anii akka turan ilaaluu danda'uu.
+            label: Dheerinna yeroo baniinsa  dhimmaa irraa haga cufiinsa dhimmaatti jiru.
+        label: KPI
+      agency:
+        actions:
+          assign:
+            explanation: ""
+            label: Ramaduu.
+          create:
+            explanation: Dandeettii ejensii uumuu.
+            label: Uumuu.
+          manage:
+            explanation: 'Fayyadamaan tokko dalagaawwan ejensiiwwan irra jiran akka raawwatu dandeessisaan.Bu''uurarraa hayyama"bulchuu"jechuun "waan hundaa "jechuudha.Barbaachisaa:Kun ammoo dandeettii ejensii haaraa uumuu kennaaf.'
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hunda)
+          read:
+            explanation: Dandeettii ejensiiwwan ilaaluu.
+            label: ilaalcha/agarsiisuu.
+          write:
+            explanation: Dandeettii  waayee odeeffannoo eejensiiwwanii gulaaluu. Maaloo inni kun ejensiiwwan  sirnicha keessa jiran  hunda kan ilaallatu ta'uusaa  qalbifadhaa.
+            label: Gulaali.
+        explanation: Dhaabbata miseensoota pirimeeroo fayyadamanii bakka bu'a.Ejensiiwwan fayyadamaa irraa bilisa ta'anii jiraatan.
+        label: Ejensii.
+      audit_log:
+        actions:
+          read:
+            explanation: ""
+            label: Ilaalcha.
+        explanation: "Tarreeffama hojiiwwanii hunda sirnicha keessatti raawwataman calalamuu danda'uu.Gaaffiiwwan dhimmootaa,taateewwanii fi ykn barbaachoota irratti odeeffannoo adda bahan tokkollee itti hin dabalu."
+        label: Galmee to'annoo/odiitii.
+      case:
+        actions:
+          add_note:
+            explanation: ""
+            label: Dhimma tokko irratti yaadannoowwan dabali.
+          add_registry_record:
+            explanation: Fayyadamaan tokko tarreeffamoota guca galmeessaa irraa galmee akka dhimma wajjiin walitti fidu hayyamaaf.Akkasumas fayyadamaan tokko dursee qunnamtii mana galmee dhimmichaan walittidhufan kamiinuu akka addaan kutu dandeessisaan.
+            label: Galmee irratti galmaa'an dhimma irraa dabalaa/ammayyomsaa.
+          approve_action_plan:
+            explanation: Dhimmoota hojjattoota dhimmaa hojii gaggeessan/hogganaan/ akka mirkanneessuu 1%(sadarkaa-mirkanaa'e) eeyyamu.
+            label: "mirkaneessi %{approval_label}mallattoo mirkaneessaa"
+          approve_assessment:
+            explanation: "gaggeessaan/bulchaan/akka dhimmoota hojjattoota dhimmaa akka mirkaneessuu %{approval_label}danda'u hayyamaaf."
+            label: "guca %{approval_label}mirkaneessi."
+          approve_bia:
+            explanation: "gaggeessaan/bulchaan/akka dhimmoota hojjattoota dhimmaa akka mirkaneessuu %{approval_label}danda'u hayyamaaf."
+            label: "guca %{approval_label}mirkaneessi."
+          approve_case_plan:
+            explanation: "gaggeessaan dhimmoota hojjattoota dhimmaa isaatiif akka mirkaneessuu danda'u%{approval_label} hayyamaaf."
+            label: "mirkaneessi%{approval_label}"
+          approve_closure:
+            explanation: "Bulchaan dhimmoota hojjettoota hawaasummaa%{approval_label}akka mirkanneessu eeyyami."
+            label: "guca %{approval_label}mirkaneessi."
+          approve_gbv_closure:
+            explanation: "Dhimmoota hojjettoota hawaasaa bulchaan akka mirkanneessu eeyyami%{approval_label}"
+            label: "guca %{approval_label}mirkaneessi."
+          assign:
+            explanation: ""
+            label: Ramaduu.
+          assign_within_agency:
+            explanation: ""
+            label: Ejensii kiyya keessatti  fayyadamaaf ramadi.
+          assign_within_user_group:
+            explanation: ""
+            label: Garee fayyadamaa kiyyaa keessatti fayyadamaadhaaf ramadi.
+          change_log:
+            explanation: ""
+            label: Galmee jijjiiraa.
+          close:
+            explanation: Fayyadamaan  dhimma banaa akka cufuuf tolu akka haala qindeessuu dandeessisaan.
+            label: Cufuu/cufi.
+          consent_override:
+            explanation: Fayyadamaan dhimma hayyamni hin kennamneef tokko akka gara biroo ergu ykn dabarsu hayyama.
+            label: Yegguu iyyattan ykn dabarsitan hanqina hayyamaa faccisaa.
+          create:
+            explanation: Dandeettii dhimma uumuu.
+            label: Uumuu.
+          display_view_page:
+            explanation: ""
+            label: Fuula ilaalcha agarsiisaa.
+          enable_disable_record:
+            explanation: ""
+            label: Dandeessisuu/dadhabsiisuu.
+          export_case_pdf:
+            explanation: ""
+            label: Dhimma PDF ergi
+          export_csv:
+            explanation: ''
+            label: Gatii/sona/qoodduu fi addaan bayanii alatti ergi.
+          export_custom:
+            explanation: ""
+            label: Maamiloo alatti ergi.
+          export_duplicate_id_csv:
+            explanation: ""
+            label: Baay'isamoota gara alaa ergi.
+          export_json:
+            explanation: ""
+            label: JSON alatti ergi.
+          export_list_view_csv:
+            explanation: ""
+            label: Tarreeffama mul'annoo gatii/sona/qoodduu fi addaan bayiinsaa alatti ergi.
+          export_pdf:
+            explanation: ""
+            label: Pii Dii Effii dhimmaa alatti ergi.
+          export_photowall:
+            explanation: ""
+            label: Dhaabaa suuraa gara alaatti erguu.
+          export_unhcr_csv:
+            label: Gatii qoodduu fi addaan kan bayee Komishinii Olaanoo Koolugaltootaa Mootummoota Gamtoomanii alatti ergi.
+          export_xls:
+            explanation: ''
+            label: "kan caaluu {faaila XLS}alatti ergi."
+          find_tracing_match:
+            explanation: ""
+            label: Barbaacha walsimaa/walfakkaataa dhimma irraa barbaadaa.
+          flag:
+            explanation: Dandeettii dhimma tokkorratti alaabaa ida'uu.Fayyadamtoonni hayyama kana qaban alaabaawwan gara dhimmaatti ida'an  baasuu/haquu danda'an.
+            label: Alaabaa.
+          import:
+            explanation: ""
+            label: Fichisiisi.
+          incident_details_from_case:
+            explanation: ""
+            label: Fuula bu'aalee barbaachaa irraa bal'inoota taatee gara  dhimma fayyadamaa birootti dabalaa.
+          incident_from_case:
+            explanation: ""
+            label: Dhimma irraa taatee uumaa.
+          manage:
+            explanation: Fayyadamaan dalagaawwan dhimmoota irra jiran hundumaa akka raawwatu dandeessisaan.Bu'uurarraa hayyama "bulchuu"jechuun "waan hundaa"jechuudha.
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hunda)
+          read:
+            explanation: Dandeettii dhimma ilaaluu.
+            label: Ilaalcha.
+          receive_referral:
+            explanation: ""
+            label: Walharkaafuudhiinsa  fudhachuu.
+          receive_referral_different_module:
+            explanation: ""
+            label: Muraa garagaraa keessatti fayyadamaa tokko irraa walharkaafuudhiinsa raawwadhaa.
+          receive_transfer:
+            explanation: ""
+            label: Dabarsa fudhachuu.
+          referral:
+            explanation: ""
+            label: Walharkaafuudhiinsa.
+          referral_from_service:
+            explanation: ""
+            label: Dhimmicha guca xiqqaa tajaajilaa irraa ilaalaa.
+          remove_assigned_users:
+            explanation: ""
+            label: Fayyadamtoota biroo ramadaman haqaa(fayyadamtoota eeraman keessaa bira gahinsa dhimmaa fudhachuun)
+          reopen:
+            explanation: Fayyadamaan dhimma dhiyeenya kana keessa cufame akka banachuu danda'u hayyamaaf/taasisa.
+            label: Irra deebi'anii  banuu
+          request_approval_action_plan:
+            explanation: "Fayyadamaan (yeroo baay'ee hojjataa dhimmaa)gaggeessaan dhimma isaanii %{approval_label}haa mirkaneessuuf akka gaafatu hayyamaaf."
+            label: "mirkaneessa %{approval_label}gaaffii."
+          request_approval_assessment:
+            explanation: "Fayyadaman (yeroo baayi'ee hojjataa dhimmaa)gaggeessaan dhimma isaanii %{approval_label}haa mirkaneessuuf akka gaafatu hayyamaaf."
+            label: "Gaafii %{approval_label}mirkanneessa"
+          request_approval_bia:
+            explanation: "Fayyadamaan (yeroo baayi'ee hojjataa dhimmaa)gaggeessaan dhimma isaanii  %{approval_label}haa mirkaneessuuf akka gaafatu hayyamaaf."
+            label: "mirkaneessa %{approval_label}gaaffii."
+          request_approval_case_plan:
+            explanation: "Fayyadamaan (yeroo baayi'ee hojjataa dhimmaa)gaggeessaan dhimma isaanii%{approval_label} haa mirkaneessuuf akka gaafatu hayyamaaf. "
+            label: "mirkaneessa %{approval_label}gaaffii "
+          request_approval_closure:
+            explanation: "Fayyadamaan (yeroo baayi'ee hojjataa dhimmaa)gaggeessaan dhimma isaanii %{approval_label}haa mirkaneessuuf akka gaafatu hayyamaaf."
+            label: "mirkaneessa %{approval_label}gaaffii."
+          request_approval_gbv_closure:
+            explanation: "Fayyadamaan (yeroo baayi'ee hojjataa dhimmaa)gaggeessaan dhimma isaanii %{approval_label}haa mirkaneessuuf akka gaafatu hayyamaaf."
+            label: "mirkaneessa %{approval_label}gaaffii."
+          request_transfer:
+            explanation: ""
+            label: Dabarsa gaafadhaa.
+          search_owned_by_others:
+            explanation: ""
+            label: Galmeewwan abbummaa fayyadamtoota biraatiin qabaman  barbaadaa.
+          service_provision_incident_details:
+            explanation: ""
+            label: Ibsa tarreeffamoota taatee irratti furtuu dhiyeessii kenna tajaajilaa ida'i jedhu ilaalaa.
+          services_section_from_case:
+            explanation: ""
+            label: Dhimma fayyadamaa biraatiif dhiyeessii tajaajilaa dabalaa.
+          sync_external:
+            explanation: Dandeettii galmee sirna qabiinsa odeeffannoo ragaa  alee wajjiin walsimsiisuu.
+            label: Sirna qabiinsa odeeffannoo ragaa alee  wajjiin walsimsiisuu/walfakkeessuu.
+          sync_mobile:
+            explanation: Fayyadamaan dhimmoota karaan ala faayidaa irra oolan akka kaayu dandeessisan.
+            label: Sararaan alatti mallattoo kaayaa.
+          transfer:
+            explanation: ""
+            label: Dabarsa.
+          view_photo:
+            explanation: ""
+            label: Suuraa  mul'annoo tarreessa dhimmaa irraa ilaalaa.
+          view_incident_from_case:
+            explanation: "Dhimma yoo ilaaltan ,fayyadamaan tarreeffama taateewwanii dhimmicha wajjiin walittidhufanii fi tokkoon tokkoo cuunfaa odeeffannoo ilaaluu danda'a."
+            label: Taateewwan dhimma irraa ilaalaa.
+          view_protection_concerns_filter:
+            explanation: Fayyadamaan  fuula tarreessa  dhimmaa irratti calaltuu sodaawwan eegumsaa akka ilaaluu danda'u taasisa..
+            label: Calaltuu sodaawwan eegumsaa fuula tarreessa dhimmaa irratti ilaalaa.
+          view_registry_record:
+            explanation: Fayyadamaan odeeffannoo mana galmee dhimmaan walqabate kamiinuu akka ilaalu hayyamaaf.Akkasumas fayyadamaan dhimma irratti guca tarreeffamoota galmeessaa akka ilaalu danda'u taasisaan.
+            label: Galmee irratti galmaa'an dhimma irraa ilaalaa.
+          write:
+            explanation: Dandeettii furtuu"Gulaali"jettu tuquu danda'uu.Ammayyoomsa odeeffannoo dhimma keessa jiruu fi "ol kaa'i"jedhu tuqaa.
+            label: Gulaali.
+          accept_or_reject_transfer:
+            explanation: ""
+            label: Fayyadamaa biraa garee keessan keessatti argamuuf  dabarsa fudhaa ykn fudhatama dhabsiisaa.
+          list_case_names:
+            explanation: Gaggeessitoonni yeroo baayi'ee  maqaalee dhimmootaa tarreeffamoota dhimmaa keessatti  arguu hin danda'an.Gaggeessaan tokko  hayyama kana yoo qabaatee  tarreeffama keessatti maqqaalee jiran arguu danda'u.
+            label: "Hoji gaggeessaa yoo ta'e,tarreeffama dhimmaa keessatti maqaalee dhimmaa ilaaluu danda'a."
+          mark_for_offline:
+            explanation: Fayyadamaan sararaan alatti dhimma itti fayadamu iddoo dhoksaa kaayuu akka danda'u taasisa.
+            label: Sararaan alatti mallattoo kaa'aa.
+        explanation: "Daa'ima tokko,warra miidhaa irraa baraaraman ykn fayyadamaa biraa bakka bu'a."
+        label: Dhimma.
+      dashboard:
+        actions:
+          approvals_action_plan:
+            explanation: "Kan eeggachaa jiran,gaaffiiwwan mirkanaa'an ykn akka kufan taasifaman mirkaneessa karoora raawwii keessatti baayi'ina fayyadamtoota  ammaan tana jiran mul'isa."
+            label: "mirkaneessa %{approval_label}hojjataa dhimmaa."
+          approvals_action_plan_pending:
+            explanation: Gaaffiiwwan mirkaneessa karoora raawwii eeggachuu irra jiran baay'ina dhimmaa garee bulchaa keessa jianii mul'isa.
+            label: "mirkaneessa %{approval_label}gaggeessaa"
+          approvals_assessment:
+            explanation: "Kan eeggachaa jiran,gaaffiwwan mirkanaa'an  ykn gaaffiiwwan mirkaneessa gamaaggamaa akka kufan taasifamanitti fayyadamuun baayi'ina dhimmoota fayyadamaa ammaan kana jiranii mul'isa."
+            label: "mirkaneessa%{approval_label} hojjataa dhimmaa."
+          approvals_assessment_pending:
+            explanation: "Gaaffiiwwan sakatta'insaa mirkaneessa  eeggachaa jiran wajjiin baayi'ina dhimmootaa garee gaggeessaa keessa jiran mul'isa. "
+            label: "mirkaneessaawwan%{approval_label} gaggeessaa"
+          approvals_case_plan:
+            explanation: "Baayyina fayyadamtoota dhimmaa agarsiissuu fi gaafii mirkanneessa karoora dhimmaa rarra'e,mirkanaa'e ykn haqame."
+            label: "mirkaneessaawwan hojjataa dhimmaa%{approval_label}"
+          approvals_case_plan_pending:
+            explanation: Gaaffiiwwan karoora dhimmaa  mirkaneessa  eeggachaa jiran keessatti baayi'ina dhimmootaa garee gaggeessaa keessa jiran mul'isa.
+            label: "mirkaneessaawwan %{approval_label}gaggeessaa"
+          approvals_closure:
+            explanation: "Gaaffiiwwan hayyama cufiinsaa eeggachaa jiran,kan mirkanaa'an ykn akka kufan taasifaman fayyadamuun  baayi'ina dhimmootaa fayyadamaa ammaan tana jiran muli'isa."
+            label: "mirkaneessaawwan%{approval_label} hojjataa dhimmaa"
+          approvals_closure_pending:
+            explanation: Baay'ina lakkofsa dhimmootaa garee hoji gaggeessaa keessatti gaafiiwwan mirkanneessa cufiinsaa eeggachaa jiran agarsiisa.
+            label: " Bulchaa 1%(sadarkaa-mirkanneessaa) Mirkanneessa"
+          approvals_gbv_closure:
+            explanation: "Gaaffiiwwan mirkaneessa cufiinsa miidhaa kornaayaa bu'ureeffatanii eeggacha jiran,kan mirkanaa'an ykn akka kufan taasifaman wajjiin baayi'ina dhimmootaa fayyadamaa ammaan tana jiranii mul'isa."
+            label: "mirkaneessaawwan %{approval_label} hojjataa dhimmaa."
+          approvals_gbv_closure_pending:
+            explanation: Baayyina dhimmoota garee bulchaa tokko jala jiranii  fi MKB ilaalchisee akka cufiinsi mirkanneeffamuuf gaafatamee otoo hin cufamiin rara'anii  hafan agarsiisu.
+            label: "mirkaneessaawwan %{approval_label}gaggeessaa"
+          case_overview:
+            explanation: Ibsa waliigalaa lakkoofsoota akka dhimmoottan waliigalaa fi haaraa jiran ka'umsa  kaardii daash boordii fuula gubbaa irratti argamu dabalu.
+            label: Daashboordii ilaalcha waliigalaa.
+          case_risk:
+            explanation: Tokkoo tokkoon sadarkaa balaa keessatti dhimmoottan meeqaa akka jiran mul'isaa.
+            label: Dhimmoottan sadarka balaa/rakkootiin.
+          cases_by_task_overdue_assessment:
+            explanation: Gaggeessaan tokkoon tokkoo hojjattoota dhimmaa isaaniitiif hojiiwwan gamaaggamaa yeroon isaanii irra darbe meeqa akka jiran ilaaluuf hayyama.
+            label: Hojiiwwan sakatta'insaa yeroon irra darbe.
+          cases_by_task_overdue_case_plan:
+            explanation: Gaggeessaan tokkoo tokkoo hojjattoota dhimmaa isaaniitiif  hojjiiwwan karoora dhimmaa meeqaa osoo hin hojjatamin jiran ilaaluuf hayyama.
+            label: Hojiiwwan  karoora dhimmaa yeroon irra dabre.
+          cases_by_task_overdue_followups:
+            explanation: Gaggeessaan tokkoo tokkoo hojjattoota dhimmaa isaaniitiif hojiiwwan hordoffii yeroon isaanii irraa darban meeqaa akka jiran ilaaluuf hayyama.
+            label: Hojiiwwan hordoffii yeroon irra darbe.
+          cases_by_task_overdue_services:
+            explanation: Gaggeessaan tokkoo tokkoo hojjattoota dhimmaa isaaniitiif hojiiwwan kenna tajaajilaa yeroon isaanii jalaa darban meeqaa akka jiran ilaaluuf hayyama.
+            label: Hojiiwwan tajaajilaa yeroon irra darbe.
+          dash_case_incident_overview:
+            explanation: .
+            label: Ilaalcha waliigalaa-Dhimmoota kiyya/Taateewwan.
+          dash_cases_by_social_worker:
+            explanation: ""
+            label: Dhimmoottan hojjetaa hawaasaatiin ilaalaa.
+          dash_cases_to_assign:
+            explanation: 'Baayyee Barbaachisaadha.  Bulchoota qofa. Baayyina dhimmootaa fayyadamaa yeroo ammaatiin qabaman agarsiissi(Bulchaa qofa ta''uu qaba). Daash boordiin kun bulchaan dhimmoota isaa bulchuu akka hin dandeenyee kan tilmaamu fi  yoo bulchaan tokko dhimma  ofii isaan qabate  dhimmicha hojjetaa dhimmaaf garee keessa jiruuf dabarsuu qaba. '
+            label: (Bulchitootaaf) dhimmoottan namoota garee kiyya keessa jiraniif ramaduu barbaadu.
+          dash_flags:
+            explanation: Tarreeffama alaabaawwanii fayyadamtoonni biroo gara galmeewwan kiyyaatti ida'an akkasumas alaabaawwan galmeewwan fayyadamtoota biroo irratti ani dabale mul'isa.
+            label: Galmeewwan eeraman.
+          dash_group_overview:
+            explanation: "Bulchaa/hoji gaggeessaa tokko dhimmoottan banaa fi cufaman fayyadamtoota garee isaanii  keessa jiraniin bulan itti mul'isa. "
+            label: Dhimmoottan garee kiyyaa.
+          dash_matching_results:
+            explanation: "Kan hin mirkannoofne.  Daash-boordiin kun kan hin hojjannee fi karaa V2 kan darbuu qabuudha. "
+            label: "Bu'aalee walfakkaatan ilaalaa. "
+          dash_protection_concerns:
+            explanation: ""
+            label: Dhimmoottan sodaawwan egumsaatiin.
+          dash_protection_concerns_by_location:
+            explanation: ""
+            label: Sodaawwan eegumsaa iddoowwan isaaniitiin ilaalaa.
+          dash_reporting_location:
+            explanation: ""
+            label: Dhimmoottan  iddoo gabaasaatiin.
+          dash_service_provisions:
+            explanation: ""
+            label: Dhimmoottan akaakuu/gosa kenna tajaajilaatiin.
+          dash_shared_from_my_team:
+            explanation: Baay'ina/lakkofsa/dhimmootaa tokkoon tokkoo fayyadamtootaan garee isaanii keessatti  to'ataman kanneen  fayyadamtoota gara birootti  akeekaman ykn dabarsaman  bulchaatti/gaggeessaatti mul'isa.
+            label: Garee kiyyarraa kan qoodame.
+          dash_shared_with_me:
+            explanation: "Dhimmotni meeqa gara keessanitti  akka ergaman ykn dabarsaman mul'isa. "
+            label: Anaa wajjiin kan qooddatame.
+          dash_shared_with_my_team:
+            explanation: Baay'ina /lakkofsa/ dhimmootaa tokkoon tokkoo fayyadamtootaa garee isaanii keessa jiraniif  akeekamee ykn dabarsamee  bulchaatti/gaggeessaa/tti mul'isa.
+            label: Garee kiyya wajjiin kan qooddatame.
+          dash_shared_with_my_team_overview:
+            label: Garee kiyya wajjiin qoodameera(ilaalcha waliigalaa)
+          dash_shared_with_others:
+            explanation: "Dhimmotni kiyya rifaraaloota si'aawaa,dabarsaawwan akka turan taasifaman,ykn dabarsaawwan fudhatama dhabanmeeqaa akka jiranagarsiisa.Dhimmoota mataa isaaniitiin yoo too'atan malee,baratamaan gaggeessitootaaf kan ta'uu miti."
+            label: Qaama biraa wajjiin kan qooddataman.
+          dash_show_none_values:
+            explanation: ""
+            label: Daashboordii sakatta'insaa keessatti 'dhimmoottan sadarkaa balaa kamiiyyuu hinqabne ilaalaa.
+          dash_tasks:
+            explanation: ""
+            label: Fuula  hojiiwwanii/ hojii.
+          dash_national_admin_summary:
+            explanation: "Sirnicha keessatti dhimmoota waliigalaa banaman, baay'ina  dhimmoota haaraa tokkoon tokkoo torbaan lamaan darban keessatti uumamanii fi baay'ina dhimmootaa tokkoon tokkoo torbaan lamaan darban keessatti cufaman  mul'isa."
+            label: Cuunfaa bulchaa.
+          view_response:
+            explanation: "Tokkoon tokkoo akaakuu deebiitiif,tokkoon tokkoo sadarkaa balaa irratti dhimmootni meeqaa dhuma yeroo tajaajilaa irra akka jiranii fi ykn yeroon kan itti darbe ta'uusaa mul'isa."
+            label: Deebiwwan kennaman ilaalaa.
+          workflow:
+            explanation: "Hojjataan dhimmaa tokko,tokkoon tokkoo sadarkaa dhimmaa irratti dhimmootiin isaanii caatoo deeloo mul'isan meeqaa akka jiran ilaaluuf hayyama."
+            label: Dhimmoottan  yaa'insa hojiitiin qoqqoodaman.
+          workflow_team:
+            explanation: Gaggeessaan akka gabatee dhimmoottan  hojjattoota hawaasaa isaanii tokkoon tokkooadeemsa waltajjii qabiinsa dhimmaa irratti jiru mul'isu ilaalu danda'u  hayyamaaf.
+            label: Dhimmoottan akkaata yaa'iinsa hojii fi hojjetaa dhimmaatiin.
+        explanation: Fuula ka'umsaa irratti cuunfaa odeeffannoo kamitu akka mul'atu ibsa.
+        label: Daashboordii.
+      disabled:
+        explanation: "Shoora kana yoo dhaamsitan/gufachiistan ,ammaan booda fayyadamaaf eenyummeessaahin dand eessan."
+        label: Qaama miidhamaa.
+      duplicate:
+        actions:
+          read:
+            explanation: "Fayyadamaan ulaagaalee adda addaatti fayyadamee kunis maqaa.maqibsa,koornaayaa,uumurii fi lammuummaa dabalatee dhimmoota sirnicha keessa jiran hundaaf akka barbaacha olaanaa taasisu hayyamaaf."
+            label: Agarsiisi.
+        explanation: "Barbaacha dhimmaa olaanaa  bulchitootaaf,"
+        label: Barbaacha baay'isaman.
+      forms:
+        case:
+          explanation: ''
+          label: Gucoota-Dhimma.
+        incident:
+          explanation: ''
+          label: Gucoota-Taatee.
+        tracing_request:
+          explanation: ''
+          label: Gucoota-Gaaffii barbaachaa.
+        registry_record:
+          explanation: ''
+          label: Gucawwan-mana galmee.
+      group:
+        actions:
+          admin_only:
+            explanation: ""
+            label: Galmeewwan wayiituu hinjiran-Hojii bulchaa qofa.
+          agency:
+            explanation: Shoorichi galmeewwan fayyadamtoota ejensii isaanii keessa jiraniin hogganaman hundaa argachuu danda'a.
+            label: Galmeewwan ykn fayyadamtoota ejensii kiyyaa keessa jiran.
+          all:
+            explanation: Shorichi gareewwan fayyadamaa kamiyyuu kanuma isaaniituu yoo ta'eeyyuu galmeewwan hunda sirnicha keessa jiran fayyadamtootaa fi gareewwan fayyadamaa biraan gahuun ni danda'ama.
+            label: Galmeewwan ykn fayyadamtoota hunda bira gahaa.
+          group:
+            explanation: Shoorichi galmeewwan fayyadamtootaa gareewwan fayyadamtootaataan bulan hunda bira gahuu ni danda'a.Gareewwan fayyadamaa isaanii keessatti fayyadamtoota qofa argachuu kan danda'an.Gareewwan fayyadamaa isaanii qofa bira gahuu danda'anis.
+            label: Galmeewwan ykn fayyadamtoota garee kiyya keessa jiran cufa bira gahaa.
+          self:
+            explanation: "Shoorichi galmeewwan mataa isaanii (dhimmoota,gaaffiiwwan barbaachaa,ykn taateewwan) bira gahuu fi eenyummeessaa fayyadamaa mataa isaaniillee gulaaluu ni danda'u."
+            label: Galmeewwan kiyya  ykn fayyadama kiyya qofa bira gahaa.
+        explanation: "Isa kam  akka galmeessu(dhimmoota,gaaffiiwwan barbaachaa ykn taateewwanii)shoorichi bira gahuu akka danda'u too'ata.Shoorichi bira gahiinsa fayyadamtootaa fi gareewwan fayyadamaa yoo qabaate kun ammoo fayyadamtoota kamii fi gareewwan fayyadamaa bira gahuu akka danda'an too'ata.Shooraawwan bira gahinsa\"Galmee hinqaabaatiin\"qaban qindaayina sirnaa kanneen akka gucootaa,fayyadamtootaa fi gabaasaawwanii qofa bira gahuu danda'an."
+        label: "Shoorri kun galmeewwan akkamii rratti dhiibbaa geessisa?"
+      incident:
+        actions:
+          change_log:
+            explanation: Fayyadamaan yeroo uumaman irraa jalqabee seenaa jijjiiramoota galmee san irratti taasifaman hunda ilaaluu danda'a.Kunis sonaawwan dirreewwan hundaaf galmaa'an dabalata.
+            label: Galmee jijjiiraa.
+          create:
+            explanation: Dandeettii taatee uumuu.
+            label: Uumuu.
+          enable_disable_record:
+            explanation: Dandeettii taatee gufachiisuu ykn kakkaasuu.Taateewwan gufatan durtii tarreeffama taatee keessatti hin mul'atan.Fayyadamtoonni calalchaatti dhimma bahuun  tarreeffama taatee keessatti  taateewwan qaama midhamtootaa ilaaluu ni danda'an.
+            label: Dandeessisuu/dadhabsiisuu.
+          export_case_pdf:
+            explanation: ""
+            label: PiiDiiEffii gara alaatti ergaa.
+          export_csv:
+            explanation: ""
+            label: gatii/sona/qoodduu fi addaan bayanii alatti ergi.
+          export_custom:
+            label: Maamila gara alaatti ergaa.
+          export_incident_recorder_xls:
+            explanation: ""
+            label: Meeshaa sagalee waraabduu  xis taatee alatti ergi.
+          export_json:
+            explanation: ""
+            label: JSON alatti ergi.
+          export_list_view_csv:
+            explanation: ""
+            label: Tarreeffama mul'annoo qoodduu fi addaan bayanii alatti ergi.
+          export_pdf:
+            explanation: ""
+            label: Pii Dii Effii gara alaatti ergi.
+          export_xls:
+            explanation: ""
+            label: ""
+          flag:
+            explanation: ""
+            label: Alaabaa.
+          import:
+            explanation: ""
+            label: Fichisiisi.
+          manage:
+            explanation: ""
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hunda)
+          read:
+            explanation: Dandeettii taatee ilaaluu.
+            label: Ilaalcha/Agarsiisi/mul'isi.
+          sync_mobile:
+            explanation: ""
+            label: Meeshaa sosocho'aa wajjiin walfakkeessuu.
+          write:
+            explanation: ""
+            label: Gulaali.
+        explanation: ""
+        label: Taatee.
+      is_manager:
+        explanation: Shoora fayyadamaa kamiyyuu walumaagalatti fayyadamtoota biroo too'atan irratti hojirra oola.Fayyadamaan kun daash boordii fi calalchuuwwan fayyadamaan garee tokko akka bulchu taasisan akka ilaalu dandeessisa.
+        label: "Hoji gaggeessaadhaa?"
+      managed_report:
+        actions:
+          violations:
+            label: Miidhaawwan/jeequmsiiwwan.
+          gbv_statistics:
+            label: Xiinannoo/lakkofsa miidhaa kornaayaa bu'ureeffatee.
+      matching_configuration:
+        actions:
+          manage:
+            explanation: ""
+            label: Bulchi (hayyamoota  akaakuu qabeenya kanaa hunda)
+        explanation: Dirreewwan kamiintuu gaaffiiwwan barbaachaa dhimmoottan yeroo maatii barbaaduu fi walitti makuuf fayyadan walmadaalchisanii too'ata.
+        label: Qindaayina walsiman.
+      metadata:
+        actions:
+          manage:
+            explanation: ""
+            label: Bulchi (hayyamoota qabeenya kanaa hunda)
+        explanation: Dandeettii qindaayinaa gucoota pireemiiroo fi dirreewwanii akkasumas isaan keessatti filannoowwan barbaachaa faayidarra oolan too'ata.
+        label: "Gucoota,barbaachaawwan."
+      module:
+        actions:
+          cp:
+            label: Eegumsa daa'imaa.ED
+          gbv:
+            label: Midhaalee kornaayaa bu'ureeffatan. MKB.
+          mrm:
+            label: Mala/tooftaa/ hordoffii fi gabaasaa.
+        explanation: Shoorri kun muraawwan kamiin irratti akka hojjetan/hojirra ooluu danda'an  to'ata.
+        label: Muraawwan.
+      potential_match:
+        actions:
+          read:
+            explanation: ""
+            label: Ilaalcha
+        label: Humna dhokataa cimaa walsimaa/qixa ta'e.
+      primero_configuration:
+        actions:
+          manage:
+            explanation: ""
+            label: Bulchi (hayyammoota gosa qabeenya kanaa hunda)
+        label: " Qindaayina."
+      referral:
+        actions:
+          refer:
+            explanation: ""
+            label: "Shoorri kun walharkaafuudhiinsa alaatiif faayidaa irra ooluu danda'aa?"
+        label: Walharkaafuudhiinsa.
+      registry_record:
+        actions:
+          change_log:
+            explanation: Fayyadamaan seenaa jijiiramoota uumama isaanii irraa eegalee galmee irratti taasifaman ilaaluu danda'a.Kun ammoo sonaawwan direewwan hundaaf galmaa'an dabalata.
+            label: "Galmee jijjjiraa,"
+          create:
+            explanation: Dandeettii  galmee irratti galmaa'an uumuu.
+            label: Uumuu.
+          enable_disable_record:
+            explanation: ""
+            label: Dandeessisuu/dadhabsiisuu.
+          export_csv:
+            explanation: ''
+            label: gatii/sona/ qoodduu fi addaan bayanii alatti ergi.
+          export_json:
+            explanation: ""
+            label: JSON alatti ergi.
+          export_xls:
+            explanation: ''
+            label: Eksi ellii(faayila XLS)alatti erguu.
+          flag:
+            explanation: Dandeettii alaabaa/mallattoo gara galmee itti galmeessaniitti ida'uu.Fayyadamtoonni hayyama kana qaban alaabaawwan gara galmee mana galmeetti ida'anii haquu/kaasuu danda'u.
+            label: Alaabaa.
+          manage:
+            explanation: Fayyadamaan tokko hojiiwwan galmeewwan itti galmaa'an irra jiran hunda akka raawwatu dandeessisan.Hayyama "bulchuu" jechuun  barbaachisummaa "waan hundaa"jechuudha.
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hunda)
+          read:
+            explanation: Dandeettii galmeewwan irratti galmaa'an  arguu/ilaaluu.
+            label: Ilaalcha.
+          write:
+            explanation: "Dandeettii furtuu\"gulaaluu\"jedhu tuquu,waayee ragaa odeeffannoo mana galmee ammayyoomsuu fi \"olkaa'i\"jedhu tuquu."
+            label: Gulaali.
+          sync_mobile:
+            explanation: Fayyadamaan sararaan ala  itti fayyadamuuf  akka tolu galmeewwan iratti galmaa'an iddoo dhoksaa akka kaayu dandeessisaan.
+            label: Sararaan alatti mallattoo kaayaa.
+        explanation: ""
+        label: Galmee ittiin galmaa'an.
+      report:
+        actions:
+          create:
+            explanation: Dandeettii gabaasa haaraa uumuu.Fayyadaman tokko yoo gabaasa uumuu gabaasaawwaniif fayyadamtoota "dubbisi" ykn "garee dubbisi" jedheen hundaafuu ni mul'ata.
+            label: Uumuu.
+          group_read:
+            explanation: ""
+            label: Ilaalcha (deetaa garee irratti hundaa'e)
+          manage:
+            explanation: Fayyadamaan tarkaanfiiwwan ejensiiwwan irra jiran hundaa akka raawwatu dandeessisaan.Bu'urarraa hayyama"to'achuu/bulchuu"jechuun "Waan hunda"jechuudha.
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hunda)
+          read:
+            explanation: ""
+            label: Ilaalcha.
+          write:
+            explanation: Dandeettii gabaasaawwaan hundaa gulaaluu(kanneen fayyadamtoota biraatiin uumaman dabalatee)
+            label: Gulaali.
+        explanation: Meeshaa xiinxala deetaa waliigalaa.Bakka bu'insaawwan ragaa/deetaa gabatee fi caatoo of keessatti ammata/dabalata.
+        label: Gabaasa.
+      reporting_location_level:
+        explanation: ''
+        label: Shoora kanaaf gabaasa gochuudhaaf bakka akkamiittu faayidaa irra ooluu qaba.
+      role:
+        actions:
+          assign:
+            explanation: Dandeettii shoora filachuu yeroo herrega fayyadamaa uumanii fi gulaalanii .Hayyamni kun shoora kamiiyyuu nama herreggoota fayyadamaa uumuu fi ykn gulaalu kamiifuu barbaachisaadha.
+            label: Ramaduu.
+          copy:
+            explanation: Dandeettii garagalcha shooraa uumuu.Inni kun bulchitoota sirnaa shooraawwan baayi'ee walfakkaatan uumaniif fayyida qabeessa.(Fknf.Dhiheessitoota tajaajilaa)
+            label: Garagalcha.
+          create:
+            explanation: Dandeetti shoora uumuu.
+            label: Uumuu.
+          delete:
+            explanation: Dandeettii shoora haquu.
+            label: Haqi.
+          manage:
+            explanation: 'Fayyadamaan tokko dalagaawwan shooraawwan irra jiran hundumaa akka raawwatu dandeessisaan.Hayyamni "bulchi"jechuu "waan hunda"jechuudha.Barbaachisaa:Kun ammoo dandeettii shooraawwan uumuu fi haquu kenna.'
+            label: Bulchi ( hayyamoota gosa qabeenya kanaa hunda)
+          permitted_roles:
+            explanation: ""
+            label: Shoorawwan biraa shoora kanaan bulan.
+          read:
+            explanation: Dandeettii shooraawwan arguu/ilaaluu.
+            label: Ilaalcha.
+          write:
+            explanation: "Dandeettii furtuu fuula shoora agarsiisuu irratti tuquu danda'uu,hayyammoota shooraa ammayyeessuu fi shooricha olkaa'uu."
+            label: Gulaali.
+        explanation: Fayyadamaan tokko piremeeroo keessatti tarkaanfiiwwan kamiin fudhachuu akka qabu labsa/ibsa.
+        label: Shoora/shooraawwan.
+      system:
+        actions:
+          manage:
+            explanation: "Dandeettii sirna odeeffannoo qunnamtii,beeksisa durtii fi qindaayinootaIi meelii baga nagaan dhuftanii fi kaadimaa walsimatanii odeeffannoo ilaaluu fi ammayyeessuu danda'uu.Hayyamni kun yeroo baayi'ee bulchaa sirnichaa qofaaf kan eegameedha."
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hunda)
+        explanation: Sirna walmakee-qindaayinoota bal'aa qabu.
+        label: Sirna.
+      tracing_request:
+        actions:
+          change_log:
+            explanation: Fayyadamaan yeroo uumame irraa jalqabee seenaa jijjiiramoota galmee san irratti taasifaman hunda  ilaaluu danda'a.Kunis sonaawwan dirreewwan hundaaf galmaa'an dabalata.
+            label: Galmee jijjiiri.
+          create:
+            explanation: Dandeettii gaaffii barbaachaa uumuu.
+            label: Uumi.
+          enable_disable_record:
+            explanation: ""
+            label: Dandeessisi/dammaqsi/gufachiisi.
+          export_case_pdf:
+            explanation: ""
+            label: PiiDiiEffii gara alaatti ergi.
+          export_csv:
+            explanation: ""
+            label: Gatii/sona/ qoodduu fi addaan bayanii alatti ergi.
+          export_custom:
+            explanation: ""
+            label: Maamila gara alaatti ergi.
+          export_json:
+            explanation: ""
+            label: JSON alatti ergi.
+          export_list_view_csv:
+            explanation: ""
+            label: Tarreeffama mul'annoo gatii/sona/qoodduu fi kan addaan bayanii alatti ergi.
+          export_pdf:
+            explanation: ""
+            label: PiiDiiEffii gara alaatti ergi.
+          export_xls:
+            explanation: ''
+            label: Eksi ellii(faayila XLS) gara alaatti ergi.
+          flag:
+            explanation: Dandeettii alaabaa/mallattoo gara gaaffii barbaachaatti dabaluu.Fayyadamtoonni hayyama kana qaban ammallee  alaabaawwan/mallattoowwan gara gaaffii barbaachaatti ida'an haquu/kaasuu danda'an.
+            label: Alaabaa.
+          import:
+            explanation: ""
+            label: Fichisiisi/seensis.
+          manage:
+            explanation: Fayyadamaan tarkaanfiiwwan hunda gaaffii barbaachaa  irra jiran akka raawwattu dandeessissaan.Hayyama  "To'achuu/bulchuu" jechuun barbaachisummaadhaan "Waan hunda"jechuudha.
+            label: Bulchi(hayyamoota hundaa gosa qabeenya kanaa)
+          read:
+            explanation: Dandeettii gaaffii barbaachaa agarsiisuu.Shooraawwan dandeettii gaaffiiwwan barbaachaa ilaaluu danda'an akkasuma dandeettii akaakuu galmee humna kuufamaa qabu ilaaluu qabaachutu irra jiraata.
+            label: Ilaalcha.
+          write:
+            explanation: "Dandeettii furtuu \"gulaalii\"tuquu.Waayeegaaffii barbaachaa ragaa odeeffannoo ammayyoomsuu fi \"ol kaa'ii\"tuquu,akkasumas fayyadamaan gaaffii barbaachaa akka dhaamsu ykn akka kakkaasu dandeessisan."
+            label: Gulaali.
+        explanation: Nama agarsiisuu fi deebisanii walitti makuu dhimma nama waliin hinjirree fi addaan bayanii deebi'ee walitti fiduuf yaaluu bakka bu'a.
+        label: Gaaffii barbaachaa.
+      transfer:
+        actions:
+          transfer:
+            explanation: ""
+            label: "Shoorri kun dabarsaawwan alaatiif faayidaa irra ooluu danda'aa?"
+        label: Dabarsa.
+      user:
+        actions:
+          agency_read:
+            explanation: ""
+            label: Ilaalcha (Ejensicha keessatti)
+          create:
+            explanation: Dandeettii enyummeessa/herrega  fayyadamaa uumuu.
+            label: Uumuu.
+          manage:
+            explanation: 'Fayyadamaan tokko dalagaawwan fayyadamtootaa irra jiran hunda akka raawwatu hayyama."hayyamni bulchiinsaa bu''uuraayyuu" "waan hunda"jechuudha.Barbaachisaa:Kun ammoo dandeettii herregaawwan  fayyadamaa haaraa uumuu namaaf kenna.'
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hundaaf)
+          read:
+            explanation: dandeettii eenyumeessaawwan/herrega fayyadamaa ilaaluu.Durtiidhaan  fayyadamaan kamiiyyuu dandeettii eenyummeessa/herrega mataa isaanii (fknf. iggitaa.Iimeelii)ilaaluu fi odeeffannoo/ragaa gulaaluu qaban.
+            label: Ilaalcha/agarsiisi.
+          write:
+            explanation: "Dandeettii furtuu fuula agarsiistuu fayyadamaa irratti \"gulaali\"jedhu tuquu,waayee ammayyomsuu ragaa fayyadamaa fi  olkaa'ii. Maaloo hayyamni kun dandeettii herregaawwan fayyadamaa gufachiisuu akka kennuu danda'u yaadadhaa."
+            label: Gulaali.
+        explanation: Herrega fayyadamaa dhuunfaa bakka bu'a.
+        label: Fayyadamtoota.
+      user_group:
+        actions:
+          assign:
+            explanation: ""
+            label: Ramadi.
+          create:
+            explanation: Dandeettii garee fayyadamaa uumuu.
+            label: Uumi.
+          delete:
+            explanation: Dandeettii garee fayyadamaa haquu.
+            label: Haqi.
+          manage:
+            explanation: 'Fayyadamaan dalagaawwan gareewwan fayyadamaa irra jiran hundaa akka raawwatu hayyama."Hayyamni bulchiinsaa"bu''uurumarraa "waan hundaa"jechuudha.Barbaachisaa: kun ammoo gareewwan fayyadamaa dandeettii uumuu fi haquu akka qabaatan taasisa.'
+            label: Bulchi(hayyamoota akaakuu qabeenya kanaa hundaaf)
+          read:
+            explanation: Dandeettii gareewwan fayyadamaa ilaaluu/hubachuu.
+            label: Ilaalcha.
+          write:
+            explanation: Dandeettii gareewwan fayyadamaa gulaaluu.
+            label: Gulaali.
+        explanation: Garee deetaa qooduu danda'u ykn garee gamtoomina fayyadamtootaa bakka bu'a.Gaggeessitoonni hojii addatti  galmeewwan hojjettoota hawaasaatiin qajeelfaman hunda gareewwan fayyadamaa isaanii keessatti ilaaluu danda'u.
+        label: Gareewwan fayyadamaa.
+      webhook:
+        actions:
+          read:
+            label: Ilaalcha/agarsiisi.
+            explanation: Karaa Walqunnama Sagantaa Iyyannootiin dandeettii qindaayina harkistuu saphaphuu  tarreessuu fi keeddeebii.
+          write:
+            label: Gulaali.
+            explanation: Karaa Walqunnama Sagantaa Iyyannootiin dandeettii qindaayina harkistuu saphaphuu uumuu fi gulaaluu.
+          create:
+            explanation: Karaa Walqunnama Sagantaa Iyyannootiin dandeettii qindaayina harkistuu saphaphuu uumuu.
+            label: Uumuu.
+          delete:
+            explanation: Karaa Walqunnama Sagantaa Iyyannootiin dandeettii qindaayina harkistuu saphaphuu haquu.
+            label: Haqi.
+          manage:
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hundaaf)
+            explanation:
+      activity_log:
+        actions:
+          transfer:
+            explanation: Fayyadamaan daash boordii kutaa yaadannoo sochii tuquu fi dhimmoota irra gahamuu danda'an irratti galmee fudhatama qaban ykn dabarsaawwan akka kufan taasifaman hundaa ilaaluun ni danda'ama.
+            label: Dabarsaawwan.
+          manage:
+            label: Bulchi (hayyamoota gosa qabeenya kanaa hunda)
+            explanation:
+        label: Galmee sosochii/hojii.
+  potential_match:
+    case_id: Eenyummeessaa dhimmaa.
+    child_age: Umurii
+    child_gender: Kornaayaa.
+    child_id: "# eenyumeessaa daa'imaa."
+    inquirer_id: "# eenyummeessaa gaafataa."
+    inquirer_tr_name: Gaaffii barbaachaa.
+    inquiry_date: Guyyaa gaaffii.
+    name: Maqaa.
+    score: Qabxii.
+    social_worker: Hojjetaa hawaasaa.
+    social_worker_agency: Ejensii.
+    tracing_request_id: Eenyumeessaa gaaffii Barbaachaa.
+    trace: Barbaaduu/ faana dhayuu.
+    likelihood_likely: Tarii.
+    likelihood_possible: Nidanda'ama.
+  potential_matches:
+    display: "Firoomsaawwan %{type}%{id}walgituu danda'an  mul'isuu irratti."
+  reassign:
+    multiple_error: Dogoggora ta'e uumameera.%1 (galmeewwan- filadhaa) Dhimmi/dhimmootni hin hin ramadamine.
+    multiple_successfully: '%{select_records}Dhimmotni haala milkaa''aan itti ramadamaniiru.'
+    notes_label: Yaadannoowwan.
+    successfully: Milkaa'inaan  irradeebi'amee ramadameera.
+    user_mandatory_label: Fudhataan barbaachisaadha.
+    users_label: Nama fudhatu/fudhataa.
+  record_information:
+    assigned_user_names: Fayyadamtoota biraa ramadaman.
+    created_at: Waanta galmeen irratti uumame.
+    created_by: Qaama galmee hoiiate/uume.
+    created_organization: Eejensichan kan uumame.
+    current_owner_separator: Abbaa ammee.
+    module_id: Mura.
+    owned_by: Dambii  hojjetaa dhimmaa.
+    owned_by_agency_id: Ejensii.
+    owned_by_text: Dirree/dhimma/hojjetaa hawaasaa.
+    previously_owned_by: Abbaa  duraanii.
+    previously_owned_by_agency: Ejensii duraanii.
+    reassigned_tranferred_on: Irra deebiin ramadameera/Dabarsameera.
+    record_history_separator: Galmee seenaa.
+    last_updated_at: Yeroo dhumatiif  irratti kan ammayyoomsame.
+    last_updated_by: Qaama  yeroo dhumaatiif ammayyoomse.
+  record_panel:
+    record_information: Odeeffannoo galmeessuu.
+  referral:
+    type_of_recipient: Akaakuu fudhataa.
+    type_of_referral_required: Akaakuun  walharkaafuudhiinsaa ni barbaachisa.
+    agency_label: Ejensii.
+    is_remote_label: "Gara sirna fagoo mul'isaa jirtuu?"
+    location_label: Iddoo.
+    notes_label: Yaadannoo.
+    notes_on_referral: Yaadannoo walitti kenna irratti.
+    note_on_referral_from_provider: Yaadannoo walharkaafudhiinsa irratti  dhiheessaa  tajaajilaa irraa.
+    provided_consent_label: Eeyyamni gucoota keessatti hinkennamne.
+    recipient_label: Fudhataa.
+    refer_anyway_label: "Maalumaafuu eeraai?"
+    service_label: Tajaajila.
+    success: '%{record_type}%{id}Haala milkaa''aan dabarsameera/akeekameera/.'
+    user_mandatory_label: Fudhataan barbaachisaadha.
+    date: Guyyaa.
+    rejected_reason: Sababaa fudhatama dhabeef.
+  report:
+    aggregate_by: Garee sararaan/tarreen.
+    attribute: Amala.
+    constraint: Hanqina.
+    date_ranges:
+      date: Guyyaa.
+      month: Ji'a.
+      quarter: Kurmaana.
+      quarter_abbr: "K1%{Kurmaana}"
+      week: Torbee/torban.
+      year: Bara/waggaa.
+    description: Ibsa.
+    disabled:
+      explanation: "Gabaasa kana yoo gufachiistan,gabaasaawwan jiran keessatti hin mul'atu."
+      label: Qaama miidhamaa.
+    exclude_empty_rows: Sarara duwwaa hin agarsiisin.
+    disaggregate_by: Garee bo'oo isaaniitiin.
+    filters:
+      label: Calaliiwwan gabaasaa.
+      label_new: Calallii gabaasa haaraa.
+      attribute: Calaltuu.
+      value: Isa waliin.
+      not_null: "Duwwaa/banaa miti?"
+      less_than: Isaa gadi.
+      greater_than: Isarra caala/isaa ol.
+      equal_to: Walqixa.
+      not_blank: Duwwaa/banaa miti.
+      is: ..dha.
+      before: Duratti.
+      after: Booda.
+      delete_filter_message: "Dhugumatti calallii kana haquu barbaaddaa?"
+    group_ages: Daangaawwan  umurii fayyadamaa.
+    group_dates_by: Daangaawwan guyyaa fayyadamaa.
+    is_graph: "Caatoo maddisiisuu?"
+    messages:
+      delete_success: Gabaasni haala milkaa'aan haqameera.
+      success: Gabaasni haala milkaa'aan uumameera.
+      updated: Gabaasni haala milkaa'aan ammayyoomeera.
+    modules: Muraawwan/moojuloota/.
+    name: Maqaa.
+    name_mandatory: Maqaan barbaachisaadha.
+    no_data: Gabaasa kanaaf galmeen wayiituu hin argamne.
+    no_filters_added: Calalliwwan wayiituu hindabalamne.
+    not_selected: Hinfilatamne.
+    record_type: Akaakuu/gosa galmee.
+    total: Waliigala.
+    value: Sona/gatii.
+  reports:
+    delete_report: Gabaasa haqi.
+    delete_report_message: "Dhugumatti gabaasa kana haquu barbaaddaa?Haquu duubatti deebisuun hin danda'amu.Gabaasicha haquudhaaf ishii tole jettu tuqi."
+    label: Gabaasaawwan.
+    register_new_report: Gabaasa uumaa.
+    translations:
+      edit: Hiikaawwan gulaali.
+      manage: Hiikaawwan bulchuu.
+      select_language: Qooqa filadhaa.
+    error_loading: "Gabaasa(gabaasawwan )fe'insa dogongora. "
+  request_transfer:
+    notes_label: Yaadannoo.
+    submit_label: Gaaffii erguu.
+    success: Gaaffiin dabarsaa ergameera.
+  role:
+    agency_ids_label: Ejensiiwwan shoora kanaan bulan/too'ataman.
+    copy_failure: Dogongora shoora garagalchuu/waraabuu.Maqichi shoora biraa wajjiin  walitti kan hin buune ta'uusaa  mirkaneeffadhaa.
+    copy_success: Shoorri haala milkaa'aan gara galfameera/waraabameera.
+    create: Shoora uumuu.
+    delete_header: Shoora haqi.
+    description: Ibsa.
+    edit: Shoora gulali.
+    error_in_updating: Dogongora tarreeffamoota shooraa ammayeessuu irratti uumame.
+    group_permission_label: "Shoorri  kun galmeewwan maal irratti dhiibbaa uumuu danda'a?"
+    label: Shoora/gahee.
+    manager: Hoji gaggeessaa.
+    messages:
+      confirmation: "Dhugumatti shoora kana haquu barbaaddaa?Haquun duubatti deebi'uu hindanda'u.Shora san haquudhaaf tole kan jedhu tuqi."
+      created: Shoorri haala milkaa'aan uumameera.
+      deleted: Shoorri haala milkaa'aan  haqameera.
+      updated: Shoorri haala milkaa'aan ammayyoomeera.
+    name: Maqaa.
+    referral_label: "Shoorri kun walharkaafuudhiinsaaf  faayidaa irra ooluu danda'aa?"
+    reporting_location_level_label: "Shoora kanaaf gabaasa gochuuf iddoo akkamiittu faayidaa irra ooluu qaba?"
+    role_ids_label: Shooraawwan biraa shoora kanaan bulan.
+    successfully_updated: Tarreeffamotni shooraa haala milkaa'aan ammayyoomeera.
+    transfer_label: "Shoorri kun dabarsaaf faayidaa irra ooluu danda'aa?"
+    hide: Dhoksuu.
+    read: Mul'isi.
+    read_write: "Agarsiisiitii gulaali. "
+  roles:
+    label: Shooraawwan.
+  saved_search:
+    deleted: Barbaachi haala milkaa'aan  haqameera.
+    filters_tab: Calaltuwwan.
+    no_filters: Calalliiwwan filatamaan hinjiran.
+    save_success: Barbaachi haala milkaa'aan kaa'amaniiru.
+    saved_searches_tab: Barbaachawwan ol'kaayaman.
+    title_description: "Dhugumatti barbaacha ol kaa'ame kana  haquu barbaaddaa?"
+    title_modal: Barbaachawwan ol'kaayaman haqaa.
+  saved_searches:
+    no_save_searches: Barbaachaawwan ol'kaayaman hin qabdan.
+    save_search: Barbaacha ol'kaayaa.
+  settings:
+    navigation:
+      agencies: Ejensiiwwan.
+      audit_logs: Galmeewwan to'annoo/odiitii.
+      configurations: Qindaayinoota.
+      contact_information: Teessoo itti argaman.
+      forms: Gucoota/unkaawwan.
+      locations: Iddoowwan/bakkeewwan.
+      lookups: Barbaachaawwan.
+      user_groups: Gareewwan fayyadamaa.
+      users: Fayyadamtoota.
+      roles: Shooraawwan.
+      code_of_conduct: Dambii naamusaa.
+    title: Qindaa'inoota.
+  system_settings:
+    label: Qindaa'inooota sirnaa.
+  task:
+    due_date: Guyyaa dhumaa itti galchan.
+    id: "# eenyumeessaa."
+    name: Maqaa
+    priorities:
+      high_level: Ol'aanaa.
+      low_level: Gadi aanaa.
+      medium_level: Giddugaleessa.
+      no_action_level: Tarkaanfii wayiituu hinjiru.
+    priority: Sadarkaa dursaa barbaadan.
+    status: Haala.
+    statuses:
+      overdue: Duubatti harkifateera/barfateera.
+      upcoming_soon: Dhaqqabuudhaaf jechuun ni danda'ama.
+    type: Gosa /akaakuu  gochaa.
+    types:
+      assessment: Sakatta'insa.
+      case_plan: Karoora dhimmaa .
+      follow_up: Hordoffii-1%(qaamagosa)
+      service: Tajaajila-1%(qaama gosaa)
+  tracing_request:
+    label: Gaaffii barbaachaa.
+    has_match: Waan walsimu qaba.
+    find_match: Waan walsiman barbaadi.
+    back_to_traces: Gara faana dhahanii barbaduutti deebi'i.
+    back_to_potential_matches: Gara walsimsiisa/dorgommii ta'uu danda'aniitti deebi'i.
+    traces: Barbaachaawwan/duukaa bu'anii barbaaduu.
+    trace: Barbaacha/Duukaa bu'uu.
+    match: Firoomsuu/walsimsiisuu.
+    matches: Walsimaa.
+    unmatch: Kan wal hin simne.
+    messages:
+      already_matched: Gaafataa mucaa kana barbaadu waliin durumaanuu sirnicha keessa walsimni jira.
+      disabled: Gaaffiin barbaachaa gufateera.
+      nothing_found: Homtuu hin argamne.
+      update_success: '{Gaafiin maatii adda  baassuu  gaafatame 1%(LG-galmee) milka''iinan foyya''ee}'
+      creation_success: Galmeen gaaffii barbaachaa haala milkaa'aan uumameera.
+      update_success_queue: 'Gaaffiin barbaachaa%{record_id} seenaaduubee keessatti haala milkaa''aan ammayyoomaniiru.'
+      creation_success_queue: Galmeen gaaffii barbaachaa haala milkaa'aan duub duubee keessatti uumameera.
+      match_action: "Barbaacha dhimma wajjiin %{trace_id}%{record_id}haala milkaa'aan walgitan."
+      unmatch_action: "Barbaacha dhimma wajjiin %{trace_id}%{record_id}haala milkaa'aan wal hingitne."
+  registry_record:
+    messages:
+      update_success: 'galmeen warraabbii %{record_id}haala milkaa''aan ammayyoomeera.'
+      creation_success: 'Galmeen ittiin galmaa''an haala milkaa''aan uumameera.'
+      disabled: Galmeen ittiin galmaa'an gufateera.
+  tracing_requests:
+    date_of_inquiry: Guyyaa gaaffii.
+    disable_dialog_title: Gaaffii barbaachaa gufachiisi.
+    disable_dialog: Tolee tuquun haala gaaffii barbaachaa kana gara gufachiisutti jijjiira.
+    disable_success: Gaaffii barbachaa haala milkaa'aan gufachiiseera.
+    enable_dialog: Ok tuquun haala gaaffii barbaachaa kana gara dandeessisuutti jijjiira.
+    enable_dialog_title: Gaaffii barbaachaa milkaa'e.
+    enable_success: Haala milkaa'aan gaaffiin barbaachaa ta'eera/dammaqeera.
+    id: Eenyumeessaa.
+    filter_by:
+      by_date: Guyyaan.
+      location_separation: Iddoo addaan bahinsaa.
+      separation_cause: Ka'umsa/sababaa addaan bahinsaa.
+      status: Haala.
+    label: Gaaffiiwwan barbaachaa.
+    name_of_inquirer: Maqaa gaafataa.
+    inquirer: Gaafataa.
+    name: Maqaa.
+    register_new_tracing_request: Gaaffii haaraa barbaachaa.
+    selectable_date_options:
+      inquiry_date: Guyyaa gaaffii.
+    selected_records: 'gaaffiin /gaaffiiwwan  barbaachaa %{select_records}filatamaniiru.'
+    selected_all_records: 'Gaaffiiwwan barbaachaa  %{total_records}gaafata kana wajjiin walgitan hundaa filadhaa.'
+    show_tracing_request: 'eenyumeessaa gaaffii barbaachaa/faana dhawuu%{short_id}'
+    tracing_requests: Gaaffiwwan barbaachaa.
+    export: Alatti ergi.
+  registry_records:
+    id: Lakkoofsa eenyummaa.
+    label: Galmeewwan ittiin galmaa'an.
+    name: Maqaa
+    registry_no: Lakkoofsa galmeessaa.
+    location: Naannoo/Teessoo
+    registration_date: Guyyaa galmee
+    selected_records: '%{select_records}galmeen warraabbii/waraabbiiwwan filatamaniiru'
+    selected_all_records: 'waraabbiiwwan galmee %{total_records}gaafata kana gitan/firooman/    hunda filadhu.'
+    disable_dialog_title: Galmee qaama miidhamaa ittiin galmeessan.
+    disable_dialog: Tolee tuquun haala galmee ittiin galmaa'aanii kanaa akka gufatu taasisa.
+    disable_success: Galmeen ittiin galmaa'an haala milkaa'aan gufateera.
+    enable_dialog_title: Galmee ittiin galmaa'an jabeessi/dammaqsi.
+    enable_dialog: Ok tuquun haala galmee ittiin galmaa'anii kana gara dandeessisuutti jijjiira.
+    enable_success: Galmee galmeessaa  haala milkaa'aan qophaa'e.
+    filter_by:
+      by_date: Guyyaan.
+      status: Haala.
+    selectable_date_options:
+      registration_date: Guyyaa galmee.
+    show_registry_record: 'Eenyummeessaa galmee itti galmaa''anii:%1[eenyummeessaa -gabaabaa]'
+    register_new_registry_record: Galmee haaraa ittiin galmaa'an.
+    export: Gara alaatti erguu.
+    mark_for_offline:
+      title: Sararaan alatti mallattoo kaa'aa.
+      text: "Dhugumatti yeroo sararaan ala taatanitti galmeewwan ittiin galmaa'an kanneen fayyadamuuf mallattoo kaayuu barbaadduu?"
+      success: Galmeewwan ittiin galmaa'an haala milkaa'aan akka sararaan alatti faayidaa irra akka oolan mallattoon irra kaayameera.
+  transfer:
+    label: Dabarsa.
+    agency_label: Ejensii.
+    consent_from_individual_label: "Dabarsa kana taasisuudhaaf namicharraa eeyyama qabdaa?"
+    consent_label: Galmeewwan eeyyama hin kennine.
+    consent_override_label: "Qindaa'ina kana fudhatama dhabsiisuu/kuffisuu barbaadduu?"
+    is_remote_label: "Gara sirna fagootti dabraa jirtuu?"
+    location_label: Iddoo.
+    notes_label: Yaadannoo.
+    provided_consent_label: Eeyyamni/waliigalteen  unkaawwan irratti hinkennamne.
+    recipient_label: Fudhataa.
+    select_label: Filadhaa.
+    success: Haala milkaa'an dabarsameera.
+    transfer_label: "Karumata'een/wamafedheenuu dabarsuu?"
+    user_mandatory: Fudhataan ni barbaachisa.
+    rejected_reason: Sababa fudhatama dhabe.
+  transfer_assignment:
+    title: Dabarsaawwanii fi ramaddiiwwan.
+  transition:
+    agency_label: Ejensii.
+    assigned_by: Qaama ramade.
+    consent_individual_transfer_value:
+      true_label: 'Eeyyen.'
+      false_label: 'Miti.'
+    consent_overridden_value:
+      false_label: 'Miti.'
+      true_label: 'Eeyyen.'
+    errors:
+      consent: Eeyyamni/Waliigalteen hin kennamne.
+      to_user_can_receive: Fayyadamaan kun galmee kana fudhachuu hindanda'u.
+    individual_consent: "Hojjetaan dhimmaa dabarsa kana raawwachuudhaaf waliigaltee nama sanii qaba turee?"
+    no_consent_share: "Qindaayinicha waliif qooduuf waliigaltaniirtuu?"
+    notes: Yaadannoo/
+    recipient: Fudhataa.
+    rejected: Sababa fudhatama dhabeef.
+    requested_by: Qaama gaafate.
+    service_label: "Tajaajila,"
+    responded_at: Deebiin irratti kennameera.
+    status:
+      accepted: Fudhateera/fudhatama argateera.
+      done: Raawwatameera.
+      in_progress: Eeggachaa kan jiru/akka turu taasifame.
+      inprogress: Eeggachaa jira/akka turu taasifame.
+      rejected: Fudhatama hinarganne.
+      revoked: Akka hindarbine taasifameera./kufeera.
+    type:
+      assign: Ramaduu.
+      reassign: Ramaduu.
+      referral: Walharkaafuudhinsa.
+      external_referral: Walharkaafuudhinsa gara alattii.
+      transfer: Dabarsa.
+      transferRequest: Gaaffii dabarsaa.
+  user:
+    agency_office: Waajjira Ejensii( dirree miidhaa koornaayaa bu'ureeffatee)
+    code: Dambii/ koodii fayyadamaa.
+    disabled: Qaama miidhamaa.
+    email: Iimeelii.
+    full_name: Maqaa guutuu.
+    identity_provider: Dhiyeessi kenna eenyummaa.
+    invalid_provider_username: 'caasaa/dhangii fashalaa''aa maqaa fayyadamaa.Fakkenyaaf:maqaa fayyadamaa kiyyaa@%{domain}'
+    label: Fayyadamaa.
+    language: Qooqa/afaan.
+    locale: Kan naannoo.
+    location: Bakka/iddoo.
+    messages:
+      confirmation: "Dhugumatti fayyadamaa kana haquu barbaaddaa?Haqiinsi  duubatti deebi'uu  hindanda'u.Fayyadamaa kana haquudhaaf Tole kan jedhu tuqaa."
+      created: Fayyadamaan haala milkaa'aan uumameera.
+      failure: Dogongorri tokko uumameera.Maaloo deeggarsa argadhaa.
+      new_confirm_html: "Amma fayyadamaa tokko   %{username} irraa %{identity}gahee %{role}primeerootti fayyadamuu akka danda'uu  affeerutti jirta.Iimeeliin dhugoomsa isaa siif ergama.<b>%{email}Itti fufisiisuu barbaaddaa?"
+      new_confirm_non_identity_html: "Amma fayyadamaa tokko %{username} irraa %{identity}gahee %{role}primeerootti fayyadamuu akka danda'uu affeerutti jirta.Iimeeliin dhugoomsa isaa siif ergama %{email}3 Itti fufisiisuu barbaaddaa?"
+      not_found: Fayyadamaan eenyummeessaa kennameef qabu hin argamne.
+      password_changed_successfully: Iggitaan haala milkaa'aan jijjirameera.
+      passwords_do_not_match: Iggitaa ammaa kanaan  walhinsimu.
+      time_zone_updated: Jijjiramichi haala milkaa'aan ammayyoomsameera.
+      updated: Fayyadamaan haala milkaa'aan ammayyomsameera.
+    organization: Dhaabbata/jaarmiyaa.
+    agency: Ejensii.
+    services_help_text: "Tajaajiloota  yoo ibsuu baattan,,fayyadamaan kun tajaajioota walfakkaataa ejensichi qabu  ni kennamaafi."
+    password_setting:
+      label: "Pirimeeroon iggitaa fayyadamaa akkamitti qopheessuu qaba?"
+      self: Iggitaa niqindeessa/nan qopheessa.
+      user: Fayyadamaan iimeelii baga nagaan dhuftanii fayyadamuun iggita ni qindeessa.
+      help_text: "Maaloo qaabadhaa,isin bulchaan iggitaa ofiikeessaniin kan qopheessitan yoo ta'e haala karaa nageenyi isaa eegameen fayyadamaaf qooduu isin barbaachisa. "
+    password_reset_header: Iimeelii deebi'anii eegalsiisuu/haaroomsuu iggitaa ergi.
+    password_reset_text: Yoo "ergi"kan jedhu tuqtan fayyadamaan kun iimeelii iggitaa san deebi'ee eegalsiisuuf iimeeliin walqunnamsiistuu isa gaha.
+    password_reset_request: Iimeelii  iggitaa irra deebiin eegalsiisuu ergi.
+    password: Iggitaa.
+    password_confirmation: Mirkaneessa iggitaa.
+    phone: Bilbila.
+    position: Gita/sadarkaa/teessumma.
+    provider_username_help: 'Fakkeenyaaf:maqaa itti fayyadama kiyya%{domain}'
+    role_id: Shoora.
+    send_mail: "Beeksisoota Iimeelii fudhaa?"
+    user_group_unique_ids: Gareewwan fayyadamaa.
+    user_name: Maqaa fayyadamaa
+    services: Tajaajiloota.
+    welcome_email:
+      subject: 'Baga gara  %1  (sirna) nagaan dhuftan!'
+      greeting: 'Baga gara %1 (sirna) nagaan dhuftan!'
+      body_native: '%{role_name}tiin ida''amtee jirta. Maloo %{admin_full_name}%{admin_email}qunnamaa%{host}  hajaja hordofuun hojii eegaluuf '
+      sso:
+        body: '%{role_name}tiin ida''amtee jirta'
+        step1: 'Karaa %{host}deemuun %{identity_provider}cuqaassa'
+        step2: 'Akka''uuntii keetiin%{user_name}keetiin seeni/gali/%{identity_provider}'
+        step3: 'Iggitaa hoggayyuu %{identity_provider}herrega keetiif  itti fayyadamtutti dhimma bayi'
+        footer: 'hubannoo gadi fageenyaatiif maaloo %{admin_full_name}%{admin_email}qunnamaa.'
+      otp:
+        body: 'Akka %{role_name}dabalamteerta.'
+        step1: 'Maaloo maqaa fayyadamaa%{admin_full_name}%{admin_email} keessanii fudhachuuf qunnamaa.'
+        step2: 'Karaa%{host}''maqaa fayyadamaa primeeroon'' cuqaassi'
+        step3: 'Maqaa itti fayyadama keessanii fi iggitaa yeroodhaaf fayyadamtaniin seenaa.%1(otp)'
+        step4: 'Yoo gaafatamtan, iggitaa keessan irra deebi''aa eegalsiisaa.'
+      url_label: Piriimeeroo.
+      enabled_label: "Iimeelii baga nagaan dhuftanii ergi?"
+      text_label: Barruu iimeelii anaa dhufuu.
+    password_reset:
+      subject: 'Qajeelfama iggitaa irra deebiin jalqabsiisi.'
+      email_greeting: "Jaalatamoo %1 (maqaa-guutuu)"
+      email_body1: "Namni wayii iggitaa kee %{host_href}qindeessuuf gaafateera.Jalqabuudhaaf url gadi jiru tuqaa."
+      email_body2: ""
+      email_body_link: Addana/gamana.
+      request_submitted: "Gaaffin irra deebiin eegalsiisuu iggitaa galeera.."
+      success: "Iggitaan milkaa'inaan jijjiirameera."
+      errors:
+        reset_password_token: "Fakkeessa iggitaa sirrii hintaane deebi'anii eegalsiisuu."
+        password_confirmation: "Iggitaawwan walisimuu qaban."
+    onboard_email:
+      subject: "Gara yaabbachuu irratti.%1(sirna)"
+      greeting: "Jaalatamoo %1(Maqaa-guutuu)"
+      body1: "Baga nagaan gara Primeerootti  dhuftan."
+      body2: "Meeshaa sagalee waraabduu  xis taatee alatti ergi."
+      body2_reset_notification: "Iggitaa keessan irra deebiin akka  jalqabsiiftan  kan gaafatu iimeelii dabalataa isin dhaqqaba."
+      body3: "Raawwii nageenyummaan isaa eegamee fi yeroo isaa eeggate mirkaneessuuf gaafatamummaa qabdu.Tokkoo tokkoon adeemuu isaatiif karoora raawwii gabatee irra jiru fi tarsiimoo bulchinsa fayyadamaa fi kabaja yagutooma odeeffannoo xumuruu qabda.Akkasumas,waliigalteen fayyadamaa mallattaa'an  dhaabbilee fayyadamaa hunda isaaniitiifuu faayila irra jiraachuu isaa mirkaneessuuf gaafatamummaa qabdu."
+  user_group:
+    associated_agencies: Ejensiiwwan garee fayyadamaa kanaa wajjiin walitti hidhatama qaban.
+    description: Ibsa.
+    disabled:
+      explanation: "Yoo garee fayyadmaa kana gufachiistan ,ammaan booda gara herregawwan fayyadamaatti ramaduu hin dandeessan."
+      label: Qaama miidhamaa/ naafa.
+    messages:
+      created: Gareen fayyadamaa haala milkaa'aan uumameera.
+      updated: Gareen fayyadamaa haala milkaa'aan ammayyoomeera.
+    name: Maqaa.
+  user_groups:
+    label: Gareewwan fayyadamaa.
+  users:
+    label: Fayyadamtoota.
+    headers:
+      full_name: Maqaa guutuu.
+      user_name: Maqaa fayyadamaa.
+      position: Gita/teessuma.
+      agency: Ejensii.
+  devise:
+    failure:
+      already_authenticated: "Isin dursitanii keessa galtaniirtu."
+      invalid: "%{authentication_keys}fudhatama hin qabne"
+      locked: "Herregni/eenyumeessaan kee cufameera."
+      last_attempt: "Herregni/eenyumeessaan kee osoo sijalaa hincufamin dura yaali tokko qofa qabda.."
+  admin:
+    locations:
+      selected_records: '1% (galmeewwan - filadhaa)  Iddoo/Iddoowwan filatamaniiru.'
+      selected_all_records: "Gaafii kanaaf dhimmoota firooman hundaa%{total_records}filadha."
+      updated: '%1 (galmeewwan-ammayyoomaniiru)Iddowwan/bakkeewwan ammayyoomaniiru.'

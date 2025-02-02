@@ -1,0 +1,7 @@
+.applyConfigText {
+  font-size: var(--fs-13);
+
+  & b {
+    margin-left: 3px;
+  }
+}

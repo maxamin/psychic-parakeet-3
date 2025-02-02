@@ -1,0 +1,165 @@
+trigger:
+  branches:
+    exclude:
+      - maint*
+  tags:
+    include:
+      - v2.*
+
+resources:
+  - repo: self
+
+variables:
+  # Container registry service connection established during pipeline creation
+  vmImageName: 'Ubuntu-18.04'
+  latestBranch: master
+
+jobs:
+  - job: Test
+    displayName: 'Run tests'
+    pool: primerox-azdo-a-ms
+    steps:
+      - bash: ./bin/install_local_test_solr.sh
+      - bash: |
+          set -e
+          mkdir -p log
+          cp config/azure-devops/database.yml config/
+          cp config/azure-devops/sunspot.yml config/
+          cp config/azure-devops/mailers.yml config/
+        displayName: 'Make required directories and copy files'
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '12.20.1'
+        displayName: 'Install node'
+      - bash: npm ci
+        displayName: 'Install npm packages'
+      - bash: |
+          apt-get update
+          apt-get install -y libpq-dev unzip libsodium-dev postgresql-client-10
+        displayName: 'Install dependencies'
+      - bash: |
+          . ~/.bash_env
+          rbenv global 2.7.4
+          bundle install --without production --path=${BUNDLE_PATH:-vendor/bundle}
+        displayName: 'Bundle install'
+        env:
+          RAILS_ENV: test
+      - bash: |
+          . ~/.bash_env
+          bundle exec rails db:drop
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+          bundle exec rspec spec
+        displayName: 'Run Rspec test'
+        env:
+          RAILS_ENV: test
+          DEVISE_JWT_SECRET_KEY: $(DEVISE_JWT_SECRET_KEY)
+          DEVISE_SECRET_KEY: $(DEVISE_SECRET_KEY)
+      - bash: |
+          npm run test:batch:1
+        displayName: 'Run Integration test Batch 1'
+      - bash: |
+          npm run test:batch:2
+        displayName: 'Run Integration test Batch 2'
+      - bash: |
+          npm run test:batch:3
+        displayName: 'Run Integration test Batch 3'
+      - bash: |
+          npm run test:batch:4
+        displayName: 'Run Integration test Batch 4'
+
+
+  - job: Build
+    displayName: 'Build and push'
+    dependsOn: Test
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+      - bash: echo "##vso[task.setvariable variable=tag]$(docker/git-to-docker-tag.sh ${BUILD_SOURCEBRANCH} ${BUILD_SOURCEVERSION})"
+      - bash: echo "##vso[task.setvariable variable=dash_el]$([[ ${BUILD_SOURCEBRANCH} == *${LATESTBRANCH} ]] && echo '-l')"
+      - bash: echo "##vso[task.setvariable variable=latest]$([[ ${BUILD_SOURCEBRANCH} == *${LATESTBRANCH} ]] && echo 'latest')"
+      - bash: echo "##vso[task.setvariable variable=latestpg10]$([[ ${BUILD_SOURCEBRANCH} == *${LATESTBRANCH} ]] && echo 'latest-pg10')"
+      - bash: echo "##vso[task.setvariable variable=latestpg11]$([[ ${BUILD_SOURCEBRANCH} == *${LATESTBRANCH} ]] && echo 'latest-pg11')"
+      - bash: echo "##vso[task.setvariable variable=latestpg14]$([[ ${BUILD_SOURCEBRANCH} == *${LATESTBRANCH} ]] && echo 'latest-pg14')"
+      - task: CmdLine@2
+        displayName: 'Build Primero Docker images'
+        inputs:
+          script: './build.sh all -t $(tag) -r $(containerRegistry) $(dash_el)'
+          workingDirectory: 'docker/'
+
+      - task: Docker@2
+        displayName: 'Application Push an image to UNICEF ACR'
+        inputs:
+          containerRegistry: '$(dockerRegistryServiceConnection)'
+          repository: 'primero/application'
+          command: 'push'
+          tags: |
+            $(tag)
+            $(latest)
+
+      - task: Docker@2
+        displayName: 'Solr - Push an image to UNICEF ACR'
+        inputs:
+          containerRegistry: '$(dockerRegistryServiceConnection)'
+          repository: 'primero/solr'
+          command: 'push'
+          tags: |
+            $(tag)
+            $(latest)
+
+      - task: Docker@2
+        displayName: 'Application Push an image to Dockerhub'
+        inputs:
+          containerRegistry: 'dockerhub-primeroims'
+          repository: 'primeroims/application'
+          command: 'push'
+          tags: |
+            $(tag)
+            $(latest)
+
+      - task: Docker@2
+        displayName: 'Solr - Push an image to Dockerhub'
+        inputs:
+          containerRegistry: 'dockerhub-primeroims'
+          repository: 'primeroims/solr'
+          command: 'push'
+          tags: |
+            $(tag)
+            $(latest)
+
+      - task: Docker@2
+        displayName: 'Nginx - Push an image to Dockerhub'
+        inputs:
+          containerRegistry: 'dockerhub-primeroims'
+          repository: 'primeroims/nginx'
+          command: 'push'
+          tags: |
+            $(tag)
+            $(latest)
+      - task: Docker@2
+        displayName: 'Postgres - Push an image to Dockerhub'
+        inputs:
+          containerRegistry: 'dockerhub-primeroims'
+          repository: 'primeroims/postgres'
+          command: 'push'
+          tags: |
+            $(tag)-pg10
+            $(latestpg10)
+      - task: Docker@2
+        displayName: 'Postgres - Push an image to Dockerhub'
+        inputs:
+          containerRegistry: 'dockerhub-primeroims'
+          repository: 'primeroims/postgres'
+          command: 'push'
+          tags: |
+            $(tag)-pg11
+            $(latestpg11)
+      - task: Docker@2
+        displayName: 'Postgres - Push an image to Dockerhub'
+        inputs:
+          containerRegistry: 'dockerhub-primeroims'
+          repository: 'primeroims/postgres'
+          command: 'push'
+          tags: |
+            $(tag)-pg14
+            $(latestpg14)

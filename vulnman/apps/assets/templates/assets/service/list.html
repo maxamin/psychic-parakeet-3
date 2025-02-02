@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load guardian_tags %}
+{% load vulnmantags %}
+
+{% block title %}
+    Services
+{% endblock %}
+
+{% block content %}
+    {% get_obj_perms request.user for project as "project_perms" %}
+
+    <div class="container mt-3">
+        <div class="row d-flex">
+            <div class="d-flex flex-column col-sm-12 col-md-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        {% include 'core/components/navigation/sidebar-toggler.html' %}
+                        <li class="breadcrumb-item active">Services</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="d-flex flex-column-reverse col-md-5 col-sm-12 align-items-end justify-content-end">
+                <div class="d-inline">
+                    <button data-bs-toggle="modal" data-bs-target="#service-filter-modal"
+                            class="btn btn-outline-secondary">
+                        <i class="fa fa-filter"></i>
+                    </button>
+                    {% if "change_project" in project_perms %}
+                        {% url 'projects:assets:service-create' as create_url %}
+                        {% include 'core/components/buttons/create_obj.html' with url=create_url text="New Service" %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        {% if not services %}
+            <div class="card mt-3">
+                <div class="card-body">
+                    {% show_blankslate %}
+                </div>
+            </div>
+        {% else %}
+            <table class="table table-hover table-striped mt-3">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Protocol</th>
+                    <th>State</th>
+                    <th>Banner</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for service in services %}
+                    <tr>
+                        <td><a href="{% url 'projects:assets:service-detail' service.pk %}">{{ service }}</a></td>
+                        <td>{{ service.get_protocol_display }}</td>
+                        <td>{{ service.get_state_display }}</td>
+                        {% if not service.banner %}
+                            <td>-</td>
+                        {% else %}
+                            <td>{{ service.banner }}</td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    </div>
+    {% include "core/components/navigation/pagination.html" %}
+    {% include 'assets/components/service_list_filter.html' %}
+
+{% endblock content %}

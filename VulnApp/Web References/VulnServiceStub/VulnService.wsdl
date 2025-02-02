@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetScore">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetScoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetScoreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetScoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetScore" />
+  </wsdl:message>
+  <wsdl:message name="GetScoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetScoreHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetScoreHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetScoreHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetScoreHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="VulnServiceSoap">
+    <wsdl:operation name="GetScore">
+      <wsdl:input message="tns:GetScoreSoapIn" />
+      <wsdl:output message="tns:GetScoreSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="VulnServiceHttpGet">
+    <wsdl:operation name="GetScore">
+      <wsdl:input message="tns:GetScoreHttpGetIn" />
+      <wsdl:output message="tns:GetScoreHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="VulnServiceHttpPost">
+    <wsdl:operation name="GetScore">
+      <wsdl:input message="tns:GetScoreHttpPostIn" />
+      <wsdl:output message="tns:GetScoreHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VulnServiceSoap" type="tns:VulnServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetScore">
+      <soap:operation soapAction="http://tempuri.org/GetScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VulnServiceSoap12" type="tns:VulnServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetScore">
+      <soap12:operation soapAction="http://tempuri.org/GetScore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VulnServiceHttpGet" type="tns:VulnServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetScore">
+      <http:operation location="/GetScore" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VulnServiceHttpPost" type="tns:VulnServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetScore">
+      <http:operation location="/GetScore" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VulnService">
+    <wsdl:port name="VulnServiceSoap" binding="tns:VulnServiceSoap">
+      <soap:address location="http://localhost/VulnApp/VulnService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VulnServiceSoap12" binding="tns:VulnServiceSoap12">
+      <soap12:address location="http://localhost/VulnApp/VulnService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VulnServiceHttpGet" binding="tns:VulnServiceHttpGet">
+      <http:address location="http://localhost/VulnApp/VulnService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VulnServiceHttpPost" binding="tns:VulnServiceHttpPost">
+      <http:address location="http://localhost/VulnApp/VulnService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,27 @@
+{
+  "name": "@contrast/test-bench",
+  "private": true,
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "test": "lerna run test",
+    "postpublish": "lerna exec -- npm install --package-lock-only && git commit -a -m 'Bump package-lock' && git push",
+    "prepare": "scripts/prepare.sh"
+  },
+  "dependencies": {
+    "lerna": "^3.22.1"
+  },
+  "devDependencies": {
+    "@contrast/eslint-config": "^3.2.0",
+    "chai": "^4.2.0",
+    "husky": "^8.0.1",
+    "jest": "^26.1.0",
+    "lint-staged": "^13.0.3",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.19",
+    "pino-pretty": "^3.6.1",
+    "shellcheck": "^1.1.0",
+    "supertest": "^4.0.2"
+  }
+}

@@ -1,0 +1,129 @@
+site_name: Eclipse Steady 3.2.5 (Incubator Project)
+site_description: Eclipse Steady Documentation
+site_url: https://eclipse.github.io/steady/
+dev_addr: localhost:8000
+
+repo_name: 'eclipse/steady'
+repo_url: 'https://github.com/eclipse/steady'
+
+docs_dir: .merged
+
+nav:
+  - Home:
+    - Home: index.md
+    - About: about/index.md
+  - User Guide:
+    - User Guide: user/index.md
+    - Tutorials:
+      - 'Getting started': 'user/tutorials/index.md'
+      - 'Workspace': 'user/tutorials/workspace_howto.md'
+      - 'Workspaces (advanced)': 'user/tutorials/workspace_howto_advanced.md'
+      - 'Scanning Java (Maven)': 'user/tutorials/java_maven.md'
+      - 'Scanning Java (Gradle)': 'user/tutorials/java_gradle.md'
+      - 'Scanning Java (CLI)': 'user/tutorials/java_cli.md'
+      - 'Reachability analysis (Java/Maven)': 'user/tutorials/java_maven_advanced.md'
+      - 'Scanning Python (CLI)': 'user/tutorials/python_cli.md'
+      - 'Jenkins automation':   'user/tutorials/jenkins_howto.md'
+      - 'Understanding reports':   'user/tutorials/reports.md'
+    - Manual:
+      - 'Intro': 'user/manuals/index.md'
+      - 'Configuration': 'user/manuals/setup.md'
+      - 'Analysis': 'user/manuals/analysis.md'
+      - 'Frontend': 'user/manuals/frontend.md'
+      - 'Report': 'user/manuals/report.md'
+      - 'Impact Assessment and Mitigation': 'user/manuals/assess_and_mitigate.md'
+      - 'Library Assessment': 'user/manuals/library_assessment.md'
+      - 'Updating Vulnerability Data': 'user/manuals/updating_vuln_data.md'
+    - Support:
+      - 'Getting help': user/support/index.md
+      - 'FAQ': user/support/faq.md
+  - DevOps:
+    - DevOps: 'admin/index.md'
+    - Tutorials:
+      - 'Deploy on Docker': 'admin/tutorials/docker.md'
+      - 'Build JAVA archives/Docker images': 'admin/tutorials/build.md'
+      - 'Push Docker images to a registry': 'admin/tutorials/registry.md'
+  - Contribute:
+    - Contribute: contributor/index.md
+    # - Tutorials:
+    #   - 'Setting up Vulas (Server)': 'admin/tutorials/tutorial_server.md'
+    # - Manual: admin/manuals/index.md
+    # - Support:
+    #   - 'Getting help': admin/support/getting_help.md
+    #   - 'General FAQ': admin/support/faq.md
+    - Tutorials:
+      - 'Project structure': 'contributor/tutorials/project_structure.md'
+#      - 'Support new language': 'contributor/tutorials/new_lang.md'
+#    - Code documentation: contributor/manuals/index.md
+#    - Support:
+#      - 'Getting help': contributor/support/getting_help.md
+#      - 'Dev. FAQ': contributor/support/faq.md
+  - Vulnerability data: 'vuln_db/index.md'
+    # - 'Vulnerability database' : vuln_db/index.md
+    # - Tutorial: vuln_db/tutorials/vuln_db_tutorial.md
+    # - Manual:
+      # - 'Intro': vuln_db/manuals/index.md
+      # - 'KB Importer': vuln_db/manuals/kb_importer.md
+      # - 'Patch Analyzer' : vuln_db/manuals/patch_analyzer.md
+      # - 'Patch Lib Analyzer' : vuln_db/manuals/patch_lib_analyzer.md
+      # - 'Manual Assessment' : vuln_db/manuals/manual_assessment.md
+  - Blog:
+    - https://blogs.sap.com/tag/vulas/
+
+copyright: 'Copyright (c) 2018-2021 SAP SE or an SAP affiliate company and Eclipse Steady contributors'
+
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown_include.include:
+      base_path: .merged
+  - markdown.extensions.toc:
+      permalink: true
+      toc_depth: 3
+      baselevel: 1
+      # title: 'List of questions'
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+extra:
+  social:
+    - type: 'github'
+      link: 'https://github.com/eclipse/steady'
+
+theme:
+  name: 'material'
+  custom_dir: './public/custom_theme/'
+  language: en
+  favicon: 'images/ES-favicon-48-transparent.png'
+#  logo: 'images/ES-logo-152-transparent.png'
+  palette:
+    primary: 'blue'
+    accent: 'blue'
+  feature:
+    tabs: true
+
+extra_css:
+  - css/faq.css
+  - css/override.css
+  - css/scrollTop.css
+
+extra_javascript:
+  - js/scrollTop.js

@@ -1,0 +1,10 @@
+C:\Users\Joe\Documents\My Dropbox\Tools\SuperSecureBank\SuperSecureBankService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Joe\Documents\My Dropbox\Tools\SuperSecureBank\SuperSecureBankService\bin\SuperSecureBankService.dll
+C:\Users\Joe\Documents\My Dropbox\Tools\SuperSecureBank\SuperSecureBankService\bin\SuperSecureBankService.pdb
+C:\Users\Joe\Documents\My Dropbox\Tools\SuperSecureBank\SuperSecureBankService\obj\Debug\SuperSecureBankService.dll
+C:\Users\Joe\Documents\My Dropbox\Tools\SuperSecureBank\SuperSecureBankService\obj\Debug\SuperSecureBankService.pdb
+C:\Users\joe\Dropbox\Tools\SuperSecureBank\SuperSecureBankService\bin\SuperSecureBankService.dll
+C:\Users\joe\Dropbox\Tools\SuperSecureBank\SuperSecureBankService\bin\SuperSecureBankService.pdb
+C:\Users\joe\Dropbox\Tools\SuperSecureBank\SuperSecureBankService\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\joe\Dropbox\Tools\SuperSecureBank\SuperSecureBankService\obj\Debug\SuperSecureBankService.dll
+C:\Users\joe\Dropbox\Tools\SuperSecureBank\SuperSecureBankService\obj\Debug\SuperSecureBankService.pdb

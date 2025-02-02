@@ -1,0 +1,17 @@
+#!/bin/bash
+# This script enforces that CodeAnalyzer's C/C++ compiler wrappers is used as
+# system-wide C/C++ compilers with the help of install script.
+#
+# Run this script before running C/C++ compiler or make for a project to 
+# let CodeAnalyzer analyze the code of the project, just like building the
+# project normally.
+#
+TOOLS_DIR=~/code/Talos/tools
+rm -f ~/bin/cc
+rm -f ~/bin/gcc
+rm -f ~/bin/g++
+rm -f ~/bin/c++
+ln -s $TOOLS_DIR/gcc.analyzer ~/bin/cc
+ln -s $TOOLS_DIR/gcc.analyzer ~/bin/gcc
+ln -s $TOOLS_DIR/g++.analyzer ~/bin/g++
+ln -s $TOOLS_DIR/g++.analyzer ~/bin/c++

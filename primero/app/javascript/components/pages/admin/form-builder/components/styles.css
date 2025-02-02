@@ -1,0 +1,25 @@
+.formBuilderDialog {
+  & h1 {
+    font-size: var(--fs-16);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  & div {
+    padding: 0;
+  }
+}
+
+.translationHeader {
+  font-size: var(--fs-13) !important;
+}
+
+.hideField {
+  display: none !important;
+}
+
+.translationField {
+  & label {
+    font-size: var(--fs-16);
+    color: var(--c-dark-grey);
+  }
+}

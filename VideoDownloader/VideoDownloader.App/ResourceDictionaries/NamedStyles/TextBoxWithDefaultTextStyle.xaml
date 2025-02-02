@@ -1,0 +1,22 @@
+﻿<ResourceDictionary x:Uid="ResourceDictionary_1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+	<Style x:Uid="Style_1" x:Key="TextBoxWithDefaultTextStyle" TargetType="TextBox">
+	
+		<!--Padding for typed text-->
+		<Setter x:Uid="Setter_1" Property="Padding" Value="5, 3, 5, 0"/>
+		<Setter x:Uid="Setter_2" Property="Height" Value="30"/>
+		<Setter x:Uid="Setter_3" Property="Background" Value="White" />
+		<Setter x:Uid="Setter_4" Property="BorderBrush" Value="#FF858585" />
+		<Setter x:Uid="Setter_5" Property="BorderThickness" Value="3" />
+		<Setter x:Uid="Setter_6" Property="Border.CornerRadius" Value="6" />
+		<Setter x:Uid="Setter_7" Property="Template" Value="{StaticResource TextBoxBaseControlTemplate}"/>
+		<Style.Triggers>
+			<Trigger x:Uid="Trigger_1" Property="Validation.HasError" Value="True">
+				<Setter x:Uid="Setter_8" Property="Validation.ErrorTemplate" Value="{StaticResource TextBoxValidationTemplate}"></Setter>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+</ResourceDictionary>
+	

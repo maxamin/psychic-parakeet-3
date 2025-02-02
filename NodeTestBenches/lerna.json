@@ -1,0 +1,20 @@
+{
+  "packages": [
+    "express",
+    "fastify3",
+    "fastify4",
+    "fastify4ts",
+    "hapi18",
+    "hapi19",
+    "hapi20",
+    "koa",
+    "kraken",
+    "loopback",
+    "loopback@4",
+    "loopback4",
+    "restify",
+    "sails",
+    "test-bench-utils"
+  ],
+  "version": "3.32.0"
+}

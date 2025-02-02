@@ -1,0 +1,9 @@
+user: admin
+pw: sicheresPassW0rtFu3rOpenV4S
+
+Start OpenVas:
+- sudo gvm-start (pw: kali)
+- Open Browser to https://127.0.0.1:9392
+
+Stop OpenVas:
+- sudo gvm-stop

@@ -1,0 +1,1 @@
+"local/unknown",2019-06-11T12:55:58+02:00,10,"xss csrf","REQUEST.ip=127.0.0.1%20%26%26%20ls POST.ip=127.0.0.1%20%26%26%20ls","%2FOSCSP%2Fvulnerabilities%2Fexec%2F","127.0.0.1"

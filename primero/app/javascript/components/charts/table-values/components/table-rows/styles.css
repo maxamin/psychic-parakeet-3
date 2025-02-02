@@ -1,0 +1,35 @@
+.tableRow {
+  background-color: var(--c-light-grey);
+
+  & td {
+    font-weight: bold;
+    border-right: 1px solid var(--c-light-grey-2);
+  }
+
+  & td:last-of-type {
+    border-right: none;
+  }
+}
+
+.tableRowValues {
+  & td {
+    border-right: 1px solid var(--c-light-grey-2);
+  }
+}
+
+.tableRowValues {
+  border-right: 1px solid var(--c-light-grey-2);
+}
+
+.tableCell {
+  background-color: var(--c-light-grey);
+}
+
+.labelCell {
+  background-color: var(--c-white);
+}
+
+.tableCellSize {
+  min-width: 6.5em;
+  text-align: center;
+}

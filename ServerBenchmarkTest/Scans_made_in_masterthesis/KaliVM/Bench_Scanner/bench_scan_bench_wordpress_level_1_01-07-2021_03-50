@@ -1,0 +1,54 @@
+Target: http://localhost/
+Date: 01-07-2021 03:50
+
+Possible SQL injection (Blind): http://localhost/xss.html?xss='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/xss.html?xss="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/xss.html?xss='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/xss.html?xss="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_login='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_login="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_login='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_login="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_pass='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_pass="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_pass='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?user_pass="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?rememberme='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?rememberme="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?rememberme='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?rememberme="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?wp-submit='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?wp-submit="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?wp-submit='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?wp-submit="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?redirect_to='%3B+set+%40test+%3D+'ksdjkfl'%3B+select+%40test%3B+%23; Evidence: The Input 'ksdjkfl' is found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?redirect_to='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?redirect_to="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?redirect_to='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?redirect_to="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?testcookie='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?testcookie="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?testcookie='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?testcookie="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?user_login='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?user_login="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?user_login='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?user_login="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?redirect_to='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?redirect_to="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?redirect_to='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?redirect_to="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?wp-submit='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?wp-submit="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?wp-submit='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/wp-login.php?action=lostpassword?wp-submit="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?user_login=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?user_pass=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?rememberme=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?wp-submit=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?testcookie=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?action=lostpassword?user_login=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?action=lostpassword?redirect_to=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/wp-login.php?action=lostpassword?wp-submit=index.html; Evidence: 'index.html' not found in response
+Possible CMD Injection: http://localhost/wp-login.php?redirect_to=echo kasodjfka; Evidence: 'kasodjfka' found in response
+Possible PHP Injection: http://localhost/wp-login.php?redirect_to=1;echo testtesttest;; Evidence: 'testtesttest' found in response

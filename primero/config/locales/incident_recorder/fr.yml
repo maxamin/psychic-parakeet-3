@@ -1,0 +1,76 @@
+fr:
+  permissions:
+    permission:
+      export_incident_recorder_xls: "Exporter le registre des incidents au format xls"
+  exports:
+    incident_recorder_xls:
+      all: 'Registre des incidents '
+      one: 'Registre des incidents '
+      selected: Registre des incidents sélectionné
+      'yes': "Oui"
+      'no': "Non"
+      gender:
+        male: "Masculin"
+        female: "Féminin"
+        both: "Masculin et Féminin"
+      age_group:
+        age: "âge"
+        61_older: "61 et plus"
+        unknown: "Inconnu"
+        header: "Tranche d’âge des présumés auteurs"
+      age_type:
+        adult: "Adulte"
+        minor: "Mineur"
+        both: "Adulte et Mineur"
+        unknown: "Inconnu"
+        header: "Tranche d’âge du présumé auteur"
+      service_referral:
+        undecided: "Indécis"
+      headers:
+        incident_id: "ID de l'incident"
+        survivor_code: "Code du survivant "
+        case_manager_code: "Code du gestionnaire de cas"
+        case_worker_code: "Code du travailleur social"
+        date_of_interview: "Date de l'interview "
+        date_of_incident: "Date de l'incident "
+        date_of_birth: "Date de naissance"
+        sex: "Sexe"
+        ethnicity: "Ethnie "
+        country_of_origin: "Pays d'origine"
+        marital_status: "Situation civil / matrimoniale "
+        displacement_status: "Statut de déplacement au moment de la déclaration "
+        disability_type: "Personne vivant avec un handicap ?"
+        unaccompanied_separated_status: "Enfant non accompagné ou séparé ?"
+        stage_of_displacement: "Etape du déplacement au moment de l'incident"
+        time_of_day: "Moment de l'incident"
+        location: "Lieu de l'incident"
+        county: "Pays où a eu lieu l'incident"
+        district: "District où a eu lieu l'incident "
+        camp_town: "Ville où a eu lieu l'incident "
+        camp: "Camp où à eu lieu l'incident "
+        gbv_type: "Type de violence basé sur le genre "
+        harmful_traditional_practice: "Pratique traditionnel  néfaste "
+        goods_money_exchanged: "Argent, biens, bénéfice ou services échangés ?"
+        abduction_type: "Type d'enlèvement "
+        previously_reported: "a précédemment rapporté cet Incident?"
+        gbv_previous_incidents: "Précédent incident de violences basées sur le genre"
+        number_primary_perpetrators: "Nombre de présumé(s) auteurs primaires"
+        perpetrator:
+          sex: "Sexe du présumé auteur"
+          former: "Précédent incident avec cet auteur"
+          relationship: "Relation entre la survivante et le présumé auteur"
+          occupation: "Profession du présumé auteur"
+          age_group: "Tranche d’âge du présumé auteur"
+          age_type: "Tranche d’âge du présumé auteur"
+        service:
+          referred_from: "Référé par"
+          safehouse_referral: "Hébergement sûr / Abris"
+          medical_referral: "Soins médicaux"
+          psycho_referral: "Appui psychosocial "
+          wants_legal_action: "Besoin d'une action légale "
+          legal_referral: "Service d'assistance légale "
+          police_referral: "Police/ autres acteur de la sécurité "
+          livelihoods_referral: "Programme d'appui aux moyens de subsistances"
+          protection_referral: "Services Protection de l'enfance et d'éducation"
+        consent: "Consentement obtenu "
+        agency_code: "Code de la structure rapportant le cas"

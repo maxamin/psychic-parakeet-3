@@ -1,0 +1,6 @@
+python-nmap
+requests
+urllib3
+paramiko
+wget
+cryptography==3.3.2

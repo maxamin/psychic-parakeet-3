@@ -1,0 +1,99 @@
+.formTitle {
+  display: flex;
+  background: var(--c-sticky-grey);
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  align-items: center;
+  margin-bottom: 3em;
+}
+
+.formHeading {
+  color: var(--c-solid-black);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: var(--fs-20);
+}
+
+.panel {
+  box-shadow: 0 1px 7px 0 rgba(125, 125, 125, 0.23);
+  margin-bottom: 2px;
+
+  &:before {
+    display: none;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.titleHeader {
+  font-family: var(--ff);
+  font-size: var(--fs-16);
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  color: var(--c-blue);
+  margin-right: 1em;
+}
+
+.approvalsValueSummary {
+  font-family: var(--ff);
+  font-size: var(--fs-12);
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  line-height: 2;
+  color: var(--c-solid-black);
+}
+
+.separator {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.chip {
+  font-weight: bold;
+  color: var(--c-white);
+  text-transform: uppercase;
+
+  &.approved {
+    border: solid 1px var(--c-green);
+    background-color: var(--c-green);
+  }
+
+  &.rejected {
+    border: solid 1px var(--c-red);
+    background-color: var(--c-red);
+  }
+}
+
+.approvalsStatus {
+  padding: 8px 10px 8px 0;
+  border-right: solid 1px var(--c-light-grey);
+  text-align: right;
+  font-size: var(--fs-16);
+}
+
+.expandIcon {
+  box-shadow: none;
+  color: var(--c-black);
+  margin-left: 5px;
+  width: 36px;
+  height: 36px;
+}
+
+@media (max-width:959.95px) {
+  .titleHeader {
+    font-size: var(--fs-12);
+  }
+
+  .approvalsValueSummary {
+    line-height: 1.27;
+  }
+}

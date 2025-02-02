@@ -1,0 +1,90 @@
+<!--
+
+    This file is part of Eclipse Steady.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+    SPDX-License-Identifier: Apache-2.0
+    SPDX-FileCopyrightText: Copyright (c) 2018-2020 SAP SE or an SAP affiliate company and Eclipse Steady contributors
+
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=11,edge" />
+	<meta charset="UTF-8">
+
+	<title>Eclipse Steady - Application Analysis Frontend</title>
+
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/core/themes/sap_belize/library.css" as="style">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/m/themes/sap_belize/library.css" as="style">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/layout/themes/sap_belize/library.css" as="style">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/unified/themes/sap_belize/library.css" as="style">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/commons/themes/sap_belize/library.css" as="style">
+	<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js" as="script">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" as="script">
+	<link rel="preload" href="https://cdn.jsdelivr.net/npm/d3@3.5.17/d3.min.js" as="script">
+	<link rel="preload" href="https://ssl.gstatic.com/trends_nrtr/1754_RC01/embed_loader.js" as="script">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/core/library-preload.js" as="script">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/m/library-preload.js" as="script">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/unified/library-preload.js" as="script">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/layout/library-preload.js" as="script">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/commons/library-preload.js" as="script">
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/core/themes/sap_belize/fonts/72-Regular.woff2" as="font" crossorigin>
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/core/themes/base/fonts/SAP-icons.woff2" as="font" crossorigin>
+	<link rel="preload" href="https://openui5.hana.ondemand.com/resources/sap/ui/core/themes/sap_belize/fonts/72-Bold.woff2" as="font" crossorigin>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="img/icon.png" rel="shortcut icon" type="image/x-icon" />
+
+	<script defer src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
+	<script defer id="sap-ui-bootstrap" type="text/javascript" src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+	 data-sap-ui-theme="sap_belize" data-sap-ui-compatVersion="edge" data-sap-ui-libs='sap.m, sap.ui.layout, sap.ui.commons'
+	 data-sap-ui-xx-bindingSyntax="complex" data-sap-ui-async="true" data-sap-ui-resourceroots='{
+		"vulasfrontend": "./",
+		"view" : "./view",
+		"model" : "./model",
+		"util" : "./util"
+	}'>
+	</script>
+	<script defer src="https://cdn.jsdelivr.net/npm/d3@3.5.17/d3.min.js"></script>
+
+	<!-- <script defer src="./helpers/basePriorityQueue.js"></script>
+	<script defer src="./helpers/pqueue.js"></script> -->
+	<script defer src="./helpers/transpiled/basePriorityQueueES5.js"></script>
+	<script defer src="./helpers/transpiled/pqueueES5.js"></script>
+
+	<script defer type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1754_RC01/embed_loader.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			sap.ui.getCore().attachInit(function(){
+				new sap.m.Shell("Shell", {
+					title: "Eclipse Steady",
+					logo: "img/icon.png",
+					showLogout: false,
+					app: new sap.ui.core.ComponentContainer({
+						name: 'vulasfrontend'
+					}),
+					appWidthLimited: false
+				}).placeAt('content')
+			});
+		})
+	</script>
+</head>
+
+<body class="sapUiBody">
+	<div id="content"></div>
+</body>
+
+</html>

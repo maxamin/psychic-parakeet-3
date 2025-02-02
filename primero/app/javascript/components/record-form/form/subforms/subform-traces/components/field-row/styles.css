@@ -1,0 +1,15 @@
+.fieldRow {
+  border-bottom: 1px solid var(--c-light-grey);
+}
+
+.fieldTitle {
+  font-weight: bold;
+}
+
+.matched {
+  color: var(--c-green);
+}
+
+.notMatched {
+  color: var(--c-red);
+}

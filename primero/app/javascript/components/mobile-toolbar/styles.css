@@ -1,0 +1,67 @@
+.appBar {
+  z-index: 9999;
+  transition: $(
+    theme.transitions.create(
+      [ "margin",
+      "width" ],
+      {easing: theme.transitions.easing.sharp,
+      duration: theme.transitions.duration.leavingScreen,
+      }
+    )
+  );
+}
+
+.toolbar, .toolbar-demo {
+  background: linear-gradient(to top, var(--c-white), var(--c-light-grey)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.14));
+  height: 2.5rem;
+  display: flex;
+
+  & div {
+    margin: 0;
+    display: flex;
+  }
+
+  & img {
+    width: auto;
+    margin: 0 1.125em;
+    height: 2.5em;
+  }
+
+  & .menuAlert {
+    position: absolute;
+    margin-left: 1em;
+  }
+}
+
+.toolbar-demo {
+  background: repeating-linear-gradient(45deg, var(--c-light-grey), var(--c-light-grey) 10px, var(--c-white) 10px, var(--c-white) 20px);
+}
+
+.appBarShift {
+  width: calc(100% - 240px);
+  margin-left: 240px;
+  transition: $(
+    theme.transitions.create(
+      [ "margin",
+      "width" ],
+      {easing: theme.transitions.easing.easeOut,
+      duration: theme.transitions.duration.enteringScreen,
+      }
+    )
+  );
+}
+
+.demoText {
+  color: var(--c-dark-grey);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (max-width: 959.95px) {
+  .toolbar, .toolbar-demo {
+    & img {
+      margin: 0;
+    }
+  }
+}

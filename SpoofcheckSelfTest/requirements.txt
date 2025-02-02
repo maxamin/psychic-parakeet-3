@@ -1,0 +1,8 @@
+emailprotectionslib>=0.8.2
+tornado
+requests
+celery
+tornado
+tornado-celery
+furl
+pika

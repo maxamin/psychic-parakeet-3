@@ -1,0 +1,51 @@
+.new {
+  color: var(--c-blue);
+}
+
+.reportsListContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+
+.card {
+  margin-bottom: 1.2em;
+  display: flex;
+  background: linear-gradient(
+    to bottom,
+    var(--c-white),
+    #fafafa
+  );
+}
+
+.title {
+  color: var(--c-black);
+  text-transform: uppercase;
+  font-size: var(--fs-16);
+  margin-bottom: 0.5em;
+}
+
+.description {
+  color: #595951;
+  font-size: var(--fs-13);
+  margin-top: 0;
+}
+
+.cardContent {
+  padding-bottom: 0 !important;
+  padding: 0 1.3em;
+}
+
+@media ((min-width:960px) and (max-width:1279.95px)) {
+  .reportsListContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:959.95px) {
+  .reportsListContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+

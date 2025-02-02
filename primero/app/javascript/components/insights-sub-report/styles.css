@@ -1,0 +1,33 @@
+.exportButton {
+  color: var(--c-blue);
+}
+
+.description {
+  color: var(--c-dark-grey);
+  font-size: var(--fs-13);
+}
+
+.container {
+  flex: 1;
+}
+
+.subReportContent {
+  max-width: 1200px;
+}
+
+.section {
+  margin-bottom: 4em;
+}
+
+.sectionTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+
+  &:after {
+    content: "";
+    border: 1px solid var(--c-warm-grey-1);
+    flex: 1;
+    height: 1px;
+  }
+}

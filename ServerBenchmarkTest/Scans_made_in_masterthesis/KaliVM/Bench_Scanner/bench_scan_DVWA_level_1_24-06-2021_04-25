@@ -1,0 +1,43 @@
+Target: http://localhost/DVWA-master/
+Date: 24-06-2021 04:25
+
+Possible SQL injection (Blind): http://localhost/DVWA-master?username='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?username="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?username='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?username="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?password='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?password="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?password='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?password="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?Login='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?Login="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?Login='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?Login="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?user_token='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?user_token="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?user_token='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master?user_token="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?username='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?username="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?username='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?username="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?password='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?password="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?password='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?password="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?Login='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?Login="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?Login='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?Login="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?user_token='+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?user_token="+or+1%3D1%23; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?user_token='+or+1%3D1--; Evidence: The Input is not found in the response
+Possible SQL injection (Blind): http://localhost/DVWA-master/login.php?user_token="+or+1%3D1--; Evidence: The Input is not found in the response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master?username=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master?password=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master?Login=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master?user_token=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master/login.php?username=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master/login.php?password=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master/login.php?Login=index.html; Evidence: 'index.html' not found in response
+Possible Path Traversal/Local File Inclusion: http://localhost/DVWA-master/login.php?user_token=index.html; Evidence: 'index.html' not found in response

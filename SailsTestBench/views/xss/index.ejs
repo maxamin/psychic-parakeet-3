@@ -1,0 +1,33 @@
+
+<div class="row col-xs-8">
+        <div class="col-xs-12" style="">
+            <h4 class="sub-header">Reflected XSS Query String</h4>
+            <p>
+                <a href="/xss/reflected?input=&lt;script&gt;alert(1)%3B&lt;%2Fscript&gt;" target="_blank">/xss/reflected?input=&lt;script&gt;alert(1);&lt;/script&gt;</a>
+            </p>
+        </div>
+        
+        <div class="col-xs-12" style="border-bottom: 1px solid #dddddd; padding-top: 20px;margin-bottom: 20px;"></div>
+        <div class="col-xs-12" style="">
+            <h4 class="sub-header">Reflected XSS Query String (safe)</h4>
+            <p>
+                <a href="/xss/safe?input=&lt;script&gt;alert(1)%3B&lt;%2Fscript&gt;" target="_blank">/xss/reflected?input=&lt;script&gt;alert(1);&lt;/script&gt;</a>
+            </p>
+        </div>
+        
+        <div class="col-xs-12" style="border-bottom: 1px solid #dddddd; padding-top: 20px;margin-bottom: 20px;"></div>
+        
+        <div class="col-xs-12" style="padding-bottom: 30px;">
+            <h4 class="sub-header">Reflected XSS from Post</h4>
+            <p>
+            <form method="POST" action="/xss/post" target="_blank">
+                <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input name="input" class="form-control" id="exampleInputEmail1" placeholder="Email" value="<script>alert(1);</script>">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            </p>
+        </div>
+
+</div>

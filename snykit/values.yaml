@@ -1,0 +1,7 @@
+#@data/values
+---
+name: snykit
+image: garethr/snykit
+port: 3000
+metrics_port: 9393
+replicas: 1

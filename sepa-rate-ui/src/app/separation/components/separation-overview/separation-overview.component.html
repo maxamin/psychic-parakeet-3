@@ -1,0 +1,41 @@
+<h1>Separation suggestion</h1>
+
+<form class="form-inline" #f="ngForm" (ngSubmit)="doFilter(f)" novalidate>
+  <div class="form-group mb-2">
+    Region name:
+  </div>
+  <div class="form-group mx-sm-3 mb-2">
+    <label class="sr-only"></label>
+    <input type="text" class="form-control" name="filter" ngModel #filter="ngModel">
+  </div>
+  <button class="btn btn-primary mb-2">Filter</button>
+</form>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Region to separate</th>
+    <th scope="col">Separate from</th>
+    <th scope="col">Argumentation</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let separation of separations | async">
+    <td><a [routerLink]="['/separation', separation.id]">{{separation.separatedRegionName}}</a></td>
+    <td>{{separation.country}}</td>
+    <td><div [innerHTML]="separation.argumentation | keepHtml"></div></td>
+  </tr>
+  </tbody>
+</table>
+
+<!--SQL-->
+<!--A%' OR 1=1 OR s.CREATED_USER LIKE '%A-->
+
+<!--XSS html/css-->
+<!--<h1>This could go wrong!</h1>-->
+<!--<p style='backgroud-color=red'>For example...<p>-->
+  <!--<style>h1 {background-color:yellow;}</style>-->
+
+<!--table {-->
+<!--display: none !important;-->
+<!--}-->

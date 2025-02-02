@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load guardian_tags %}
+{% load vulnmantags %}
+
+{% block title %}
+    Reports
+{% endblock %}
+
+{% block content %}
+    {% get_obj_perms request.user for project as "project_perms" %}
+    <div class="container mt-3">
+        <div class="row d-flex">
+            <div class="d-flex flex-column col-sm-12 col-md-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        {% include 'core/components/navigation/sidebar-toggler.html' %}
+                        <li class="breadcrumb-item active">Reports</li>
+                    </ol>
+                </nav>
+            </div>
+            {% if "change_project" in project_perms %}
+                <div class="d-flex flex-column-reverse col-md-5 col-sm-12 align-items-end justify-content-end">
+                    <div class="d-inline">
+                        {% url 'projects:reporting:report-create' as create_url %}
+                        {% include 'core/components/buttons/create_obj.html' with text="New Report" url=create_url %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+
+        <div class="card mt-3">
+            <div class="card-header border-bottom">
+                <div class="row">
+                    <div class="col-sm-12 d-flex flex-column-reverse align-items-end">
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle" href="#" role="button" id="dropdown-menu-sort"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Sort
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-menu-sort">
+                                <li><a class="dropdown-item" href="">Recently Updated</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group list-group-flush">
+                {% for report in reports %}
+                    <a class="list-group-item list-group-item-action" href="{{ report.get_absolute_url }}">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <strong class="p-2">{{ report.get_report_variant_display }} ({{ report.get_language_display }})</strong>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 d-flex">
+                                <small class="p-2 text-muted">opened on {{ report.date_created|date }}, updated
+                                    on {{ report.date_updated|date }}</small>
+                            </div>
+                        </div>
+                    </a>
+                {% empty %}
+                   {% include 'reporting/components/report_list_blankslate.html' %}
+                {% endfor %}
+            </div>
+        </div>
+
+        {% include 'core/components/navigation/pagination.html' %}
+    </div>
+{% endblock %}

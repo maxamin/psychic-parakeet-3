@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--sp-2);
+  align-items: center;
+}
+
+.field {
+  margin: 1.5em auto;
+}
+
+.likelyScore {
+  font-weight: bold;
+}
+
+.listTitle {
+  & span {
+    font-weight: bold;
+  }
+}
+
+.emptyHeader {
+  cursor: pointer;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}

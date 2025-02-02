@@ -1,0 +1,13 @@
+extends ../../layout
+
+block content
+  h1 Time Machine
+  fieldset
+    em Enter a year to go back in time and view the year:
+    form(action="",method="post")
+        input(type="text", name="year")
+        | &nbsp;
+        input(type="submit", value="Submit").btn.btn-primary
+  if cal
+    hr  
+    pre= cal

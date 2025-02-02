@@ -1,0 +1,12 @@
+dotenv: .env
+networks:
+  default: sepolia-fork-local
+  sepolia-fork-local:
+    cmd_settings:
+      # block to fork 8948253
+      fork: $sepoliafork #@8948253
+      #chain_id: 1337
+      #default_balance: 100
+    verify: False
+wallets:
+  from_key: ${PRIVATE_KEY}

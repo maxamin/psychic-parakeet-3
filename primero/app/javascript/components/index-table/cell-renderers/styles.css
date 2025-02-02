@@ -1,0 +1,68 @@
+.iconButton {
+  padding: 0;
+  display: block;
+}
+
+.iconButtonOffline {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+
+.iconValue {
+  position: absolute;
+  padding-top: 0.5em;
+  padding-left: 1.1em;
+  color: var(--c-white);
+  font-size: var(--fs-9);
+  z-index: 999;
+  font-weight: bold;
+  margin-left: 0;
+}
+
+.flagIcon {
+  font-size: var(--fs-30);
+  margin-left: 0;
+}
+
+.badge {
+  font-size: var(--fs-12);
+  font-weight: bold;
+  height: 10px;
+  min-width: 10px;
+  padding: 0 3px;
+  line-height: 0;
+  top: 16px;
+  right: 9px;
+}
+
+[dir="rtl"] .badge {
+  left: 9px;
+  right: initial;
+}
+
+.offlinePinIcon {
+  font-size: var(--fs-16);
+  color: var(--c-dark-grey);
+}
+
+.readonly {
+  & fieldset {
+    border: none;
+  }
+
+  & input {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  & input::placeholder {
+    color: var(--c-black) !important;
+  }
+
+  & input:hover {
+    background-color: #F5F4F6;
+    border: #F5F4F6;
+  }
+}

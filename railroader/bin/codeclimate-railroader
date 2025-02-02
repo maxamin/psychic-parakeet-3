@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+$:.unshift "#{File.expand_path(File.dirname(__FILE__))}/../lib"
+
+require "railroader"
+require "json"
+require "railroader/codeclimate/engine_configuration"
+
+engine_options = {}
+
+if File.exist?("/config.json")
+  engine_options = JSON.parse(File.read("/config.json"))
+end
+
+Railroader.run Railroader::Codeclimate::EngineConfiguration.new(engine_options).options

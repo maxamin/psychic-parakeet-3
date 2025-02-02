@@ -1,0 +1,998 @@
+<?xml version="1.0"?>
+<WatoboExportv1>
+  <Findings>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIxOjUzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMb2NhdGlvbjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvDQpDb250ZW50LUxlbmd0aDogMzE2DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjMwMSBNb3ZlZCBQZXJtYW5lbnRseTwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPk1vdmVkIFBlcm1hbmVudGx5PC9oMT4KPHA+VGhlIGRvY3VtZW50IGhhcyBtb3ZlZCA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8iPmhlcmU8L2E+LjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>1</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[Apache/2.4.46 (Debian) Server at localhost Port 80] - Apache/2.4.46 (Debian)</title>
+        <check_pattern/>
+        <proof_pattern>Apache/2.4.46 (Debian) Server at localhost Port 80</proof_pattern>
+        <threat>Information about the underlying infrastructure may help an attacker to perform specialized attacks.</threat>
+        <measure/>
+        <class>Infrastructure</class>
+        <subclass/>
+        <type>3</type>
+        <rating>0</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:21:54</tstamp>
+        <fid>6b5828c3ca8a1cb1f11eb01cc6c11eaa</fid>
+        <module>Watobo::Modules::Passive::Detect_infrastructure</module>
+        <chat_id>1</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIxOjUzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMb2NhdGlvbjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvDQpDb250ZW50LUxlbmd0aDogMzE2DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjMwMSBNb3ZlZCBQZXJtYW5lbnRseTwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPk1vdmVkIFBlcm1hbmVudGx5PC9oMT4KPHA+VGhlIGRvY3VtZW50IGhhcyBtb3ZlZCA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8iPmhlcmU8L2E+LjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>2</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>Apache/2.4.46 (Debian)</title>
+        <check_pattern/>
+        <proof_pattern>Server: Apache/2.4.46 (Debian)</proof_pattern>
+        <threat>Information about the system maybe revealed</threat>
+        <measure/>
+        <class>Server Headers</class>
+        <subclass/>
+        <type>3</type>
+        <rating>0</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:21:54</tstamp>
+        <fid>221c47f72acd445a27e82d02fc28e89b</fid>
+        <module>Watobo::Modules::Passive::Multiple_server_headers</module>
+        <chat_id>1</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3QvZmF2aWNvbi5pY28gSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KQWNjZXB0OiAqLyoNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLw0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgNDA0IE5vdCBGb3VuZA0KRGF0ZTogRnJpLCAwMiBKdWwgMjAyMSAwNzoyMTo1NCBHTVQNClNlcnZlcjogQXBhY2hlLzIuNC40NiAoRGViaWFuKQ0KQ29udGVudC1MZW5ndGg6IDI3MQ0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PWlzby04ODU5LTENCg0KPCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9JRVRGLy9EVEQgSFRNTCAyLjAvL0VOIj4KPGh0bWw+PGhlYWQ+Cjx0aXRsZT40MDQgTm90IEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Tm90IEZvdW5kPC9oMT4KPHA+VGhlIHJlcXVlc3RlZCBVUkwgd2FzIG5vdCBmb3VuZCBvbiB0aGlzIHNlcnZlci48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlLzIuNC40NiAoRGViaWFuKSBTZXJ2ZXIgYXQgbG9jYWxob3N0IFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==</Response>
+      <Details>
+        <id>3</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[Apache/2.4.46 (Debian) Server at localhost Port 80] - Apache/2.4.46 (Debian)</title>
+        <check_pattern/>
+        <proof_pattern>Apache/2.4.46 (Debian) Server at localhost Port 80</proof_pattern>
+        <threat>Information about the underlying infrastructure may help an attacker to perform specialized attacks.</threat>
+        <measure/>
+        <class>Infrastructure</class>
+        <subclass/>
+        <type>3</type>
+        <rating>0</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:21:54</tstamp>
+        <fid>2acb6eacd2de56eb07ba4c2a2f715acd</fid>
+        <module>Watobo::Modules::Passive::Detect_infrastructure</module>
+        <chat_id>3</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoP3hzZD0uLi8uLi8uLi8uLi8uLi8uLi8uLi9ldGMvcGFzc3dkIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIyOjQ1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMb2NhdGlvbjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvP3hzZD0uLi8uLi8uLi8uLi8uLi8uLi8uLi9ldGMvcGFzc3dkDQpDb250ZW50LUxlbmd0aDogMzUyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjMwMSBNb3ZlZCBQZXJtYW5lbnRseTwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPk1vdmVkIFBlcm1hbmVudGx5PC9oMT4KPHA+VGhlIGRvY3VtZW50IGhhcyBtb3ZlZCA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8/eHNkPS4uLy4uLy4uLy4uLy4uLy4uLy4uL2V0Yy9wYXNzd2QiPmhlcmU8L2E+LjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>4</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench]</title>
+        <check_pattern>../../../../../../../etc/passwd</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../../../../../../../etc/passwd</test_item>
+        <tstamp>07/02/2021@03:22:45</tstamp>
+        <fid>b073e5444baf64f4877c35278b782758</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>1</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoP3hzZD0uLi9jb25mL2F4aXMyLnhtbCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIyOjQ1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMb2NhdGlvbjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvP3hzZD0uLi9jb25mL2F4aXMyLnhtbA0KQ29udGVudC1MZW5ndGg6IDMzOA0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PWlzby04ODU5LTENCg0KPCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9JRVRGLy9EVEQgSFRNTCAyLjAvL0VOIj4KPGh0bWw+PGhlYWQ+Cjx0aXRsZT4zMDEgTW92ZWQgUGVybWFuZW50bHk8L3RpdGxlPgo8L2hlYWQ+PGJvZHk+CjxoMT5Nb3ZlZCBQZXJtYW5lbnRseTwvaDE+CjxwPlRoZSBkb2N1bWVudCBoYXMgbW92ZWQgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvP3hzZD0uLi9jb25mL2F4aXMyLnhtbCI+aGVyZTwvYT4uPC9wPgo8aHI+CjxhZGRyZXNzPkFwYWNoZS8yLjQuNDYgKERlYmlhbikgU2VydmVyIGF0IGxvY2FsaG9zdCBQb3J0IDgwPC9hZGRyZXNzPgo8L2JvZHk+PC9odG1sPgo=</Response>
+      <Details>
+        <id>5</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench]</title>
+        <check_pattern>../conf/axis2.xml</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../conf/axis2.xml</test_item>
+        <tstamp>07/02/2021@03:22:45</tstamp>
+        <fid>c017c3d9eccf631b9ce23fb3472c5d94</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>1</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpDb250ZW50LUxlbmd0aDogNTENClRyYW5zZmVyLUVuY29kaW5nOiBjaHVua2VkDQoNCg0KMA0KR0VUIC9mb3VyT2ZvdXIudHh0IEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCg0K</Request>
+      <Response>SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIyOjQ2IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KQ29udGVudC1MZW5ndGg6IDQyOA0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPHA+QWRkaXRpb25hbGx5LCBhIDMwMSBNb3ZlZCBQZXJtYW5lbnRseQplcnJvciB3YXMgZW5jb3VudGVyZWQgd2hpbGUgdHJ5aW5nIHRvIHVzZSBhbiBFcnJvckRvY3VtZW50IHRvIGhhbmRsZSB0aGUgcmVxdWVzdC48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlLzIuNC40NiAoRGViaWFuKSBTZXJ2ZXIgYXQgbG9jYWxob3N0IFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==</Response>
+      <Details>
+        <id>6</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ HRS ]</title>
+        <check_pattern>0&#xD;
+GET /fourOfour.txt HTTP/1.1&#xD;
+Host: localhost&#xD;
+&#xD;
+</check_pattern>
+        <proof_pattern>400</proof_pattern>
+        <threat>Access to restricted files</threat>
+        <measure/>
+        <class>HTTP Request Smuggling</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:22:46</tstamp>
+        <fid>0c5fe933cbab5e581563bfc45e8e8312</fid>
+        <module>Watobo::Modules::Active::Hrs::Te_cl</module>
+        <chat_id>1</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvc2VydmVyLXN0YXR1cy8gSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIyOjU2IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiA1MjUyDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9SVNPLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL1czQy8vRFREIEhUTUwgMy4yIEZpbmFsLy9FTiI+CjxodG1sPjxoZWFkPgo8dGl0bGU+QXBhY2hlIFN0YXR1czwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkFwYWNoZSBTZXJ2ZXIgU3RhdHVzIGZvciBsb2NhbGhvc3QgKHZpYSA6OjEpPC9oMT4KCjxkbD48ZHQ+U2VydmVyIFZlcnNpb246IEFwYWNoZS8yLjQuNDYgKERlYmlhbik8L2R0Pgo8ZHQ+U2VydmVyIE1QTTogcHJlZm9yazwvZHQ+CjxkdD5TZXJ2ZXIgQnVpbHQ6IDIwMjEtMDEtMTFUMTA6NTg6MjMKPC9kdD48L2RsPjxociAvPjxkbD4KPGR0PkN1cnJlbnQgVGltZTogRnJpZGF5LCAwMi1KdWwtMjAyMSAwMzoyMjo1NiBFRFQ8L2R0Pgo8ZHQ+UmVzdGFydCBUaW1lOiBGcmlkYXksIDAyLUp1bC0yMDIxIDAzOjIxOjIyIEVEVDwvZHQ+CjxkdD5QYXJlbnQgU2VydmVyIENvbmZpZy4gR2VuZXJhdGlvbjogMTwvZHQ+CjxkdD5QYXJlbnQgU2VydmVyIE1QTSBHZW5lcmF0aW9uOiAwPC9kdD4KPGR0PlNlcnZlciB1cHRpbWU6ICAxIG1pbnV0ZSAzNCBzZWNvbmRzPC9kdD4KPGR0PlNlcnZlciBsb2FkOiAwLjQ1IDAuMzIgMC4xNTwvZHQ+CjxkdD5Ub3RhbCBhY2Nlc3NlczogNDU3MSAtIFRvdGFsIFRyYWZmaWM6IDUuMiBNQiAtIFRvdGFsIER1cmF0aW9uOiA0Mjg8L2R0Pgo8ZHQ+Q1BVIFVzYWdlOiB1LjI0IHMuNCBjdTAgY3MwIC0gLjY4MSUgQ1BVIGxvYWQ8L2R0Pgo8ZHQ+NDguNiByZXF1ZXN0cy9zZWMgLSA1Ni4xIGtCL3NlY29uZCAtIDExODIgQi9yZXF1ZXN0IC0gLjA5MzYzMzggbXMvcmVxdWVzdDwvZHQ+CjxkdD4zIHJlcXVlc3RzIGN1cnJlbnRseSBiZWluZyBwcm9jZXNzZWQsIDcgaWRsZSB3b3JrZXJzPC9kdD4KPC9kbD48cHJlPldDX19fX19fX0MuLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4KLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLi4uLgouLi4uLi4uLi4uLi4uLi4uLi4uLi4uPC9wcmU+CjxwPlNjb3JlYm9hcmQgS2V5OjxiciAvPgoiPGI+PGNvZGU+XzwvY29kZT48L2I+IiBXYWl0aW5nIGZvciBDb25uZWN0aW9uLCAKIjxiPjxjb2RlPlM8L2NvZGU+PC9iPiIgU3RhcnRpbmcgdXAsIAoiPGI+PGNvZGU+UjwvY29kZT48L2I+IiBSZWFkaW5nIFJlcXVlc3QsPGJyIC8+CiI8Yj48Y29kZT5XPC9jb2RlPjwvYj4iIFNlbmRpbmcgUmVwbHksIAoiPGI+PGNvZGU+SzwvY29kZT48L2I+IiBLZWVwYWxpdmUgKHJlYWQpLCAKIjxiPjxjb2RlPkQ8L2NvZGU+PC9iPiIgRE5TIExvb2t1cCw8YnIgLz4KIjxiPjxjb2RlPkM8L2NvZGU+PC9iPiIgQ2xvc2luZyBjb25uZWN0aW9uLCAKIjxiPjxjb2RlPkw8L2NvZGU+PC9iPiIgTG9nZ2luZywgCiI8Yj48Y29kZT5HPC9jb2RlPjwvYj4iIEdyYWNlZnVsbHkgZmluaXNoaW5nLDxiciAvPiAKIjxiPjxjb2RlPkk8L2NvZGU+PC9iPiIgSWRsZSBjbGVhbnVwIG9mIHdvcmtlciwgCiI8Yj48Y29kZT4uPC9jb2RlPjwvYj4iIE9wZW4gc2xvdCB3aXRoIG5vIGN1cnJlbnQgcHJvY2VzczxiciAvPgo8L3A+CgoKPHRhYmxlIGJvcmRlcj0iMCI+PHRyPjx0aD5TcnY8L3RoPjx0aD5QSUQ8L3RoPjx0aD5BY2M8L3RoPjx0aD5NPC90aD48dGg+Q1BVCjwvdGg+PHRoPlNTPC90aD48dGg+UmVxPC90aD48dGg+RHVyPC90aD48dGg+Q29ubjwvdGg+PHRoPkNoaWxkPC90aD48dGg+U2xvdDwvdGg+PHRoPkNsaWVudDwvdGg+PHRoPlByb3RvY29sPC90aD48dGg+Vkhvc3Q8L3RoPjx0aD5SZXF1ZXN0PC90aD48L3RyPgoKPHRyPjx0ZD48Yj4wLTA8L2I+PC90ZD48dGQ+MTQzMTwvdGQ+PHRkPjAvNTQwLzU0MDwvdGQ+PHRkPjxiPlc8L2I+CjwvdGQ+PHRkPjAuMDg8L3RkPjx0ZD4wPC90ZD48dGQ+MDwvdGQ+PHRkPjUwPC90ZD48dGQ+MC4wPC90ZD48dGQ+MC41OTwvdGQ+PHRkPjAuNTkKPC90ZD48dGQ+OjoxPC90ZD48dGQ+aHR0cC8xLjE8L3RkPjx0ZCBub3dyYXA+MTI3LjAuMS4xOjgwPC90ZD48dGQgbm93cmFwPkdFVCAvc2VydmVyLXN0YXR1cy8gSFRUUC8xLjE8L3RkPjwvdHI+Cgo8dHI+PHRkPjxiPjEtMDwvYj48L3RkPjx0ZD4xNDMyPC90ZD48dGQ+MS81MjQvNTI0PC90ZD48dGQ+PGI+QzwvYj4KPC90ZD48dGQ+MC4wNzwvdGQ+PHRkPjA8L3RkPjx0ZD4wPC90ZD48dGQ+NTA8L3RkPjx0ZD4wLjc8L3RkPjx0ZD4wLjYwPC90ZD48dGQ+MC42MAo8L3RkPjx0ZD46OjE8L3RkPjx0ZD5odHRwLzEuMTwvdGQ+PHRkIG5vd3JhcD4xMjcuMC4xLjE6ODA8L3RkPjx0ZCBub3dyYXA+R0VUIC9zdGF0dXMvIEhUVFAvMS4xPC90ZD48L3RyPgoKPHRyPjx0ZD48Yj4yLTA8L2I+PC90ZD48dGQ+MTQzMzwvdGQ+PHRkPjAvNTI3LzUyNzwvdGQ+PHRkPl8KPC90ZD48dGQ+MC4wNzwvdGQ+PHRkPjA8L3RkPjx0ZD4wPC90ZD48dGQ+NDk8L3RkPjx0ZD4wLjA8L3RkPjx0ZD4wLjU3PC90ZD48dGQ+MC41Nwo8L3RkPjx0ZD46OjE8L3RkPjx0ZD5odHRwLzEuMTwvdGQ+PHRkIG5vd3JhcD4xMjcuMC4xLjE6ODA8L3RkPjx0ZCBub3dyYXA+R0VUIC9zZXJ2ZXJfc3RhdHVzLyBIVFRQLzEuMTwvdGQ+PC90cj4KCjx0cj48dGQ+PGI+My0wPC9iPjwvdGQ+PHRkPjE0MzQ8L3RkPjx0ZD4wLzUzMi81MzI8L3RkPjx0ZD5fCjwvdGQ+PHRkPjAuMDc8L3RkPjx0ZD4wPC90ZD48dGQ+MDwvdGQ+PHRkPjUwPC90ZD48dGQ+MC4wPC90ZD48dGQ+MC42MTwvdGQ+PHRkPjAuNjEKPC90ZD48dGQ+OjoxPC90ZD48dGQ+aHR0cC8xLjE8L3RkPjx0ZCBub3dyYXA+MTI3LjAuMS4xOjgwPC90ZD48dGQgbm93cmFwPkdFVCAvd29yZHByZXNzLWJlbmNoIEhUVFAvMS4xPC90ZD48L3RyPgoKPHRyPjx0ZD48Yj40LTA8L2I+PC90ZD48dGQ+MTQzNTwvdGQ+PHRkPjAvNTI1LzUyNTwvdGQ+PHRkPl8KPC90ZD48dGQ+MC4wNzwvdGQ+PHRkPjA8L3RkPjx0ZD4wPC90ZD48dGQ+NDg8L3RkPjx0ZD4wLjA8L3RkPjx0ZD4wLjYxPC90ZD48dGQ+MC42MQo8L3RkPjx0ZD46OjE8L3RkPjx0ZD5odHRwLzEuMTwvdGQ+PHRkIG5vd3JhcD4xMjcuMC4xLjE6ODA8L3RkPjx0ZCBub3dyYXA+R0VUIC93b3JkcHJlc3MtYmVuY2ggSFRUUC8xLjE8L3RkPjwvdHI+Cgo8dHI+PHRkPjxiPjUtMDwvYj48L3RkPjx0ZD4xNDc5PC90ZD48dGQ+MC81MDAvNTAwPC90ZD48dGQ+Xwo8L3RkPjx0ZD4wLjA3PC90ZD48dGQ+MDwvdGQ+PHRkPjA8L3RkPjx0ZD40NzwvdGQ+PHRkPjAuMDwvdGQ+PHRkPjAuNTQ8L3RkPjx0ZD4wLjU0CjwvdGQ+PHRkPjo6MTwvdGQ+PHRkPmh0dHAvMS4xPC90ZD48dGQgbm93cmFwPjEyNy4wLjEuMTo4MDwvdGQ+PHRkIG5vd3JhcD5HRVQgL3dvcmRwcmVzcy1iZW5jaCBIVFRQLzEuMTwvdGQ+PC90cj4KCjx0cj48dGQ+PGI+Ni0wPC9iPjwvdGQ+PHRkPjE0ODA8L3RkPjx0ZD4wLzQyMi80MjI8L3RkPjx0ZD5fCjwvdGQ+PHRkPjAuMDY8L3RkPjx0ZD4wPC90ZD48dGQ+MDwvdGQ+PHRkPjM5PC90ZD48dGQ+MC4wPC90ZD48dGQ+MC41MDwvdGQ+PHRkPjAuNTAKPC90ZD48dGQ+OjoxPC90ZD48dGQ+aHR0cC8xLjE8L3RkPjx0ZCBub3dyYXA+MTI3LjAuMS4xOjgwPC90ZD48dGQgbm93cmFwPkdFVCAvd29yZHByZXNzLWJlbmNoIEhUVFAvMS4xPC90ZD48L3RyPgoKPHRyPjx0ZD48Yj43LTA8L2I+PC90ZD48dGQ+MTQ4MTwvdGQ+PHRkPjAvNDM4LzQzODwvdGQ+PHRkPl8KPC90ZD48dGQ+MC4wNjwvdGQ+PHRkPjA8L3RkPjx0ZD4wPC90ZD48dGQ+Mzk8L3RkPjx0ZD4wLjA8L3RkPjx0ZD4wLjUyPC90ZD48dGQ+MC41Mgo8L3RkPjx0ZD46OjE8L3RkPjx0ZD5odHRwLzEuMTwvdGQ+PHRkIG5vd3JhcD4xMjcuMC4xLjE6ODA8L3RkPjx0ZCBub3dyYXA+R0VUIC93b3JkcHJlc3MtYmVuY2ggSFRUUC8xLjE8L3RkPjwvdHI+Cgo8dHI+PHRkPjxiPjgtMDwvYj48L3RkPjx0ZD4xNDgyPC90ZD48dGQ+MC8zMzMvMzMzPC90ZD48dGQ+Xwo8L3RkPjx0ZD4wLjA1PC90ZD48dGQ+MDwvdGQ+PHRkPjA8L3RkPjx0ZD4zMDwvdGQ+PHRkPjAuMDwvdGQ+PHRkPjAuMzg8L3RkPjx0ZD4wLjM4CjwvdGQ+PHRkPjo6MTwvdGQ+PHRkPmh0dHAvMS4xPC90ZD48dGQgbm93cmFwPjEyNy4wLjEuMTo4MDwvdGQ+PHRkIG5vd3JhcD5HRVQgL21vZC1zdGF0dXMvIEhUVFAvMS4xPC90ZD48L3RyPgoKPHRyPjx0ZD48Yj45LTA8L2I+PC90ZD48dGQ+MTQ4MzwvdGQ+PHRkPjEvMjMwLzIzMDwvdGQ+PHRkPjxiPkM8L2I+CjwvdGQ+PHRkPjAuMDI8L3RkPjx0ZD4wPC90ZD48dGQ+MDwvdGQ+PHRkPjIxPC90ZD48dGQ+MC44PC90ZD48dGQ+MC4yNTwvdGQ+PHRkPjAuMjUKPC90ZD48dGQ+OjoxPC90ZD48dGQ+aHR0cC8xLjE8L3RkPjx0ZCBub3dyYXA+MTI3LjAuMS4xOjgwPC90ZD48dGQgbm93cmFwPkdFVCAvd29yZHByZXNzLWJlbmNoIEhUVFAvMS4xPC90ZD48L3RyPgoKPC90YWJsZT4KIDxociAvPiA8dGFibGU+CiA8dHI+PHRoPlNydjwvdGg+PHRkPkNoaWxkIFNlcnZlciBudW1iZXIgLSBnZW5lcmF0aW9uPC90ZD48L3RyPgogPHRyPjx0aD5QSUQ8L3RoPjx0ZD5PUyBwcm9jZXNzIElEPC90ZD48L3RyPgogPHRyPjx0aD5BY2M8L3RoPjx0ZD5OdW1iZXIgb2YgYWNjZXNzZXMgdGhpcyBjb25uZWN0aW9uIC8gdGhpcyBjaGlsZCAvIHRoaXMgc2xvdDwvdGQ+PC90cj4KIDx0cj48dGg+TTwvdGg+PHRkPk1vZGUgb2Ygb3BlcmF0aW9uPC90ZD48L3RyPgo8dHI+PHRoPkNQVTwvdGg+PHRkPkNQVSB1c2FnZSwgbnVtYmVyIG9mIHNlY29uZHM8L3RkPjwvdHI+Cjx0cj48dGg+U1M8L3RoPjx0ZD5TZWNvbmRzIHNpbmNlIGJlZ2lubmluZyBvZiBtb3N0IHJlY2VudCByZXF1ZXN0PC90ZD48L3RyPgogPHRyPjx0aD5SZXE8L3RoPjx0ZD5NaWxsaXNlY29uZHMgcmVxdWlyZWQgdG8gcHJvY2VzcyBtb3N0IHJlY2VudCByZXF1ZXN0PC90ZD48L3RyPgogPHRyPjx0aD5EdXI8L3RoPjx0ZD5TdW0gb2YgbWlsbGlzZWNvbmRzIHJlcXVpcmVkIHRvIHByb2Nlc3MgYWxsIHJlcXVlc3RzPC90ZD48L3RyPgogPHRyPjx0aD5Db25uPC90aD48dGQ+S2lsb2J5dGVzIHRyYW5zZmVycmVkIHRoaXMgY29ubmVjdGlvbjwvdGQ+PC90cj4KIDx0cj48dGg+Q2hpbGQ8L3RoPjx0ZD5NZWdhYnl0ZXMgdHJhbnNmZXJyZWQgdGhpcyBjaGlsZDwvdGQ+PC90cj4KIDx0cj48dGg+U2xvdDwvdGg+PHRkPlRvdGFsIG1lZ2FieXRlcyB0cmFuc2ZlcnJlZCB0aGlzIHNsb3Q8L3RkPjwvdHI+CiA8L3RhYmxlPgo8aHIgLz4KPGFkZHJlc3M+QXBhY2hlLzIuNC40NiAoRGViaWFuKSBTZXJ2ZXIgYXQgbG9jYWxob3N0IFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==</Response>
+      <Details>
+        <id>7</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[Server] - Server-Status page</title>
+        <check_pattern>server-status/</check_pattern>
+        <proof_pattern>Apache Server Status for</proof_pattern>
+        <threat>The result page of the mod-status module is accessible without authentication. This page contains information about the server activity and performance</threat>
+        <measure>Disable the mod_status module or restrict the access to the status page</measure>
+        <class>Information disclosure</class>
+        <subclass/>
+        <type>1</type>
+        <rating>2</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>server-status/</test_item>
+        <tstamp>07/02/2021@03:22:56</tstamp>
+        <fid>278ecbdce603e3b8762e217abd704445</fid>
+        <module>Watobo::Modules::Active::Apache::Mod_status</module>
+        <chat_id>1</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLz94c2Q9Li4vY29uZi9heGlzMi54bWwgSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIzOjAyIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjFmYS01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA1MDYNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+SG9tZXBhZ2U8L3RpdGxlPg0KICAgIDwvaGVhZD4NCiAgICA8Ym9keT4NCiAgICAgICAgPGgxPiBIb21lcGFnZSA8L2gxPg0KICAgICAgICA8cCBpZD0iV2VsY29tZXRleHQiPldlbGNvbWUgdG8gdGhlIGhvbWVwYWdlIG9mIHRoZSBiZW5jaG1hcmtpbmcgc2l0ZSBmb3IgV2ViIFZ1bG5lcmFiaWxpdHkgU2Nhbm5lcjwvcD4NCiAgICAgICAgPHAgaWQ9IkxpbmtzIj4NCiAgICAgICAgICAgIEhlcmUgYXJlIHRoZSBsaW5rcyB0byB0aGUgZXhwbG9pdHM6PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvaW5qZWN0Lmh0bWwiPlNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwiPlhTUy1BdHRhY2tlbjwvYT48YnI+DQogICAgICAgIDwvcD4NCiAgICA8L2JvZHk+DQo8L2h0bWw+</Response>
+      <Details>
+        <id>8</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/]</title>
+        <check_pattern>../conf/axis2.xml</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../conf/axis2.xml</test_item>
+        <tstamp>07/02/2021@03:23:02</tstamp>
+        <fid>2a10ce4e62ebb8213000499f4e85d93e</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>2</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLz94c2Q9Li4vLi4vLi4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIzOjAyIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjFmYS01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA1MDYNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+SG9tZXBhZ2U8L3RpdGxlPg0KICAgIDwvaGVhZD4NCiAgICA8Ym9keT4NCiAgICAgICAgPGgxPiBIb21lcGFnZSA8L2gxPg0KICAgICAgICA8cCBpZD0iV2VsY29tZXRleHQiPldlbGNvbWUgdG8gdGhlIGhvbWVwYWdlIG9mIHRoZSBiZW5jaG1hcmtpbmcgc2l0ZSBmb3IgV2ViIFZ1bG5lcmFiaWxpdHkgU2Nhbm5lcjwvcD4NCiAgICAgICAgPHAgaWQ9IkxpbmtzIj4NCiAgICAgICAgICAgIEhlcmUgYXJlIHRoZSBsaW5rcyB0byB0aGUgZXhwbG9pdHM6PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvaW5qZWN0Lmh0bWwiPlNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwiPlhTUy1BdHRhY2tlbjwvYT48YnI+DQogICAgICAgIDwvcD4NCiAgICA8L2JvZHk+DQo8L2h0bWw+</Response>
+      <Details>
+        <id>9</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/]</title>
+        <check_pattern>../../../../../../../etc/passwd</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../../../../../../../etc/passwd</test_item>
+        <tstamp>07/02/2021@03:23:02</tstamp>
+        <fid>bed9c836f6e0d9def5f7f5636f0cc5ea</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>2</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8gSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KQ29udGVudC1MZW5ndGg6IDUxDQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KDQoNCjANCkdFVCAvZm91ck9mb3VyLnR4dCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQoNCg==</Request>
+      <Response>SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIzOjA0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KQ29udGVudC1MZW5ndGg6IDMwMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>10</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ HRS ]</title>
+        <check_pattern>0&#xD;
+GET /fourOfour.txt HTTP/1.1&#xD;
+Host: localhost&#xD;
+&#xD;
+</check_pattern>
+        <proof_pattern>400</proof_pattern>
+        <threat>Access to restricted files</threat>
+        <measure/>
+        <class>HTTP Request Smuggling</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:23:04</tstamp>
+        <fid>40c458d2fd27d748a330eab0c3b9e970</fid>
+        <module>Watobo::Modules::Active::Hrs::Te_cl</module>
+        <chat_id>2</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L2Zhdmljb24uaWNvIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCkFjY2VwdDogKi8qDQpSZWZlcmVyOiBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8NClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KQ29udGVudC1MZW5ndGg6IDUxDQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KDQoNCjANCkdFVCAvZm91ck9mb3VyLnR4dCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQoNCg==</Request>
+      <Response>SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIzOjI0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KQ29udGVudC1MZW5ndGg6IDMwMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>12</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ HRS ]</title>
+        <check_pattern>0&#xD;
+GET /fourOfour.txt HTTP/1.1&#xD;
+Host: localhost&#xD;
+&#xD;
+</check_pattern>
+        <proof_pattern>400</proof_pattern>
+        <threat>Access to restricted files</threat>
+        <measure/>
+        <class>HTTP Request Smuggling</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:23:24</tstamp>
+        <fid>e4fc2cb8a5bdda1c61773c6805e6749b</fid>
+        <module>Watobo::Modules::Active::Hrs::Te_cl</module>
+        <chat_id>3</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLw0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIzOjU5IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjE4Ny01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiAzOTENClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxmb3JtIGFjdGlvbj0iYWN0aW9uLnBocCIgbWV0aG9kPSJwb3N0Ij4NCiA8cD5IaWVyIGRpZSBTUUwgQW5mcmFnZSBlaW5nZWJlbjogPC9wPg0KIDxwPklucHV0OiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic3FsIiAvPjwvcD4NCiA8cD48aW5wdXQgdHlwZT0ic3VibWl0IiAvPjwvcD4NCjwvZm9ybT4NCg0KPHAgaWQ9IkxpbmtzIj4NCiAgICBIZXJlIGFyZSB0aGUgbGlua3MgdG8gdGhlIGV4cGxvaXRzOjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5Ib21lPC9hPjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuaHRtbCI+WFNTLUF0dGFja2VuPC9hPjxicj4NCjwvcD4=</Response>
+      <Details>
+        <id>14</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>action.phplocalhost:80</title>
+        <check_pattern/>
+        <proof_pattern>&lt;form[^&gt;]*action\.php[^&gt;]*&gt;</proof_pattern>
+        <threat>Lists all HTML-Forms.</threat>
+        <measure>Check if all forms are checked for vulnerabilities.</measure>
+        <class>Forms</class>
+        <subclass/>
+        <type>3</type>
+        <rating>0</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <fid>035fd8d76bf138a5df414adc878b1d57</fid>
+        <tstamp>07/02/2021@03:24:00</tstamp>
+        <module>Watobo::Modules::Passive::Form_spotter</module>
+        <chat_id>4</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLw0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIzOjU5IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjE4Ny01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiAzOTENClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxmb3JtIGFjdGlvbj0iYWN0aW9uLnBocCIgbWV0aG9kPSJwb3N0Ij4NCiA8cD5IaWVyIGRpZSBTUUwgQW5mcmFnZSBlaW5nZWJlbjogPC9wPg0KIDxwPklucHV0OiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic3FsIiAvPjwvcD4NCiA8cD48aW5wdXQgdHlwZT0ic3VibWl0IiAvPjwvcD4NCjwvZm9ybT4NCg0KPHAgaWQ9IkxpbmtzIj4NCiAgICBIZXJlIGFyZSB0aGUgbGlua3MgdG8gdGhlIGV4cGxvaXRzOjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5Ib21lPC9hPjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuaHRtbCI+WFNTLUF0dGFja2VuPC9hPjxicj4NCjwvcD4=</Response>
+      <Details>
+        <id>15</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>http://localhost/wordpress-bench/action.php</title>
+        <check_pattern/>
+        <proof_pattern>action.php</proof_pattern>
+        <threat>References to active content pages have been found. Sometimes old and/or vulnerable functions are revealed. With this information you can also estimate if all parts of the application are covered.</threat>
+        <measure>Check if these references are only pointing to "good" functions.</measure>
+        <class>Hotspots</class>
+        <subclass/>
+        <type>3</type>
+        <rating>0</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <fid>ec8a03b22267553c68dc8d050aa845a9</fid>
+        <tstamp>07/02/2021@03:24:00</tstamp>
+        <module>Watobo::Modules::Passive::Hotspots</module>
+        <chat_id>4</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5qcyBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpBY2NlcHQ6ICovKg0KUmVmZXJlcjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI0OjAzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogImQ2LTVjNDY1OWU5N2U5NzAiDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KQ29udGVudC1MZW5ndGg6IDIxNA0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qYXZhc2NyaXB0DQoNCg0KZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3NlbmQnKS5hZGRFdmVudExpc3RlbmVyICgnY2xpY2snLCBzZW5kKTsNCmZ1bmN0aW9uIHNlbmQoKSANCnsNCiAgICB2YXIgaW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgneHNzJykudmFsdWU7DQogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI291dCcpLmlubmVySFRNTCA9ICI8cD4iK2lucHV0KyI8L3A+IjsNCn0=</Response>
+      <Details>
+        <id>16</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ innerHTML ]</title>
+        <check_pattern>.innerHTML</check_pattern>
+        <proof_pattern>.innerHTML</proof_pattern>
+        <threat>Parameter value may be exploitable for XSS.</threat>
+        <measure/>
+        <class>DOM XSS</class>
+        <subclass/>
+        <type>1</type>
+        <rating>0</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:24:03</tstamp>
+        <fid>2fe86e41ff7ddcf6405eb567a3f56b6a</fid>
+        <module>Watobo::Modules::Passive::Xss_dom</module>
+        <chat_id>6</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sP3hzZD0uLi9jb25mL2F4aXMyLnhtbCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpSZWZlcmVyOiBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8NCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI4OjM2IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjE4Ny01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiAzOTENClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxmb3JtIGFjdGlvbj0iYWN0aW9uLnBocCIgbWV0aG9kPSJwb3N0Ij4NCiA8cD5IaWVyIGRpZSBTUUwgQW5mcmFnZSBlaW5nZWJlbjogPC9wPg0KIDxwPklucHV0OiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic3FsIiAvPjwvcD4NCiA8cD48aW5wdXQgdHlwZT0ic3VibWl0IiAvPjwvcD4NCjwvZm9ybT4NCg0KPHAgaWQ9IkxpbmtzIj4NCiAgICBIZXJlIGFyZSB0aGUgbGlua3MgdG8gdGhlIGV4cGxvaXRzOjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5Ib21lPC9hPjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuaHRtbCI+WFNTLUF0dGFja2VuPC9hPjxicj4NCjwvcD4=</Response>
+      <Details>
+        <id>27</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/inject.html]</title>
+        <check_pattern>../conf/axis2.xml</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../conf/axis2.xml</test_item>
+        <tstamp>07/02/2021@03:28:36</tstamp>
+        <fid>0283d99c4a2c464e05d93f2582814d2c</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>4</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sP3hzZD0uLi8uLi8uLi8uLi8uLi8uLi8uLi9ldGMvcGFzc3dkIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLw0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI4OjM2IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjE4Ny01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiAzOTENClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxmb3JtIGFjdGlvbj0iYWN0aW9uLnBocCIgbWV0aG9kPSJwb3N0Ij4NCiA8cD5IaWVyIGRpZSBTUUwgQW5mcmFnZSBlaW5nZWJlbjogPC9wPg0KIDxwPklucHV0OiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic3FsIiAvPjwvcD4NCiA8cD48aW5wdXQgdHlwZT0ic3VibWl0IiAvPjwvcD4NCjwvZm9ybT4NCg0KPHAgaWQ9IkxpbmtzIj4NCiAgICBIZXJlIGFyZSB0aGUgbGlua3MgdG8gdGhlIGV4cGxvaXRzOjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5Ib21lPC9hPjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuaHRtbCI+WFNTLUF0dGFja2VuPC9hPjxicj4NCjwvcD4=</Response>
+      <Details>
+        <id>28</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/inject.html]</title>
+        <check_pattern>../../../../../../../etc/passwd</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../../../../../../../etc/passwd</test_item>
+        <tstamp>07/02/2021@03:28:36</tstamp>
+        <fid>dd3c0327b3dbfa4c8a2f98182a30d5af</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>4</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmplY3QuaHRtbCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpSZWZlcmVyOiBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8NCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCkNvbnRlbnQtTGVuZ3RoOiA1MQ0KVHJhbnNmZXItRW5jb2Rpbmc6IGNodW5rZWQNCg0KDQowDQpHRVQgL2ZvdXJPZm91ci50eHQgSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KDQo=</Request>
+      <Response>SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI4OjM5IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KQ29udGVudC1MZW5ndGg6IDMwMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>29</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ HRS ]</title>
+        <check_pattern>0&#xD;
+GET /fourOfour.txt HTTP/1.1&#xD;
+Host: localhost&#xD;
+&#xD;
+</check_pattern>
+        <proof_pattern>400</proof_pattern>
+        <threat>Access to restricted files</threat>
+        <measure/>
+        <class>HTTP Request Smuggling</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:28:39</tstamp>
+        <fid>a4d184e6218e34d1bfe335a456a28688</fid>
+        <module>Watobo::Modules::Active::Hrs::Te_cl</module>
+        <chat_id>4</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sP3hzZD0uLi8uLi8uLi8uLi8uLi8uLi8uLi9ldGMvcGFzc3dkIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI5OjM0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjM5My01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA5MTUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+WFNTLWF0dGFja3M8L3RpdGxlPg0KICAgICAgICA8c2NyaXB0IHNyYz0ieHNzLmpzIiBhc3luYz48L3NjcmlwdD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICAgIDxoMT4gWFNTLWF0dGFja3MgPC9oMT4NCiAgICAgICAgPHAgaWQ9IlhTU2ludHJvIj5UaGlzIHNpdGUgY29udGFpbnMgdGhlIHBvc3NpYmlsaXR5IGZvciBYU1MtYXR0YWNrczwvcD4NCiAgICAgICAgDQogICAgICAgIDxmb3JtPg0KICAgICAgICAgICAgPGxhYmVsIGZvcj0ieHNzIj5YU1MtSW5wdXQ6DQogICAgICAgICAgICAgICAgPCEtLSBwb3NzaWJsZSB4c3MtZXhwbG9pdCBpbnB1dDogPGltZyBzcmM9J3gnIG9uZXJyb3I9J2FsZXJ0KDEpJz4gLS0+DQogICAgICAgICAgICAgICAgPGlucHV0IGlkPSJ4c3MiIG5hbWU9InhzcyI+PGJ1dHRvbiB0eXBlPSJidXR0b24iIGlkPSJzZW5kIj5zZW5kPC9idXR0b24+PGJyPg0KICAgICAgICAgICAgPC9sYWJlbD4NCiAgICAgICAgICAgIDxsYWJlbCBmb3I9Im91dCI+WW91IGdhdmU6DQogICAgICAgICAgICAgICAgPG91dHB1dCBpZD0ib3V0Ij48L291dHB1dD4NCiAgICAgICAgICAgIDwvbGFiZWw+DQogICAgICAgIDwvZm9ybT4NCiAgICAgICAgDQogICAgICAgIDxwIGlkPSJMaW5rcyI+DQogICAgICAgICAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5UaGlzIGxpbmsgbGVhZHMgdG8gdGhlIGhvbWVwYWdlPC9hPjxicj4NCiAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sIj5IZXJlIHlvdSBjYW4gdHJ5IFNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICA8L3A+DQogICAgPC9ib2R5Pg0KPC9odG1sPg==</Response>
+      <Details>
+        <id>31</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/xss.html]</title>
+        <check_pattern>../../../../../../../etc/passwd</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../../../../../../../etc/passwd</test_item>
+        <tstamp>07/02/2021@03:29:34</tstamp>
+        <fid>891cde8f09da1f4fb964fad5614caca4</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>5</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sP3hzZD0uLi9jb25mL2F4aXMyLnhtbCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpSZWZlcmVyOiBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmplY3QuaHRtbA0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI5OjM0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjM5My01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA5MTUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+WFNTLWF0dGFja3M8L3RpdGxlPg0KICAgICAgICA8c2NyaXB0IHNyYz0ieHNzLmpzIiBhc3luYz48L3NjcmlwdD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICAgIDxoMT4gWFNTLWF0dGFja3MgPC9oMT4NCiAgICAgICAgPHAgaWQ9IlhTU2ludHJvIj5UaGlzIHNpdGUgY29udGFpbnMgdGhlIHBvc3NpYmlsaXR5IGZvciBYU1MtYXR0YWNrczwvcD4NCiAgICAgICAgDQogICAgICAgIDxmb3JtPg0KICAgICAgICAgICAgPGxhYmVsIGZvcj0ieHNzIj5YU1MtSW5wdXQ6DQogICAgICAgICAgICAgICAgPCEtLSBwb3NzaWJsZSB4c3MtZXhwbG9pdCBpbnB1dDogPGltZyBzcmM9J3gnIG9uZXJyb3I9J2FsZXJ0KDEpJz4gLS0+DQogICAgICAgICAgICAgICAgPGlucHV0IGlkPSJ4c3MiIG5hbWU9InhzcyI+PGJ1dHRvbiB0eXBlPSJidXR0b24iIGlkPSJzZW5kIj5zZW5kPC9idXR0b24+PGJyPg0KICAgICAgICAgICAgPC9sYWJlbD4NCiAgICAgICAgICAgIDxsYWJlbCBmb3I9Im91dCI+WW91IGdhdmU6DQogICAgICAgICAgICAgICAgPG91dHB1dCBpZD0ib3V0Ij48L291dHB1dD4NCiAgICAgICAgICAgIDwvbGFiZWw+DQogICAgICAgIDwvZm9ybT4NCiAgICAgICAgDQogICAgICAgIDxwIGlkPSJMaW5rcyI+DQogICAgICAgICAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5UaGlzIGxpbmsgbGVhZHMgdG8gdGhlIGhvbWVwYWdlPC9hPjxicj4NCiAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sIj5IZXJlIHlvdSBjYW4gdHJ5IFNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICA8L3A+DQogICAgPC9ib2R5Pg0KPC9odG1sPg==</Response>
+      <Details>
+        <id>32</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/xss.html]</title>
+        <check_pattern>../conf/axis2.xml</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../conf/axis2.xml</test_item>
+        <tstamp>07/02/2021@03:29:34</tstamp>
+        <fid>538c8e94d4fd4b06683fc82c2edbceed</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>5</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuaHRtbCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpSZWZlcmVyOiBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmplY3QuaHRtbA0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KQ29udGVudC1MZW5ndGg6IDUxDQpUcmFuc2Zlci1FbmNvZGluZzogY2h1bmtlZA0KDQoNCjANCkdFVCAvZm91ck9mb3VyLnR4dCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQoNCg==</Request>
+      <Response>SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI5OjM4IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KQ29udGVudC1MZW5ndGg6IDMwMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>33</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ HRS ]</title>
+        <check_pattern>0&#xD;
+GET /fourOfour.txt HTTP/1.1&#xD;
+Host: localhost&#xD;
+&#xD;
+</check_pattern>
+        <proof_pattern>400</proof_pattern>
+        <threat>Access to restricted files</threat>
+        <measure/>
+        <class>HTTP Request Smuggling</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:29:38</tstamp>
+        <fid>9083ca5c51ef2ca71b0c06eadf4bcf08</fid>
+        <module>Watobo::Modules::Active::Hrs::Te_cl</module>
+        <chat_id>5</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5qcz94c2Q9Li4vY29uZi9heGlzMi54bWwgSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KQWNjZXB0OiAqLyoNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMwOjMyIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogImQ2LTVjNDY1OWU5N2U5NzAiDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KQ29udGVudC1MZW5ndGg6IDIxNA0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qYXZhc2NyaXB0DQoNCg0KZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3NlbmQnKS5hZGRFdmVudExpc3RlbmVyICgnY2xpY2snLCBzZW5kKTsNCmZ1bmN0aW9uIHNlbmQoKSANCnsNCiAgICB2YXIgaW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgneHNzJykudmFsdWU7DQogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI291dCcpLmlubmVySFRNTCA9ICI8cD4iK2lucHV0KyI8L3A+IjsNCn0=</Response>
+      <Details>
+        <id>35</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/xss.js]</title>
+        <check_pattern>../conf/axis2.xml</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../conf/axis2.xml</test_item>
+        <tstamp>07/02/2021@03:30:32</tstamp>
+        <fid>4cef08df9fe910adb0520f462b5c5d0a</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>6</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5qcz94c2Q9Li4vLi4vLi4vLi4vLi4vLi4vLi4vZXRjL3Bhc3N3ZCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpBY2NlcHQ6ICovKg0KUmVmZXJlcjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMwOjMyIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogImQ2LTVjNDY1OWU5N2U5NzAiDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KQ29udGVudC1MZW5ndGg6IDIxNA0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qYXZhc2NyaXB0DQoNCg0KZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3NlbmQnKS5hZGRFdmVudExpc3RlbmVyICgnY2xpY2snLCBzZW5kKTsNCmZ1bmN0aW9uIHNlbmQoKSANCnsNCiAgICB2YXIgaW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgneHNzJykudmFsdWU7DQogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI291dCcpLmlubmVySFRNTCA9ICI8cD4iK2lucHV0KyI8L3A+IjsNCn0=</Response>
+      <Details>
+        <id>36</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/xss.js]</title>
+        <check_pattern>../../../../../../../etc/passwd</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../../../../../../../etc/passwd</test_item>
+        <tstamp>07/02/2021@03:30:32</tstamp>
+        <fid>a5337e555d9a2e5cb70f03dbd0b5c309</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>6</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuanMgSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KQWNjZXB0OiAqLyoNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCkNvbnRlbnQtTGVuZ3RoOiA1MQ0KVHJhbnNmZXItRW5jb2Rpbmc6IGNodW5rZWQNCg0KDQowDQpHRVQgL2ZvdXJPZm91ci50eHQgSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KDQo=</Request>
+      <Response>SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMwOjM1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KQ29udGVudC1MZW5ndGg6IDMwMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>37</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ HRS ]</title>
+        <check_pattern>0&#xD;
+GET /fourOfour.txt HTTP/1.1&#xD;
+Host: localhost&#xD;
+&#xD;
+</check_pattern>
+        <proof_pattern>400</proof_pattern>
+        <threat>Access to restricted files</threat>
+        <measure/>
+        <class>HTTP Request Smuggling</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:30:35</tstamp>
+        <fid>584defca4628dfa936cadc86036e12d2</fid>
+        <module>Watobo::Modules::Active::Hrs::Te_cl</module>
+        <chat_id>6</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCkFjY2VwdDogKi8qDQpSZWZlcmVyOiBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuaHRtbA0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMwOjM1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjM5My01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA5MTUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+WFNTLWF0dGFja3M8L3RpdGxlPg0KICAgICAgICA8c2NyaXB0IHNyYz0ieHNzLmpzIiBhc3luYz48L3NjcmlwdD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICAgIDxoMT4gWFNTLWF0dGFja3MgPC9oMT4NCiAgICAgICAgPHAgaWQ9IlhTU2ludHJvIj5UaGlzIHNpdGUgY29udGFpbnMgdGhlIHBvc3NpYmlsaXR5IGZvciBYU1MtYXR0YWNrczwvcD4NCiAgICAgICAgDQogICAgICAgIDxmb3JtPg0KICAgICAgICAgICAgPGxhYmVsIGZvcj0ieHNzIj5YU1MtSW5wdXQ6DQogICAgICAgICAgICAgICAgPCEtLSBwb3NzaWJsZSB4c3MtZXhwbG9pdCBpbnB1dDogPGltZyBzcmM9J3gnIG9uZXJyb3I9J2FsZXJ0KDEpJz4gLS0+DQogICAgICAgICAgICAgICAgPGlucHV0IGlkPSJ4c3MiIG5hbWU9InhzcyI+PGJ1dHRvbiB0eXBlPSJidXR0b24iIGlkPSJzZW5kIj5zZW5kPC9idXR0b24+PGJyPg0KICAgICAgICAgICAgPC9sYWJlbD4NCiAgICAgICAgICAgIDxsYWJlbCBmb3I9Im91dCI+WW91IGdhdmU6DQogICAgICAgICAgICAgICAgPG91dHB1dCBpZD0ib3V0Ij48L291dHB1dD4NCiAgICAgICAgICAgIDwvbGFiZWw+DQogICAgICAgIDwvZm9ybT4NCiAgICAgICAgDQogICAgICAgIDxwIGlkPSJMaW5rcyI+DQogICAgICAgICAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5UaGlzIGxpbmsgbGVhZHMgdG8gdGhlIGhvbWVwYWdlPC9hPjxicj4NCiAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sIj5IZXJlIHlvdSBjYW4gdHJ5IFNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICA8L3A+DQogICAgPC9ib2R5Pg0KPC9odG1sPg==</Response>
+      <Details>
+        <id>38</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[html]</title>
+        <check_pattern/>
+        <proof_pattern>200 OK</proof_pattern>
+        <threat>Selectors can reveal sensitive information about the application, e.g. password hashes (jackrabbit). Also, the query selector enables you to perform XPATH queries on the entire repository, which could slow your system down considerably, or even cause a denial of service if run multiple times</threat>
+        <measure/>
+        <class>CQ5: Selectors</class>
+        <subclass/>
+        <type>2</type>
+        <rating>1</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>http://localhost/wordpress-bench/xss.html</test_item>
+        <tstamp>07/02/2021@03:30:35</tstamp>
+        <fid>1a92664dbf01563a547c22ba32dc384a</fid>
+        <module>Watobo::Modules::Active::Cq5::Cq5_default_selectors</module>
+        <chat_id>6</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luZGV4Lmh0bWw/eHNkPS4uLy4uLy4uLy4uLy4uLy4uLy4uL2V0Yy9wYXNzd2QgSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KUmVmZXJlcjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMxOjMwIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjFmYS01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA1MDYNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+SG9tZXBhZ2U8L3RpdGxlPg0KICAgIDwvaGVhZD4NCiAgICA8Ym9keT4NCiAgICAgICAgPGgxPiBIb21lcGFnZSA8L2gxPg0KICAgICAgICA8cCBpZD0iV2VsY29tZXRleHQiPldlbGNvbWUgdG8gdGhlIGhvbWVwYWdlIG9mIHRoZSBiZW5jaG1hcmtpbmcgc2l0ZSBmb3IgV2ViIFZ1bG5lcmFiaWxpdHkgU2Nhbm5lcjwvcD4NCiAgICAgICAgPHAgaWQ9IkxpbmtzIj4NCiAgICAgICAgICAgIEhlcmUgYXJlIHRoZSBsaW5rcyB0byB0aGUgZXhwbG9pdHM6PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvaW5qZWN0Lmh0bWwiPlNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwiPlhTUy1BdHRhY2tlbjwvYT48YnI+DQogICAgICAgIDwvcD4NCiAgICA8L2JvZHk+DQo8L2h0bWw+</Response>
+      <Details>
+        <id>40</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/index.html]</title>
+        <check_pattern>../../../../../../../etc/passwd</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../../../../../../../etc/passwd</test_item>
+        <tstamp>07/02/2021@03:31:30</tstamp>
+        <fid>42d986d424c71688ba9caa8777216948</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>7</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luZGV4Lmh0bWw/eHNkPS4uL2NvbmYvYXhpczIueG1sIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMxOjMwIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjFmYS01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA1MDYNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+SG9tZXBhZ2U8L3RpdGxlPg0KICAgIDwvaGVhZD4NCiAgICA8Ym9keT4NCiAgICAgICAgPGgxPiBIb21lcGFnZSA8L2gxPg0KICAgICAgICA8cCBpZD0iV2VsY29tZXRleHQiPldlbGNvbWUgdG8gdGhlIGhvbWVwYWdlIG9mIHRoZSBiZW5jaG1hcmtpbmcgc2l0ZSBmb3IgV2ViIFZ1bG5lcmFiaWxpdHkgU2Nhbm5lcjwvcD4NCiAgICAgICAgPHAgaWQ9IkxpbmtzIj4NCiAgICAgICAgICAgIEhlcmUgYXJlIHRoZSBsaW5rcyB0byB0aGUgZXhwbG9pdHM6PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvaW5qZWN0Lmh0bWwiPlNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwiPlhTUy1BdHRhY2tlbjwvYT48YnI+DQogICAgICAgIDwvcD4NCiAgICA8L2JvZHk+DQo8L2h0bWw+</Response>
+      <Details>
+        <id>41</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/index.html]</title>
+        <check_pattern>../conf/axis2.xml</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../conf/axis2.xml</test_item>
+        <tstamp>07/02/2021@03:31:30</tstamp>
+        <fid>6a6f0ed703a259a2ae42f46822043b4d</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>7</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpDb250ZW50LUxlbmd0aDogNTENClRyYW5zZmVyLUVuY29kaW5nOiBjaHVua2VkDQoNCg0KMA0KR0VUIC9mb3VyT2ZvdXIudHh0IEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCg0K</Request>
+      <Response>SFRUUC8xLjEgNDAwIEJhZCBSZXF1ZXN0DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMxOjM1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KQ29udGVudC1MZW5ndGg6IDMwMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwMCBCYWQgUmVxdWVzdDwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPkJhZCBSZXF1ZXN0PC9oMT4KPHA+WW91ciBicm93c2VyIHNlbnQgYSByZXF1ZXN0IHRoYXQgdGhpcyBzZXJ2ZXIgY291bGQgbm90IHVuZGVyc3RhbmQuPGJyIC8+CjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <id>42</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[ HRS ]</title>
+        <check_pattern>0&#xD;
+GET /fourOfour.txt HTTP/1.1&#xD;
+Host: localhost&#xD;
+&#xD;
+</check_pattern>
+        <proof_pattern>400</proof_pattern>
+        <threat>Access to restricted files</threat>
+        <measure/>
+        <class>HTTP Request Smuggling</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <tstamp>07/02/2021@03:31:35</tstamp>
+        <fid>e84774b8c506414d67b5a8ca7a4bfdac</fid>
+        <module>Watobo::Modules::Active::Hrs::Te_cl</module>
+        <chat_id>7</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9hY3Rpb24ucGhwP3hzZD0uLi8uLi8uLi8uLi8uLi8uLi8uLi9ldGMvcGFzc3dkIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpPcmlnaW46IGh0dHA6Ly9sb2NhbGhvc3QNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtTGVuZ3RoOiA1MQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0Kc3FsPSUyNyUzQitzZWxlY3QrKitmcm9tK0lucHV0K3doZXJlK2lkKyUzRCsxJTNCKy0t</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMyOjMzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiAxOTENCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQpPdXRwdXQgZGVyIERhdGVuYmFuazogIApDb25uZWN0aW9uIGVzdGFibGlzaGVkIDxicj5JbnB1dDogJzsgc2VsZWN0ICogZnJvbSBJbnB1dCB3aGVyZSBpZCA9IDE7IC0tPGJyPlF1ZXJ5OiBzZWxlY3QgKiBmcm9tIGh0bWxJbnB1dCB3aGVyZSBpbnB1dCA9ICcnOyBzZWxlY3QgKiBmcm9tIElucHV0IHdoZXJlIGlkID0gMTsgLS0nPGJyPg==</Response>
+      <Details>
+        <id>44</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/action.php]</title>
+        <check_pattern>../../../../../../../etc/passwd</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../../../../../../../etc/passwd</test_item>
+        <tstamp>07/02/2021@03:32:33</tstamp>
+        <fid>42b017e902f5749a789c91d6d62a4002</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>8</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9hY3Rpb24ucGhwP3hzZD0uLi9jb25mL2F4aXMyLnhtbCBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpSZWZlcmVyOiBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmplY3QuaHRtbA0KT3JpZ2luOiBodHRwOi8vbG9jYWxob3N0DQpDb250ZW50LVR5cGU6IGFwcGxpY2F0aW9uL3gtd3d3LWZvcm0tdXJsZW5jb2RlZA0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb250ZW50LUxlbmd0aDogNTENCkNvbm5lY3Rpb246IGNsb3NlDQoNCnNxbD0lMjclM0Irc2VsZWN0KyorZnJvbStJbnB1dCt3aGVyZStpZCslM0QrMSUzQistLQ==</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMyOjMzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiAxOTENCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQpPdXRwdXQgZGVyIERhdGVuYmFuazogIApDb25uZWN0aW9uIGVzdGFibGlzaGVkIDxicj5JbnB1dDogJzsgc2VsZWN0ICogZnJvbSBJbnB1dCB3aGVyZSBpZCA9IDE7IC0tPGJyPlF1ZXJ5OiBzZWxlY3QgKiBmcm9tIGh0bWxJbnB1dCB3aGVyZSBpbnB1dCA9ICcnOyBzZWxlY3QgKiBmcm9tIElucHV0IHdoZXJlIGlkID0gMTsgLS0nPGJyPg==</Response>
+      <Details>
+        <id>45</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[wordpress-bench/action.php]</title>
+        <check_pattern>../conf/axis2.xml</check_pattern>
+        <proof_pattern/>
+        <threat/>
+        <measure/>
+        <class>Apache AXIS XSD</class>
+        <subclass/>
+        <type>2</type>
+        <rating>3</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>../conf/axis2.xml</test_item>
+        <tstamp>07/02/2021@03:32:33</tstamp>
+        <fid>fd2a8f246a23a3fe8f278f50176db9ad</fid>
+        <module>Watobo::Modules::Active::Axis::Axis_xsd</module>
+        <chat_id>8</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9hY3Rpb24ucGhwIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpPcmlnaW46IGh0dHA6Ly9sb2NhbGhvc3QNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtTGVuZ3RoOiA1MQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0Kc3FsPSUyNyUzQitzZWxlY3QrKitmcm9tK0lucHV0K3doZXJlK2lkKyUzRCsxJTNCKy0tJTI3LS0=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMzOjI0IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiAxOTENCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQpPdXRwdXQgZGVyIERhdGVuYmFuazogIApDb25uZWN0aW9uIGVzdGFibGlzaGVkIDxicj5JbnB1dDogJzsgc2VsZWN0ICogZnJvbSBJbnB1dCB3aGVyZSBpZCA9IDE7IC0tPGJyPlF1ZXJ5OiBzZWxlY3QgKiBmcm9tIGh0bWxJbnB1dCB3aGVyZSBpbnB1dCA9ICcnOyBzZWxlY3QgKiBmcm9tIElucHV0IHdoZXJlIGlkID0gMTsgLS0nPGJyPg==</Response>
+      <Details>
+        <id>46</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[sql] - /wordpress-bench/action.php</title>
+        <check_pattern>sql</check_pattern>
+        <proof_pattern/>
+        <threat>SQL Injection is an attack technique used to exploit applications that construct SQL statements from user-supplied input. 
+When successful, the attacker is able to change the logic of SQL statements executed against the database.
+Structured Query Language (SQL) is a specialized programming language for sending queries to databases. 
+The SQL programming language is both an ANSI and an ISO standard, though many database products supporting SQL do so with 
+proprietary extensions to the standard language. Applications often use user-supplied data to create SQL statements. 
+If an application fails to properly construct SQL statements it is possible for an attacker to alter the statement structure 
+and execute unplanned and potentially hostile commands. When such commands are executed, they do so under the context of the user 
+specified by the application executing the statement. This capability allows attackers to gain control of all database resources 
+accessible by that user, up to and including the ability to execute commands on the hosting system.
+
+Source: http://projects.webappsec.org/SQL-Injection
+</threat>
+        <measure>All user input must be escaped and/or filtered thoroughly before the sql statement is put together. Additionally prepared statements should be used.</measure>
+        <class>SQL-Injection (Boolean)</class>
+        <subclass/>
+        <type>2</type>
+        <rating>5</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>sql</test_item>
+        <debug>true</debug>
+        <tstamp>07/02/2021@03:33:24</tstamp>
+        <fid>21f565d2552cf5ed2430876ec8dc1556</fid>
+        <module>Watobo::Modules::Active::Sqlinjection::Sql_boolean</module>
+        <chat_id>8</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9hY3Rpb24ucGhwIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpPcmlnaW46IGh0dHA6Ly9sb2NhbGhvc3QNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtTGVuZ3RoOiA1MQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0Kc3FsPSc=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjMzOjIzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiAyODkNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQpPdXRwdXQgZGVyIERhdGVuYmFuazogIApDb25uZWN0aW9uIGVzdGFibGlzaGVkIDxicj5JbnB1dDogJzxicj5RdWVyeTogc2VsZWN0ICogZnJvbSBodG1sSW5wdXQgd2hlcmUgaW5wdXQgPSAnJyc8YnI+Tm8gcmVzdWx0IG9yIGVycm9yIDxicj5Zb3UgaGF2ZSBhbiBlcnJvciBpbiB5b3VyIFNRTCBzeW50YXg7IGNoZWNrIHRoZSBtYW51YWwgdGhhdCBjb3JyZXNwb25kcyB0byB5b3VyIE1hcmlhREIgc2VydmVyIHZlcnNpb24gZm9yIHRoZSByaWdodCBzeW50YXggdG8gdXNlIG5lYXIgJycnJycgYXQgbGluZSAx</Response>
+      <Details>
+        <id>65</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[sql] - wordpress-bench/action.php</title>
+        <check_pattern>sql.*'</check_pattern>
+        <proof_pattern>error in your SQL syntax</proof_pattern>
+        <threat>SQL Injection is an attack technique used to exploit applications that construct SQL statements from user-supplied input. 
+When successful, the attacker is able to change the logic of SQL statements executed against the database.
+Structured Query Language (SQL) is a specialized programming language for sending queries to databases. 
+The SQL programming language is both an ANSI and an ISO standard, though many database products supporting SQL do so with 
+proprietary extensions to the standard language. Applications often use user-supplied data to create SQL statements. 
+If an application fails to properly construct SQL statements it is possible for an attacker to alter the statement structure 
+and execute unplanned and potentially hostile commands. When such commands are executed, they do so under the context of the user 
+specified by the application executing the statement. This capability allows attackers to gain control of all database resources 
+accessible by that user, up to and including the ability to execute commands on the hosting system.
+
+Source: http://projects.webappsec.org/SQL-Injection
+</threat>
+        <measure>All user input must be escaped and/or filtered thoroughly before the sql statement is put together. Additionally prepared statements should be used.</measure>
+        <class>SQL-Injection (Error)</class>
+        <subclass/>
+        <type>2</type>
+        <rating>5</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>sql</test_item>
+        <tstamp>07/02/2021@03:33:33</tstamp>
+        <fid>3cc76f835d8ce1cd23f144cc27b1daa3</fid>
+        <module>Watobo::Modules::Active::Sqlinjection::Sqli_error</module>
+        <chat_id>8</chat_id>
+      </Details>
+    </Finding>
+    <Finding>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9hY3Rpb24ucGhwIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpPcmlnaW46IGh0dHA6Ly9sb2NhbGhvc3QNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtTGVuZ3RoOiA1MQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0Kc3FsPXdhdG9ibzM2JTI3</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjM1OjAzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiAzMTMNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQpPdXRwdXQgZGVyIERhdGVuYmFuazogIApDb25uZWN0aW9uIGVzdGFibGlzaGVkIDxicj5JbnB1dDogd2F0b2JvMzYnPGJyPlF1ZXJ5OiBzZWxlY3QgKiBmcm9tIGh0bWxJbnB1dCB3aGVyZSBpbnB1dCA9ICd3YXRvYm8zNicnPGJyPk5vIHJlc3VsdCBvciBlcnJvciA8YnI+WW91IGhhdmUgYW4gZXJyb3IgaW4geW91ciBTUUwgc3ludGF4OyBjaGVjayB0aGUgbWFudWFsIHRoYXQgY29ycmVzcG9uZHMgdG8geW91ciBNYXJpYURCIHNlcnZlciB2ZXJzaW9uIGZvciB0aGUgcmlnaHQgc3ludGF4IHRvIHVzZSBuZWFyICcnd2F0b2JvMzYnJycgYXQgbGluZSAx</Response>
+      <Details>
+        <id>149</id>
+        <comment/>
+        <false_positive>false</false_positive>
+        <title>[sql] - wordpress-bench/action.php</title>
+        <check_pattern>%27</check_pattern>
+        <proof_pattern>watobo36'</proof_pattern>
+        <threat>Cross-site Scripting (XSS) is an attack technique that involves echoing attacker-supplied code into a user's browser instance. 
+A browser instance can be a standard web browser client, or a browser object embedded in a software product such as the browser 
+within WinAmp, an RSS reader, or an email client. The code itself is usually written in HTML/JavaScript, but may also extend to 
+VBScript, ActiveX, Java, Flash, or any other browser-supported technology.
+
+When an attacker gets a user's browser to execute his/her code, the code will run within the security context (or zone) of the 
+hosting web site. With this level of privilege, the code has the ability to read, modify and transmit any sensitive data accessible 
+by the browser. A Cross-site Scripted user could have his/her account hijacked (cookie theft), their browser redirected to another 
+location, or possibly shown fraudulent content delivered by the web site they are visiting. Cross-site Scripting attacks essentially 
+compromise the trust relationship between a user and the web site. Applications utilizing browser object instances which load content 
+from the file system may execute code under the local machine zone allowing for system compromise.
+
+Source: http://projects.webappsec.org/Cross-Site+Scripting
+</threat>
+        <measure>All user input should be filtered and/or escaped using a method appropriate for the output context</measure>
+        <class>Reflected XSS (POST) - 25%</class>
+        <subclass/>
+        <type>2</type>
+        <rating>4</rating>
+        <cvss>n/a</cvss>
+        <icon/>
+        <timestamp/>
+        <test_item>sql</test_item>
+        <tstamp>07/02/2021@03:35:13</tstamp>
+        <fid>b4d1c4cab7905aade79ef4eac9d03225</fid>
+        <module>Watobo::Modules::Active::Xss::Xss_ng</module>
+        <chat_id>8</chat_id>
+      </Details>
+    </Finding>
+  </Findings>
+  <Chats>
+    <Chat>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMzAxIE1vdmVkIFBlcm1hbmVudGx5DQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIxOjUzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMb2NhdGlvbjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvDQpDb250ZW50LUxlbmd0aDogMzE2DQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiB0ZXh0L2h0bWw7IGNoYXJzZXQ9aXNvLTg4NTktMQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjMwMSBNb3ZlZCBQZXJtYW5lbnRseTwvdGl0bGU+CjwvaGVhZD48Ym9keT4KPGgxPk1vdmVkIFBlcm1hbmVudGx5PC9oMT4KPHA+VGhlIGRvY3VtZW50IGhhcyBtb3ZlZCA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC8iPmhlcmU8L2E+LjwvcD4KPGhyPgo8YWRkcmVzcz5BcGFjaGUvMi40LjQ2IChEZWJpYW4pIFNlcnZlciBhdCBsb2NhbGhvc3QgUG9ydCA4MDwvYWRkcmVzcz4KPC9ib2R5PjwvaHRtbD4K</Response>
+      <Details>
+        <source>1</source>
+        <id>1</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLyBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIxOjUzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjFmYS01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA1MDYNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+SG9tZXBhZ2U8L3RpdGxlPg0KICAgIDwvaGVhZD4NCiAgICA8Ym9keT4NCiAgICAgICAgPGgxPiBIb21lcGFnZSA8L2gxPg0KICAgICAgICA8cCBpZD0iV2VsY29tZXRleHQiPldlbGNvbWUgdG8gdGhlIGhvbWVwYWdlIG9mIHRoZSBiZW5jaG1hcmtpbmcgc2l0ZSBmb3IgV2ViIFZ1bG5lcmFiaWxpdHkgU2Nhbm5lcjwvcD4NCiAgICAgICAgPHAgaWQ9IkxpbmtzIj4NCiAgICAgICAgICAgIEhlcmUgYXJlIHRoZSBsaW5rcyB0byB0aGUgZXhwbG9pdHM6PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvaW5qZWN0Lmh0bWwiPlNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwiPlhTUy1BdHRhY2tlbjwvYT48YnI+DQogICAgICAgIDwvcD4NCiAgICA8L2JvZHk+DQo8L2h0bWw+</Response>
+      <Details>
+        <source>1</source>
+        <id>2</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3QvZmF2aWNvbi5pY28gSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KQWNjZXB0OiAqLyoNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLw0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgNDA0IE5vdCBGb3VuZA0KRGF0ZTogRnJpLCAwMiBKdWwgMjAyMSAwNzoyMTo1NCBHTVQNClNlcnZlcjogQXBhY2hlLzIuNC40NiAoRGViaWFuKQ0KQ29udGVudC1MZW5ndGg6IDI3MQ0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sOyBjaGFyc2V0PWlzby04ODU5LTENCg0KPCFET0NUWVBFIEhUTUwgUFVCTElDICItLy9JRVRGLy9EVEQgSFRNTCAyLjAvL0VOIj4KPGh0bWw+PGhlYWQ+Cjx0aXRsZT40MDQgTm90IEZvdW5kPC90aXRsZT4KPC9oZWFkPjxib2R5Pgo8aDE+Tm90IEZvdW5kPC9oMT4KPHA+VGhlIHJlcXVlc3RlZCBVUkwgd2FzIG5vdCBmb3VuZCBvbiB0aGlzIHNlcnZlci48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlLzIuNC40NiAoRGViaWFuKSBTZXJ2ZXIgYXQgbG9jYWxob3N0IFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==</Response>
+      <Details>
+        <source>1</source>
+        <id>3</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoLw0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNClVwZ3JhZGUtSW5zZWN1cmUtUmVxdWVzdHM6IDENClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjIzOjU5IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjE4Ny01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiAzOTENClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxmb3JtIGFjdGlvbj0iYWN0aW9uLnBocCIgbWV0aG9kPSJwb3N0Ij4NCiA8cD5IaWVyIGRpZSBTUUwgQW5mcmFnZSBlaW5nZWJlbjogPC9wPg0KIDxwPklucHV0OiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0ic3FsIiAvPjwvcD4NCiA8cD48aW5wdXQgdHlwZT0ic3VibWl0IiAvPjwvcD4NCjwvZm9ybT4NCg0KPHAgaWQ9IkxpbmtzIj4NCiAgICBIZXJlIGFyZSB0aGUgbGlua3MgdG8gdGhlIGV4cGxvaXRzOjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5Ib21lPC9hPjxicj4NCiAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC94c3MuaHRtbCI+WFNTLUF0dGFja2VuPC9hPjxicj4NCjwvcD4=</Response>
+      <Details>
+        <source>1</source>
+        <id>4</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5odG1sIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbm5lY3Rpb246IGNsb3NlDQoNCg==</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI0OjAzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjM5My01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA5MTUNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+WFNTLWF0dGFja3M8L3RpdGxlPg0KICAgICAgICA8c2NyaXB0IHNyYz0ieHNzLmpzIiBhc3luYz48L3NjcmlwdD4NCiAgICA8L2hlYWQ+DQogICAgPGJvZHk+DQogICAgICAgIDxoMT4gWFNTLWF0dGFja3MgPC9oMT4NCiAgICAgICAgPHAgaWQ9IlhTU2ludHJvIj5UaGlzIHNpdGUgY29udGFpbnMgdGhlIHBvc3NpYmlsaXR5IGZvciBYU1MtYXR0YWNrczwvcD4NCiAgICAgICAgDQogICAgICAgIDxmb3JtPg0KICAgICAgICAgICAgPGxhYmVsIGZvcj0ieHNzIj5YU1MtSW5wdXQ6DQogICAgICAgICAgICAgICAgPCEtLSBwb3NzaWJsZSB4c3MtZXhwbG9pdCBpbnB1dDogPGltZyBzcmM9J3gnIG9uZXJyb3I9J2FsZXJ0KDEpJz4gLS0+DQogICAgICAgICAgICAgICAgPGlucHV0IGlkPSJ4c3MiIG5hbWU9InhzcyI+PGJ1dHRvbiB0eXBlPSJidXR0b24iIGlkPSJzZW5kIj5zZW5kPC9idXR0b24+PGJyPg0KICAgICAgICAgICAgPC9sYWJlbD4NCiAgICAgICAgICAgIDxsYWJlbCBmb3I9Im91dCI+WW91IGdhdmU6DQogICAgICAgICAgICAgICAgPG91dHB1dCBpZD0ib3V0Ij48L291dHB1dD4NCiAgICAgICAgICAgIDwvbGFiZWw+DQogICAgICAgIDwvZm9ybT4NCiAgICAgICAgDQogICAgICAgIDxwIGlkPSJMaW5rcyI+DQogICAgICAgICAgICA8YSBocmVmPSJodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9pbmRleC5odG1sIj5UaGlzIGxpbmsgbGVhZHMgdG8gdGhlIGhvbWVwYWdlPC9hPjxicj4NCiAgICAgICAgICAgIDxhIGhyZWY9Imh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sIj5IZXJlIHlvdSBjYW4gdHJ5IFNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICA8L3A+DQogICAgPC9ib2R5Pg0KPC9odG1sPg==</Response>
+      <Details>
+        <source>1</source>
+        <id>5</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL3hzcy5qcyBIVFRQLzEuMQ0KSG9zdDogbG9jYWxob3N0DQpBY2NlcHQ6ICovKg0KUmVmZXJlcjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChYMTE7IExpbnV4IHg4Nl82NCkgQXBwbGVXZWJLaXQvNjA1LjEuMTUgKEtIVE1MLCBsaWtlIEdlY2tvKSBWZXJzaW9uLzEzLjAgU2FmYXJpLzYwNS4xLjE1IE1pZG9yaS82DQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpDb25uZWN0aW9uOiBjbG9zZQ0KDQo=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI0OjAzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogImQ2LTVjNDY1OWU5N2U5NzAiDQpBY2NlcHQtUmFuZ2VzOiBieXRlcw0KQ29udGVudC1MZW5ndGg6IDIxNA0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQpDb25uZWN0aW9uOiBjbG9zZQ0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi9qYXZhc2NyaXB0DQoNCg0KZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI3NlbmQnKS5hZGRFdmVudExpc3RlbmVyICgnY2xpY2snLCBzZW5kKTsNCmZ1bmN0aW9uIHNlbmQoKSANCnsNCiAgICB2YXIgaW5wdXQgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgneHNzJykudmFsdWU7DQogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcignI291dCcpLmlubmVySFRNTCA9ICI8cD4iK2lucHV0KyI8L3A+IjsNCn0=</Response>
+      <Details>
+        <source>1</source>
+        <id>6</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>R0VUIGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luZGV4Lmh0bWwgSFRUUC8xLjENCkhvc3Q6IGxvY2FsaG9zdA0KUmVmZXJlcjogaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwNCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpVcGdyYWRlLUluc2VjdXJlLVJlcXVlc3RzOiAxDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoWDExOyBMaW51eCB4ODZfNjQpIEFwcGxlV2ViS2l0LzYwNS4xLjE1IChLSFRNTCwgbGlrZSBHZWNrbykgVmVyc2lvbi8xMy4wIFNhZmFyaS82MDUuMS4xNSBNaWRvcmkvNg0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KQ29ubmVjdGlvbjogY2xvc2UNCg0K</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI0OjA1IEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpMYXN0LU1vZGlmaWVkOiBUaHUsIDEwIEp1biAyMDIxIDA5OjAwOjE1IEdNVA0KRVRhZzogIjFmYS01YzQ2NTllOTdlOTcwIg0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkNvbnRlbnQtTGVuZ3RoOiA1MDYNClZhcnk6IEFjY2VwdC1FbmNvZGluZw0KQ29ubmVjdGlvbjogY2xvc2UNCkNvbnRlbnQtVHlwZTogdGV4dC9odG1sDQoNCjxodG1sPg0KICAgIDxoZWFkPg0KICAgICAgICA8dGl0bGU+SG9tZXBhZ2U8L3RpdGxlPg0KICAgIDwvaGVhZD4NCiAgICA8Ym9keT4NCiAgICAgICAgPGgxPiBIb21lcGFnZSA8L2gxPg0KICAgICAgICA8cCBpZD0iV2VsY29tZXRleHQiPldlbGNvbWUgdG8gdGhlIGhvbWVwYWdlIG9mIHRoZSBiZW5jaG1hcmtpbmcgc2l0ZSBmb3IgV2ViIFZ1bG5lcmFiaWxpdHkgU2Nhbm5lcjwvcD4NCiAgICAgICAgPHAgaWQ9IkxpbmtzIj4NCiAgICAgICAgICAgIEhlcmUgYXJlIHRoZSBsaW5rcyB0byB0aGUgZXhwbG9pdHM6PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gvaW5qZWN0Lmh0bWwiPlNRTC1JbmplY3Rpb248L2E+PGJyPg0KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cDovL2xvY2FsaG9zdC93b3JkcHJlc3MtYmVuY2gveHNzLmh0bWwiPlhTUy1BdHRhY2tlbjwvYT48YnI+DQogICAgICAgIDwvcD4NCiAgICA8L2JvZHk+DQo8L2h0bWw+</Response>
+      <Details>
+        <source>1</source>
+        <id>7</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9hY3Rpb24ucGhwIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpPcmlnaW46IGh0dHA6Ly9sb2NhbGhvc3QNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtTGVuZ3RoOiA1MQ0KQ29ubmVjdGlvbjogY2xvc2UNCg0Kc3FsPSUyNyUzQitzZWxlY3QrKitmcm9tK0lucHV0K3doZXJlK2lkKyUzRCsxJTNCKy0t</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI0OjUyIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiAxOTENCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQpPdXRwdXQgZGVyIERhdGVuYmFuazogIApDb25uZWN0aW9uIGVzdGFibGlzaGVkIDxicj5JbnB1dDogJzsgc2VsZWN0ICogZnJvbSBJbnB1dCB3aGVyZSBpZCA9IDE7IC0tPGJyPlF1ZXJ5OiBzZWxlY3QgKiBmcm9tIGh0bWxJbnB1dCB3aGVyZSBpbnB1dCA9ICcnOyBzZWxlY3QgKiBmcm9tIElucHV0IHdoZXJlIGlkID0gMTsgLS0nPGJyPg==</Response>
+      <Details>
+        <source>1</source>
+        <id>8</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+    <Chat>
+      <Request>UE9TVCBodHRwOi8vbG9jYWxob3N0L3dvcmRwcmVzcy1iZW5jaC9hY3Rpb24ucGhwIEhUVFAvMS4xDQpIb3N0OiBsb2NhbGhvc3QNClJlZmVyZXI6IGh0dHA6Ly9sb2NhbGhvc3Qvd29yZHByZXNzLWJlbmNoL2luamVjdC5odG1sDQpPcmlnaW46IGh0dHA6Ly9sb2NhbGhvc3QNCkNvbnRlbnQtVHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KVXBncmFkZS1JbnNlY3VyZS1SZXF1ZXN0czogMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC82MDUuMS4xNSAoS0hUTUwsIGxpa2UgR2Vja28pIFZlcnNpb24vMTMuMCBTYWZhcmkvNjA1LjEuMTUgTWlkb3JpLzYNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNCkNvbnRlbnQtTGVuZ3RoOiA5DQpDb25uZWN0aW9uOiBjbG9zZQ0KDQpzcWw9aGFsbG8=</Request>
+      <Response>SFRUUC8xLjEgMjAwIE9LDQpEYXRlOiBGcmksIDAyIEp1bCAyMDIxIDA3OjI1OjIzIEdNVA0KU2VydmVyOiBBcGFjaGUvMi40LjQ2IChEZWJpYW4pDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCkNvbnRlbnQtTGVuZ3RoOiAxMjMNCkNvbm5lY3Rpb246IGNsb3NlDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1VVEYtOA0KDQpPdXRwdXQgZGVyIERhdGVuYmFuazogIApDb25uZWN0aW9uIGVzdGFibGlzaGVkIDxicj5JbnB1dDogaGFsbG88YnI+UXVlcnk6IHNlbGVjdCAqIGZyb20gaHRtbElucHV0IHdoZXJlIGlucHV0ID0gJ2hhbGxvJzxicj4=</Response>
+      <Details>
+        <source>1</source>
+        <id>9</id>
+        <tstart>0</tstart>
+        <tstop>-1</tstop>
+        <comment/>
+        <tested>false</tested>
+      </Details>
+    </Chat>
+  </Chats>
+</WatoboExportv1>

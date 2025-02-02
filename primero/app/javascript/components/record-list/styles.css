@@ -1,0 +1,79 @@
+.root {
+  & > div {
+    padding: 1em;
+  }
+}
+
+.content {
+  display: flex;
+}
+
+.table {
+  flex-grow: 1;
+  position: relative;
+}
+
+.toolbar {
+  position: sticky;
+  top: 0;
+  background: var(--c-sticky-grey);
+  z-index: 999;
+}
+
+.drawer {
+  padding: 0 0.5em;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1
+}
+
+.overdueHeading {
+  width: 45px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+}
+
+.photoHeader {
+  border-bottom: 1px solid rgba(224, 224, 224, 1);
+  color: #4a4a4a;
+  padding: 10px;
+  font-size: var(--fs-12);
+  font-weight: 900;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.photoHeader, .photoIcon, .alerts {
+  width: 45px;
+}
+
+.alerts {
+  display: flex;
+
+  & > span {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg {
+      margin: 0;
+    }
+  }
+}
+
+.id {
+  color: var(--c-blue)
+}
+
+.filterContainer {
+  margin: 0 var(--sp-2);
+}
+
+.iconHeader {
+  width: .8em;
+  height: .8em;
+}

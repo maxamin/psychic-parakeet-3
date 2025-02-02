@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SecurityExamples</title>
+    <link rel="stylesheet" media="all" href="http://localhost:3000/assets/scaffolds.self-0b32a8b7f1566c77b14058806980b8fd432047842f0ac502fe9213379af85a1b.css?body=1" />
+  <link rel="stylesheet" media="all" href="http://localhost:3000/assets/users.self-e49c85098683511562797a8a21a0ac3e174f27e8d930efe5795dc44455e58c6d.css?body=1"  />
+  </head>
+  <body onload="document.forms[0].submit()">
+    <h1>Editing User</h1>
+    <form class="edit_user" id="edit_user_2" action="http://localhost:3000/users/2" method="post">
+      <input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="hidden" name="_method" value="patch" />
+      <div class="field">
+        <label for="user_name">Name</label>
+        <input type="text" value="Eileen" name="user[name]" id="user_name" />
+      </div>
+
+      <div class="field">
+        <label for="user_email">Email</label>
+        <input type="text" value="changed@example.com" name="user[email]" id="user_email" />
+      </div>
+
+      <div class="field">
+        <label for="user_website">Website</label>
+        <input type="text" value="eileencodes.com" name="user[website]" id="user_website" />
+      </div>
+
+      <div class="actions">
+        <input type="submit" name="commit" value="Update user" data-disable-with="Update user" />
+      </div>
+    </form>
+    <a href="/users/2">Show</a> |
+    <a href="/users">Back</a>
+  </body>
+</html>

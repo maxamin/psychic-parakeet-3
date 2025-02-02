@@ -1,0 +1,29 @@
+
+<div class="row col-xs-8">
+        <div class="col-xs-12" style="padding-bottom: 30px;">
+           <h4 class="sub-header">Unsafe Eval from childProcess.exec</h4>
+            <p>
+            <form method="GET" action="/command/childprocess" target="_blank">
+                <div class="form-group">
+                <label for="exampleInputEmail1">ls -l [path] </label>
+                <input name="user_path" class="form-control" id="exampleInputEmail1" placeholder="./" value="./" autocomplete="off" />                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            </p>
+        </div>
+        <div class="col-xs-12" style="border-bottom: 1px solid #dddddd; padding-top: 20px;margin-bottom: 20px;"></div>
+        
+         <div class="col-xs-12" style="padding-bottom: 30px;">
+            <h4 class="sub-header">Code Injection from eval</h4>
+             <p>
+				<form method="GET" action="/command/eval" target="_blank">
+				  <div class="form-group">
+				    <label for="exampleInputEmail1">name -  eval("name='" + input + "'");</label>
+				    <input name="name" class="form-control" id="exampleInputEmail1" placeholder="" value="matt '+process.pid+'">
+				  </div>
+				  <button type="submit" class="btn btn-default">Submit</button>
+				</form>
+             </p>
+         </div>       
+        
+</div>

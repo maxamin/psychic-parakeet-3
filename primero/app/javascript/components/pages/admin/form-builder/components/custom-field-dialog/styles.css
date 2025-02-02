@@ -1,0 +1,28 @@
+.existingFieldButton, .cancelButton {
+  border-radius: 50px;
+  box-shadow: none;
+  color: var(--c-white);
+  background: var(--c-blue);
+  margin-bottom: 0.6em;
+
+  &:hover {
+    color: var(--c-black);
+  }
+
+  & svg {
+    position: absolute;
+    left: 0.6em;
+    top: 8px
+  }
+}
+
+.cancelButton {
+  background: var(--c-grey);
+}
+
+.actionBtns {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-1);
+  margin-bottom: var(--sp-2);
+}

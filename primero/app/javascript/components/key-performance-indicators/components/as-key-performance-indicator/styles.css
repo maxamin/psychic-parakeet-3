@@ -1,0 +1,15 @@
+.helptextHeader {
+  text-align: right;
+}
+
+.helptextButton {
+  margin-right: 6px;
+  margin-top: 4px;
+  color: var(--c-grey);
+  cursor: pointer;
+}
+
+.helptextBody {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

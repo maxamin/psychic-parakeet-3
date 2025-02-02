@@ -1,0 +1,80 @@
+.loginSelection,
+.logoutSelection {
+  padding: 0 0 1.5em 0;
+
+  & button {
+    margin-top: 20px;
+
+    & span {
+      justify-content: left;
+    }
+
+    &.logout {
+      color: #595952;
+      background-color: #f0f0f0;
+      border: none;
+    }
+  }
+}
+
+.linkButtonContainer {
+  display: flex;
+
+  & span {
+    padding-right: 3px;
+    text-transform: capitalize;
+  }
+
+  & a:hover {
+    cursor: pointer;
+  }
+}
+
+.onlyLink {
+
+  & a {
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+
+}
+
+.selectProvider {
+  margin: 0;
+}
+
+.logoutSelection {
+  display: none;
+}
+
+.idpSelectContainer {
+  display: flex;
+  margin-top: 5px;
+  & form {
+    min-width: 80%;
+    margin-right: 5%;
+  }
+  & span > button {
+    min-height: 38px;
+  }
+}
+
+
+@media (max-width:599.95px) {
+  .loginSelection,
+  .logoutSelection {
+    & button {
+      width: 100%;
+    }
+  }
+
+  .idpSelectContainer {
+    display: grid;
+    & form {
+      margin-right: 0;
+    }
+    & span > button {
+      min-width: 100%;
+    }
+  }
+}

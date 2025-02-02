@@ -1,0 +1,194 @@
+Target: http://127.0.0.1/apache-bench/
+Date: 21-07-2021 06:19
+
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D1%23'<br>Query: select * from htmlInput where input = ''+or+1%3D1%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D1%23''' at line 1</body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: "+or+1%3D1%23"<br>Query: select * from htmlInput where input = '"+or+1%3D1%23"'<br></body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D1--'<br>Query: select * from htmlInput where input = ''+or+1%3D1--''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D1--''' at line 1</body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: "+or+1%3D1--"<br>Query: select * from htmlInput where input = '"+or+1%3D1--"'<br></body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/xss.html?xss='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D1%23'        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D2%23'        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/xss.html?xss="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        "+or+1%3D1%23"        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D2%23'        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/xss.html?xss='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D1--'        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D2%23'        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/xss.html?xss="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        "+or+1%3D1--"        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D2%23'        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1/apache-bench/inject.html?sql=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: 1;echo testtesttest;<br>Query: select * from htmlInput where input = '1;echo testtesttest;'<br>Result: 20, 1;echo testtesttest;<br></body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1/apache-bench/xss.html?xss=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        1;echo testtesttest;        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------

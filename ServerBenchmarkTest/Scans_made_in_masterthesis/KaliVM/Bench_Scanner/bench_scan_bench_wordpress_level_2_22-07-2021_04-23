@@ -1,0 +1,222 @@
+Target: http://127.0.0.1/
+Date: 22-07-2021 04:23
+
+findings: 
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+Possible PHP Injection: http://127.0.0.1/xss.html?xss=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+Possible XSS (Permanent): http://127.0.0.1/xss.html?xss=<img src='x' onerror='alert(1)'>; Evidence: <img src='x' onerror='alert(1)'> found in response
+Possible XSS (Permanent): http://127.0.0.1/xss.html?xss=<script> alert(1) </script>; Evidence: <script> alert(1) </script> found in response
+
+
+Details: 
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+-----------------------------------
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D1%23'
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D2%23'
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+-----------------------------------
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        "+or+1%3D1%23"
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        "+or+1%3D2%23"
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+-----------------------------------
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D1--'
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        '+or+1%3D2--'
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/xss.html?xss="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+-----------------------------------
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        "+or+1%3D1--"
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+ negative Result: 
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        "+or+1%3D2--"
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1/xss.html?xss=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+-----------------------------------
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        1;echo testtesttest;
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1/xss.html?xss=<img src='x' onerror='alert(1)'>; Evidence: <img src='x' onerror='alert(1)'> found in response
+-----------------------------------
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        <img src="x" onerror="alert(1)">
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1/xss.html?xss=<script> alert(1) </script>; Evidence: <script> alert(1) </script> found in response
+-----------------------------------
+request answer:
+<html><head>
+        <title>XSS-attacks</title>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        <script> alert(1) </script>
+        
+        <p id="Links">
+            <a href="http://localhost/apache-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/apache-bench/inject.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost/apache-bench/xss.html">Here you can try XSS-Attacken</a><br>
+        </p>
+    
+</body></html>
+-----------------------------------------------------------------------------

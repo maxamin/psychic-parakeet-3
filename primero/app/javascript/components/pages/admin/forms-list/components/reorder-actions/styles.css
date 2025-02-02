@@ -1,0 +1,18 @@
+.reorderActions {
+  padding: 0;
+}
+
+.actionButtonCancel {
+  background: var(--c-grey);
+  color: var(--c-white);
+  margin: 0 .5em;
+
+  &:hover {
+    color: var(--c-black);
+  }
+}
+
+.dialog {
+  top: auto !important;
+  left: auto !important;
+}

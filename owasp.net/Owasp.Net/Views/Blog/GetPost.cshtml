@@ -1,0 +1,13 @@
+﻿@model BlogPost
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<h2>@ViewData["Title"]</h2>
+<p>By @Model.Author</p>
+
+<div class="row">
+    <div class="col-md-12">
+        @Html.Raw(@Model.Content)
+    </div>
+</div>

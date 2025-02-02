@@ -1,0 +1,10 @@
+<h3>Why did we create s.k.f?</h3>
+Our experience taught us that the current level of security the current web-applications contain is not sufficient enough to ensure security. This is mainly because web-developers simply aren't aware of the risks and dangers which are lurking, waiting to be exploited by hackers.<br/><br/>
+
+Because of this we decided to develop a proof of concept framework in order to create a guide system available for all developers so they can develop applications secure by design.<br/><br/>
+
+The security knowledge framework is here to support developers create secure applications. By analysing processing techniques in which the developers use to edit their data the application can link these techniques to different known vulnerabilities and give the developer feedback regarding descriptions and solutions on how to properly implement these techniques in a safe manner.<br/><br/>
+
+The second stage of the application is validating if the developer properly implemented different types of defence mechanisms by means of checklists with among others the OWASP Application security verification standards.<br/><br/>
+
+By means of the answers supplied by the developer the application again generates documentation in which it gives feedback on what defence mechanisms the developer forgot to implement and give him feedback regarding descriptions and solutions on how to properly implement these techniques in a safe manner.<br/><br/>

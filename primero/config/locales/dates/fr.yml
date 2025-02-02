@@ -1,0 +1,69 @@
+fr:
+  date:
+    today: 'Aujourd''hui'
+    clear: 'Effacer'
+    abbr_day_names_short:
+      - Di
+      - Lu
+      - Ma
+      - Me
+      - Je
+      - Ve
+      - Sa
+    abbr_day_names:
+      - Dimanche
+      - Lundi
+      - Mardi
+      - 'Mercredi '
+      - 'Jeudi '
+      - 'Vendredi '
+      - Samedi
+    abbr_month_names:
+      - ~
+      - jan
+      - fév
+      - mar
+      - avr
+      - mai
+      - juin
+      - juil
+      - août
+      - sept
+      - oct
+      - nov
+      - déc
+    day_names:
+      - dimanche
+      - lundi
+      - mardi
+      - mercredi
+      - jeudi
+      - vendredi
+      - samedi
+    month_names:
+      - ~
+      - janvier
+      - février
+      - mars
+      - avril
+      - mai
+      - juin
+      - juillet
+      - août
+      - septembre
+      - octobre
+      - novembre
+      - décembre
+    formats:
+      default: "%d-%b-%Y"
+      with_time: "%d-%b-%Y %H:%M"
+      rtl: "%Y-%b-%d"
+      rtl_with_time: "%M:%H %Y-%b-%d"
+  time:
+    formats:
+      default: "%d-%b-%Y"
+      with_time: "%d-%b-%Y %H:%M"
+      rtl: "%Y-%b-%d"
+      rtl_with_time: "%M:%H %Y-%b-%d"
+  'true': "Oui "
+  'false': "Non"

@@ -1,0 +1,15 @@
+Target: http://localhost:8080/WebGoat/
+Date: 29-06-2021 09:48
+
+Possible SQL injection (Blind): http://localhost:8080/WebGoat/registration?username='%3B+set+%40test+%3D+'ksdjkfl'%3B+select+%40test%3B+%23; Evidence: The Input 'ksdjkfl' is found in the response without it´s injection string
+Possible SQL injection (Blind): http://localhost:8080/WebGoat/registration?password='%3B+set+%40test+%3D+'ksdjkfl'%3B+select+%40test%3B+%23; Evidence: The Input 'ksdjkfl' is found in the response without it´s injection string
+Possible SQL injection (Blind): http://localhost:8080/WebGoat/registration?matchingPassword='%3B+set+%40test+%3D+'ksdjkfl'%3B+select+%40test%3B+%23; Evidence: The Input 'ksdjkfl' is found in the response without it´s injection string
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat?exampleInputEmail1=index.html; Evidence: index.html content found in response
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat?exampleInputPassword1=index.html; Evidence: index.html content found in response
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat/start.mvc?exampleInputEmail1=index.html; Evidence: index.html content found in response
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat/start.mvc?exampleInputPassword1=index.html; Evidence: index.html content found in response
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat/login?exampleInputEmail1=index.html; Evidence: index.html content found in response
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat/login?exampleInputPassword1=index.html; Evidence: index.html content found in response
+Possible PHP Injection: http://localhost:8080/WebGoat/registration?username=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+Possible PHP Injection: http://localhost:8080/WebGoat/registration?password=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+Possible PHP Injection: http://localhost:8080/WebGoat/registration?matchingPassword=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command

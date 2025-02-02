@@ -1,0 +1,18 @@
+extends ../../layout
+
+block content
+  script(src="/js/xxe1.js")
+  h1 Contact Us
+  div#notice
+  
+  label(for="name") Your Name:
+  input#name(type="text")
+  br
+  label Phone Number:
+  input#phone(type="text")
+  br
+  label Comments
+  br
+  textarea#comments(rows=10, cols=35)
+  p
+    button#xxe1Send.btn.btn-primary Send

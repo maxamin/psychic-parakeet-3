@@ -1,0 +1,40 @@
+Target: http://127.0.0.1/apache-bench/
+Date: 19-07-2021 04:51
+
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D1%23'<br>Query: select * from htmlInput where input = ''+or+1%3D1%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D1%23''' at line 1</body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: "+or+1%3D1%23"<br>Query: select * from htmlInput where input = '"+or+1%3D1%23"'<br></body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D1--'<br>Query: select * from htmlInput where input = ''+or+1%3D1--''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D1--''' at line 1</body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/apache-bench/inject.html?sql="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: "+or+1%3D1--"<br>Query: select * from htmlInput where input = '"+or+1%3D1--"'<br></body></html>
+ negative Result: 
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: '+or+1%3D2%23'<br>Query: select * from htmlInput where input = ''+or+1%3D2%23''<br>No result or error <br>You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'or+1%3D2%23''' at line 1</body></html>
+-----------------------------------------------------------------------------
+Possible PHP Injection: http://127.0.0.1/apache-bench/inject.html?sql=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command
+request answer:
+<html><head></head><body>Output der Datenbank:  
+Connection established <br>Input: 1;echo testtesttest;<br>Query: select * from htmlInput where input = '1;echo testtesttest;'<br>Result: 20, 1;echo testtesttest;<br></body></html>
+-----------------------------------------------------------------------------

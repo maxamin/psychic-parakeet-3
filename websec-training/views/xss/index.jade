@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+  h3 Enter keywords to search:
+  form(action="",method="get")
+      input(type="text", name="q")
+      | &nbsp;
+      input(type="submit",value="Search").btn.btn-primary

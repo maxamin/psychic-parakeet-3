@@ -1,0 +1,40 @@
+version: 0.2
+
+env:
+  shell: 'bash'
+  secrets-manager:
+    SECRET_VARS_cicd: 'PrimeroCicdSecretcicd'
+    SECRET_VARS_master: 'PrimeroCicdSecretmaster'
+    SECRET_VARS_develop: 'PrimeroCicdSecretdevelop'
+    SECRET_VARS_release_2_0: 'PrimeroCicdSecretrelease-2-0'
+    SECRET_VARS_release_2_1: 'PrimeroCicdSecretrelease-2-1'
+    SECRET_VARS_release_2_2: 'PrimeroCicdSecretrelease-2-2'
+    SECRET_VARS_release_2_3: 'PrimeroCicdSecretrelease-2-3'
+    SECRET_VARS_release_2_4: 'PrimeroCicdSecretrelease-2-4'
+    SECRET_VARS_release_2_5: 'PrimeroCicdSecretrelease-2-5'
+
+phases:
+  pre_build:
+    commands:
+      - ./buildspec/pre-build.sh
+      - source ./pre-build-env-vars
+    finally:
+      - cd docker
+      - ./build-report.py -p pre_build
+  build:
+    on-failure: ABORT
+    commands:
+      - ./build.sh all -t ${TAG} -r ${CONTAINER_REGISTRY} -b ${CONTAINER_REGISTRY}
+      - docker image ls
+    finally:
+      - ./build-report.py -p build
+  post_build:
+    commands:
+      - echo ${CONTAINER_REGISTRY}/primeroims/application:${TAG}
+      - docker push ${CONTAINER_REGISTRY}/primeroims/solr:${TAG}
+      - docker push ${CONTAINER_REGISTRY}/primeroims/postgres:${TAG}-pg10
+      - docker push ${CONTAINER_REGISTRY}/primeroims/postgres:${TAG}-pg11
+      - docker push ${CONTAINER_REGISTRY}/primeroims/postgres:${TAG}-pg14
+      - docker push ${CONTAINER_REGISTRY}/primeroims/nginx:${TAG}
+      - docker push ${CONTAINER_REGISTRY}/primeroims/application:${TAG}
+      - ../buildspec/send-command.sh

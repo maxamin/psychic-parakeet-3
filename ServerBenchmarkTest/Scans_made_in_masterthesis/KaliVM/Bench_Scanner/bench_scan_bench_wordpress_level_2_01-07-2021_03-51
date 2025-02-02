@@ -1,0 +1,5 @@
+Target: http://localhost/
+Date: 01-07-2021 03:51
+
+Possible SQL injection (Blind): http://localhost/wp-login.php?redirect_to='%3B+set+%40test+%3D+'ksdjkfl'%3B+select+%40test%3B+%23; Evidence: The Input 'ksdjkfl' is found in the response without it´s injection string
+Possible PHP Injection: http://localhost/wp-login.php?redirect_to=1;echo testtesttest;; Evidence: 'testtesttest' found in response but not the injection command

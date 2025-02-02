@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%=typeof title == 'undefined' ? 'New Sails App' : title%></title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <!--
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+    <style>
+    html,body
+    {
+    	font-size:1em;
+    	text-align:left;
+    }
+
+    html,body,img,form,textarea,input,fieldset,div,p,div,ul,li,ol,dl,dt,dd,h1,h2,h3,h4,h5,h6,pre,code
+    {
+    	margin:0;
+    	padding:0;
+    }
+
+    ul,li
+    {
+    	list-style:none;
+    }
+
+    img
+    {
+    	display:block;
+    }
+
+    a img
+    {
+    	border:0;
+    }
+
+    a
+    {
+    	color:#118798;
+    	font-family:inherit;
+    	font-weight:300;
+    	text-decoration:underline;
+    }
+
+    :active,:focus
+    {
+    	-moz-outline-style:none;
+    	outline:0;
+    }
+
+    h1,h2,h3,h4,h5,h6
+    {
+    	font-weight:400;
+    }
+
+    div.clear
+    {
+    	clear:both;
+    }
+
+    .clearfix:after
+    {
+    	clear:both;
+    	content:".";
+    	display:block;
+    	font-size:0;
+    	height:0;
+    	line-height:0;
+    	visibility:hidden;
+    }
+
+    body
+    {
+    	font-family:"Open Sans",Arial,sans-serif;
+    	font-weight:300;
+    }
+
+    .top-bar
+    {
+    	background-color:#e4f0f1;
+    	padding:15px 0;
+    	width:100%;
+    }
+
+    .top-bar .container img
+    {
+    	float:left;
+    }
+
+    .top-bar .container ul
+    {
+    	float:right;
+    	padding-top:25px;
+    }
+
+    .top-bar .container li
+    {
+    	color:#000;
+    	float:left;
+    	font-size:15px;
+    	font-weight:600;
+    	text-align:center;
+    	width:125px;
+    }
+
+    .top-bar .container a li:hover
+    {
+    	-moz-transition:color 200ms;
+    	-o-transition:color 200ms;
+    	-webkit-transition:color 200ms;
+    	color:#118798;
+    	transition:color 200ms;
+    }
+
+    .container
+    {
+    	margin:auto;
+    	max-width:1200px;
+    	width:80%;
+    }
+
+    div.header
+    {
+    	-moz-transition:6s;
+    	-o-transition:6s;
+    	-webkit-transition:6s;
+    	background:rgba(4,36,41,0.89) url(http://sailsjs.org/images/img_sailsShadow.png) no-repeat 42% bottom;
+    	padding:20px 0 10px;
+    	transition:6s;
+    }
+
+    .header h1#main-title
+    {
+    	color:#fff;
+    	font-size:2.5em;
+    	font-weight:300;
+    }
+
+    .header h3
+    {
+    	color:#b1eef7;
+    	font-style:italic;
+    	font-weight:300;
+    }
+
+    .header h3 code
+    {
+    	background-color:rgba(255,255,255,0.5);
+    	color:#0e6471;
+    	font-style:normal!important;
+    	font-weight:300;
+    	margin:0 5px;
+    }
+
+    div.main.container
+    {
+    	padding:50px 0;
+    }
+
+    h1
+    {
+    	color:#118798;
+    	font-weight:300;
+    }
+
+    code
+    {
+    	background-color:#f3f5f7;
+    	font-family:Consolas, Monaco, monospace;
+    	font-size:inherit;
+    	padding:4px 5px 1px;
+    }
+
+    a:hover
+    {
+    	-moz-transition:color 200ms;
+    	-o-transition:color 200ms;
+    	-webkit-transition:color 200ms;
+    	color:#0e6471;
+    	transition:color 200ms;
+    }
+
+    p
+    {
+    	line-height:1.5em;
+    }
+
+    blockquote
+    {
+    	background-color:#e4f0f1;
+    	line-height:1.5em;
+    	margin:15px 0;
+    	padding:25px;
+    }
+
+    blockquote span
+    {
+    	font-weight:600;
+    	padding-right:5px;
+    }
+
+    ul.getting-started
+    {
+    	-moz-box-sizing:border-box;
+    	-webkit-box-sizing:border-box;
+    	box-sizing:border-box;
+    	float:left;
+    	padding:25px 75px 25px 0;
+    	width:70%;
+    }
+
+    ul.getting-started li
+    {
+    	padding:25px 0;
+    }
+
+    ul.getting-started li h3
+    {
+    	font-size:25px;
+    	font-weight:300;
+    	padding-bottom:10px;
+    }
+
+    .sprite
+    {
+    	background:url(http://sailsjs.org/images/newapp.sprite.png) no-repeat;
+    	left:0;
+    	position:absolute;
+    	top:0;
+    }
+
+    .getting-started .sprite
+    {
+    	float:left;
+    	height:42px;
+    	margin-left:10px;
+    	padding-left:60px;
+    	width:0;
+    }
+
+    .getting-started .one
+    {
+    	background-position:0 0;
+    }
+
+    .getting-started .two
+    {
+    	background-position:0 -42px;
+    }
+
+    .getting-started .three
+    {
+    	background-position:0 -83px;
+    }
+
+    div.step
+    {
+    	opacity:0.9;
+    	padding-left:70px;
+    	position:relative;
+    }
+
+    div.step:hover
+    {
+    	opacity:1;
+    }
+
+    div.links
+    {
+    	-moz-box-sizing:border-box;
+    	-webkit-box-sizing:border-box;
+    	background-color:#f3f5f7;
+    	border:1px solid #ebebeb;
+    	box-sizing:border-box;
+    	float:left;
+    	max-width:325px;
+    	padding:25px 45px 35px;
+    	width:30%;
+    }
+
+    div.links h3
+    {
+    	color:#727272;
+    	font-size:28px;
+    	font-weight:300;
+    	text-align:center;
+    }
+
+    div.links h4
+    {
+    	color:#727272;
+    	font-size:17px;
+    	font-weight:600;
+    	padding:15px 0 10px;
+    }
+
+    div.links .link-list a
+    {
+    	font-weight:400;
+    	text-decoration:none;
+    }
+
+    div.links .link-list a li
+    {
+    	padding:0 0 5px 10px;
+    }
+
+    div.default-page
+    {
+    	min-width:1200px;
+    }
+
+    .pocket
+    {
+    	display:none;
+    }
+    </style>
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://bootswatch.com/simplex/bootstrap.min.css">
+  </head>
+
+  <body>
+      <div class="header">
+        <h1 id="main-title" class="container"><%= __('SailsTestBench') %></h1>
+        <h3 class="container">Contrast Security</h3>
+      </div>
+            
+      <!-- Default home page -->
+      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600' rel='stylesheet' type='text/css'>
+
+      <script type="text/javascript">
+      setTimeout(function sunrise () {
+        document.getElementsByClassName('header')[0].style.backgroundColor = '#118798';
+      }, 0);
+      </script>
+
+      <div class="links pull-left">
+        <!-- <h3>Links</h3> -->
+        <ul class="link-list">
+
+          <h4>XSS</h4>
+          <a href="/xss"><li>reflected-xss</li></a>
+          <h4>Command Injection</h4>
+          <a href="/command"><li>command-injection</li></a>
+          <h4>Header</h4>
+          <a href="/header"><li>unvalidated-redirect</li></a>
+        </ul>
+      </div>
+
+      <div style="padding-top: 20px;" >
+          <%- body %>
+     </div>
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    
+    <!--TEMPLATES END-->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

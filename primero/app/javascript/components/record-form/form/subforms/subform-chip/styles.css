@@ -1,0 +1,14 @@
+.subformChip {
+  border-radius: 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 5px;
+}
+
+.info {
+  background-color: var(--c-light-grey);
+}
+
+.success {
+  background-color: var(--c-green);
+}

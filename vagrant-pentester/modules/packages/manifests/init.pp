@@ -1,0 +1,7 @@
+class packages {
+  $packages = ["wget", "unzip", "git"]
+  package { $packages:
+    ensure => present,
+    require => Exec["apt-get update"]
+  }
+}

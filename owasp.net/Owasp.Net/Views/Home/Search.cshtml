@@ -1,0 +1,38 @@
+﻿@using OwaspDemo.Dtos
+@model OwaspDemo.Dtos.SearchDto
+@{
+    ViewData["Title"] = "Search";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div>
+    <p>Use this demo with Edge. Chrome now protects you.</p>
+    @using (Html.BeginForm("Search", "Home", FormMethod.Post))
+    {
+        <div class="input-group">
+            @Html.TextBoxFor(u => u.Keyword, new {@class = "form-control", @placeholder = "Enter keyword..."})
+            <div class="input-group-btn">
+                <input class="btn btn-default" type="submit" value="Search!"/>
+            </div>
+        </div>
+    }
+</div>
+<br /><br />
+
+@if (!String.IsNullOrEmpty(Model.Keyword))
+{
+    <div>
+        <p>Your search for '@Html.Raw(Model.Keyword)' returned @Model.Results.Count results</p>
+        <table class="table">
+            <tr>
+                <th>Email</th>
+            </tr>
+            @foreach (var email in Model.Results)
+            {
+                <tr>
+                    <td>@email</td>
+                </tr>
+            }
+        </table>
+    </div>
+}

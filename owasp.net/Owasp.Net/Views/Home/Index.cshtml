@@ -1,0 +1,25 @@
+﻿@model IEnumerable<BlogPost>
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div id="main-home-content" class="row">
+    <div class="col-md-12">
+        <h2>Latest Articles</h2>
+        @*<ul>
+            @foreach (var post in Model)
+            {
+                <li><a href="@Url.Content($"~/Blog/GetPost/{post.Id}")">@post.Title</a> | @post.Author</li>
+            }
+        </ul>*@
+        @foreach (var post in Model)
+        {
+            <article>
+                <h3>@post.Title | @post.Author</h3>
+                <div>
+                    @Html.Raw(post.Content)
+                </div>
+            </article>
+        }
+    </div>
+</div>

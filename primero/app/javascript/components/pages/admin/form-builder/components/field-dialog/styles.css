@@ -1,0 +1,38 @@
+.fieldDialog {
+  & h1 {
+    font-size: var(--fs-16);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+.cancelButton {
+  background: var(--c-grey);
+  color: var(--c-white);
+  margin: 0 .5em;
+
+  &:hover {
+    color: var(--c-black);
+    background-color: var(--c-warm-grey-5);
+  }
+}
+
+.hiddenField {
+  display: none;
+}
+
+.boldLabel {
+  font-weight: bold;
+}
+
+.subformFieldTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1em;
+
+  & h1 {
+    flex: 1
+  }
+}

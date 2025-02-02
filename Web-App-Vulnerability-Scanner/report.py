@@ -1,0 +1,137 @@
+import re
+import os
+import json
+from urllib.parse import unquote
+
+home_path = os.path.dirname(__file__)
+results_path = os.path.join(home_path,"results")
+
+fh = open("completed.txt", "r")
+targets = fh.readlines()
+targets = [x.rstrip() for x in targets]
+fh.close()
+
+all_findings = []
+for t in targets:
+    try:
+        filename = re.sub("[^A-Za-z0-9\.]+", "_", t)
+        filename = os.path.join(results_path, filename + ".json")
+        fh = open(filename, "r")
+        lines = fh.readlines()
+        fh.close()
+        s = ""
+        for l in lines:
+            s = s + l
+        findings = json.loads(s.encode("utf-8"))
+        all_findings.append(findings)
+    except Exception as e:
+        print(str(e))
+        pass
+
+outfile = open("report.html", "w")
+######################   find counts              #####################
+authbypass_count = 0
+for findings in all_findings:
+
+    if "authbypass" in findings:
+        authbypass_count = authbypass_count + 1
+
+weakpasswords_count = 0
+for findings in all_findings:
+
+    if "WeakPassword" in findings and len(findings["WeakPassword"]) > 0 and len(findings["WeakPassword"]) != 4:
+        weakpasswords_count = weakpasswords_count + 1
+
+findings_error = []
+findings_blind = []
+findings_time_based_blind = []
+
+for findings in all_findings:
+    flag_error = False
+    flag_blind = False
+    flag_time = False
+    for sqlinjection in findings["sqlinjection"]:
+
+        for error in sqlinjection["sql_error_msgs"]:
+            if error["dbms"] != "Unknown":
+                flag_error = True
+            if error["error_msgs"] == "Blind SQL Injection":
+                flag_blind = True
+            if error["error_msgs"] == "Time Based Blind SQL Injection":
+                flag_time = True
+    if flag_error == True:
+        findings_error.append(findings)
+    if flag_blind == True:
+        findings_blind.append(findings)
+    if flag_error == True:
+        findings_time_based_blind.append(findings)
+
+total = len(all_findings)
+findings_error_count = len(findings_error)
+findings_blind_count = len(findings_blind)
+findings_time_based_blind_count = len(findings_time_based_blind)
+
+#####################################
+outfile.write("Total: " + str(total) + "\n")
+outfile.write("Authbypass: " + str(authbypass_count) + "\n")
+outfile.write("Weak Passwords: " + str(weakpasswords_count) + "\n")
+
+outfile.write("SQL Injection->Error: " + str(findings_error_count) + "\n")
+outfile.write("SQL Injection->Blind: " + str(findings_blind_count) + "\n")
+outfile.write("SQL Injection->Time Blind: " + str(findings_time_based_blind_count) + "\n")
+
+
+
+##################### start printing ###################################
+for findings in all_findings:
+
+    if "authbypass" in findings:
+        outfile.write("\n\nTarget:\n" + findings["target"])
+        authbypass = findings['authbypass']
+        outfile.write("\n\n====================AuthBypass:: Method==============\n" + authbypass["method"])
+        outfile.write("\naction: " + authbypass["action"])
+        outfile.write("\npayload: " + authbypass["payload"])
+
+for findings in all_findings:
+
+    if "WeakPassword" in findings and len(findings["WeakPassword"]) > 0 and len(findings["WeakPassword"]) != 4:
+        outfile.write("\n\nTarget:\n" + findings["target"])
+        weakpasswords_all = findings['WeakPassword']
+        for weakpasswords in weakpasswords_all:
+            outfile.write("\n\n====================Weak Password:: Method==============\n" + weakpasswords["method"])
+            outfile.write("\naction: " + weakpasswords["action"])
+            outfile.write("\nPassword: " + weakpasswords["password"])
+
+
+def print_finding_sqlinjection(findings):
+    for sqlinjection in findings["sqlinjection"]:
+        outfile.write("\nMethod: " + sqlinjection["method"].upper())
+        outfile.write("\nURL: " + sqlinjection["url"])
+
+        if sqlinjection["form"] == "yes":
+            outfile.write("\nAction: " + sqlinjection["url1"])
+
+        outfile.write("\nParameter: " + sqlinjection["parameter"])
+        try:
+            outfile.write("\nPayload: " + unquote(sqlinjection["payload"].encode("utf-8").decode()))
+        except Exception as e:
+            print(str(e))
+        for error in sqlinjection["sql_error_msgs"]:
+            outfile.write("\nDatabase: " + error["dbms"] + " - " + "Error Message: " + error["error_msgs"])
+
+outfile.write("\n\n=============SQL Injectionzzzzzz===============\n\n")
+
+outfile.write("\n\n=============SQL Injection Error===============\n\n")
+for findings in findings_error:
+    print_finding_sqlinjection(findings)
+outfile.write("\n\n=============SQL Injection Blind===============\n\n")
+for findings in findings_blind:
+    print_finding_sqlinjection(findings)
+
+outfile.write("\n\n=============SQL Injection Time===============\n\n")
+for findings in findings_time_based_blind:
+    print_finding_sqlinjection(findings)
+
+outfile.flush()
+outfile.close()
+

@@ -1,0 +1,135 @@
+.loadingMargin {
+  position: absolute;
+}
+
+.field {
+  margin: 0 0 var(--sp-3);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+
+  & > div {
+    flex: 1;
+    padding: 0 1em;
+  }
+
+  & > div:last-of-type {
+    padding: 0 0 0 1em;
+  }
+
+  & > div:first-of-type {
+    padding: 0 1em 0 0;
+  }
+}
+
+.rowCustom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--c-light-grey-2);
+
+  & label {
+    border-left: 1px solid var(--c-light-grey-2);
+    width: 70px;
+
+    & span {
+      margin-left: 8px
+    }
+  }
+
+  & > div:last-of-type {
+
+    & div {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.headerCustom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: none;
+  margin-bottom: 8px;
+
+  & > div:last-of-type {
+    display: flex;
+    align-items: center;
+    border-bottom: none;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+    flex: 0;
+
+    & div {
+      width: 80px;
+      padding: 0;
+    }
+  }
+}
+
+.row {
+  &.notEqual {
+    & > div {
+      flex: none;
+    }
+  }
+}
+
+.actionButtonText {
+  margin: 0 0.5em;
+}
+
+.heading {
+  font-size: var(--fs-16);
+  font-weight: var(--fwb);
+
+  &.error {
+    color: red;
+  }
+}
+
+.panelContent {
+  display: block;
+}
+
+.formActions {
+  padding: 20px 0;
+}
+
+.readonly {
+  & fieldset {
+    border: none;
+  }
+
+  & input {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  & input::placeholder {
+    color: var(--c-black) !important;
+  }
+}
+
+.readonly :global .MuiOutlinedInput-root {
+  background: transparent;
+}
+.readonly :global .MuiAutocomplete-endAdornment {
+  display: none;
+}
+
+:global [dir="rtl"] .MuiAutocomplete-endAdornment {
+  right: initial !important;
+  left: 9px !important;
+}
+
+:global .MuiAutocomplete-endAdornment {
+  right: 9px !important;
+  left: initial !important;
+}

@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="VideoDownloader.App.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="RpcUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://app.pluralsight.com/player/functions/rpc</Value>
+    </Setting>
+    <Setting Name="SiteHostName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">app.pluralsight.com</Value>
+    </Setting>
+    <Setting Name="ViewClipUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://app.pluralsight.com/video/clips/viewclip</Value>
+    </Setting>
+    <Setting Name="ReferrerUrlForDownloading" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://vid20.pluralsight.com</Value>
+    </Setting>
+    <Setting Name="ClipExtensionMp4" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">mp4</Value>
+    </Setting>
+    <Setting Name="ClipExtensionPart" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">part</Value>
+    </Setting>
+    <Setting Name="EnglishLocale" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">en</Value>
+    </Setting>
+    <Setting Name="AllCoursesUrl" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://app.pluralsight.com/search/proxy?i=1&amp;q1=course&amp;x1=categories&amp;m_Sort=updated_date&amp;count=7100</Value>
+    </Setting>
+    <Setting Name="FirstUrlForLogin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://app.pluralsight.com/id/</Value>
+    </Setting>
+    <Setting Name="FileNameForJsonOfCourses" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">products.json</Value>
+    </Setting>
+    <Setting Name="CoursesUrlFormat" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://app.pluralsight.com/library/courses/{0}</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

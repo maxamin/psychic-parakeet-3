@@ -1,0 +1,48 @@
+<% provide(:title, "Sign in") %>
+<h1>Welcome to the HashChat Secure Messaging Platform</h3>
+
+<div class="container">
+<script>
+// Ignore this if you're looking at the source: we're just base64-encoding
+// the value here so the browser doesn't block us from making this exploitable.
+
+// Yeah, it seems like this wouldn't happen in the real world, but trust us,
+// it does. :(
+function encode_form() {
+  $('#session_username').val(btoa($('#session_username_text').val()));
+  return true;
+}
+function submit2() {
+  $('#realform').submit();
+}
+</script>
+    <h2 class="form-signin-heading">Please sign in to continue</h2>
+
+<form onsubmit="submit2();return false;">
+    <label class="sr-only" for="session_username_text">Username</label>
+    <input type="text" class="form-control" placeholder="Username" id="session_username_text">
+</form>
+  <%= form_for(:session, url: sessions_path, html: {id: "realform", class: "form-signin", onsubmit: 'encode_form()'} ) do |f| %>
+    <%= f.label :username, class: "sr-only" %>
+    <%= f.hidden_field :username %>
+
+    <%= f.label :password, class: "sr-only" %>
+    <%= f.text_field :password, class: "form-control", placeholder: "Password" %>
+
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+
+    <%= f.submit "Sign in", class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    <p class="text-muted">All messages are hashed using the latest SSL certificate. Relax. Hash. Chat.
+</p>
+  </div>
+</footer>

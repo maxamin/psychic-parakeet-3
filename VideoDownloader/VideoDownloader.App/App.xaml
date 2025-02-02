@@ -1,0 +1,23 @@
+﻿<Application x:Class="VideoDownloader.App.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:vm="clr-namespace:VideoDownloader.App.ViewModel" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" Startup="Application_Startup" d1p1:Ignorable="d" xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary>
+          <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+        </ResourceDictionary>
+        <ResourceDictionary Source="ResourceDictionaries\Templates\TextBoxBaseControlTemplate.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\Templates\TextBoxValidationTemplate.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\Templates\PasswordBoxControlTemplate.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\Templates\TagListViewItemDataTemplate.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\Templates\ProductsListViewItemDataTemplate.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\NamedStyles\TagListViewItemStyle.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\NamedStyles\TagListViewControlStyle.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\NamedStyles\ProductListViewItemStyle.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\NamedStyles\ProductsListViewControlStyle.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\NamedStyles\TextBoxWithDefaultTextStyle.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\NamedStyles\PasswordBoxStyle.xaml" />
+        <ResourceDictionary Source="ResourceDictionaries\Images\Common.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

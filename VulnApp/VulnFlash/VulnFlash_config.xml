@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<main>
+   <config>
+      <hasToc type="Boolean">0</hasToc>
+      <hasAudio type="Boolean">0</hasAudio>
+      <hasAbout type="Boolean">1</hasAbout>
+      <hasFullscreen type="Boolean">1</hasFullscreen>
+      <hasPipOverlay type="Boolean">0</hasPipOverlay>
+      <startText><![CDATA[]]></startText>
+      <startLogo></startLogo>
+      <endLogo></endLogo>
+      <about>
+         <title><![CDATA[VulnFlash]]></title>
+         
+         
+         
+         <logo></logo>
+         <width>336</width>
+         <height>270</height>
+         <tabSelected>1</tabSelected>
+         <aboutMedia></aboutMedia>
+         <aboutText><![CDATA[(c) Portcullis Computer Security Ltd & Tim Brown, 2010]]></aboutText>
+         <infoText><![CDATA[]]></infoText>
+      </about>
+      <accessibility>
+         <startbutton>Begin Video</startbutton>
+         <playbutton>Play Toggle</playbutton>
+         <progressbutton>Progress bar Indicator</progressbutton>
+         <audiobutton>Audio Toggle</audiobutton>
+         <tocbutton>Table of Contents Toggle</tocbutton>
+         <volumeslider>Audio Indicator</volumeslider>
+         <fsbutton>Fullscreen Toggle</fsbutton>
+         <ccbutton>Closed Caption Toggle</ccbutton>
+         <infobutton>Information</infobutton>
+         <volumebutton>Volume Control</volumebutton>
+         <exitquizbutton>Exit Quiz</exitquizbutton>
+         <exitfeedbackbutton>Exit Question Feedback</exitfeedbackbutton>
+         <exitsummarybutton>Exit Question Feedback</exitsummarybutton>
+         <exitpreviewbutton>Exit Preview</exitpreviewbutton>
+         <infowindow>info window</infowindow>
+         <infoaboutbutton>about</infoaboutbutton>
+         <infoinfobutton>info</infoinfobutton>
+         <infoexitbutton>info window Exit</infoexitbutton>
+         <replaybutton>Replay Video </replaybutton>
+         <tocexitbutton>Table of Contents Exit</tocexitbutton>
+         <tocwindow>Table of Contents Window</tocwindow>
+      </accessibility>
+      <localSecurityWarning>
+         <title>Important</title>
+         <message>This action is not allowed by the default Flash Player security settings when the content is played from a hard drive or CD.  Once the content is moved to a web server, it should function as expected, and you should not see this message.
+
+For other distribution methods, or to understand how the Flash Player security settings affect this content, please see the &quot;Flash Player Security&quot; topic in the Camtasia Studio help file.
+
+
+
+ </message>
+      </localSecurityWarning>
+      <includeScoreInEmail type="Boolean">0</includeScoreInEmail>
+      <rememberQuizAnswers type="Number">0</rememberQuizAnswers>
+      <endAction>JumpToURL</endAction>
+      <endActionParam>http://localhost/VulnApp/Default.aspx</endActionParam>
+      <endActionTarget>_self</endActionTarget>
+      <volume type="Number">100</volume>
+      <brandedContextMenu type="Boolean">true</brandedContextMenu>
+      <hasCaptions type="Boolean">1</hasCaptions>
+      <captionsVisible type="Boolean">0</captionsVisible>
+      <caption>         
+         <font>
+            <type type="String">Arial</type>
+            <size type="Number">16</size>
+            <weight type="Boolean">0</weight>
+            <color type="Number">0xFFFFFF</color>
+            <cpl type="Number">32</cpl>
+         </font>
+         <panel>
+            <background>
+               <color type="Number">0x000000</color>
+               <alpha type="Number">50</alpha>
+            </background>
+         </panel>
+      </caption>
+      <video1>
+         <width type="Number">640</width>
+         <height type="Number">351</height>
+      </video1>
+      <toc>
+         <type type="Number">2</type>
+         <title></title>
+         
+         <media></media>
+         <x type="Number">0</x>
+         <y type="Number">0</y>
+         <width type="Number">0</width>
+         <height type="Number">369</height>
+         <transparent type="Boolean">1</transparent>
+         <horizontalScroll type="Number">0</horizontalScroll>
+         <backgroundColor type="Number">0x000000</backgroundColor>
+         <alternatingRowColors>
+            <array>
+               <colors type="Number">0x666666</colors>
+               <colors type="Number">0x777777</colors>
+            </array></alternatingRowColors>
+         <rowDepthColors>
+            <array>
+               <colors type="Number"></colors>
+               <colors type="Number"></colors>
+            </array>
+         </rowDepthColors>
+         <rowRollOverColor type="Number">0xA4A4A4</rowRollOverColor>
+         <rowSelectedColor type="Number">0xC0C0C0</rowSelectedColor>
+         <rowIndentation>10</rowIndentation>
+         <borderStyle>inset</borderStyle>    
+         <textColor type="Number">0xFFFFFF</textColor>
+         <fontFamily>Arial</fontFamily>
+         <fontSize type="Number">12</fontSize>
+         <fontWeight>none</fontWeight>
+         <textAlign>left</textAlign>
+         <textDecoration>none</textDecoration>
+         <textIndent type="Number">0</textIndent>
+         <textRollOverColor type="Number">0xFFFFFF</textRollOverColor>
+         <textSelectedColor type="Number">0x000000</textSelectedColor>
+         <useRollOver type="Boolean">0</useRollOver>
+         <collapsible type="Boolean">0</collapsible>
+         <expanded type="Boolean">1</expanded>
+      </toc>
+      <quiz>
+         <disableFeedback type="Boolean">0</disableFeedback>
+         <txtQuestionOf>Question @ of @</txtQuestionOf>
+         <txtPrev>Prev</txtPrev>
+         <txtSubmit>Submit</txtSubmit>
+         <txtNext>Next</txtNext>
+         <txtDone>Done</txtDone>
+         <txtPreview>Preview</txtPreview>
+         <txtSend>Send</txtSend>
+         <txtMainMessage>You have reached the end of the questions and this video. Your answers are ready to be sent.</txtMainMessage>
+         <txtEmailContents>E-mail Contents</txtEmailContents>
+         <txtEmailTo>E-mail to </txtEmailTo>
+         <txtAnswersSent>Your answers have been sent.</txtAnswersSent>
+         <txtsummary>You have completed @ of @ questions.</txtsummary>
+         <txtScore>Score = @/@</txtScore>
+         <txtSummaryTitle>Answers Summary</txtSummaryTitle>
+      </quiz>
+   </config>
+   <playlist>
+      <array>
+         <fileset>
+            <video1>
+               <duration type="Number">43.20</duration>
+               <uri>VulnFlash.mp4</uri>
+               <frameRate type="Number">15</frameRate>
+               <keyframeRate type="Number">0</keyframeRate>
+               <blendingMode>Normal</blendingMode>
+               <isFlv type="Boolean">1</isFlv>
+            </video1>
+            <pip>
+               <duration type="Number">43.20</duration>
+               <frameRate type="Number">10</frameRate>
+               <keyframeRate type="Number">30</keyframeRate>
+               <uri>VulnFlash_PIP.mp4</uri>   
+            </pip>
+            <hasPipVideo type="Boolean">0</hasPipVideo>
+            <hotspotInfo>
+               
+            </hotspotInfo>
+            <quizInfo>
+               
+            </quizInfo>
+            <captionInfo>
+               <array>
+<captionObject>
+<Time>18.433333</Time>
+<Caption><![CDATA[{\rtf1 Enter your credentials and click Login}]]></Caption>
+<align>center</align>
+</captionObject>
+<captionObject>
+<Time>22.433333</Time>
+<Caption><![CDATA[]]></Caption>
+<align>center</align>
+</captionObject>
+<captionObject>
+<Time>26.966667</Time>
+<Caption><![CDATA[{\rtf1 Select a game to play such as Higher Or Lower}]]></Caption>
+<align>center</align>
+</captionObject>
+<captionObject>
+<Time>30.966667</Time>
+<Caption><![CDATA[{\rtf1 }]]></Caption>
+<align>center</align>
+</captionObject>
+<captionObject>
+<Time>34.733333</Time>
+<Caption><![CDATA[{\rtf1 I'm going to guess the next number will be Lower}]]></Caption>
+<align>center</align>
+</captionObject>
+<captionObject>
+<Time>38.200000</Time>
+<Caption><![CDATA[{\rtf1 }]]></Caption>
+<align>center</align>
+</captionObject>
+</array>
+
+            </captionInfo>
+
+         </fileset>
+      </array>
+
+   </playlist>   
+   <tocInfo>
+      
+   </tocInfo>
+</main>

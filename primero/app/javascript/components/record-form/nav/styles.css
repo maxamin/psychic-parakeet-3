@@ -1,0 +1,54 @@
+.navSelected {
+  border-radius: 4px;
+  background: var(--c-blue-hover-light) !important;
+}
+
+.item {
+  font-size: var(--fs-16);
+
+  & span {
+    font-weight: 600;
+  }
+}
+
+.nestedItem {
+  padding: 0 1em;
+  font-size: var(--fs-13)
+}
+
+.root {
+  transition: none;
+  padding-right: 0;
+
+  &:hover {
+    border-radius: 4px;
+  }
+}
+
+.listRecordNav {
+  padding-bottom: 5em;
+}
+
+@media (max-width:959.95px) {
+  .closeButtonRecordNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: 0 0 auto;
+  }
+
+  .closeIconButtonRecordNav {
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .drawerPaper {
+    top: 4em;
+    height: 93.5%;
+  }
+
+  .listRecordNav {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+}

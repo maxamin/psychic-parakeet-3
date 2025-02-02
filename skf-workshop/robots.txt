@@ -1,0 +1,4 @@
+User-agent: *
+
+Allow: /skf-workshop/*
+Disallow: /skf-workshop/secret/secret.txt

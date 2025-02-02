@@ -1,0 +1,26 @@
+.container {
+  max-width: 88em;
+}
+
+.title {
+  height: 28px;
+  font-family: var(--ff);
+  font-size: var(--fs-20);
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: var(--c-solid-black);
+  margin: 25px 0 0 0;
+}
+
+.pageOptions {
+  display: inline;
+
+  & Button {
+    float: right;
+    color: var(--c-blue);
+    margin: 13px 0 0 0;
+  }
+}

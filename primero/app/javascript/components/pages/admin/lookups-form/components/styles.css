@@ -1,0 +1,41 @@
+.hideTranslationsFields {
+  display: none !important;
+}
+
+.header {
+  font-weight: bold;
+  text-tranform: uppercase;
+
+  & div:first-of-type {
+    border-right: none;
+  }
+}
+
+.row {
+  border-bottom: 1px solid var(--c-light-grey);
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  text-transform: uppercase;
+
+  & div:not(:first-of-type) {
+    flex: 1;
+  }
+
+  & div {
+    padding: .2em;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.dragIndicatorContainer {
+  width: 3em;
+  justify-content: center;
+  margin-right: 1em;
+  border-right: 1px solid var(--c-light-grey) !important;
+}
+
+.removeIcon {
+  color: var(--c-red);
+}

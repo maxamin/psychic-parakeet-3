@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+        <StartupObject>TarpitCsharp.Program</StartupObject>
+        <TargetFrameworks>netcoreapp2.2</TargetFrameworks>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNet.Mvc" Version="5.2.7" />
+        <PackageReference Include="Microsoft.AspNet.WebApi.Core" Version="5.2.7" />
+        <PackageReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+        <PackageReference Include="Microsoft.System.Core" Version="1.0.0" />
+        <PackageReference Include="Mvc2" Version="2.0.1" />
+        <PackageReference Include="NUnit" Version="3.11.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+        <PackageReference Include="Roslyn.Throwback.Services" Version="1.0.0" />
+        <PackageReference Include="Spiffy.Monitoring.NLog" Version="4.5.0" />
+        <PackageReference Include="System.ComponentModel.Primitives" Version="4.3.0" />
+        <PackageReference Include="System.Data.SQLite.Core" Version="1.0.110" />
+    </ItemGroup>
+</Project>

@@ -1,0 +1,20 @@
+<h1>Separation suggestions for your country {{country}}</h1>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">Region to separate</th>
+    <th scope="col">Separate from</th>
+    <th scope="col">Argumentation</th>
+    <th scope="col">Rate</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let separation of separations | async">
+    <td *ngIf="isUsersCountry(separation.country)">{{separation.separatedRegionName}}</td>
+    <td *ngIf="isUsersCountry(separation.country)">{{separation.country}}</td>
+    <td *ngIf="isUsersCountry(separation.country)"><div [innerHTML]="separation.argumentation | keepHtml"></div></td>
+    <td *ngIf="isUsersCountry(separation.country)"><a href="#">RATE</a></td>
+  </tr>
+  </tbody>
+</table>

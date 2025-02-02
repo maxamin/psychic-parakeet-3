@@ -1,0 +1,11 @@
+﻿<ResourceDictionary x:Uid="ResourceDictionary_1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Uid="SolidColorBrush_1" x:Key="SelectedBackgroundBrush" Color="#DDD" />
+    <SolidColorBrush x:Uid="SolidColorBrush_2" x:Key="DisabledForegroundBrush" Color="#888" />
+
+    <!--Style for listview-->
+    <Style x:Uid="Style_1" x:Key="TagListViewControlStyle" TargetType="{x:Type ListView}">
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="Background" Value="Transparent"/>
+    </Style>
+</ResourceDictionary>

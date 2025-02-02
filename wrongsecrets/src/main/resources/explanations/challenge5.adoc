@@ -1,0 +1,5 @@
+=== K8s Configmap based secret
+
+Hardcoding something in docker was not smart. But what about a config-map in the default namespace without RBAC?
+
+If this challenge is enabled, you are running this from a K8s cluster. Can you use `kubectl` to find the secret? Or what about looking at the repository where the cluster is configured by? You might have spotted it as well if the configmap was committed to Git maybe.

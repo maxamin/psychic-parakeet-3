@@ -1,0 +1,5 @@
+Target: http://localhost:8080/WebGoat/
+Date: 29-06-2021 09:50
+
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat?exampleInputEmail1=index.html; Evidence: index.html content found in response
+Possible Path Traversal/Local File Inclusion: http://localhost:8080/WebGoat?exampleInputPassword1=index.html; Evidence: index.html content found in response

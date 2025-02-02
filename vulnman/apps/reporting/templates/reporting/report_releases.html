@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load guardian_tags %}
+{% load vulnmantags %}
+
+{% block title %}
+    Reports
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                {% include 'core/components/navigation/sidebar-toggler.html' %}
+                <li class="breadcrumb-item"><a href="{% url 'projects:reporting:report-list' %}">Reports</a></li>
+                <li class="breadcrumb-item active">{{ report.name }}</li>
+            </ol>
+        </nav>
+
+        {% include 'reporting/components/sub_nav.html' %}
+
+        <div class="row mt-3">
+            {% if perms.projects.change_project %}
+                <div class="col-sm-12 col-md-8 d-flex">
+                    <p><strong>Unversioned Draft Report:</strong></p>
+                </div>
+                <div class="col-sm-12 col-md-4 d-flex flex-column-reverse align-items-end">
+                    <div class="d-flex justify-content-end">
+                        <form method="POST" action="{% url 'projects:reporting:report-release-wip-create' report.pk %}">
+                            <input type="hidden" name="name" value="wip">
+                            {% csrf_token %}
+                            <button class="btn btn-outline-secondary mr-3" id="wip-create-btn">
+                                <span id="wip-task-status-indicator" class="d-none">
+                                    <span class="spinner-border spinner-border-sm" role="status">
+                                    </span>
+                                </span>
+                                Create
+                            </button>
+                        </form>
+                        <a class="btn btn-outline-secondary" href="{{ wip_report.get_absolute_url }}" target="_blank" id="wip-download-btn">
+                            Download
+                        </a>
+                    </div>
+                </div>
+                {% if wip_report %}
+                    <p><small>Created {{ wip_report.date_created|timesince }} ago</small></p>
+                {% else %}
+                    <p><small>No report exists!</small></p>
+                {% endif %}
+            {% endif %}
+        </div>
+
+        <div class="row mt-3">
+            {% if perms.projects.change_project %}
+                <div class="col-sm-12 d-flex flex-column-reverse align-items-end">
+                    <a class="btn btn-primary" href="{% url 'projects:reporting:report-release-create' report.pk %}">
+                        <i class="fa fa-plus"></i> New Release
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="card mt-3">
+            <div class="card-header border-bottom">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 d-flex">
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-flex flex-column-reverse align-items-end">
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle" href="#" role="button" id="dropdown-menu-sort"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Sort
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdown-menu-sort">
+                                <li><a class="dropdown-item" href="">Recently Updated</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group list-group-flush">
+                {% for report in releases %}
+                    <div class="list-group-item list-group-item-action">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-6 d-flex">
+                                <strong class="p-2">
+                                    <a class="text-decoration-none" style="color: inherit;"
+                                       href="{% url 'projects:reporting:report-release-update' report.pk %}">
+                                        {{ report.name }}
+                                    </a>
+
+                                </strong>
+                            </div>
+                            <div class="col-sm-12 col-md-6 d-flex flex-column-reverse align-items-end">
+                                <span class="pt-2">
+                                    <a class="btn btn-outline-secondary" href="{{ report.get_absolute_url }}"
+                                       target="_blank">
+                                    {% if report.task_id %}
+                                        <span id="{{ report.task_id }}-task-status-indicator" class="d-none">
+                                            <span class="spinner-border spinner-border-sm" role="status"></span>
+                                        </span>
+                                    {% endif %} Download
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 d-flex">
+                                <small class="p-2 text-muted">opened on {{ report.date_created|date }}, updated
+                                    on {{ report.date_updated|date }}</small>
+                            </div>
+
+                        </div>
+                    </div>
+                {% empty %}
+                    {% include 'reporting/components/report_release_list_blankslate.html' %}
+                {% endfor %}
+            </div>
+        </div>
+
+        {% include 'core/components/navigation/pagination.html' %}
+    </div>
+{% endblock %}
+
+
+{% block extra_scripts %}
+    <script>
+        {% if wip_report.task_id %}
+            wip_task_status_check();
+        {% endif %}
+    function wip_task_status_check(){
+        $('#wip-download-btn').removeAttr("href");
+        $('#wip-task-status-indicator').removeClass("d-none");
+        $('#wip-create-btn').attr("disabled");
+        let url = "/api/ui/reporting/task-results/{{ wip_report.task_id }}/";
+        setInterval(function(){
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "json",
+                success: function (data) {
+                    if (data.success === true) {
+                        location.reload();
+                    }
+                }
+            });
+        // Every 5 seconds
+        }, 5*1000);
+    }
+
+    function task_status_check(task_id){
+        let task_status_indicator = "#" + task_id + "-task-status-indicator";
+        $(task_status_indicator).removeClass("d-none");
+        let url = "/api/ui/reporting/task-results/" + task_id + "/";
+        setInterval(function(){
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "json",
+                success: function (data) {
+                    if (data.success === true) {
+                        location.reload();
+                    }
+                }
+            });
+        // Every 5 secondy
+        }, 5*1000);
+    }
+
+        {% for release in releases %}
+            {% if release.task_id %}
+            task_status_check("{{ release.task_id }}")
+            {% endif %}
+        {% endfor %}
+    </script>
+{% endblock %}

@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1> Command Injection Attacks </h1>
+        <p>This site contains the possibility for Command Injection</p>
+        <p>The given input will be directly executed by subprocess.run()</p>
+        <p>Example input: echo Hallo</p>
+        
+        <form>
+            <label for="cmdi">File input:
+                <input id="cmdi" name="cmdi"><button type="submit">submit</button><br>
+            </label>
+        </form>
+        
+        <p>{}</p>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,10 @@
+<div class="card" *ngIf="separation">
+  <div class="card-header">
+    Please separate {{separation.separatedRegionName}} from {{separation.country}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Suggested by {{separation.createdUser}}</h5>
+    <p class="card-text">{{separation.argumentation}}</p>
+    <a routerLink="/overview" class="btn btn-primary">Back</a>
+  </div>
+</div>

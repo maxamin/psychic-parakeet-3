@@ -1,0 +1,765 @@
+ar-LB:
+  'true': 'نعم'
+  'false': 'لا'
+  cancel: إلغاء
+  clear: إلغاء
+  description: الوصف
+  yes_label: 'نعم'
+  actions:
+    button: إجراءات
+    description:
+      invalid: ملفّ غير صالح
+      valid: ملفّ صالح
+    disable: تعطيل
+    enable: تفعيل/تمكين
+    incident_details_from_case: إضافة حادثة
+    reopen: إعادة فتح
+    services_section_from_case: إضافة تقديم خدمة
+  agencies:
+    label: الوكالة
+  agency:
+    code: رمز الوكالة
+    name: إسم الوكالة
+  approvals:
+    status:
+      approved: تمت الموافقة
+      pending: معلّق / غير مفصول فيه
+      rejected: تم رفضه
+  audit_log:
+    action: إجراء
+    description: وصف
+    record_owner: الشخص المكلَّف الملفّ
+  bulk_export:
+    file_name: ملفّ
+    record_type: نوع
+    retry: عمليّة التصدير هذه غير صالحة. الرجاء محاولة إعادة تشغيل عملية النقل.
+    started_on: 'بدء '
+    status: الوضع الحالي
+  buttons:
+    accept: قبول
+    approvals: الموافقات
+    approve_bia: 'الموافقة على تقرير التقييم  '
+    approve_case_plan: 'المواقفة على مخطّط التدخل '
+    approve_closure: الموافقة على إقفال الملفّ
+    back: السابق
+    bundle_export: حزمة التهيئة والتشكيل
+    bundle_import: حزمة التهيئة والتشكيل
+    cancel: إلغاء
+    change_password: تغيير كلمة المرور
+    create_case: إنشاء حالة
+    create_incident: إنشاء حادث أو واقعة
+    create_new_record: إنشاء %{model} جديد
+    delete: حذف
+    disable: تعطيل
+    disable_photo_wall: تعطيل photo wall
+    done: تمّ/انتهى
+    edit: تحرير وتعديل
+    edit_subform: تحرير وتعديل النموذج الثانوي أو الملحق
+    enable: تشغيل
+    enable_photo_wall: تفعيل photo wall
+    export: تصدير
+    filter: تطبيق الفلتر
+    filter_clear: مسح الفلاتر
+    filter_label: 'عامل التصفية أو الفلتر:'
+    flag_model: وضع علامة %{model}
+    flag_records: وضع علامة
+    import: استيراد وإدخال إلى النظام
+    login: تسجيل الدخول
+    mark_for_mobile: وضع علامة للهاتف المحمول
+    ok: موافق
+    reject: رفض
+    remove_referrals: إزالة الإحالات
+    request_approval: طلب الموافقة
+    reunite: ' إعادة لمّ الشمل'
+    save: حفظ
+    sort_by_case: الحالات/الملفّات
+    sort_by_tr: تتبع الطلبات
+    submit: إرسال
+    unflag_model: إزالة العلامة %{model}
+    unflag_model_history: وضع علامة للتاريخ%{model}
+    unmark_for_mobile: إزالة علامة الهاتف للمحمول
+    view: عرض
+    view_flags_history: عرض التاريخ
+  case:
+    create_new_case: إنشاء حالة جديدة
+    enter_id_number: إدخال رقم تعريف الهوية للبحث عن سجلّ موجود
+    messages:
+      update_success: 'تم تحديث الحالة %{record_id} بنجاح.'
+      creation_success: 'تم إنشاء سجل الحالة بنجاح.'
+    workflow:
+      assessment: تقييم
+      case_plan: مخطّط تدخّل
+      closed: مقفل
+      created_on: تمّ وضعه في
+      in_progress: عمليّة جارية
+      new: جديد
+      on_label: 'في'
+      reopened: أعيد فتحه
+      service_implemented: تنفيذ الخدمة
+      services_implemented: تنفيذ الخدمة
+  cases:
+    apply_filter: تطبّيق
+    clear_filter: إلغاء
+    export: تصدير
+    filter_by:
+      3month_inactivity: لمدة تتعدّى 3 أشهر
+      approvals:
+        approved: تمت الموافقة
+        rejected: تم رفضه
+      date: التاريخ
+      female: أنثى
+      flag_label: هل من علامة؟
+      male: ذكر
+      mobile_label: هل تمّ وضع علامة للمحمول؟
+      my_cases: ملفّاتي
+      no_activity: لا يوجد نشاط
+      photo_label: صورة متوفّرة؟
+      referred_cases: الحالات المحالة إليّ
+      workflow: الحالات وفق سير العمل
+    flag_summary: ملخّص العلامة
+    hide_name: إخفاء الإسم
+    hide_name_error: حدث خطأ عند حفظ التغييرات. الرجاء المحاولة مرة أخرى.
+    label: الحالات/الملفّات
+    my_filters: الفلاتر الخاصة بالمستخدم
+    ok: موافق
+    order_by:
+      label: ترتيب بحسب
+      most_recently: الأحدث
+      name: الإسم
+    register_new_case: ملفّ/حالة جديدة
+    save_filter: حفظ
+    view_name: عرض الإسم
+  children:
+    selectable_date_options:
+      assessment_requested_on: تاريخ التقييم
+      closure_approved_date: 'تاريخ إقفال الملفّ'
+      created_at: تاريخ فتح الملفّ
+      date_case_plan_initiated: تاريخ مخطّط التدخّل
+      registration_date: تاريخ التسجيل
+  contact:
+    field:
+      email: البريد الإلكتروني
+      location: الموقع
+      name: الإسم
+      organization: المنظمة
+      other_information: معلومات أخرى
+      phone: الهاتف
+      position: المنصب
+      support_forum: منتدى الدعم
+    info_label: معلومات الاتصال
+    updated: تمّ تحديث معلومات الاتصال بنجاح.
+  dashboard:
+    activity: النشاط
+    admin_only: اضغط على %{links} لإجراء تغييرات على التطبيق.
+    all_cases: جميع الملفّات/الحالات
+    all_services_implemented: جميع الخدمات المنفّذة
+    and: 'و'
+    approvals: الموافقات
+    approved: تمت الموافقة
+    assessment: تقييم
+    case_id: 'رقم الحالة التعريفي / رقم الملفّ'
+    case_plan: مخطّط التدخّل
+    case_stat_by_approval_type: الموافقات
+    case_stat_by_assessment_level: الحالات وفق مستوى التقييم
+    case_stat_referrals: الإحالات
+    case_stats: الحالات/الملفّات
+    case_worker: ' العامل اجتماعي:'
+    cases_by_social_worker: الحالات بحسب العامل الاجتماعي
+    cases_by_task_overdue: المهمّات المتأخّرة
+    cases_by_workflow: الحالات بحسب سير العمل
+    cases_this_week: الحالات هذا الأسبوع
+    cases_to_assign: الحالات/الملفّات الواجبة التكليف
+    closed: مقفل
+    comprehensive_need_intervention: ردّ شامل/إستجابة شاملة
+    current_owner: الشخص المضطلع حاليًّا بالملفّ
+    date: التاريخ
+    date_of_incident: تاريخ الحادث
+    date_of_interview: تاريخ المقابلة
+    due: تستحق
+    flagged_by: 'تمّ وضع العلامة من قبل:'
+    flagged_by_me: أنا وضعت العلامة
+    flagged_by_other: شخص آخر وضع العلامة
+    follow_up: متابعة
+    forms: تبويب النماذج
+    geographic_area: المنطقة الجغرافية
+    high_risk: أولوية مرتفعة
+    immediate_response: ردّ فوري/إستجابة فوريّة
+    incident_id: 'رقم الحادث التعريفي'
+    incident_location: موقع الحادث/حدوث الوقائع
+    incident_status_open: مفتوح
+    last_updated: آخر تحديث
+    link_see_all: عرض المحتوى كلّه
+    low_risk: أولوية منخفضة
+    match_result: نتائج متطابقة
+    medium_risk: أولوية متوسطة
+    missed_cases: الحالات الفائتة
+    name: الإسم
+    name_or_survivor_code: إسم الناجي أو رمزه
+    near_deadline: يستحق قريباً
+    new: جديد ومحدَّث
+    new_child_assigned_to_you: حالات/ملفّات جديدة كُلّفت بها
+    new_incident: وقائع/حوادث جديدة
+    new_incident_assigned_to_you: حوادث/وقائع جديدة مكلّفة
+    new_referred: إحالات جديدة
+    new_service_provision: تقديم خدمة جديدة
+    no_case_stats: لا يوجد إحصائيات حول الحالة
+    no_caseworker_data: ' بيانات الأخصائي الاجتماعي غير موجودة:'
+    no_flagged_child: لا يوجد حالات مميزة بعلامة
+    no_flagged_incident: لا يوجد وقائع/حوادث مميزة بعلامة
+    no_open_incidents: لا يوجد وقائع/حوادث مفتوحة
+    no_overdue_activities: لا يوجد أنشطة متأخرة
+    no_recent_activities: لا يوجد أنشطة حديثة
+    no_scheduled_activities: لا يوجد أنشطة مجدولة
+    none_risk: ' لا يوجد أولوية'
+    number_of_victims: عدد الضحايا
+    number_of_violations: عدد الانتهاكات
+    number_of_violations_verified: التحقق من الانتهاكات
+    open: مفتوح
+    open_cases: ملفّات مفتوحة
+    open_incidents: حوادث/وقائع مفتوحة
+    overdue_activities: أنشطة متأخرة
+    overdue_cases_to_assign: حالات متأخرة واجبة التكليف
+    pending: لم يتم البت به
+    pending_transfers: عمليات النقل المعلّقة/غير المفصول فيها
+    protection_concern: واقعة مثيرة للقلق
+    protection_concerns: وقائع مثيرة للقلق
+    range12+: '+12'
+    range4: 0-4
+    range4_8: 4-8
+    range8_12: 8-12
+    recent_activities: أنشطة حديثة
+    recently_flagged_child: حالات/ملفّات وضع لها علامة حديثًا
+    recently_flagged_incident: حوادث/وقائع وضع لها علامة حديثًا
+    referrals_by_social_worker: الإحالات من قبل العامل الاجتماعي
+    rejected: تم رفضه
+    rejected_transfers: عمليات النقل المرفوضة
+    scheduled_activities: أنشطة مُجدولة
+    score_range: نطاق النتائج
+    services: الخدمات
+    services_implemented: خدمات منفّذة
+    status_of_cases: وضع الملفّات/مرحلة التدخّل
+    system_user: النظام
+    total: المجموع
+    total_cases: إجمالي عدد الملفّات/الحالات
+    total_referred: إجمالي الإحالات
+    tr_stats: تتبع الطلبات
+    transers_awaiting_acceptance: عمليات النقل التي تنتظر الموافقة
+    transfers_by_social_worker: عمليات التحويل/نقل الملفّات من قبل العامل الاجتماعي
+    users: رمز الإعدادات
+    violence_type: نوع العنف
+    worker_count_referrals_total:
+    worker_count_total:
+    you_have: 'لديك'
+  disabled:
+    status:
+      disabled: 'مُعطَّل '
+      enabled: مُفعَّل/ممكَّن
+  email_notification:
+    approval_request: 'يطلب المستخدم %{user} الموافقة %{approval_type} للملفّ %{case_id}.'
+    approval_request_subject: 'الملفّ: %{id} - طلب الموافقة'
+    approval_response: 'طلب %{user} %{status} الموافقة %{approval_type} للملفّ %{case_id}.'
+    approval_response_subject: 'الملفّ: %{id} - إستجابة حول الموافقة'
+    referral: 'أحال إليك %{user} من %{agency} %{record_type}: %{record_id} لـ%{service_type}.'
+    transfer: 'حوّل لك %{user} %{record_type} التالي:%{record_id}.'
+    transfer_subject: '%{record_type}: %{id} - نقل/تحويل'
+    referral_subject: '%{record_type}: %{id} - إحالة'
+    approval_request_html: 'إنّ المستخدم <strong>%{user}</strong> يطلب الموافقة <strong>%{approval_type}</strong> للملفّ <strong>%{case_id}</strong>.'
+    approval_response_html: '<strong>%{user}</strong> لديه <strong>%{status}</strong> طلب الموافقة على <strong>%{approval_type}</strong> للملفّ <strong>%{case_id}</strong>.'
+    referral_html: '<strong>%{user}</strong> من %{agency} أحال %{record_type} إليك: <strong>%{record_id}</strong> لـ%{service_type}.'
+    transfer_html: 'حوّل لك <strong>%{user}</strong> %{record_type}: <strong>%{record_id}</strong>.'
+  encrypt:
+    file_name: قم بوضع إسم الملف الخاصّ بك (اختياري)
+    password_label: الرجاء إدخال كلمة المرور التي سوف تشفّر ملفك.
+  error_page:
+    not_authorized:
+      code: 403
+    not_found:
+      code: 404
+      contact_admin: في حال التواجد هنا عن طريق الخطأ،الرجاء التواصل مع المشرف التقني.
+      something_went_wrong: نأسف، حدث خطأ ما!
+  errors:
+    models:
+      child:
+        age: يجب أن يتراوح العمر بين 0 و 130
+        date_of_birth: الرجاء إدخال تاريخ ولادة صالح لملفّ هذه الحالة
+      location:
+        admin_level_present: لا يجوز أن يكون فارغًا
+        code_present: لا يجوز أن يكون فارغًا
+        name_present: لا يجوز أن يكون فارغًا
+        unique_location_code: إنّ "الموقع" برمز الموقع هذا موجود أصلاً، الرجاء إدخال رمز موقع آخر
+      lookup:
+        being_used: هذا البحث في الاستخدام  ولا يمكن حذفه
+        name_present: لا يجوز أن يكون الإسم فارغاً
+      primero_module:
+        associated_record_types: 'يجب أن يرتبط نوع واحد من الملفّات على الأقل بهذه الوحدة '
+        name_present: لا يجب أن يكون الاسم فارغاً
+        unique_name: توجد وحدة نمطية تحمل هذا الإسم بالفعل، الرجاء إدخال اسم مختلف
+      report:
+        module_presence: لا يجوز ترك الوحدة فارغة
+        module_syntax: ينبغي أن تكون وحدات التقارير كلّها موجودة أصلاً
+        name_presence: لا يجوز ترك الإسم فارغاً
+      role:
+        permission_presence: الرجاء تحديد إذن واحد على الأقل
+      user:
+        password_mismatch: حقول كلمة المرور لا تحمل كلمة المرور نفسها
+  exports:
+    case_pdf:
+      all: PDF
+      one: PDF
+      selected: تحديد إلى PDF
+    csv:
+      all: CSV
+      one: CSV
+      selected: تحديد إلى CSV
+    custom_exports:
+      choose_fields: هل تريد اختيار حقول فرديّة لنموذج؟
+      empty_fields_forms: الرجاء تحديد بعض النماذج أو الحقول للتصدير
+      empty_format: الرجاء اختيار صيغة للتصدير.
+      empty_module: الرجاء اختيار وحدة للتصدير.
+      empty_password: الرجاء إدخال كلمة المرور التي سوف تشفّر ملفك.
+      field_label: الحقل
+      fields: اختيار حقول للتصدير
+      form_label: النموذج
+      format_label: اختيار صيغة
+      forms: اختيار نماذج للتصدير
+      label: عمليات تصدير مخصّصة
+      module_placeholder: الرجاء اختيار وحدة.
+      select_module: اختيار وحدة نمطية
+      submit: موافق
+    duplicate_id_csv:
+      female_abbreviation: أنثى
+      headers:
+        age: العمر
+        case_id: رقم تعريف /الملفّ/الحالة
+        sex_mapping_m_f_u: الجنس
+      male_abbreviation: ذكر
+    forms:
+      button: نماذج التصدير
+      label: تصدير
+    json:
+      all: JSON
+      one: JSON
+      selected: تحديد إلى JSON
+    list_view_csv:
+      all: تصدير عرض القائمة
+      selected: تحديد إلى CSV
+    mrm_violation_xls:
+      all: انتهاكات آلية المراقبة والإبلاغ MRM
+      one: انتهاكات آلية المراقبة والإبلاغ MRM
+      selected: تحدد إلى انتهاكات آلية المراقبة والإبلاغ MRM
+    no_records: ملفّات غير متوفّرة!
+    pdf:
+      one: PDF
+      selected: تحديد إلى PDF
+    pdf_exports:
+      label: PDF
+    photowall:
+      all: Photo Wall
+      one: Photo Wall
+      selected: تحديد إلى Photo Wall
+    selected_xls:
+      all: Excel
+      one: Excel
+      selected: تحديد إلى Excel
+    unhcr_csv:
+      all: المفوضية السامية للأمم المتحدة لشؤون اللاجئين UNHCR
+      female_abbreviation: أنثى
+      headers:
+        age: العمر
+        sex: الجنس
+        sex_mapping_m_f_u: الجنس
+      male_abbreviation: ذكر
+      one: المفوضية السامية للأمم المتحدة لشؤون اللاجئين UNHCR
+      selected: تحديد إلى المفوضية السامية للأمم المتحدة لشؤون اللاجئين UNHCR
+    xlsx:
+      all: Excel
+      one: Excel
+      selected: تحديد إلى Excel
+  fields:
+    action: إجراء
+    actions: الإجراءات
+    add: إضافة
+    audio:
+      current: ّالتسجيل الصوتيّ الحالي
+    check_box: خانات اختيار
+    date_field: حقل التاريخ
+    date_help: يوم-شهر-سنة
+    date_help_with_time: 'يوم-شهر- سنة ساعة: دقيقة'
+    date_not_valid: التاريخ غير صالح.
+    date_range:
+      date: التاريخ
+      date_range: نطاق التاريخ
+      from: من
+      to: إلى
+    date_range_field: نطاق التاريخ
+    default_date_validation: التأكد من صحة التاريخ الافتراضي
+    deleted: تم إلغاء الحقل %{display_name}.
+    display_name: الإسم المعتمد للعرض
+    document:
+      comments: ملاحظات
+      current: هل هذا هو المستند الحالي؟
+      date: تاريخ إنشاء المستند
+      name: عنوان المستند
+    field_name: إسم الحقل
+    file_upload_box:
+      add_new_document_button_text: إضافة مستند آخر
+      add_new_photo_button_text: إضافة صورة أخرى
+      add_photo_label: إضافة صورة
+      document_description: وصف المستند
+      document_file_restrictions_message: لا ينبغي أن يتعدّى حجم الملفّات 2 ميجابايت(لا يمكن تحميل ملفّات .exe)
+      no_file_selected: لم يتم انتقاء ملف.
+      photo_file_restrictions_message: لا ينبغي أن تكون الصور أكبر من 10 ميجابايت. لا ينبغي أن تكون ملفات الصوت أكبر من 10 ميجابايت. كلما كانت الملفات أصغر كان ذلك أفضل.
+      recorded_audio_label: التسجيل الصوتيّ
+      select_file_button_text: انتقِ ملف
+    form_name: إسم/عنوان النموذج
+    help_text: نصّ المساعدة
+    label: الحقول
+    move_to: الانتقال إلى
+    not_future_date: ليس تاريخًا مستقبليًّا
+    number_not_valid: الرجاء إدخال بيانات رقمية
+    numeric_field: حقل عددي/رقمي
+    option_strings_add_option: إضافة خيار
+    option_strings_source: عمليّات البحث
+    option_strings_text: الخيارات
+    option_strings_text_display: نصّ الخيار
+    option_strings_text_key: مفتاح الخيار
+    options_or_lookup_warning: الرجاء إضافة خيارات أواختيار بحث. عدم إدخالهما معًا.
+    radio_button: زر انتقاء
+    remove: إزالة
+    select_box: حدد القائمة المنسدلة
+    select_date_validation: اختيار طريقة تحقٌّق من صلاحية التاريخ
+    separator: فاصل
+    subform: نموذج ثانوي/ملحق
+    subform_remove_message: هل أنت متأكد أنك تريد إزالة هذا النموذج الفرعي؟
+    successfully_added: تم إضافة الحقل بنجاح
+    tally_field: حقل العدّ
+    text_area: منطقة النص
+    text_field: حقل النص
+    textarea: منطقة النص
+    tick_box: مربّع الاختيار
+    tick_box_label: تسمية خانة الاختيار
+    updated: تم تحديث الحقل
+  followup_reminders:
+    system_generated_followup_flag: زيارة متابعة إلزامية
+  form_section:
+    name: الإسم
+    required_field: '%{field} مطلوب'
+  forms:
+    label: نماذج
+    messages:
+      use_existing: نشجّع على استخدام النماذج القائمة بحيث يسهّل ذلك عملية مشاركة البيانات ودمجها ما بين المؤسسات.
+    record_types:
+      case: حالة/ملفّ
+      child: حالة/ملفّ
+      incident: حادث/واقعة
+      potential_match: تطابق محتمل
+      reportable_follow_up: متابعة
+      reportable_protection_concern: واقعة مثيرة للقلق
+      reportable_service: خدمة
+      tracing_request: طلب التتبع
+      violation: انتهاك
+  home:
+    ar: العربية
+    ar-IQ: العربية (العراقية)
+    ar-LB: العربية (اللبنانية)
+    bn: বাংলা
+    current_time_zone: المنطقة الزمنية الحالية
+    dashboard: لوحة التحكّم
+    en: الإنكليزية
+    es: Español
+    fr: الفرنسية
+    id: Bahasa
+    ku: کوردی
+    ku-IQ: کوردی (بادینی)
+    label: الصفحة الرئيسية
+    language: اللغة
+    manage_system_users: إدارة مزامنة الخادم للمستخدمين
+    my: ဗမာစာ
+    pt: Português
+    records_need_attention: الملفّات التي تستدعي الانتباه
+    ru: Русский
+    th: ไทย
+    users: إدارة المستخدمين
+    view_records: عرض الملفّات
+    welcome: أهلاً بك في بريميرو
+    zh: 中文
+  incident:
+    messages:
+      update_success: 'تم تحديث الوقائع/الحادث %{record_id} بنجاح.'
+  incidents:
+    label: حوادث/وقائع
+    filter_by:
+      boys: فتيان
+      girls: فتيات
+      unknown: غير معروف
+    register_new_incident: حادث جديد
+  location:
+    base_types:
+      camp: المخيّم
+      chiefdom: القائمقامية
+      city: المدينة
+      country: البلد
+      county: المقاطعة
+      district: القضاء
+      governorate: المحافظة
+      locality: المحلّة
+      other: مختلف
+      province: المحافظة
+      region: المنطقة
+      site: الموقع
+      state: الولاية
+      sub-district: المقاطعة الفرعيّة
+      village: القرية
+      zone: النطاق
+  logger:
+    approve_form:
+      bia: نموذج تقرير التقييم
+      case_plan: نموذج مخطّط تدخّل
+      closure: نموذج إقفال
+      'false': رفض
+      'true': موافقة
+    by_user: من قبل المستخدم
+    copy: جاري النسخ
+    create: إنشاء
+    destroy: جاري الحذف
+    edit: جاري التحرير و/أو التعديل
+    export: تصدير بيانات إلى
+    flag: وضع علامة
+    flag_records: وضع علامة
+    graph_data: عرض بيانات الرسم البياني
+    hide_name:
+      protect: إخفاء الاسم
+      view: إظهار الاسم
+    login: تسجيل الدخول
+    logout: تسجيل الخروج
+    lookups_for_field: عمليات البحث عن الحقل
+    mark_for_mobile:
+      'false': إزالة علامة للمحمول
+      'true': وضع علامة للمحمول
+    permitted_field_list: قائمة الحقل المسموح بها
+    reassign: جاري التخصيص والتعيين
+    record_state:
+      'false': تعطيل
+      'true': تشغيل/تمكين
+    referral: جاري الإحالة
+    relinquish_referral: انتهت عمليّة التخلّي عن الإحالة
+    reopen_case: ' قيد إعادة الفتح'
+    request_approval:
+      bia: طلب موافقة على نموذج تقرير التقييم
+      case_plan: طلب موافقة على نموذج مخطّط التدخّل
+      closure: طلب موافقة على نموذج إقفال الملفّ
+    show: قيد العرض
+    to: إلى
+    to_user: للمستخدم
+    transfer: قيد التحويل
+    transfer_status:
+      Accepted: نقل/تحويل مقبول
+      Rejected: نقل/تحويل مرفوض
+    unflag: إزالة علامة
+    update: جاري التحديث
+  login:
+    label: تسجيل الدخول
+    password:
+      label: كلمة المرور
+    username: إسم المستخدم
+  lookup:
+    create: بحث جديد
+    label: بحث
+    messages:
+      cannot_create: فشل إجراء البحث
+      correct_errors: 'الرجاء تصحيح الأخطاء التالية وإعادة الإرسال:'
+    name: الاسم
+    values: خيارات
+  messages:
+    confirmation_message: ّالنقر على موافق يؤدي إلى تجاهل أيّ تغييرات غير محفوظة والانتقال إلى الصفحة المطلوبة. الضغط على إلغاء للعودة إلى الملفّ.
+  navigation:
+    search: بحث
+  permissions:
+    label: أذونات/تصاريح
+    permission:
+      All: ّالكل
+      admin_only: لا توجد ملفّات - وظيفة المشرف التقني فقط لا غير
+      administrator_read: قراءات المشرف التقني
+      agency: وكالة
+      agency_read: قراءات الوكالة
+      all: النفاذ إلى جميع الملفّات أو المستخدمين
+      assign: تعيين/تخصيص/تكليف
+      case: حالة/ملفّ
+      consent_override: تجاوز الموافقة
+      copy: نسخ
+      create: إنشاء
+      dash_cases_by_social_worker: عرض الملفّات بحسب العامل الاجتماعي
+      dash_cases_by_task_overdue: عرض الحالات بحسب المهمّات المتأخّرة
+      dash_cases_by_workflow: عرض الحالات بحسب سير العمل
+      dash_cases_to_assign: عرض الحالات التي تستلزم التكليف
+      dash_manager_transfers: إظهار عمليات النقل الخاصة بالمدير
+      dash_matching_results: عرض النتائج المتطابقة
+      dash_protection_concerns: إظهار الوقائع المثيرة للقلق
+      dash_referrals_by_socal_worker: عرض الإحالات التي قام بها العامل الاجتماعي
+      dash_reporting_location: عرض مواقع الإبلاغ
+      dash_service_provisions: عرض تقديم الخدمات
+      dash_transfers_by_socal_worker: عرض عمليات التحويل/النقل التي قام بها العامل الاجتماعي
+      dashboard: لوحة التحكم
+      enable_disable_record: تعطيل
+      export_case_pdf: تصدير ملفّ pdf
+      export_csv: تصدير csv
+      export_custom: تصدير مخصص
+      export_json: تصدير json
+      export_list_view_csv: تصدير عرض قائمة csv
+      export_mrm_violation_xls: تصدير انتهاك آلية الرصد والإبلاغ  mrm بصيغة xls
+      export_pdf: تصدير pdf
+      export_photowall: تصدير photowall
+      export_unhcr_csv: تصدير unhcr csv
+      export_xls: تصدير xls
+      flag: تمييز بعلامة/وضع علامة
+      group: 'النفاذ إلى جميع الملفّات أو المستخدمين في مجموعتي '
+      group_read: قراءات عن المجموعة
+      import: إدخال ملفّ
+      incident: حادث/واقعة
+      incident_details_from_case: إضافة تفاصيل حادثة لحالة مستخدم آخر
+      incident_from_case: إنشاء وقائع/حادثة من حالة
+      manage: إدارة
+      metadata: النماذج، عمليات البحث
+      potential_match: تطابق محتمل
+      read: قراءة
+      reassign: إعادة تخصيص/تعيين/تكليف
+      referral_from_service: إحالة حالة من نموذج خدمة
+      remove_assigned_users: حذف مستخدمون مكلّفون آخرون (الإحالات)
+      report: تقرير
+      request_approval: طلب للموافقة
+      role: أدوار
+      save_search: تحفيظ عمليات البحث
+      saved_search: تمّ حفظ البحث
+      search_owned_by_others: البحث عن ملفّات حالات في عهدة مستخدمين آخرين
+      self: النفاذ إلى ملفّاتي أو إلى مستخدم فقط لا غير
+      services_section_from_case: إضافة تقديم خدمة لحالة مستخدم آخر
+      specific_roles: النفاذ إلى قائمة محددة من الأدوار
+      sync_mobile: مزامنة مع جهاز المحمول
+      system: نظام
+      tracing_request: طلب التتبع
+      user: مستخدمون
+      user_group: مجموعات المستخدمين
+      view_approvals: عرض الموافقات
+      view_assessment: عرض التقييم
+      view_protection_concerns_filter: عرض الفلتر الخاصّ بالوقائع المثيرة للقلق
+      write: كتابة
+  potential_match:
+    child_age: العمر
+    child_gender: الجنس
+    child_id: 'رقم هوية الطفل '
+    inquirer_id: رقم تعريف/هوية المستفسر
+    inquirer_tr_name: طلب تتبّع
+    inquiry_date: تاريخ الاستفسار
+    name: الإسم
+    score: نتيجة
+    social_worker: العامل الاجتماعي
+    social_worker_agency: الوكالة
+  reassign:
+    notes_label: ملاحظات
+  record_panel:
+    record_information: تسجيل المعلومات
+  referral:
+    agency_label: الوكالة
+    is_remote_label: هل تود مشاركة الاحالة مع شخص من غير المستخدمين للنظام؟
+    location_label: الموقع
+    notes_label: ملاحظات
+    service_label: نوع الخدمة المطلوبة والتي تقوم بالاحالة
+    success: 'تمت إحالة %{record_type} %{id} بنجاح'
+  report:
+    aggregate_by: جمع بحسب الصف
+    date_ranges:
+      date: يوم
+      month: شهر
+      week: أسبوع
+      year: سنة
+    description: الوصف
+    disaggregate_by: جمع بحسب الأعمدة
+    filters:
+      label: الإبلاغ عن عوامل التصفية
+    group_ages: استخدام نطاقات الأعمار
+    group_dates_by: استخدام نطاقات التواريخ
+    is_graph: إنتاج رسم/مخطّط بياني؟
+    messages:
+      delete_success: تم حذف التقرير بنجاح
+    modules: الوحدات النمطية
+    name: الإسم
+    no_data: لا يوجد بيانات لهذا التقرير
+    record_type: نوع الملفّ
+    total: الإجمالي/المجموع
+  reports:
+    label: تقارير
+    register_new_report: إنشاء تقرير
+  request_transfer:
+    notes_label: ملاحظات
+  role:
+    copy_failure: خطأ في نسخ الدور. تأكد من أنّ الإسم لا يتعارض مع دور آخر.
+    copy_success: نسخ الدور بنجاح.
+    create: إنشاء دور
+    description: الوصف
+    edit: تعديل الدور
+    error_in_updating: خطأ في تحديث تفاصيل الدور.
+    group_permission_label: ما الملفّات التي يؤثر فيها هذا الدور؟
+    name: الإسم
+    referral_label: هل يمكن استخدام هذا الدور للإحالات؟
+    role_ids_label: الأدوار الأخرى التي يديرها هذا الدور
+    successfully_updated: تمّ تحديث تفاصيل الدور بنجاح.
+    transfer_label: هل يمكن استخدام هذا الدور لتحويل/نقل الملفّات؟
+  roles:
+    label: الأدوار
+  saved_search:
+    deleted: تمّ حذف البحث بنجاح.
+    filters_tab: الفلاتر
+    save_success: تمّ حفظ البحث بنجاح
+    saved_searches_tab: عمليات البحث المحفوظة
+  saved_searches:
+    no_save_searches: ما من عمليّات بحث محفوظة.
+    save_search: حفظ البحث
+  system_settings:
+    label: إعدادات النظام
+  task:
+    due_date: تاريخ الاستحقاق
+    id: رقم التعريف
+    priority: مستوى الأولويّة
+    type: نوع الإجراء
+    types:
+      assessment: تقييم
+      case_plan: مخطّط تدخّل
+      follow_up: متابعة - %{subtype}
+      service: خدمة - %{subtype}
+  tracing_request:
+    messages:
+      update_success: 'تم تحديث طلب التتبّع %{record_id} بنجاح. '
+  tracing_requests:
+    register_new_tracing_request: 'طلب تتبّع جديد '
+    selectable_date_options:
+      inquiry_date: تاريخ الاستفسار
+  transfer:
+    agency_label: الوكالة
+    consent_label: 'الموافقة على نقل الحالة غير متوفرة '
+    consent_override_label: هل ترغب في تجاوز هذا الإعداد؟
+    is_remote_label: هل تود القيام بنقل الحالة الى شخص لا يستخدم نظام بريميرو؟
+    location_label: الموقع
+    notes_label: ملاحظات
+  user:
+    code: رمز المستخدم
+    disabled: 'مُعطل '
+    full_name: الإسم الكامل
+    location: الموقع
+    messages:
+      confirmation: 'هل أنت متأكد من أنّك تريد حذف هذا المستخدم؟ لا يمكن التراجع عن الحذف. انقر على موافق لحذف المستخدم. '
+      created: تمّ إنشاء المستخدم بنجاح.
+      not_found: فشل العثور على مستخدم برقم التعريف هذا
+      password_changed_successfully: تغيير كلمة المرور بنجاح
+      passwords_do_not_match: لا تطابق كلمة المرور الحالية
+      time_zone_updated: تم تحديث التغيير بنجاح.
+      updated: تمّ تحديث المستخدم بنجاح.
+    organization: المنظمة
+    position: منصب
+    send_mail: تلقّي إشعارات بالبريد الإلكتروني؟
+  user_group:
+    description: الوصف
+    name: الإسم
+  user_groups:
+    label: مجموعات المستخدم
+  users:
+    label: المستخدمون

@@ -1,0 +1,43 @@
+service: vulnerable-lambda
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: us-west-2
+  environment:
+    VARIABLE_1: supersecret99
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: arn:aws:s3:::securitydojo2023
+
+resources:
+  Resources:
+    MyBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: securitydojo2023
+package:
+  individually: true
+  include:
+    - app.py
+    - requirements.txt
+  exclude:
+    - venv/**
+    - node_modules/**
+
+plugins:
+  - serverless-python-requirements
+  - serverless-wsgi
+custom:
+  wsgi:
+    app: app.app
+    packRequirements: false  
+
+functions:
+  app:
+    handler: wsgi.handler
+    events:
+      - http: ANY /
+      - http: 'ANY /{proxy+}'

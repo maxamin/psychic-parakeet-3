@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Templates
+{% endblock %}
+
+{% block content %}
+    <h3 class="text-center">Vulnerability Templates</h3>
+    <hr/>
+    <div class="container mt-3 mb-3">
+        <div class="mt-3 form-floating">
+            <input class="form-control" id="search-template">
+            <label for="search-template">Search</label>
+        </div>
+        <div class="list-group mt-3" id="template-list">
+            {% for template in templates %}
+                <a class="list-group-item list-group-item-action" href="{{ template.get_absolute_url }}">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <div class="float-start">
+                                    {{ template.vulnerability_id }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <div class="float-start">
+                                    <small class="text-muted"><i>Last updated: {{ template.date_updated|timesince }}
+                                        ago</i></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% empty %}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row d-flex flex-column-reverse text-center p-5">
+                            <div class="align-items-center">
+                                <p><i class="fa fa-bugs fa-fw fa-xl"></i></p>
+                                <h4>There aren't any Vulnerability Templates!</h4>
+                                <p class="text-muted">Templates need to be configured server-side. Contact your
+                                    admin!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% include 'core/components/navigation/pagination.html' %}
+    </div>
+{% endblock %}
+
+{% block extra_scripts %}
+    <script>
+
+        $('#search-template').on('input', function () {
+            let url = "{% url 'api:ui:findings:template-list' %}?search=" + $('#search-template').val();
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "json",
+                success: function (data) {
+                    var results = data["results"];
+                    $('#template-list').html("");
+                    $.each(results, function (k, v) {
+                        $('#template-list').append(
+                            '<a class="list-group-item list-group-item-action" href="' + v.url + '">' +
+                            '<div class="row"><div class="col-sm-12"><div class="clearfix"><div class="float-start">' + v.vulnerability_id + '</div></div></div></div>' +
+                            '<div class="row"><div class="col-sm-12"><div class="clearfix"><div class="float-start">' +
+                            '<small class="text-muted"><i>Last updated: 0 minutes ago</i></small></div></div></div></div>' +
+                            '</a>'
+                        )
+                    });
+                }
+            })
+        });
+    </script>
+{% endblock extra_scripts %}

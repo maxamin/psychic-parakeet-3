@@ -1,0 +1,21 @@
+.itemButton {
+  font-size: var(--fs-14);
+  border: none;
+  line-height: 1.5em;
+  text-align: left;
+  background: none;
+  padding: 0;
+  font-weight: 600;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: none;
+}
+
+.count {
+  font-size: var(--fs-16);
+}
+

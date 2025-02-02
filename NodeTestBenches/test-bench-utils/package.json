@@ -1,0 +1,73 @@
+{
+  "name": "@contrast/test-bench-utils",
+  "version": "3.32.0",
+  "description": "Shared code to use in Contrast's web framework test apps. Test",
+  "author": "Contrast Security <nodejs@contrastsecurity.com>",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Contrast-Security-OSS/NodeTestBenches.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Contrast-Security-OSS/NodeTestBenches/issues"
+  },
+  "homepage": "https://github.com/Contrast-Security-OSS/NodeTestBenches/tree/main/test-bench-utils#readme",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "lib/",
+    "public/",
+    "types/",
+    "!**/*.test.*"
+  ],
+  "engines": {
+    "node": ">=12.13.0"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "test": "jest --coverage",
+    "prepare": "npm run build"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.55.0",
+    "aws-sdk": "^2.1104.0",
+    "axios": "^0.19.0",
+    "bent": "^1.5.13",
+    "ejs": "^3.1.6",
+    "escape-html": "^1.0.3",
+    "handlebars": "^4.7.7",
+    "hooker": "^0.2.3",
+    "jest": "^26.3.0",
+    "joi": "^17.5.0",
+    "libxmljs2": "^0.28.0",
+    "lodash": "^4.17.19",
+    "mongodb": "^4.2.2",
+    "mssql": "^6.4.1",
+    "mustache": "^4.2.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^2.6.0",
+    "node-serialize": "0.0.4",
+    "pg": "^8.7.1",
+    "pug": "^3.0.2",
+    "request": "^2.88.0",
+    "rethinkdb": "^2.4.2",
+    "sequelize": "^5.21.1",
+    "sql-template-strings": "^2.2.2",
+    "sqlite3": "^5.0.0",
+    "stealthy-require": "^1.1.1",
+    "superagent": "^5.0.5",
+    "typeorm": "^0.2.24",
+    "xmldom": "^0.2.1",
+    "xpath": "0.0.27"
+  },
+  "optionalDependencies": {
+    "libxmljs": "^0.19.7"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.182",
+    "@types/node": "^12.20.55",
+    "typescript": "^4.7.4"
+  },
+  "gitHead": "8d22546951021e6e727e2f1b9b42d9a336228675"
+}

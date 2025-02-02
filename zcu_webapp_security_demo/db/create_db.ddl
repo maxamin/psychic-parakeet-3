@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS zcu_demo;
+use zcu_demo;
+
+CREATE TABLE IF NOT EXISTS user (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(256) NOT NULL,
+    password VARCHAR(256) NOT NULL
+);
+CREATE TABLE IF NOT EXISTS notice_board (
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    author_id INT,
+    notice VARCHAR(256) NOT NULL,
+    FOREIGN KEY (author_id) REFERENCES user(id)
+);

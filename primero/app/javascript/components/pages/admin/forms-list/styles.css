@@ -1,0 +1,137 @@
+
+.container {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+.indexContainer {
+  display: flex
+}
+
+.forms {
+  flex: 1;
+  margin-right: 1.5em;
+}
+
+.filters {
+  min-width: 25%;
+}
+
+.disabledFilters {
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.draggingFormSections {
+  & div {
+    width: 100%;
+  }
+}
+
+.summaryPanel {
+  margin-bottom: .2em;
+}
+
+.row {
+  border-bottom: 1px solid var(--c-light-grey);
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+
+  & div:not(:first-of-type) {
+    flex: 1;
+  }
+
+  & div:first-of-type {
+    width: 3em;
+    justify-content: center;
+    border-right: 1px solid var(--c-light-grey);
+  }
+
+  & div {
+    padding: .5em;
+    display: flex;
+    align-items: center;
+
+    &.protected {
+      padding: .5em 1em .5em 0;
+    }
+
+  }
+}
+
+.header {
+  font-weight: bold;
+  text-tranform: uppercase;
+
+  & div:first-of-type {
+    border-right: none;
+  }
+}
+
+.panel {
+  border-radius: 0;
+}
+
+.summary {
+  padding: 0 .5em;
+}
+
+.summaryContent {
+  align-items: end;
+  font-weight: bold;
+
+  & span {
+    margin-right: .6em;
+  }
+}
+
+.dragIndicator {
+  opacity: 0.25;
+}
+
+.details {
+  padding: 0;
+}
+
+.toggleContainer {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+}
+
+.toggleButton {
+  color: var(--c-blue);
+  border: 1px solid var(--c-blue);
+  flex: 1;
+  font-size: var(--fs-12);
+  line-height: 1rem;
+
+  &:first-child {
+    border-radius: 0.25em 0 0 0.25em;
+  }
+
+  &:last-child {
+    border-radius: 0 0.25em 0.25em 0;
+  }
+}
+
+.toggleButtonSelected {
+  color: #fff !important;
+  background-color: var(--c-blue) !important;
+}
+
+.clearBtn {
+  margin-bottom: 1em;
+}
+
+.formName a {
+  color: var(--c-blue);
+  text-decoration: none;
+}
+
+.reorderButton {
+  margin: 1em 0;
+}

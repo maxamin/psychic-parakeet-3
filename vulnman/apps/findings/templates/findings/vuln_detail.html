@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+{% load markdown %}
+{% load crispy_forms_tags %}
+{% load guardian_tags %}
+{% load static %}
+
+{% block title %}
+    {{ project.name }}
+{% endblock %}
+
+{% block extra_head %}
+    <link href="{% static 'css/codehilite.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    {% get_obj_perms request.user for project as "project_perms" %}
+    <div class="container mt-3">
+    <!-- Breadcrumbs -->
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            {% include 'core/components/navigation/sidebar-toggler.html' %}
+
+            <li class="breadcrumb-item"><a href="{% url 'projects:findings:vulnerability-list' %}">Vulnerabilities</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{ vuln.internal_id }}</li>
+        </ol>
+    </nav>
+
+    {% include 'findings/components/sub_nav.html' %}
+
+    <div class="row mt-5">
+        <div class="col-sm-12 col-md-8 d-flex">
+            <div class="justify-content-start">
+                <h3>{{ vuln.template.vulnerability_id }} / {{ vuln.name }}</h3>
+            </div>
+            <div class="d-block">
+                {% include 'components/severity_badge.html' with obj=vuln %}
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 d-flex align-items-end justify-content-end">
+            <a class="btn btn-outline-info" data-bs-target="#export-vuln-modal" data-bs-toggle="modal">
+                <i class="fa fa-file-arrow-down"></i>
+            </a>
+            {% if "change_project" in project_perms %}
+                <a class="btn btn-outline-warning" href="{% url 'projects:findings:vulnerability-update' vuln.pk %}">
+                    <i class="fa fa-edit"></i>
+                </a>
+                <a class="btn btn-outline-danger" data-bs-toggle="modal"
+                   data-bs-target="#delete-modal-{{ vuln.pk }}">
+                    <i class="fa fa-trash"></i>
+                </a>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-sm-12 col-md-8 d-flex">
+            <div class="justify-content-start">
+                {% if vuln.status == 0 %}
+                    <div class="badge bg-success p-2 badge-pill">
+                        <i class="fa fa-dot-circle"></i> Open
+                    </div>
+                {% endif %}
+                <span class="text-muted">
+                        by {{ vuln.creator }} on {{ vuln.date_created|date }}
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4 d-flex align-items-end justify-content-end">
+            <form method="POST" action="{% url 'projects:findings:vulnerability-copy' vuln.pk%}">
+                {% csrf_token %}
+                <button class="btn btn-outline-secondary">Copy Vulnerability</button>
+            </form>
+        </div>
+    </div>
+
+    <hr/>
+    {% include 'findings/components/vuln_detail_cards.html' %}
+    </div>
+    <!-- Proofs -->
+    <div class="container mb-3">
+        <div class="card p-3">
+            <!-- Proofs -->
+            <div id="proofs">
+                <div class="container-fluid mt-3">
+                    <div class="list-group list-group-flush" id="sortable" data-sortable-id="0" aria-dropeffect="move">
+                        {% for proof in vuln.proofs %}
+                            {% include 'responsible_disc/components/single_proof_detail.html' %}
+                        {% empty %}
+                            <div class="row d-flex flex-column-reverse text-center p-5">
+                                <div class="align-items-center">
+                                    <p><i class="fa fa-bug fa-fw fa-xl"></i></p>
+                                    <h4>There aren't any Proof of Concepts!</h4>
+                                    <p class="text-muted">Proof of concepts are used to document how you found a
+                                        vulnerability.</p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-lg" id="template-details-modal" tabindex="-1" role="dialog"
+             aria-labelledby="template-details-modal-label"
+             aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="p-3">
+                        <p><strong>Description:</strong></p>
+                        <p>{{ vuln.template.description | md_to_html }}</p>
+                        <p><strong>Recommendation: </strong></p>
+                        <p>{{ vuln.template.recommendation | md_to_html }}</p>
+
+                        {% if vuln.template.reference_set.all %}
+                            <p><strong>References: </strong></p>
+                            <ul>
+                                {% for reference in vuln.template.reference_set.all %}
+                                    <li>{{ reference }}</li>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include 'findings/components/modals/export_vuln_form.html' %}
+
+        {% csrf_token %}
+
+        {% include 'modals/delete_object.html' with obj=vuln %}
+    </div>
+{% endblock %}

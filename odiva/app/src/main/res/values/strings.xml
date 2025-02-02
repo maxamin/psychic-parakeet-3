@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">ODIVA</string>
+    <string name="txt_view_select_a_challenge">Select a challenge</string>
+    <string name="btn_insecure_data_storage_i">Insecure Data Storage I</string>
+    <string name="btn_insecure_data_storage_ii">Insecure Data Storage II</string>
+    <string name="btn_insecure_data_storage_iii">Insecure Data Storage III</string>
+    <string name="btn_insecure_data_storage_iv">Insecure Data Storage IV</string>
+    <string name="btn_input_validation_issues_i">Input Validation Issues I</string>
+    <string name="btn_access_control_issues_i">Access Control Issues I</string>
+    <string name="txt_view_intro_ids_i">Login IDS-I</string>
+    <string name="txt_view_intro_ids_ii">Login IDS-II</string>
+    <string name="txt_view_intro_ids_iii">Login IDS-III</string>
+    <string name="txt_view_intro_ids_iv">Login IDS-IV</string>
+    <string name="edit_txt_user">User</string>
+    <string name="edit_txt_password">Password</string>
+    <string name="btn_save">Login</string>
+    <string name="title_activity_insecure_data_storage_iiactivity">InsecureDataStorageIIActivity</string>
+    <string name="ivi1_intro"></string>
+    <string name="ivi1_enter">Enter the URL to view</string>
+    <string name="ivi1_view">VIEW</string>
+    <string name="aci1_intro"></string>
+    <string name="aci1_view">VIEW API CREDENTIALS</string>
+</resources>

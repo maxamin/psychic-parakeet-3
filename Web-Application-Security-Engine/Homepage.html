@@ -1,0 +1,233 @@
+<html>
+<head>
+<title>Damn Secure Web App</title>
+<style>
+:root {  
+  
+  /* Set neon color */
+  --neon-text-color: #f40;
+  --neon-border-color: #08f;
+}
+
+img{
+  font-size: 13rem;
+  font-weight: 200;
+  font-style: italic;
+  color: #fff;
+  //padding: 4rem 6rem 5.5rem;
+  border: 0.4rem solid #b6b8b6;
+  border-radius: 2rem;
+  text-transform: uppercase;
+  animation: flicker 1.5s infinite alternate;     
+}
+
+img::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+img::selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+
+img:focus {
+  outline: none;
+}
+
+/* Animate neon flicker */
+@keyframes flicker {
+    
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+      
+        text-shadow:
+            -0.2rem -0.2rem 1rem #00ff00,
+            0.2rem 0.2rem 1rem #ffff,
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+        
+        box-shadow:
+            0 0 .5rem #00ff00,
+            inset 0 0 .5rem #ffff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);        
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+        box-shadow: none;
+    }    
+}
+//Glowing text
+@font-face {
+  font-family: neon;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+}
+
+.container {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.neon {
+  font-family: neon;
+  color: #FB4264;
+  font-size: 50px;
+  line-height: 50x;
+  text-shadow: 0 0 3vw #F40A35;
+  font-style: italic;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+//Glowing text 2
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff3, 0 0 20px #ff5, 0 0 30px #e60075, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+}
+
+//Neon Button
+a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  color: #2196f3;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 24px;
+  overflow: hidden;
+  transition: 0.2s;
+}
+a:hover{
+  color: #fc9d03;
+  background: black;
+  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #fc9d03;
+  transition-delay: 0.1s;
+}
+a span{
+  position: absolute;
+  display: block;
+}
+a span:nth-child(1)  {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#fc9d03);
+}
+a:hover span:nth-child(1) {
+  left: 100%;
+  transition: 1s;
+}
+a span:nth-child(3) {
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent,#fc9d03);
+}
+a:hover span:nth-child(3) {
+  left: 100%;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+a span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent,#fc9d03);
+}
+a:hover span:nth-child(2) {
+  top: 100%;
+  transition: 1s;
+  transition-delay: 0.25s;
+}
+a span:nth-child(4) {
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent,#fc9d03);
+}
+a:hover span:nth-child(3) {
+  right: 100%;
+}
+a:hover span:nth-child(4) {
+  bottom: 100%;
+  transition: 1s;
+  transition-delay: 0.75s;
+}
+
+.my_text{
+	font-family: consolas;
+}
+
+
+</style>
+</head>
+<body bgcolor="Black" alink="red" vlink="orange">
+<div id="title">
+<center><img src="LOGOS/Atomic-Slush-Geeen.png" height="200px" width="600px"></center>
+</div>
+<br><br><br><br><br>
+<center>
+<br>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<align = "left">
+<div class="container">
+ <div class="neon"> <a href="Sql-Injection.html">SQL-Injection</a></div>
+</div></align>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<align = "center">
+<div class="container">
+  <div class="neon">XSS</div>
+</div></align>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<align = "right">
+<div class="container">
+  <div class="neon">Brute-Force</div>
+</div></align>
+
+</body>
+
+</html>

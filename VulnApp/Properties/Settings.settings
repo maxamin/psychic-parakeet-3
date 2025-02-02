@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="VulnApp.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DatabaseConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">workstation id=EREBOS;packet size=4096;user id=vulnapp;data source=localhost;persist security info=True;initial catalog=vulndb;password=vulnapp;Max Pool Size=1000</Value>
+    </Setting>
+    <Setting Name="VulnApp_VulnServiceStub_VulnService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost/VulnApp/VulnService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

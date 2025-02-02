@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    {% include 'head.html' %}
+    <title>{% block title %}{% endblock title %} | Vulnman</title>
+    {% block extra_head %}
+    {% endblock extra_head %}
+</head>
+<body>
+    {% include 'core/components/navigation/topnav.html' %}
+
+    <div class="fixed-sidebar has-sidebar d-flex layout" id="page-wrapper">
+        {% include 'core/components/navigation/sidebar.html' %}
+
+        <!-- Content -->
+        <div class="layout">
+
+            <!-- Page Content -->
+            <div class="content">
+                {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            {% include 'message.html' %}
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+    </div>
+
+<!-- Scripts -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+{% include 'core/components/navigation/sidebar.js.html' %}
+
+{% block extra_scripts %}
+{% endblock extra_scripts %}
+</body>
+</html>

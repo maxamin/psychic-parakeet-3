@@ -1,0 +1,70 @@
+.fieldRow {
+  display: flex;
+  border-bottom: 1px solid #efefef;
+}
+
+.fieldColumn {
+  flex: 1 1;
+  padding: 0.5em;
+  align-items: center;
+  display: flex;
+
+  &.dragIndicatorColumn{
+    flex: 0 0 auto;
+    padding: 0.5em 0;
+    border-right: 1px solid #efefef;
+  }
+
+  &.fieldName {
+    flex: 2 1;
+
+    &.fieldHeader {
+      padding-left: 2.5em;
+    }
+    & button {
+      color: var(--c-blue);
+      text-transform: none;
+      text-align: left;
+      justify-content: left;
+
+      &.editable {
+        margin-left: 1.7em;
+      }
+    }
+  }
+
+  &.fieldShow {
+    flex: 0 0 auto;
+    border-left: 1px solid #efefef;
+  }
+
+  &.fieldHeader {
+    color: #676767;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+  }
+}
+
+.rotateIcon {
+  color: var(--c-gold-yellow);
+  transform: rotate(90deg);
+  transform-origin: 50% 50%;
+}
+
+.tabContent {
+  padding: 0 1em;
+}
+
+.noFiltersAdded {
+  border-top: 1px solid #efefef;
+  padding: .5em !important;
+
+  & button {
+    margin-left: 8px;;
+  }
+}
+
+.disabledFieldButton {
+  background-color: transparent !important;
+}

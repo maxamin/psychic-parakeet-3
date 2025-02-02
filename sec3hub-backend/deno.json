@@ -1,0 +1,26 @@
+{
+  "imports": {
+    "std/": "https://deno.land/std@0.193.0/",
+    "oak": "https://deno.land/x/oak@v12.5.0/mod.ts",
+    "postgres": "https://deno.land/x/postgresjs@v3.3.5/mod.js",
+    "cors": "https://deno.land/x/cors@v1.2.2/mod.ts",
+    "superoak": "https://deno.land/x/superoak@4.7.0/mod.ts",
+    "sinon": "https://cdn.skypack.dev/sinon@15.2.0",
+    "viem": "npm:viem@1.2.12/"
+  },
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-env --allow-read --allow-write  src/server.ts",
+    "test": "deno test --allow-read --allow-net --allow-env --allow-write",
+    "prod": "deno run --allow-net --allow-env --allow-read --allow-write  src/server.ts"
+  },
+
+  "fmt": {
+    "useTabs": true,
+    "lineWidth": 80,
+    "indentWidth": 4,
+    "semiColons": true,
+    "singleQuote": true,
+    "proseWrap": "preserve",
+    "include": ["src/"]
+  }
+}

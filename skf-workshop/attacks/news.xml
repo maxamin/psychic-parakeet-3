@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf8'?>
+ <!DOCTYPE foo [ 
+   <!ELEMENT foo ANY >
+   <!ENTITY xxe SYSTEM "attack.html">
+   ]>
+<newsitems>
+
+<item>
+<titles>New website online!</titles>
+<date>25 june 2015</date>
+<tekst>We just launched ourselves a new website.
+On this website you can find information about
+tutorials, installation guides and other various types 
+of documentation</tekst>
+</item>
+
+
+<item>
+<titles>This is an XXE</titles>
+<date>25 june 2015</date>
+<tekst>Hello this is an XXe injection woop!
+<foo>
+&xxe;
+</foo>
+</tekst>
+</item>
+</newsitems>

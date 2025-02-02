@@ -1,0 +1,32 @@
+﻿@model IEnumerable<BlogPost>
+@{
+    ViewData["Title"] = "My Blog Posts";
+}
+
+<h2>@ViewData["Title"]</h2>
+<div class="row">
+    <div class="col-md-12">
+        @if (!Model.Any())
+        {
+            <p>You do not seem to have any posts yet. Why not start by writing one?</p>
+            <a class="btn btn-default" href="@Url.Content("~/Blog/Write")">Show me!</a>
+        }
+        else
+        {
+            <table class="table">
+                <tr>
+                    <th>Title</th>
+                    <th></th>
+                </tr>
+                @foreach (var post in Model)
+                {
+                    <tr>
+                        <td>@post.Title</td>
+                        <td></td>
+                    </tr>
+                }
+            </table>
+        }
+    </div>
+</div>
+

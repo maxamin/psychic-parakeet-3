@@ -1,0 +1,109 @@
+{
+	"vulasReport": {
+		"generatedAt": "$generatedAt",
+		"generatedFor": {
+			"space": "$space.getSpaceToken()",
+			"groupId": "$app.getMvnGroup()",
+			"artifactId": "$app.getArtifact()",
+			"version": "$app.getVersion()"
+		},
+		"isAggregated": $isAggregated,
+	
+		#if($isAggregated)
+		"aggregatedModules": [
+			#foreach( $prj in $projects)
+				#if( $foreach.count>1 )
+				,
+				#end
+				{
+					"groupId": "$prj.getMvnGroup()",
+					"artifactId": "$prj.getArtifact()",
+					"version": "$prj.getVersion()"
+				}
+			#end
+		],
+		#else
+		"aggregatedModules": [],
+		#end
+	
+		"configuration": [
+			{ "name": "exceptionThreshold",
+			  "value": "$exceptionThreshold" },
+			{ "name": "exemptScopes",
+			  "value": "$exemptScopes" },
+			{ "name": "exemptBugs",
+			  "value": "$exemptBugs" }
+		],
+	
+		"vulnerabilities": [
+		
+		#foreach( $vul in $vulnsToReport )
+			#if( $foreach.count>1 )
+			,
+			#end
+			{
+		
+			"bug":{
+				"id":"$vul.bug.getBugId()",
+				"cvssScore":#if( $vul.bug.getCvssScore() ) "$vul.bug.getCvssScore()" #else "n/a" #end,
+				"cvssVersion":#if( $vul.bug.getCvssVersion() ) "$vul.bug.getCvssVersion()" #else "n/a" #end
+			},
+			"filename": "$vul.filename",
+			"sha1": "$vul.archiveid",
+			
+			"modules": [
+			#foreach( $analysis in $vul.analyses )
+				#if( $foreach.count>1 )
+				,
+				#end
+			
+				{
+			
+				"groupId": "$analysis.getApp().getMvnGroup()",
+				"artifactId": "$analysis.getApp().getArtifact()",
+				"version": "$analysis.getApp().getVersion()",
+				
+				"href": "$vulasBackendServiceUrl/../apps/#/$space.getSpaceToken()/$analysis.getApp().getMvnGroup()/$analysis.getApp().getArtifact()/$analysis.getApp().getVersion()",
+				
+				"scope": "$analysis.getDep().getScope()",
+				"isTransitive": $analysis.getDep().getTransitive(),
+				
+				#if( $analysis.isAffectedVersion() && $analysis.isAffectedVersionConfirmed() )
+					"containsVulnerableCode": "true",
+				#elseif( $analysis.isNoneAffectedVersion() )
+					"containsVulnerableCode": "historical",
+				#elseif( !$analysis.isAffectedVersionConfirmed() )
+					"containsVulnerableCode": "unknown",
+				#end
+				
+				#if( !$analysis.isNoneAffectedVersion())
+					#if( $analysis.isReachable() )
+						"potentiallyExecutesVulnerableCode": "vulnerableLibraryCode",
+					#elseif( $analysis.isNotReachable() )
+						"potentiallyExecutesVulnerableCode": "nonVulnerableLibraryCode",
+					#elseif( !$analysis.isReachableConfirmed() )
+						"potentiallyExecutesVulnerableCode": "noLibraryCodeAtAll",
+					#end					
+				#else
+					"potentiallyExecutesVulnerableCode": "notApplicable",
+				#end				
+				
+				#if( !$analysis.isNoneAffectedVersion())
+					#if( $analysis.isTraced() )
+						"actuallyExecutesVulnerableCode": "vulnerableLibraryCode"
+					#elseif( $analysis.isNotTraced() )
+						"actuallyExecutesVulnerableCode": "nonVulnerableLibraryCode"
+					#elseif( !$analysis.isTracedConfirmed() )
+						"actuallyExecutesVulnerableCode": "noLibraryCodeAtAll"
+					#end					
+				#else
+					"actuallyExecutesVulnerableCode": "notApplicable"
+				#end		
+				}
+			#end
+			]
+		}
+		#end
+		]
+	}
+}

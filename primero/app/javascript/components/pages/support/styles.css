@@ -1,0 +1,50 @@
+.mainSupport {
+  display: flex;
+  flex: 1;
+  padding: var(--sp-1);
+
+  & nav {
+    width: 280px;
+    padding-right: 1em;
+  }
+
+  & > div {
+    flex: 1;
+    padding: 0 2em;
+  }
+}
+
+.mobileNav {
+  top: 4em;
+  min-width: 220px;
+}
+
+.item, .selectedItem {
+  border-radius: .5em;
+
+  &:hover {
+    border-radius: .5em;
+  }
+}
+
+.selectedItem {
+   background-color: var(--c-light-blue-menu) !important;
+}
+
+.termsOfUse,
+.codeOfConductContainer {
+
+  & h2 {
+    margin: 0;
+  }
+
+  & h3 {
+    margin: 0;
+    text-transform: uppercase;
+    color: var(--c-mid-grey);
+  }
+
+  & p {
+    padding: 1em 0 0 0;
+  }
+}

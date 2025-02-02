@@ -1,0 +1,1 @@
+load File.join(Rails.root, 'db','configuration', 'load_configuration.rb')

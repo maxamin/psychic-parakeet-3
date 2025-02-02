@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}
+    {{ page_title }}
+{% endblock %}
+
+{% block extra_head %}
+    {% if not form.helper.include_media %}
+        {{ form.media.css }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-3">
+        <!-- Breadcrumbs -->
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                {% if project %}
+                {% include 'core/components/navigation/sidebar-toggler.html' %}
+                {% endif %}
+                {% for breadcrumb in breadcrumbs %}
+                    <li class="breadcrumb-item">
+                        <a href="{{ breadcrumb.url }}">{{ breadcrumb.name }}</a>
+                    </li>
+                {% endfor %}
+                <li class="breadcrumb-item active">Create</li>
+            </ol>
+        </nav>
+
+        <div class="row mb-3">
+            <div class="d-flex flex-md-column-reverse align-items-end">
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Create Instance</h4>
+                <hr/>
+                {% crispy form %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_scripts %}
+    {% if not form.helper.include_media %}
+        {{ form.media.js }}
+    {% endif %}
+<script>
+$('.filepond-input').filepond({storeAsFile:true,credits:false});
+</script>
+{% endblock %}

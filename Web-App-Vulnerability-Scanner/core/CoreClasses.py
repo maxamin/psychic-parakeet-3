@@ -1,0 +1,19 @@
+class Url:
+    def __init__(self,url,status):
+        self.url=url
+        self.status=status
+
+
+class EForm:
+    action = ""
+    method = ""
+    enctype = ""
+    params = []
+    referer = ""
+    def __init__(self, action, method,enctype, params, referer, refetch_form):
+        self.action = action
+        self.method = method
+        self.enctype = enctype
+        self.params = params
+        self.referer = referer
+        self.refetch_form = refetch_form

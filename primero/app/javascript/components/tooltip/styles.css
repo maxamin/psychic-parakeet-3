@@ -1,0 +1,15 @@
+.arrow {
+  color: var(c-black)
+}
+
+.tooltip {
+  background: var(c-black)
+}
+
+.disabled {
+  cursor: not-allowed;
+
+  & > div, & > label {
+    pointer-events: none;
+  }
+}

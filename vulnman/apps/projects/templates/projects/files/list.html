@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load vulnmantags %}
+{% load guardian_tags %}
+
+{% block title %}Project Files{% endblock %}
+
+{% block content %}
+    {% get_obj_perms request.user for project as "project_perms" %}
+
+    <div class="container mt-3">
+        <div class="row d-flex">
+            <div class="d-flex flex-column col-sm-12 col-md-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        {% include 'core/components/navigation/sidebar-toggler.html' %}
+                        <li class="breadcrumb-item active">Files</li>
+                    </ol>
+                </nav>
+            </div>
+            {% if "change_project" in project_perms %}
+                <div class="d-flex flex-column-reverse col-md-5 col-sm-12 align-items-end justify-content-end">
+                    <div class="d-inline">
+                        {% url "projects:file-create" as create_url %}
+                        {% include 'core/components/buttons/create_obj.html' with text="New File" url=create_url %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+
+        {% if not object_list %}
+            <div class="card mt-3">
+                <div class="card-body">
+                    {% show_blankslate %}
+                </div>
+            </div>
+        {% else %}
+            <div class="row">
+                {% for obj in object_list %}
+                    <div class="file-list-item col-sm-6 col-md-2">
+                        <div class="card justify-content-center align-items-center">
+                            <div class="card-content">
+                                <i class="fa fa-file fa-2x p-3"></i>
+                            </div>
+                            <div class="card-footer">
+                                <div class="d-flex d-inline justify-content-evenly align-content-between">
+                                    <a href="{% url 'projects:file-update' obj.pk %}" class="btn btn-sm btn-outline-warning"><i class="fa fa-edit"></i></a>
+                                    <a href="{{ obj.get_absolute_url }}" class="btn btn-sm btn-outline-info"><i class="fa fa-download"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center align-items-center">
+                            {{ obj|truncatechars:32 }}
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div
+{% endblock content %}

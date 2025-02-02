@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load guardian_tags %}
+{% load vulnmantags %}
+
+{% block title %}
+    User Accounts
+{% endblock %}
+
+
+{% block content %}
+    {% get_obj_perms request.user for project as "project_perms" %}
+
+    <div class="container mt-3">
+        <div class="row d-flex">
+            <div class="d-flex flex-column col-sm-12 col-md-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        {% include 'core/components/navigation/sidebar-toggler.html' %}
+                        <li class="breadcrumb-item active">User Accounts</li>
+                    </ol>
+                </nav>
+            </div>
+            {% if "change_project" in project_perms %}
+                <div class="d-flex flex-column-reverse col-md-5 col-sm-12 align-items-end justify-content-end">
+                    <div class="d-inline">
+                        {% url "projects:findings:user-account-create" as create_url %}
+                        {% include "core/components/buttons/create_obj.html" with url=create_url text="New Account" %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        {% if user_accounts %}
+            <table class="table table-hover table-striped mt-3">
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Role</th>
+                    <th>Compromised</th>
+                    <th>Password</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for account in user_accounts %}
+                    <tr>
+                        <td><a href="{% url 'projects:findings:user-account-update' account.pk %}">{{ account.username }}</a></td>
+                        <td>{{ account.role|default:"-" }}</td>
+                        <td>{{ account.account_compromised }}</td>
+                        <td>
+                            <a href="#" data-bs-toggle="modal"
+                               data-bs-target="#password-show-modal-{{ account.pk }}">Show</a>
+                        </td>
+                    </tr>
+                    <div class="modal fade" id="password-show-modal-{{ account.pk }}" tabindex="-1"
+                         aria-labelledby="password-show-modal-{{ account.pk }}-label">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="password-show-modal-{{ account.pk }}-label">
+                                        Password</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>{{ account.password }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <div class="card mt-3">
+                <div class="card-body">
+                    {% show_blankslate %}
+                </div>
+            </div>
+        {% endif %}
+
+        {% include 'core/components/navigation/pagination.html' %}
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+extends ../../layout
+block content
+	if err
+		div.alert.alert-danger
+			Strong Internal Server Error
+			li= err
+			
+	if (pages.length == 0)
+		h1 Four Oh Four!
+		p Page not found :(
+	else
+		each page in pages
+			h1= page.title
+			p !{page.content}
+
+	p
+		a(href="../") Back

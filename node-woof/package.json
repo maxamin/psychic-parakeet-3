@@ -1,0 +1,32 @@
+{
+  "name": "node-woof",
+  "description": "yes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snyk/node-woof"
+  },
+  "main": "lib/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node lib/index.js",
+    "startWithAgent": "node lib/index.js",
+    "startWithoutAgent": "node lib/index.js --without-agent",
+    "lint": "eslint ."
+  },
+  "author": "snyk.io",
+  "license": "MIT OR Apache-2.0",
+  "devDependencies": {
+    "eslint": "^5.12.1"
+  },
+  "dependencies": {
+    "@snyk/nodejs-runtime-agent": "^1.42.1",
+    "debug": "^4.1.1",
+    "st": "^0.1.0",
+    "uuid-validate": "0.0.3"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

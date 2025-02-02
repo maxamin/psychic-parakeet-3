@@ -1,0 +1,17 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.8.0
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.0"
+dotenv: .env
+networks:
+  default: development
+  sepolia:
+    verify: False
+wallets:
+  from_key: ${PRIVATE_KEY}
+
+pytest:
+  networks:
+    default: development

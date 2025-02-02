@@ -1,0 +1,21 @@
+.title {
+  font-size: var(--fs-20);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: var(--fs-16);
+  text-transform: uppercase;
+}
+
+.toggleButtonGroup {
+  margin-left: 1rem;
+}
+
+.bgBlue {
+  background-color: blue;
+}
+
+.bgGrey {
+  background-color: grey;
+}

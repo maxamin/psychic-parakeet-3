@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Checklists
+{% endblock %}
+
+{% block content %}
+    <h3 class="text-center">Checklists</h3>
+    <hr/>
+    <div class="container mt-3">
+        <div class="form-floating">
+            <input class="form-control" id="search-checklist">
+            <label for="search-checklist">Search</label>
+        </div>
+
+        <div class="list-group mt-3" id="checklist-list">
+            {% for methodology in methodologies %}
+                <a class="list-group-item list-group-item-action" href="" data-bs-toggle="modal"
+                   data-id="{{ methodology.pk }}" data-bs-target="#checklist-detail-modal">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <div class="float-start">
+                                    {{ methodology }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <div class="float-start">
+                                    <small class="text-muted"><i>Last updated: {{ methodology.date_updated|timesince }}
+                                        ago</i></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            {% empty %}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row d-flex flex-column-reverse text-center p-5">
+                            <div class="align-items-center">
+                                <p><i class="fa fa-check fa-fw fa-xl"></i></p>
+                                <h4>There aren't any Checklists!</h4>
+                                <p class="text-muted">Checklists need to be configured server-side. Contact your
+                                    admin!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="checklist-detail-modal" tabindex="-1" aria-labelledby="checklist-detail-modal">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="checklist-detail-modal-label"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_scripts %}
+    <script>
+        $('#checklist-detail-modal').on('show.bs.modal', function (e) {
+            let url = "{% url 'api:ui:methodologies:task-detail' pk=12345 %}".replace(
+                /12345/, e.relatedTarget.dataset['id'])
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "json",
+                success: function (data) {
+                    $("#checklist-detail-modal-label").text(data.name);
+                    $("#checklist-detail-modal .modal-body").html(data.description)
+                }
+            });
+        });
+
+        $('#search-checklist').on('input', function () {
+            let url = "{% url 'api:ui:methodologies:task-list' %}?search=" + $('#search-checklist').val();
+            $.ajax({
+                type: "GET",
+                url: url,
+                dataType: "json",
+                success: function (data) {
+                    let results = data["results"];
+                    $('#checklist-list').html("");
+                    $.each(results, function (k, v) {
+                        $('#checklist-list').append(
+                            '<a class="list-group-item list-group-item-action" data-bs-toggle="modal" data-id="' + v.uuid + '" data-bs-target="#checklist-detail-modal">' +
+                            '<div class="row"><div class="col-sm-12"><div class="clearfix"><div class="float-start">' + v.task_id + '</div></div></div></div>' +
+                            '<div class="row"><div class="col-sm-12"><div class="clearfix"><div class="float-start">' +
+                            '<small class="text-muted"><i>Last updated: 0 minutes ago</i></small></div></div></div></div>' +
+                            '</a>'
+                        )
+                    });
+                }
+            })
+        });
+    </script>
+{% endblock extra_scripts %}

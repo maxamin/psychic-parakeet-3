@@ -1,0 +1,31 @@
+.isTransparent {
+  color: var(--c-grey);
+  background-color: transparent;
+}
+
+.isDisabled {
+  cursor: not-allowed;
+}
+
+.buttonProgress {
+  position: absolute;
+  margin-top: 6px;
+  margin-left: -55px;
+}
+
+@media (max-width:959.95px) {
+  .defaultActionButton {
+    min-width: 3em;
+    padding: 0 15px;
+
+    & span {
+
+      & span {
+        margin: 0;
+      }
+    }
+  }
+  .buttonProgress {
+    margin-left: -32px;
+  }
+}

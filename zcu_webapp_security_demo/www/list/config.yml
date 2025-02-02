@@ -1,0 +1,3 @@
+db_name: zcu_demo
+db_password: secret-password-123
+db_host: localhost

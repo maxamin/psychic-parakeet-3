@@ -1,0 +1,72 @@
+#@ load("@ytt:data", "data")
+
+#@ selectors = {
+#@   "app.kubernetes.io/name": "{}".format(data.values.name),
+#@   "app.kubernetes.io/instance": "{}".format(data.values.name),
+#@ }
+#@ labels = dict(selectors)
+#@ labels.update({"app.kubernetes.io/version": "1.0"})
+
+---
+apiVersion: kbld.k14s.io/v1alpha1
+kind: Sources
+sources:
+- image: #@ data.values.image
+  path: .
+---
+apiVersion: kbld.k14s.io/v1alpha1
+kind: ImageDestinations
+destinations:
+- image: #@ data.values.image
+  newImage: #@ "docker.io/{}".format(data.values.image)
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: #@ data.values.name
+  labels: #@ labels
+spec:
+  type: LoadBalancer
+  ports:
+    - port: #@ data.values.port
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector: #@ selectors
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: snykit
+  labels: #@ labels
+spec:
+  replicas: #@ data.values.replicas
+  selector:
+    matchLabels: #@ selectors
+  template:
+    metadata:
+      labels: #@ selectors
+    spec:
+      containers:
+        - name: #@ data.values.name
+          image: #@ data.values.image
+          imagePullPolicy: IfNotPresent
+          securityContext:
+              readOnlyRootFilesystem: true
+          ports:
+            - name: http
+              containerPort: #@ data.values.port
+              protocol: TCP
+            - name: metrics
+              containerPort: #@ data.values.metrics_port
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+          resources:
+            {}

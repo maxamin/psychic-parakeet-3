@@ -1,0 +1,36 @@
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top mb-4" style="background-color: black">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand">Sepa-rate</a>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/overview">Sepa</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/rating/overview">Rate</a>
+      </li>
+    </ul>
+  </div>
+  <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <ul class="navbar-nav ml-auto">
+      <li *ngIf="isLoggedIn()" class="nav-item">
+        <p class="nav-link">Hello, {{getUsername()}}</p>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/login" *ngIf="!isLoggedIn()">Log in</a>
+        <a class="nav-link" (click)="logOut()" *ngIf="isLoggedIn()">Log out</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <router-outlet></router-outlet>
+
+</div>
+
+

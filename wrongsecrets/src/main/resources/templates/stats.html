@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{index.html}">
+<body>
+<div class="container">
+    <div class="container-fluid mt-3 text-sm p-5 bg-light" layout:fragment="content">
+        <h1>Current Stats</h1>
+        <p>Number of active sessions:</p>
+        <p th:text="${sessioncounter}"></p>
+        <p>Hints enabled:<span th:text="${hintsEnabled}"></span></p>
+        <p>Reason enabled:<span th:text="${reasonEnabled}"></span></p>
+        <p>CTF-mode enabled:<span th:text="${ctfModeEnabled}"></span></p>
+
+        <p>Number of canary callbacks since boot:</p>
+        <p th:text="${canaryCounter}"></p>
+        <p>Last canary token received:</p>
+        <p th:text="${lastCanaryToken}"></p>
+        <p>CanaryTokenUrlwebtoken in use:</p>
+        <ul th:each="canarytokenURL : ${canarytokenURLs}">
+            <li th:text="${canarytokenURL}"></li>
+        </ul>
+        <p>Note that, when accessing the URLs of the CanaryTokens, some of your data is being logged by the Canarytoken service.</p>
+    </div>
+</div>
+</body>
+</html>

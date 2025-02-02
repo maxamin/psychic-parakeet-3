@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load guardian_tags %}
+
+{% block title %}
+Tokens
+{% endblock %}
+
+
+{% block content %}
+    {% get_obj_perms request.user for project as "project_perms" %}
+
+    <div class="container mt-3">
+        <div class="row d-flex">
+            <div class="d-flex flex-column col-sm-12 col-md-7">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        {% include 'core/components/navigation/sidebar-toggler.html' %}
+                        <li class="breadcrumb-item active">API-Tokens</li>
+                    </ol>
+                </nav>
+            </div>
+            {% if "change_project" in project_perms %}
+                <div class="d-flex flex-column-reverse col-md-5 col-sm-12 align-items-end justify-content-end">
+                    <div class="d-inline">
+                        {% url 'projects:token-create' as create_url %}
+                        {% include 'core/components/buttons/create_obj.html' with text="New API-Token" url=create_url %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="list-group mt-3">
+            {% for token in tokens %}
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <div class="float-start">
+                                    <p>{{ token.key|truncatechars:54 }}</p>
+                                </div>
+                                <div class="float-end">
+                                    <a class="btn btn-outline-info copy-button" onclick="copyToClipboard('{{token.pk}}')" data-toggle="tooltip" title="Copied">
+                                        <i class="fa fa-copy"></i>
+                                    </a>
+                                    <a class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#delete-modal-{{ token.pk }}">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="clearfix">
+                                <div class="float-start">
+                                    <small class="text-muted"><i>Date valid: {{ token.date_valid }}</i></small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% include 'modals/delete_object.html' with obj=token %}
+            {% empty %}
+                <li class="list-group-item">No tokens here!</li>
+            {% endfor %}
+        </div>
+
+        <!-- Create Modal -->
+        <div class="modal fade" id="create-modal" tabindex="-1" aria-labelledby="create-modal">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="create-modal-label">Create Token</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {% crispy token_create_form %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include 'core/components/navigation/pagination.html' %}
+    </div>
+{% endblock %}
+
+{% block extra_scripts %}
+
+<script>
+    $(function(){
+        $('a[data-toggle="tooltip"]').tooltip({
+            trigger: "click",
+            placement: "top",
+            animated: "fade"
+        });
+    })
+
+    function copyToClipboard(value){
+        navigator.clipboard.writeText(value);
+    }
+</script>
+{% endblock %}

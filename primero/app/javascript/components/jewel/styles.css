@@ -1,0 +1,53 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  
+  & span {
+    color: var(--c-black);
+    font-size: var(--fs-12);
+    font-weight: bold;
+    position: absolute;
+    z-index: 999;
+  }
+}
+.circle, .circleForm {
+  font-size: var(--fs-30);
+  color: var(--c-yellow) !important;
+
+  &.error { 
+    color:  var(--c-red) !important;
+  }
+}
+
+.circleForm {
+  font-size: var(--fs-16);
+  margin-left: 5px;
+  padding-top: 4px;
+}
+
+.circleList {
+  font-size: var(--fs-16);
+  margin-bottom: 2px;
+  color: var(--c-yellow);
+}
+
+@media ((min-width:960px) and (max-width:1279.95px)) {
+  .root {
+    position: absolute;
+    top: 47%;
+    left: 60%;
+    & span {
+      display: none;
+    }
+  }
+  .circle {
+    font-size: var(--fs-16);
+  }
+
+  .circleForm {
+    position: absolute;
+    right: 0;
+  }
+}

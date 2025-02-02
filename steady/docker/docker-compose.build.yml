@@ -1,0 +1,50 @@
+version: '2.4'
+
+services:
+  frontend-apps:
+    build:
+      context: ./frontend-apps
+      dockerfile: ./Dockerfile
+      args:
+        - VULAS_RELEASE=${VULAS_RELEASE}
+    image: steady-frontend-apps:${VULAS_RELEASE}
+
+  frontend-bugs:
+    build:
+      context: ./frontend-bugs
+      dockerfile: ./Dockerfile
+      args:
+        - VULAS_RELEASE=${VULAS_RELEASE}
+    image: steady-frontend-bugs:${VULAS_RELEASE}
+
+  patch-lib-analyzer:
+    build:
+      context: ./patch-lib-analyzer
+      dockerfile: ./Dockerfile
+      args:
+        - VULAS_RELEASE=${VULAS_RELEASE}
+    image: steady-patch-lib-analyzer:${VULAS_RELEASE}
+
+  rest-backend:
+    build:
+      context: ./rest-backend
+      dockerfile: ./Dockerfile
+      args:
+        - VULAS_RELEASE=${VULAS_RELEASE}
+    image: steady-rest-backend:${VULAS_RELEASE}
+
+  rest-lib-utils:
+    build:
+      context: ./rest-lib-utils
+      dockerfile: ./Dockerfile
+      args:
+        - VULAS_RELEASE=${VULAS_RELEASE}
+    image: steady-rest-lib-utils:${VULAS_RELEASE}
+
+  kb-importer:
+    build:
+      context: ./kb-importer
+      dockerfile: ./Dockerfile
+      args:
+        - VULAS_RELEASE=${VULAS_RELEASE}
+    image: steady-kb-importer:${VULAS_RELEASE}

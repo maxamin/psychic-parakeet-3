@@ -1,0 +1,9 @@
+.matchedTracesContainer {
+  & h3 {
+    margin-top: 3em;
+  }
+}
+
+.nothingFound {
+  font-style: italic;
+}

@@ -1,0 +1,2 @@
+- name: Hardhat Solidity
+  uses: amine7777/hardhat-action@v1

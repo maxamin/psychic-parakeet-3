@@ -1,0 +1,7 @@
+.description {
+  font-size: var(--fs-13);
+  line-height: 1em;
+  color: var(--c-dark-grey);
+  padding: 0 16px;
+  margin: 0 10px 15px 0;
+}

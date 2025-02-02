@@ -1,0 +1,41 @@
+version: "2"
+services:
+    www:
+        build: ./www/
+        ports: 
+            - 80:80
+        volumes:
+            - ./www:/var/www/html/
+        links:
+            - mysql
+        networks:
+            - default
+    mysql:
+                container_name: webdb
+                build: ./sqldb/
+                restart: always
+                command: --default-authentication-plugin=mysql_native_password
+                entrypoint: ['/entrypoint.sh', '--character-set-server=utf8', '--collation-server=utf8_general_ci']
+                ports:
+                        - 3306:3306
+                environment:
+                        MYSQL_USER: mysql
+                        MYSQL_DATABASE: website
+                        MYSQL_ROOT_PASSWORD: rootpassword
+                        MYSQL_PASSWORD: password123!
+                networks:
+                        - default
+                volumes:
+                        - /sqldb:/etc/mysql/conf.d
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: 
+            - mysql:mysql
+        ports:
+            - 8000:80
+        environment:
+            MYSQL_USER: user
+            MYSQL_PASSWORD: test
+            MYSQL_ROOT_PASSWORD: test
+volumes:
+    persistent:

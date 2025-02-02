@@ -1,0 +1,18 @@
+﻿@model BlogPost
+@{
+    ViewData["Title"] = "Write a new article";
+}
+
+<h2>@ViewData["Title"]</h2>
+@using (Html.BeginForm("WritePost", "Blog", FormMethod.Post))
+{
+    <label>Title</label>
+    @Html.TextBoxFor(u => u.Title, new { @class = "form-control", @placeholder = "Enter title..." })
+    <br /><br />
+    <label>Content</label>
+    <p>I lack a nice WYSIWYG editor :P</p>
+    @Html.TextAreaFor(u => u.Content, new { @class = "form-control", style = "height: 250px; resize: none" })
+    <br /><br />
+
+    <input class="btn btn-primary" type="submit" value="Let's Go!" />
+}

@@ -1,0 +1,2 @@
+Prerequisites for Python program:
+pip install mysql-connector-python, pathlib, traceback, http.server, subprocess

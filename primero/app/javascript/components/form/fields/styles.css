@@ -1,0 +1,143 @@
+.checkboxContainer {
+  margin-top: 1em;
+
+  & label {
+    font-size: var(--fs-12);
+    color: var(--c-black);
+  }
+}
+
+.attachment {
+  align-items: center;
+  padding: 10px 0;
+}
+
+.document {
+  display: flex;
+}
+
+.inputField,
+.attachmentInputField {
+  display: none;
+}
+
+.preview {
+  max-width: 11em;
+  padding: 2em;
+}
+
+.buttonWrapper {
+  position: relative;
+  margin: .5em 0;
+}
+
+.buttonProgress {
+  position: absolute;
+  margin-top: -12;
+  margin-left: -12;
+}
+
+.hint {
+  display: block;
+  margin-top: 0.5em;
+  color:  var(--c-warm-grey-4);
+  font-weight: bold;
+}
+
+.rowDirection {
+  flex-direction: row;
+}
+
+.fieldHeaderRow {
+  display: flex;
+}
+
+.fieldRow {
+  display: flex;
+  border-bottom: 1px solid #efefef;
+}
+
+.fieldColumn {
+  flex: 1 1;
+  padding: 0.5em 0 0 0.5em;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &.dragIndicatorColumn{
+    flex: 0 0 auto;
+    padding: 0;
+  }
+
+  &.fieldInput {
+    flex: 3 1;
+
+    &.fieldHeader {
+      padding-left: 2em;
+      justify-content: left;
+    }
+    & button {
+      color: var(--c-blue);
+      text-transform: none;
+
+      &.editable {
+        margin-left: 1.7em;
+      }
+    }
+  }
+
+  &.fieldShow {
+    flex: 0 0 auto;
+    border-left: 1px solid #efefef;
+  }
+
+  &.fieldHeader {
+    justify-content: center;
+    color: var(--c-black);
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+  }
+}
+
+.clearDefaultButton {
+  color: var(--c-dark-brown);
+  font-weight: bold;
+}
+
+.inputOptionField {
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.removeIcon {
+  color: var(--c-red);
+}
+
+.dialogTrigger {
+  color: var(--c-blue);
+  font-size: var(--fs-9);
+  font-weight: bold;
+  padding: 0 0 10px 0;
+  text-transform: none;
+}
+
+.linkField {
+  color: var(--c-blue);;
+}
+
+.linkFieldLabel {
+  font-size: var(--fs-12);
+}
+
+.displayNone {
+  display: none;
+}
+
+.separator {
+  border-top: 1px solid var(--c-warm-grey-1);
+}
+
+.downloadButton {
+  padding-top: 10px;
+}

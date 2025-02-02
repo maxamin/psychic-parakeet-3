@@ -1,0 +1,11 @@
+.git/
+.vscode/
+.github/
+docs/
+node_modules/
+dist/
+cache/
+artifacts/
+npm-debug.log
+Dockerfile*
+docker-compose*

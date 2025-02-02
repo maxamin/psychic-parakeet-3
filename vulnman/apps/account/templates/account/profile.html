@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ user.username }}'s Profile
+{% endblock %}
+
+{% block content %}
+
+    <div class="container mt-3">
+        {% if user.profile.is_public or user == request.user %}
+            {% include 'account/components/profile/public_profile.html' %}
+        {% else %}
+            {% include 'account/components/profile/private_profile.html' %}
+        {% endif %}
+    </div>
+
+{% endblock %}

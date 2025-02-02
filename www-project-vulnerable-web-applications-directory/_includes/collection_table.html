@@ -1,0 +1,62 @@
+{% if include.collection == "aotd" %}
+  {% assign allapps = site.data["collection"]  uniq | sort: "name" %}
+  {% assign random = site.time | date: "%s%N" | modulo: allapps.size %}
+  {% assign apps = "" | split: ',' %}
+  {% assign apps = apps | push: allapps[random] %}
+{% else %}
+  {% assign apps = site.data["collection"] | where_exp:"app",
+"app.collection contains include.collection" | uniq | sort: "name" %}
+{% endif %}
+<style>
+    ul { padding: 5px; }
+</style>
+
+<table style="font-size: 16px">
+  <tr>
+    <th>App. URL</th>
+    <th>Author</th>
+    <th nowrap="nowrap">Reference(s)</th>
+    <th nowrap="nowrap">Technology(ies)</th>
+    <th nowrap="nowrap">Note(s)</th>
+  </tr>
+  {% for app in apps %}
+  <tr>
+    <td>
+        <a href="{{ app.url }}">{{ app.name }}</a><br>
+        {% if app.badge %}
+            <img alt="GitHub stars" src="https://img.shields.io/github/stars/{{ app.badge }}?style=social">
+        {% endif %}
+    </td>
+    <td>
+        {{ app.author }}<br>
+        {% if app.badge %}
+            <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/{{ app.badge }}">
+        {% endif %}
+    </td>
+    <td nowrap="nowrap">
+      {% if app.references %}
+        <ul> 
+          {% for ref in app.references %}
+            <li> <a href="{{ ref.url }}">{{ ref.name | capitalize }}</a> </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </td>
+    <td nowrap="nowrap"> 
+      {% if app.technology %}
+        <ul>
+          {% for tech in app.technology %}
+            <li> {{ tech }} </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </td>
+    <td>
+        {{ app.notes }}<br>
+        {% if app.badge %}
+            <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/{{ app.badge }}">
+        {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>

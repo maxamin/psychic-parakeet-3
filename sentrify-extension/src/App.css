@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+:root {
+    --main-blue: #001F3F;
+    --text-white: #F0EFEC;
+    --text-ash: #C0C0C0;
+    --main-orange: #FF5733;
+    --check-green: #2ECC71;
+    --x-red: #C70039;
+    font-size: 10px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--main-blue);
+    color: var(--text-ash);
+    font-family: 'Inter', sans-serif;
+    width: 300px;
+    min-height: 200px;
+    letter-spacing: 0.05rem;
+    text-align: center;
+    /* padding: 2rem 1rem; */
+}
+
+h1 {
+    text-align: center;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    color: var(--main-orange);
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-orange);
+    transition: all 0.3s ease;
+}
+
+
+.main {
+    display: flex;
+    padding-top: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5rem;
+    height: 100%;
+}
+
+.info > p {
+    font-size: 1.2rem;
+}
+
+.highlight {
+    color: var(--main-orange);
+}
+
+.link_highlight {
+    font-weight: bold;
+    color: var(--text-white);
+}
+
+.data {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+}
+
+.data > div {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 1rem;
+}
+
+.check {
+    color: var(--check-green);
+}
+
+.x_icon {
+    color: var(--x-red);
+}
+
+.request_btn {
+    padding: 1rem 2rem;
+    background-color: var(--main-orange);
+    color: var(--text-white);
+    font-size: 1.4rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.request_btn:hover, .source:hover, .twitter_link:hover {
+    transform: scale(0.95);
+    opacity: 0.9; 
+}
+
+.fetching, .not_found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-inline: 2rem;
+}
+
+
+.loader {
+    animation: spin 2s linear infinite;
+}
+
+/* .footer {
+    margin-top: 5rem;
+} */
+
+.resources {
+    margin-top: 3rem;
+    padding-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-top: 1px solid #C0C0C0;
+    color: #C0C0C0;
+    font-size: 1.2rem;
+}
+
+@keyframes spin {
+  0% {
+    rotate: 0deg;
+  }
+  95% {
+    rotate: 360deg;
+  }
+  100% {
+    rotate: 360deg;
+    animation-timing-function: ease-out; /* Ease out animation at the end */
+    animation-duration: 0.4s; /* Brief pause at the end */
+  }
+}

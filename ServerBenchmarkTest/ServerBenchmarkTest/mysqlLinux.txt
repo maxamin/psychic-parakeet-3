@@ -1,0 +1,14 @@
+Create a mysql-Database user with name 'httpUser' and credentials 'simpelP4ssPhrase4Testing':
+
+Linux: 
+1. sudo apt install mysql-server
+2. sudo mysql -u root
+	in mysql:
+	create user 'httpUser' identified by 'simpleP4ssPhrase4Testing';
+	grant all privileges on 'httpDB'.* to 'httpUser';
+	exit
+
+Windows:
+Follow instructions of the GUI installer
+
+ 

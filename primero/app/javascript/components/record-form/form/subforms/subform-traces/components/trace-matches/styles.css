@@ -1,0 +1,9 @@
+.listTitle {
+  & span {
+    font-weight: bold;
+  }
+}
+
+.likely {
+  font-weight: bold;
+}

@@ -1,0 +1,196 @@
+.secondarySubformHeader {
+  font-size: var(--fs-12);
+  color: var(--c-dark-grey);
+}
+
+.subformHeaderBox {
+  flex-grow: 1;
+}
+
+.moreActions {
+  width: 30px;
+  height: 30px;
+  min-height: 30px;
+}
+
+.loadingIndicator {
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 20px;
+}
+
+.emptySubformContainer {
+  display: flex;
+  align-items: center;
+  margin: var(--sp-3) 0;
+
+  & > svg:first-of-type {
+    color: var(--c-yellow);
+  }
+
+  & > span {
+    padding: 0 10px;
+
+    & strong {
+      padding-right: 5px;
+    }
+  }
+}
+
+.subformFieldArrayContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--sp-2) 0;
+}
+
+.subformFieldArrayAccordion {
+  margin: 0;
+}
+
+.subformFieldArrayShow {
+  margin-top: 0;
+}
+
+.subformFields {
+  display: flex;
+  align-items: center;
+  padding: 0 var(--sp-2);
+  font-size: var(--fs-12);
+  border: 1px solid var(--c-warm-grey-2);
+  background: var(--c-white);
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.04);
+    cursor: pointer;
+  }  
+}
+
+.fieldArray .subformFields ~ .subformFields {
+  border-top: none;
+}
+
+.subformTitle {
+  margin: 0;
+}
+
+.subformGuidance {
+  margin-bottom:  8px;
+}
+
+.subFormField {
+  margin: 0 0 var(--sp-4);
+}
+
+.panelAccordion {
+  box-shadow: none;
+  border: 1px solid var(--c-warm-grey-2);
+  margin-bottom: var(--sp-2);
+
+  &:before {
+    display: none;
+  }
+}
+
+.accordionSummaryExpanded {
+  min-height: 48px;
+}
+
+.accordionSummaryContent {
+  margin: 0px !important;
+}
+
+.expandIconAccordion {
+  box-shadow: none;
+  width: 36px;
+  height: 36px;
+}
+
+.accordionDetails {
+  display: block;
+
+  & > div {
+    margin-bottom: 0;
+  }
+}
+
+.list {
+  border: 1px solid var(--c-warm-grey-2);
+  border-radius: 5px;
+  background: var(--c-white);
+}
+
+.listItem:hover {
+  background: var(--c-light-grey);
+  cursor: pointer;
+}
+
+.listDivider {
+  border-bottom: 1px solid var(--c-warm-grey-2);
+}
+
+.listActions {
+  right: -3px;
+  left: initial;
+  display: flex;
+  padding: 5px;
+  align-items: center;
+
+  & .subformShow {
+    background-color: inherit;
+    color: var(--c-black);
+  }
+}
+
+[dir="rtl"] .listActions {
+  right: initial;
+  left: -3px;
+}
+
+.listText {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.27;
+  letter-spacing: normal;
+  color: var(--c-blue);
+  text-transform: none;
+  display: inline-block;
+}
+
+.listItemText {
+  width: 100%;
+
+  & span:after {
+    top:50%;
+    transform:translateY(-50%);
+    content:"•";
+    margin: 0.4em;
+  }
+
+  & span:last-of-type:after {
+    content: ""
+  }
+}
+
+.listTextSecondary {
+  color: var(--c-grey);
+  font-size: var(--fs-8);
+  margin-top: 1em;
+}
+
+.violationMenu {
+  width: 100%;
+}
+
+.listItemNepaliItem {
+  display: flex;
+  & label {
+    display: none;
+  }
+  & input {
+    margin-right: 0.5em;
+    max-width: 5.5em;
+    padding-top: 0px;
+  }
+}

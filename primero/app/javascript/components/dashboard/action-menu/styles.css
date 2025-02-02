@@ -1,0 +1,17 @@
+.root {
+  font-size: var(--fs-18);
+  color: var(--c-black);
+  line-height: 1;
+  font-weight: "normal";
+
+  & button {
+    &:hover {
+      background-color: var(--c-warm-grey-1);
+    }
+  }
+}
+
+.paper {
+  max-height: 216px;
+  width: 200px;
+}

@@ -1,0 +1,18 @@
+.recordId {
+  color: var(--c-red);
+}
+
+.alreadyMatched {
+  background-color: var(--c-wild-sand);
+  padding: 10px;
+
+  & span {
+    font-weight: bold;
+  }
+}
+
+.fieldRow {
+  & audio {
+    width: 100%;
+  }
+}

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>XSS-attacks</title>
+        <script src="xss.js" async></script>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <img src='x' onerror='alert(1)'> -->
+                <input id="xss" name="xss"><button type="button" id="send">send</button><br>
+            </label>
+            <label for="out">You gave:
+                <output id="out"></output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+        </p>
+    </body>
+</html>

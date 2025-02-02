@@ -1,0 +1,287 @@
+import dns.resolver
+import Config
+import requests
+from bs4 import BeautifulSoup
+from core.CoreClasses import EForm
+from urllib.parse import urlparse
+from urllib.parse import urljoin
+import re
+import random
+import string
+from urllib.parse import unquote
+import json
+import os
+
+
+def nslookup(url):
+    parsed_uri = urlparse(url)
+    answers = dns.resolver.query(parsed_uri.netloc, 'A')
+    for rdata in answers:
+        print(rdata)
+    return False
+def prepend_scheme(url):
+    if url.startswith('http://') or url.startswith('https://'):
+        return url
+    else:
+        return 'http://'+url
+
+def extract_form_fields(soup):
+    fields = {"static":{}, "dynamic":{}}
+    fields_static = {}
+    fields_dynamic = {}
+
+    flag = False
+    refetch_form=False
+    for input in soup.findAll('input'):
+        # ignore submit/image with no name attribute
+        # if input['type'] in ('submit','image') and not input.has_attr("name"):# in input:
+        if not input.has_attr("name"):  # in input:
+            continue
+
+        field_name  = input["name"]
+        field_value = ''
+
+        if input['name'].startswith('_'):
+            refetch_form = True
+
+        # single element nome/value fields
+        if input.has_attr('type') and input['type'].lower() in ('hidden', 'submit', 'image'):
+            if input.has_attr('value'):
+                field_value = input['value']
+            fields_static[field_name] = field_value
+
+        if input.has_attr('type') and input['type'].lower() in ('text', 'password'):
+
+            field_value = ""
+
+            if input['type'] == 'password':
+                flag = True
+
+            fields_dynamic[field_name] = field_value
+
+        # radios
+        if input.has_attr('type') and input['type'] in ('radio'):
+            if input.has_attr("checked"):
+                if input.has_attr('value'):
+                    field_value = input['value']
+                else:
+                    field_value = 'on'
+                fields_dynamic[field_name] = field_value
+        # checkbox
+        if input.has_attr('type') and input['type'] in ('checkbox'):
+            field_value = 'on'
+            fields_dynamic[field_name] = field_value
+
+        # assert False, 'input type %s not supported' % input['type']
+
+    # textareas
+    for textarea in soup.findAll('textarea'):
+        if not textarea.has_attr("name"):
+            continue
+        fields_dynamic[textarea['name']] = ""
+
+    # select fields
+    for select in soup.findAll('select'):
+        if not select.has_attr("name"):
+            continue
+        field_value = ''
+        field_name = select["name"]
+
+        options = select.findAll('option')
+        for option in options:
+            if option.has_attr("selected") and option.has_attr("value") and option["value"] != "":
+                field_value = option["value"]
+                break
+            if option.has_attr("selected") and option.has_attr("value") and option["value"] == "" and option.text !="":
+                field_value = option.text
+                break
+            if option.has_attr("value") and option["value"] != "":
+                field_value = option.text
+                break
+            if option.has_attr("value") and option["value"] == "" and option.text !="":
+                field_value = option.text
+                break
+
+        fields_dynamic[field_name] = field_value
+
+    fields["static"] = fields_static
+    fields["dynamic"] = fields_dynamic
+
+    return fields, flag, refetch_form
+
+def refetch_form_and_text(req, loginFormEndpoint):
+    headers = {'User-Agent': Config.user_agent}
+    if loginFormEndpoint == None:
+        return None,None
+    loginForms = []
+    try:
+        r = req.get(loginFormEndpoint.referer, headers=headers, allow_redirects=True,
+                    proxies={"http": Config.http_proxy, "https": Config.https_proxy}, verify=False, timeout=5)
+
+    except requests.exceptions.RequestException as e:
+        return None,None
+    if r.status_code != 200:
+        return None,None
+    try:
+        response_text = r.content.decode('utf-8', errors='ignore')
+        soup = BeautifulSoup(response_text, "html.parser")
+        text = re.sub("\s+", " ", soup.text).strip()
+        old_url = loginFormEndpoint.referer
+        new_url = r.url
+        parsed_uri = urlparse(new_url)
+
+        for form in soup.findAll("form"):
+            if not form.has_attr("action"):
+                continue
+            form_action = form.get("action")
+
+            if (form_action is None) or form_action.startswith("#"):
+                form_action = new_url
+
+            elif form_action.startswith('//'):
+                form_action = form_action.replace('//', parsed_uri.scheme)
+
+            form_action = urljoin(new_url, form_action)
+
+            method = form.get("method")
+            if method == None:
+                method = "Get"
+            enctype = form.get("enctype")
+            if enctype == None:
+                enctype = "application/x-www-form-urlencoded"
+
+            fields, isLoginForm, refetch_form = extract_form_fields(form)
+            loginForm = EForm(form_action, method, enctype, fields, old_url, refetch_form)
+            if forms_equal(loginFormEndpoint, loginForm) == True:
+                return loginForm, text
+                #loginForms.append(loginForm)
+
+    except:
+        return None,None
+
+    return  None,None
+
+
+
+def refetch_form(req, loginFormEndpoint):
+    headers = {'User-Agent': Config.user_agent}
+    if loginFormEndpoint == None:
+        return
+    loginForms = []
+    try:
+        r = req.get(loginFormEndpoint.referer, headers=headers, allow_redirects=True,
+                    proxies={"http": Config.http_proxy, "https": Config.https_proxy}, verify=False, timeout=5)
+
+    except requests.exceptions.RequestException as e:
+        return
+    if r.status_code != 200:
+        return
+    try:
+        response_text = r.content.decode('utf-8', errors='ignore')
+        soup = BeautifulSoup(response_text, "html.parser")
+
+        old_url = loginFormEndpoint.referer
+        new_url = r.url
+        parsed_uri = urlparse(new_url)
+
+        for form in soup.findAll("form"):
+            if not form.has_attr("action"):
+                continue
+            form_action = form.get("action")
+
+            if (form_action is None) or form_action.startswith("#"):
+                form_action = new_url
+
+            elif form_action.startswith('//'):
+                form_action = form_action.replace('//', parsed_uri.scheme)
+
+            form_action = urljoin(new_url, form_action)
+
+            method = form.get("method")
+            if method == None:
+                method = "Get"
+            enctype = form.get("enctype")
+            if enctype == None:
+                enctype = "application/x-www-form-urlencoded"
+
+            fields, isLoginForm, refetch_form = extract_form_fields(form)
+            loginForm = EForm(form_action, method, enctype, fields, old_url, refetch_form)
+            if forms_equal(loginFormEndpoint, loginForm) == True:
+                return loginForm
+                #loginForms.append(loginForm)
+
+    except:
+        return
+
+    return
+
+def get_random(N):
+    return ''.join(random.choice(string.ascii_lowercase + string.digits) for _ in range(N))
+
+def params_equal(params1,params2):
+    keys1 = list(params1.keys())
+    keys2 = list(params2.keys())
+    return set(keys1) == set(keys2)
+
+def forms_equal(form1, form2):
+    if form1.action != form2.action:
+        return False
+
+    if params_equal(form1.params["static"],form2.params["static"]) and params_equal(form1.params["dynamic"],form2.params["dynamic"]):
+            return True
+
+    return False
+
+def save_findings(findings):
+    out_filename = findings["target"]
+    out_filename = re.sub("[^A-Za-z0-9\.]+","_", out_filename)
+    out_filename = os.path.join(Config.results_path,out_filename + ".json")
+    outfile = open(out_filename,"w")
+    outfile.write(json.dumps(findings))
+    outfile.flush()
+    outfile.close()
+
+    outfile = open("completed.txt","a")
+    outfile.write(findings["target"]+"\n")
+    outfile.flush()
+    outfile.close()
+
+
+def display_findings(findings):
+    out_filename = findings["target"]
+    out_filename = re.sub("[^A-Za-z0-9\.]*", "_", out_filename)
+    outfile = open(out_filename, "a")
+    if 'authbypass' in findings:
+        authbypass = findings['authbypass']
+        outfile.write("\n\n====================AuthBypass:: Method==============\n" + authbypass["method"])
+        outfile.write("\naction: " + authbypass["action"])
+        outfile.write("\npayload: " + authbypass["payload"])
+
+    if 'WeakPassword' in findings:
+        weakpasswords = findings['WeakPassword']
+        outfile.write("\n\n====================Weak Password:: Method==============\n" + weakpasswords["method"])
+        outfile.write("\naction: " + weakpasswords["action"])
+        outfile.write("\nPassword: " + weakpasswords["password"])
+
+    if len(findings["sqlinjection"]) > 0:
+        outfile.write("\n\n======================SQL Injection=====================")
+
+    for sqlinjection in findings["sqlinjection"]:
+
+        outfile.write("\nMethod: " + sqlinjection["method"].upper())
+        outfile.write("\nURL: " + sqlinjection["url"])
+
+        if sqlinjection["form"] == "yes":
+            outfile.write("\nAction: " + sqlinjection["url1"])
+
+        outfile.write("\nParameter: " + sqlinjection["parameter"])
+        outfile.write("\nPayload: " + unquote(sqlinjection["payload"]))
+        for error in sqlinjection["sql_error_msgs"]:
+            outfile.write("\nDatabase: " + error["dbms"] + " - " + "Error Message: " + error["error_msgs"])
+    outfile.flush()
+    outfile.close()
+def logStatus(statusMessage, lock):
+    outfile = open("output.txt", "a")
+    outfile.write(statusMessage)
+    outfile.flush()
+    outfile.close()

@@ -1,0 +1,40 @@
+.button {
+  display: flex;
+  justify-content: initial;
+  color: var(--c-dark-grey);
+  padding: 0 16px;
+
+  & > span {
+    & div {
+      flex: 1;
+      text-align: left;
+      padding: 0.85em;
+      text-transform: initial;
+    }
+
+    & svg {
+      color: var(--c-black);
+      width: 24px;
+    }
+  }
+}
+
+.paper {
+  margin-top: -50px;
+
+  &:before, &:after {
+    bottom: -6px;
+    top: auto;
+    right: calc(50% - 6px);
+  }
+
+  &:after {
+    border: 1px solid var(--c-sold-black);
+  }
+}
+
+@media ((min-width:600px) and (max-width:1279.95px)) {
+  .button > span svg {
+    margin: 0 .3em
+  }
+}

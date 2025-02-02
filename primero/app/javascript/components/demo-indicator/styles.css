@@ -1,0 +1,18 @@
+.standardInfo {
+  background-color: var(--c-solid-black);
+  border-radius: 0;
+  padding: 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  width: 100%;
+
+}
+
+.standardInfoText {
+  color: var(--c-white);
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+}

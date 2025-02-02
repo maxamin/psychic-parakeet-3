@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+}
+
+.nav {
+  width: 250px;
+  padding-right: 1em;
+}
+
+.content {
+  flex: 1;
+}
+
+.nestedItem {
+  padding: 0 1em;
+  font-size: var(--fs-13);
+}
+
+.selectedItem {
+  background-color: var(--c-light-blue-menu) !important;
+}
+

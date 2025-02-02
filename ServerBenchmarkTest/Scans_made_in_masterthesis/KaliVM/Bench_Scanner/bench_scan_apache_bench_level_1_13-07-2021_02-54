@@ -1,0 +1,135 @@
+Target: http://127.0.0.1/wordpress-bench
+Date: 13-07-2021 02:54
+
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/xss.html?xss='+or+1%3D1%23'; Evidence: The Input is not found in the response
+request answer:
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/xss.html?xss="+or+1%3D1%23"; Evidence: The Input is not found in the response
+request answer:
+<html>
+    <head>
+        <title>XSS-attacks</title>
+        <script src="xss.js" async></script>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <img src='x' onerror='alert(1)'> -->
+                <input id="xss" name="xss"><button type="button" id="send">send</button><br>
+            </label>
+            <label for="out">You gave:
+                <output id="out"></output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost/wordpress-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/wordpress-bench/inject.html">Here you can try SQL-Injection</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/xss.html?xss='+or+1%3D1--'; Evidence: The Input is not found in the response
+request answer:
+<html>
+    <head>
+        <title>XSS-attacks</title>
+        <script src="xss.js" async></script>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <img src='x' onerror='alert(1)'> -->
+                <input id="xss" name="xss"><button type="button" id="send">send</button><br>
+            </label>
+            <label for="out">You gave:
+                <output id="out"></output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost/wordpress-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/wordpress-bench/inject.html">Here you can try SQL-Injection</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/xss.html?xss="+or+1%3D1--"; Evidence: The Input is not found in the response
+request answer:
+<html>
+    <head>
+        <title>XSS-attacks</title>
+        <script src="xss.js" async></script>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p id="XSSintro">This site contains the possibility for XSS-attacks</p>
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <img src='x' onerror='alert(1)'> -->
+                <input id="xss" name="xss"><button type="button" id="send">send</button><br>
+            </label>
+            <label for="out">You gave:
+                <output id="out"></output>
+            </label>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost/wordpress-bench/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost/wordpress-bench/inject.html">Here you can try SQL-Injection</a><br>
+        </p>
+    </body>
+</html>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/inject.html?sql='+or+1%3D1%23'; Evidence: The Input is not found in the response
+request answer:
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/inject.html?sql="+or+1%3D1%23"; Evidence: The Input is not found in the response
+request answer:
+<form action="action.php" method="post">
+ <p>Hier die SQL Anfrage eingeben: </p>
+ <p>Input: <input type="text" name="sql" /></p>
+ <p><input type="submit" /></p>
+</form>
+
+<p id="Links">
+    Here are the links to the exploits:<br>
+    <a href="http://localhost/wordpress-bench/index.html">Home</a><br>
+    <a href="http://localhost/wordpress-bench/xss.html">XSS-Attacken</a><br>
+</p>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/inject.html?sql='+or+1%3D1--'; Evidence: The Input is not found in the response
+request answer:
+<form action="action.php" method="post">
+ <p>Hier die SQL Anfrage eingeben: </p>
+ <p>Input: <input type="text" name="sql" /></p>
+ <p><input type="submit" /></p>
+</form>
+
+<p id="Links">
+    Here are the links to the exploits:<br>
+    <a href="http://localhost/wordpress-bench/index.html">Home</a><br>
+    <a href="http://localhost/wordpress-bench/xss.html">XSS-Attacken</a><br>
+</p>
+-----------------------------------------------------------------------------
+Possible SQL injection (Blind): http://127.0.0.1/wordpress-bench/inject.html?sql="+or+1%3D1--"; Evidence: The Input is not found in the response
+request answer:
+<form action="action.php" method="post">
+ <p>Hier die SQL Anfrage eingeben: </p>
+ <p>Input: <input type="text" name="sql" /></p>
+ <p><input type="submit" /></p>
+</form>
+
+<p id="Links">
+    Here are the links to the exploits:<br>
+    <a href="http://localhost/wordpress-bench/index.html">Home</a><br>
+    <a href="http://localhost/wordpress-bench/xss.html">XSS-Attacken</a><br>
+</p>
+-----------------------------------------------------------------------------

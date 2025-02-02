@@ -1,0 +1,7 @@
+.translationsDialog {
+  & h1 {
+    font-size: var(--fs-16);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

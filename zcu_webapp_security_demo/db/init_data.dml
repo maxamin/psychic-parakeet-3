@@ -1,0 +1,10 @@
+DELETE FROM notice_board;
+DELETE FROM user;
+
+INSERT INTO user(username, password) VALUES('foo', 'bar');
+INSERT INTO user(username, password) VALUES('alfa', 'bravo');
+
+INSERT INTO notice_board(notice, author_id)
+    SELECT 'first entry', id FROM user WHERE username='foo';
+INSERT INTO notice_board(notice, author_id)
+    SELECT 'second entry', id FROM user WHERE username='foo';

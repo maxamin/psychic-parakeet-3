@@ -1,0 +1,56 @@
+.inputPreviewContainer {
+  display: flex;
+}
+
+.label span {
+  display: flex;
+  align-items: center;
+
+  & div:first-of-type {
+    width: 9em;
+  }
+}
+.addCustomFieldButton {
+  border-radius: 50px;
+  box-shadow: none;
+  color: var(--c-white);
+  background: var(--c-blue);
+  margin-bottom: 0.6em;
+
+  &:hover {
+    color: var(--c-black);
+  }
+
+  & svg {
+    position: absolute;
+    left: 0.6em;
+  }
+}
+
+.cancelButton {
+  background: var(--c-grey);
+  color: var(--c-white);
+
+  &:hover {
+    color: var(--c-black);
+    background-color: var(--c-warm-grey-5);
+  }
+}
+
+.listHeader {
+    color: var(--c-black);
+    text-transform: uppercase;
+    font-weight: bold;
+  & span {
+    font-weight: bold;
+  }
+}
+
+.inputIcon {
+  width: inherit;
+  font-size: var(--fs-20);
+}
+
+.inputIconTickBox {
+  font-size: 1.2em !important;
+}

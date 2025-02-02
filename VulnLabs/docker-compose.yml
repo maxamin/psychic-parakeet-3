@@ -1,0 +1,35 @@
+dvwa:
+  image: m4n3dw0lf/docker-vulnerable-dvwa
+  ports:
+    - 8080:80
+  links:
+    - mysql
+
+dsvw:
+  image: m4n3dw0lf/dsvw
+  ports:
+    - 8081:8081
+
+webgoat:
+  image: mrmendes/webgoat-docker
+  ports:
+    - 8082:8080
+
+javavulnlab:
+  image: m4n3dw0lf/javavulnerablelab
+  ports:
+    - 8083:8080
+  links:
+    - mysql
+
+hackzon:
+  image: m4n3dw0lf/hackazon
+  links:
+    - mysql
+  ports:
+    - 8084:80
+
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_ROOT_PASSWORD=root

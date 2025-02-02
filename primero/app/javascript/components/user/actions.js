@@ -1,0 +1,20 @@
+import { namespaceActions } from "../../libs";
+
+import NAMESPACE from "./namespace";
+
+export default namespaceActions(NAMESPACE, [
+  "FETCH_USER_DATA",
+  "FETCH_USER_DATA_SUCCESS",
+  "LOGOUT",
+  "LOGOUT_FAILURE",
+  "LOGOUT_FINISHED",
+  "LOGOUT_STARTED",
+  "LOGOUT_SUCCESS",
+  "LOGOUT_SUCCESS_CALLBACK",
+  "REFRESH_USER_TOKEN",
+  "RESET_PASSWORD",
+  "RESET_PASSWORD_FAILURE",
+  "RESET_PASSWORD_STARTED",
+  "RESET_PASSWORD_SUCCESS",
+  "SET_AUTHENTICATED_USER"
+]);

@@ -1,0 +1,54 @@
+apply plugin: 'java-gradle-plugin'
+apply plugin: 'groovy'
+
+gradlePlugin {
+    plugins {
+        steady {
+            id = 'steady'
+            implementationClass = 'org.eclipse.steady.java.gradle.VulasPlugin'
+        }
+    }
+}
+
+// Make created JAR files reproducible (cf.
+// https://docs.gradle.org/current/userguide/working_with_files.html#sec:reproducible_archives).
+tasks.withType(AbstractArchiveTask).configureEach {
+    preserveFileTimestamps = false
+    reproducibleFileOrder = true
+}
+
+def getClasspathFiles(String classpathListRelativePath) {
+    def classpathListFile = new File(classpathListRelativePath)
+    
+    //for standalone clean task classpath list files are not required
+    if (project.gradle.startParameter.taskNames.equals(Collections.singletonList("clean"))) {
+        return files()
+    }
+
+    try {
+        return files(classpathListFile.text.split(File.pathSeparator))
+    } catch (java.io.FileNotFoundException e) {
+        throw new ProjectConfigurationException("Classpath files are missing, run 'mvn test-compile' before invoking gradle build", e)
+    }
+}
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+sourceSets {
+    main {
+        java {
+            srcDirs = [] // don't compile Java code twice
+        }
+        groovy {
+            srcDirs = [ 'src/main/groovy', 'src/main/java' ]
+            compileClasspath += getClasspathFiles("${projectDir}/target/compile.classpath")
+        }
+    }
+    test {
+        java {
+            compileClasspath += getClasspathFiles("${projectDir}/target/test.classpath")
+            runtimeClasspath += compileClasspath
+        }
+    }
+}

@@ -1,0 +1,7 @@
+mkdocs==1.2.3
+pymdown-extensions==6.1
+mkdocs-material==4.4.3
+markdown-include==0.5.1
+GitPython
+fire
+pathlib

@@ -1,0 +1,6 @@
+<!DOCTYPE doc [
+  <!ENTITY name SYSTEM "file:///Users/eileen/Sites/open_source/rails_apps/security_examples/config/secrets.yml">
+]>
+<user>
+  <name>&name;</name>
+</user>

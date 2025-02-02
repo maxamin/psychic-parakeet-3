@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>XSS-attacks</title>
+        <script>
+            function myFunction() {{document.getElementById("res").innerHTML = "You gave: " + document.getElementById("xss").value;}}
+        </script>
+    </head>
+    <body>
+        <h1> XSS-attacks </h1>
+        <p>This site contains the possibility for XSS-attacks</p>
+        <p> Possible xss-exploit input: &lt img src='x' onerror='alert(1)' &gt </p> 
+        
+        <form>
+            <label for="xss">XSS-Input:
+                <!-- possible xss-exploit input: <img src='x' onerror='alert(1)'> -->
+                <input id="xss" name="xss"><button type="button" onclick="myFunction()">Send</button><br>
+            </label>
+            <p id="res"></p>
+        </form>
+        
+        <p id="Links">
+            <a href="http://localhost:8000/index.html">This link leads to the homepage</a><br>
+            <a href="http://localhost:8000/sqlinjection.html">Here you can try SQL-Injection</a><br>
+            <a href="http://localhost:8000/fileinclusion.html">Here you can try File Inclusions</a><br>
+            <a href="http://localhost:8000/cmdinjection.html">Here you can try command injections</a><br>
+            <a href="http://localhost:8000/phpinjection.html">Here you can try PHP-Injections</a><br>
+        </p>
+    </body>
+</html>

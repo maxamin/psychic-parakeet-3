@@ -1,0 +1,18 @@
+{
+  "summary": {
+    "title": "test",
+    "owner": "test",
+    "description": "sad"
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "title": "XZXzX",
+        "thumbnail": "./public/content/images/thumbnail.jpg",
+        "id": 0
+      }
+    ],
+    "reviewer": "test"
+  }
+}

@@ -1,0 +1,38 @@
+.loginForm {
+  padding: 1em 0;
+
+  & h1 {
+    font-family: SourceSansPro;
+    font-size: var(--fs-30);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--c-black);
+  }
+
+   & .recoveryLink {
+    margin-top: 1.5em;
+
+     & a {
+      text-decoration: none;
+      color: var(--c-blue);
+    }
+  }
+}
+
+.loginContainer {
+  & header, & form {
+    margin-bottom: 1em;
+  }
+}
+
+.forgotPaswordLink {
+  margin: 10px 0 0 0;
+}
+
+@media (max-width:599.95px) {
+  .loginForm {
+    & button {
+      width: 100%;
+    }
+  }
+}

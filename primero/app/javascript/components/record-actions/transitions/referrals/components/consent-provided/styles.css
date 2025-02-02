@@ -1,0 +1,22 @@
+.alert {
+  background-color: var(--c-light-grey);
+  color: var(--c-black);
+  margin-bottom: 2em;
+
+  & div:first-of-type {
+    margin-right: 1em;
+  }
+}
+
+.message {
+  padding: 8px 0 0 0;
+
+  & > div {
+    margin-bottom: var(--sp-1);
+  }
+}
+
+.icon {
+  font-size: var(--fs-30);
+  color: var(--c-black);
+}

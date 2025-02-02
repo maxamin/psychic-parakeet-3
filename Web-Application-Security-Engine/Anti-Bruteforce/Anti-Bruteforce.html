@@ -1,0 +1,224 @@
+<html>
+<head>
+<title>Damn Secure Web App</title>
+<style>
+img{
+    cursor: pointer;
+    padding: 10px;
+}
+
+img:hover{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(0, 255, 0, 0.67);
+}
+img:last-of-type:hover{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+ -webkit-box-shadow: 0px 0px 30px 0px rgba(232, 0, 0, 0.67);
+-moz-box-shadow:    0px 0px 30px 0px rgba(232, 0, 0, 0.67);
+box-shadow:         0px 0px 30px 0px rgba(232, 0, 0, 0.67);
+}
+
+
+form{
+	background-color : grey;
+	width : 400px;
+	height : 160px;
+	padding : 25px;
+	border : 5px solid green;
+	font-family: "Lucida Console", Monaco, monospace;
+	letter-spacing: -0.4px;
+	word-spacing: 0px;
+	border-radius : 5px;
+}
+
+.navbar{
+	background-color : grey;
+	width : 51%;
+	margin-left : 0%;
+	padding : 10px;
+	
+	font-family: "Lucida Console", Monaco, monospace;
+	font-size: 20px;
+	letter-spacing: -0.4px;
+	word-spacing: 0px;
+	color: #000000;
+	font-weight: normal;
+	text-decoration: none solid rgb(68, 68, 68);
+	font-style: normal;
+	font-variant: normal;
+	text-transform: capitalize;
+	border : 5px solid red;
+	
+	box-shadow: 0 0 10px lightgreen;
+	padding: 3px 0px 3px 3px;
+	margin: 5px 1px 3px 0px;
+	border: 5px solid green;
+	background-image : url('Green-tech3.png');
+}
+
+body{
+	background-image : url("Tech.jpg");
+	background-repeat : no-repeat;
+	background-size : 100%;
+}
+
+.fbg{
+	background-image : url('Green-tech2.png');
+	background-size : 100%;
+}
+
+
+.glow {
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #ff000, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.texbox_decor{
+	color : #747862;
+	height:20px;
+	border:2px solid green;
+	text-align :center;
+	text-colo
+	margin-bottom:0px;
+	border-radius : 25px;
+}
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+.button{
+	font-family : Montserrat;
+	display: inline-block;
+	overflow: hidden;
+	width: 120px;
+	height : 24px;
+	perspective:400px;
+	background-color: black;
+  
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255,255,255,0.3)));
+  
+}
+.button span{
+	display: block;
+	position: relative;
+	transition:0.3s ease-in-out all;
+	transform-origin:50% 0;
+  transform-style:preserve-3d;
+	background-color: black;
+	color: white;
+  width: 100%;
+
+}
+.button span:after{
+	display: block;
+	content: attr(data-title);
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition:0.3s ease-in-out all;
+	transform-origin:50% 0;
+	transform:translate3d(0px,105%,0px) rotateX(-90deg);
+	background-color: white;
+	color: black;
+  width: 100%;
+}
+
+.button:hover span{
+	transform:translate3d(0px,0px,-30px) rotateX(90deg);
+}
+
+a{
+  color:inherit;
+  text-decoration: none;
+}
+
+.block {
+	position: relative;
+	
+	width: 500px;
+	height: 200px;
+	
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
+}
+</style>
+</head>
+<body bgcolor="black">
+<br><br>
+<div id="title">
+<center><a href="/Home.html"><img src="glowing_logo.gif"></a></center>
+<hr type="dashed"></hr>
+</div>
+	<center>
+	
+	
+	<center><font color="white"><br><br><br><br><br>
+	<img src="Hack_if_you_can2.png" width="200px" height ="200px">
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="xploit3.png" height="150px" width="150px">
+	<form name="reg_form" id="red_form" method="post" action="Anti-Bruteforce.php" class="fbg block">
+	<font color="red" size="5px"><b><u>Login Form</b></u></font><br><br>
+	
+	<font color="red"><b>Username :</b></font> <input type="text" id="name" name="username" class="texbox_decor"><br><br>
+	<font color="red"><b>Password :</b></font> <input type="text" id="pass" name="password" class="texbox_decor"><br><br>
+	<button class="button">
+		<span data-title="Login">Exploit!!!</span>
+	</button>
+	</form>
+	<br>
+	<br>
+	<br>
+	<img width="70%" src="damn_secure_officially.png">
+
+</body>
+
+</html>

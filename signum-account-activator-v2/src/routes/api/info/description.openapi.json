@@ -1,0 +1,116 @@
+{
+	"openapi": "3.0.3",
+	"info": {
+		"title": "Signum Account Activator API",
+		"version": "1.0.0",
+		"contact": {
+			"email": "development@signum.network"
+		},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+		}
+	},
+	"paths": {
+		"/api/status": {
+			"get": {
+				"operationId": "status",
+				"summary": "Status/Health check",
+				"responses": {
+					"200": {
+						"description": "200 response"
+					}
+				}
+			}
+		},
+		"/api/info": {
+			"get": {
+				"operationId": "info",
+				"summary": "This description (OpenAPI 3.0)",
+				"responses": {
+					"200": {
+						"description": "The OpenAPI V3 description of this API"
+					}
+				}
+			}
+		},
+		"/api/activate": {
+			"post": {
+				"summary": "Activates an account",
+				"description": "Sends a message to given account. The activation needs a few moments, usually a block time (240 sec)",
+				"operationId": "activate",
+				"requestBody": {
+					"description": "Account to be activated",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Account"
+							},
+							"example": {
+								"account": "S-K37B-9V85-FB95-793HN",
+								"publickey": "7210b8941929030324540238450e985899989a7ad0267e0c76f668fde3b1016b",
+								"ref": "phoenix-wallet"
+							}
+						}
+					}
+				},
+				"responses": {
+					"204": {
+						"description": "Successfully requested account activation, i.e. an activation message was sent"
+					},
+					"429": {
+						"description": "Exceeds rate limit",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorMessage"
+								}
+							}
+						}
+					},
+					"400": {
+						"description": "Account maybe activated already, or account activation is pending",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/ErrorMessage"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"Account": {
+				"type": "object",
+				"required": ["account", "publickey"],
+				"properties": {
+					"account": {
+						"type": "string",
+						"description": "Account Id, RS Address, or RS Extended Address"
+					},
+					"publickey": {
+						"type": "string",
+						"description": "The public key in hexadecimal format (will be pulled automatically when using RS Extended Address"
+					},
+					"ref": {
+						"type": "string",
+						"description": "An optional reference to indicate what app is calling the activator, e.g phoenix, btdex"
+					}
+				}
+			},
+			"ErrorMessage": {
+				"type": "object",
+				"properties": {
+					"message": {
+						"type": "string",
+						"description": "The message"
+					}
+				}
+			}
+		}
+	}
+}

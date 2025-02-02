@@ -1,0 +1,207 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load markdown %}
+{% load vulnmantags %}
+{% load project_contribs %}
+{% load guardian_tags %}
+
+{% block title %}
+    {{ project.name }}
+{% endblock %}
+
+
+{% block content %}
+
+    <div class="container mt-3">
+        <div class="row d-flex">
+            <div class="d-flex flex-column col-sm-12 col-md-7">
+                <nav aria-label="breadcrumb">
+
+                    <ol class="breadcrumb">
+                        {% include 'core/components/navigation/sidebar-toggler.html' %}
+
+                        <li class="breadcrumb-item"><a href="{% url 'projects:project-list' %}">Projects</a></li>
+                        <li class="breadcrumb-item active">{{ project.name }}</li>
+                    </ol>
+                </nav>
+            </div>
+            {% if perms.projects.change_project %}
+                <div class="d-flex flex-column-reverse col-md-5 col-sm-12 align-items-end justify-content-end">
+                    <div class="d-inline">
+                        <a class="btn btn-outline-warning" href="{% url 'projects:project-update' project.pk %}"><i
+                                class="fa fa-edit"></i></a>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+
+        <div class="row mt-3">
+            <div class="col-md-4 col-sm-12">
+                <div class="card">
+                    <div class="card-body px-3 py-4-5">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="stats-icon purple">
+                                    <i class="fa fa-clock fa-2x py-2"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <h6 class="text-muted font-semibold">Remaining Time</h6>
+                                <h6 class="font-extrabold mb-0" id="countdown"></h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                {% include 'components/cards/card_with_information.html' with icon="fa-bug" title="Vulnerabilities" value=project.vulnerability_set.count %}
+            </div>
+            <div class="col-md-4 col-sm-12">
+                {% include 'components/cards/card_with_information.html' with icon="fa-crosshairs" title="Assets" value=project.get_assets|length %}
+            </div>
+        </div>
+
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-3">
+                {% include 'components/cards/card_with_information.html' with icon="fa-handshake" title="Customer" value=project.client|get_customer_link %}
+            </div>
+            <div class="col-sm-12 col-md-3">
+                {% include 'components/cards/card_with_information.html' with icon="fa-users" title="Contributors" value=project.projectcontributor_set.count %}
+            </div>
+            <div class="col-sm-12 col-md-3">
+                {% include 'components/cards/card_with_information.html' with icon="fa-list-check" title="Open Checks" value=project.get_open_todos.count %}
+            </div>
+            <div class="col-sm-12 col-md-3">
+                {% if request.user == project.creator %}
+                    {% include 'components/cards/card_with_information.html' with icon="fa-user-secret" title="Your Role" value="Creator" %}
+                {% else %}
+                    {% include 'components/cards/card_with_information.html' with icon="fa-user-secret" title="Your Role" value=project|get_project_role:request.user %}
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-sm-12 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">Latest Findings</p>
+                        <div class="list-group">
+                            {% for vuln in latest_vulnerabilities %}
+                                <a class="list-group-item list-group-item-action" href="{{ vuln.get_absolute_url }}">
+                                    <div class="d-flex">
+                                        <div class="justify-content-start d-flex flex-column">
+                                            {% include 'components/severity_badge.html' with obj=vuln %}
+                                        </div>
+                                        <div class="justify-content-end flex-column-reverse col flex-lg-column-reverse d-flex flex-fill align-items-center">
+                                            {{ vuln }}
+                                        </div>
+                                    </div>
+                                </a>
+                            {% empty %}
+                                <i>Not enough data!</i>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">Vulnerabilities by Severity</p>
+                        <canvas id="severity-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text">Description</p>
+                        {% if project.description %}
+                        {{ project.description|md_to_html }}
+                        {% else %}
+                        <i>No description provided!</i>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+
+{% block extra_scripts %}
+    <script>
+        /* taken from https://www.w3schools.com/howto/howto_js_countdown.asp */
+        // Set the date we're counting down to
+        var countDownDate = new Date("{{ project.end_date|date:'M d, Y' }} 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s";
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+    <script src="{% static 'vendor/chartjs/chart.min.js' %}"></script>
+    <script>
+        var severity_chart = new Chart(
+            document.getElementById("severity-chart"), {
+                type: "doughnut",
+                data: {
+                    labels: ["Critical", "High", "Medium", "Low", "Informational"],
+                    datasets: [
+                        {
+                            label: "Vulnerabilities by Severity",
+                            data: [],
+                            backgroundColor: [],
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        )
+
+        getVulnsBySeverity()
+
+        function getVulnsBySeverity() {
+            $.get('/api/ui/projects/{{project.pk}}/vulns_by_severity/', function (data, status) {
+                if (status === "success") {
+                    severity_chart.data.datasets[0].backgroundColor = data.colors;
+                    severity_chart.data.datasets[0].data = data.severities;
+                    severity_chart.update();
+                }
+            });
+        }
+    </script>
+
+{% endblock extra_scripts %}

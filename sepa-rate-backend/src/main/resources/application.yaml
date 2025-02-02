@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://0.0.0.0:3306/SEPA_RATE?useSSL=false
+    username: root
+    password: password
+    continueOnError: true
+    hibernate:
+      ddl-auto: none
+#    driver-class-name: oracle.jdbc.OracleDriver

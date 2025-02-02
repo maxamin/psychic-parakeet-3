@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommandInjection content should render correctly 1`] = `
+<div>
+  <div
+    class="VulnerableApp-Facade-Info"
+  >
+    <div
+      class="VulnerableApp-Facade-Content-Container"
+    >
+      <div>
+        <div
+          class="VulnerableApp-Facade-Content-Vulnerability-Description-Header rs-panel rs-panel-default rs-panel-in rs-panel-collapsible"
+        >
+          <div
+            class="rs-panel-heading"
+            role="rowheader"
+            tabindex="-1"
+          >
+            <span
+              class="rs-panel-title"
+              role="presentation"
+            >
+              <span
+                aria-controls="undefined"
+                aria-expanded="true"
+                aria-selected="true"
+              >
+                Vulnerability Description
+              </span>
+            </span>
+          </div>
+          <div
+            aria-hidden="false"
+            class="rs-panel-collapse VulnerableApp-Facade-Content-Vulnerability-Description-Header collapse in"
+          >
+            <div
+              class="rs-panel-body"
+            >
+              <div
+                class="VulnerableApp-Facade-Content"
+              >
+                <div
+                  data-testid="VULNERABILITY_CONTENT_DESCRIPTION"
+                  id="__vuln_description__"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="VulnerableApp-Facade-Content-Practice-Vulnerability-Header rs-panel rs-panel-default"
+        >
+          <div
+            class="rs-panel-heading"
+            role="rowheader"
+            tabindex="-1"
+          >
+            Practice Vulnerability
+          </div>
+          <div
+            class="rs-panel-body"
+          >
+            <div
+              class="VulnerableApp-Facade-Content"
+            >
+              <div
+                data-testid="VULNERABILITY_MAIN_CONTENT"
+                id="__content__"
+              />
+            </div>
+          </div>
+        </div>
+        <div />
+      </div>
+    </div>
+  </div>
+</div>
+`;

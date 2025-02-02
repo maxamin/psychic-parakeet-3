@@ -1,0 +1,93 @@
+.root {
+  width: 80%;
+
+  & p {
+    white-space: pre-wrap;
+    padding: 16px;
+  }
+}
+
+.content {
+  max-height: 12em;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.link {
+  cursor: pointer;
+  display: flex;
+  gap: 3px;
+  margin-top: var(--sp-1);
+}
+
+.stepper {
+  background: none;
+  padding: 0;
+  margin-bottom: var(--sp-1);
+
+  & div:first-of-type {
+    padding-left: 0;
+  }
+}
+
+.stepLabel,
+.mobileStepper div {
+  font-size: var(--fs-13);
+  font-weight: bold !important;
+}
+
+.mobileStepper {
+  display: flex;
+  align-items: center;
+
+  & > span {
+    margin-right: 1.5em;
+    margin-left: 0.7em;
+  }
+}
+
+.importDataClass {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+
+  & button {
+    height: 22px;
+    margin-left: 5px;
+  }
+}
+
+.checkStatusLabelClass {
+  display: flex;
+  & > div {
+    margin-top: 0.1em;
+  }
+}
+
+.checkStatusClass {
+  & button {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+
+@media (max-width:959.95px) {
+  .importDataLabelClass {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .importDataClass {
+    & button {
+      margin-left: 0px;
+      margin-top: 8px;
+    }
+  }
+
+  .checkStatusClass {
+    & button {
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+  }
+}

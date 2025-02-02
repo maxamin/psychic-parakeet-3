@@ -1,0 +1,33 @@
+.searchPromptFormContainer {
+  padding: 0 20px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid var(--c-warm-grey-4);
+  border-radius: 6px;
+  padding: .3em .3em .3em .5em;
+
+  & form {
+    width: 100%;
+
+    & fieldset {
+      margin-bottom: 0 !important;
+      border: none;
+    }
+
+    & div {
+      padding: 0 !important;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.inputLabel {
+  width: 100%;
+  line-height: 1.5em;
+  position: relative;
+}

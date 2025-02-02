@@ -1,0 +1,27 @@
+FROM kalilinux/kali-bleeding-edge
+
+RUN apt-get update\
+    && DEBIAN_FRONTEND=noninteractive apt-get -qy upgrade -o\
+    "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold"\
+    && DEBIAN_FRONTEND=noninteractive apt-get -qy install -o\
+    "Dpkg::Options::=--force-confdef" -o "Dpkg::Options::=--force-confold"\
+    apt-utils openssh-server net-tools iputils-ping dnsutils man-db curl\
+    default-mysql-client iproute2 locales python3 python3-setuptools\
+    python3-pip exploitdb vim zsh stow git nmap tmux wafw00f kali-tools-web fzf\
+    && chsh --shell /usr/bin/zsh root\
+    && mkdir /var/run/sshd\
+    && mkdir /root/authorizded_keys\
+    && echo "en_US.UTF-8 UTF-8" > /etc/locale.gen\
+    && echo "LANG=en_US.UTF-8\nLC_COLLATE=C" > /etc/default/locale\
+    && locale-gen\
+    && echo '' > /etc/motd\
+    && find /root/ -maxdepth 1 -name '.*' -exec rm {} +
+RUN curl -fsSL\
+    https://raw.githubusercontent.com/oliverwiegers/dotfiles/prod/install.sh\
+    -o install.sh && chmod +x install.sh && NON_INTERACTIVE=true ./install.sh
+
+COPY ./etc/kali/authorized_keys /root/.ssh/
+COPY ./etc/kali/sshd_config /etc/ssh/
+COPY ./etc/kali/20-motd-header /etc/update-motd.d/
+
+CMD ["/usr/sbin/sshd", "-D"]
